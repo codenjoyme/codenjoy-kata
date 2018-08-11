@@ -24,26 +24,18 @@ package com.codenjoy.dojo.kata.client.ai;
 
 
 import com.codenjoy.dojo.client.AbstractTextBoard;
-import com.codenjoy.dojo.client.LocalGameRunner;
 import com.codenjoy.dojo.client.WebSocketRunner;
 import com.codenjoy.dojo.kata.client.AbstractTextSolver;
 import com.codenjoy.dojo.kata.client.Board;
 import com.codenjoy.dojo.kata.client.Strings;
 import com.codenjoy.dojo.kata.model.levels.*;
 import com.codenjoy.dojo.kata.model.Elements;
-import com.codenjoy.dojo.kata.services.GameRunner;
 import com.codenjoy.dojo.services.Dice;
 import com.codenjoy.dojo.services.RandomDice;
 
 import java.util.List;
 
-/**
- * User: your name
- * Это твой алгоритм AI для игры. Реализуй его на свое усмотрение.
- * Обрати внимание на {@see YourSolverTest} - там приготовлен тестовый
- * фреймворк для тебя.
- */
-public class ApofigSolver extends AbstractTextSolver {
+public class AISolver extends AbstractTextSolver {
 
     private AbstractTextBoard board;
     private List<Level> levels = LevelsLoader.getAlgorithms();
@@ -78,7 +70,7 @@ public class ApofigSolver extends AbstractTextSolver {
 
     public static void start(String name, Dice dice) {
         WebSocketRunner.runAI(name,
-                new ApofigSolver(),
+                new AISolver(),
                 new Board());
     }
 }
