@@ -36,7 +36,7 @@ import java.util.List;
 
 import static org.mockito.Mockito.mock;
 
-public class KataPerformanceTest {
+public class PerformanceTest {
 
     @Test
     public void test() {
