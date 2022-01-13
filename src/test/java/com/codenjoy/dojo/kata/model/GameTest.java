@@ -30,25 +30,22 @@ import com.codenjoy.dojo.kata.model.levels.LevelsPool;
 import com.codenjoy.dojo.kata.model.levels.LevelsPoolImpl;
 import com.codenjoy.dojo.kata.model.levels.QuestionAnswerLevelImpl;
 import com.codenjoy.dojo.kata.services.GameSettings;
-import com.codenjoy.dojo.services.Dice;
 import com.codenjoy.dojo.services.EventListener;
+import com.codenjoy.dojo.services.dice.MockDice;
 import com.codenjoy.dojo.utils.JsonUtils;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.stubbing.OngoingStubbing;
 
 import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 public class GameTest {
 
     private Kata game;
     private Hero hero;
-    private Dice dice;
+    private MockDice dice;
     private EventListener listener;
     private Player player;
     private LevelsPool pool;
@@ -56,15 +53,12 @@ public class GameTest {
 
     @Before
     public void setup() {
-        dice = mock(Dice.class);
+        dice = new MockDice();
         settings = new TestGameSettings();
     }
 
-    private void dice(int...ints) {
-        OngoingStubbing<Integer> when = when(dice.next(anyInt()));
-        for (int i :ints) {
-            when = when.thenReturn(i);
-        }
+    private void dice(Integer... next) {
+        dice.then(next);
     }
 
     private void givenQA(String... questionAnswers) {
