@@ -73,6 +73,11 @@ public class Kata implements Field {
         player.newHero(this);
     }
 
+    @Override
+    public int size() {
+        return 0;
+    }
+
     public void remove(Player player) {
         players.remove(player);
     }
