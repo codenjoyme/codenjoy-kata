@@ -26,29 +26,31 @@ package com.codenjoy.dojo.kata.services;
 import com.codenjoy.dojo.kata.model.levels.Level;
 import com.codenjoy.dojo.kata.model.levels.LevelsLoader;
 import com.codenjoy.dojo.services.event.Calculator;
+import com.codenjoy.dojo.services.settings.PropertiesKey;
 import com.codenjoy.dojo.services.settings.SettingsImpl;
 import com.codenjoy.dojo.services.settings.SettingsReader;
 
 import java.util.Arrays;
 import java.util.List;
 
+import static com.codenjoy.dojo.kata.services.GameRunner.GAME_NAME;
 import static com.codenjoy.dojo.kata.services.GameSettings.Keys.*;
 
 public class GameSettings extends SettingsImpl implements SettingsReader<GameSettings> {
 
-    public enum Keys implements Key {
+    public enum Keys implements PropertiesKey {
 
-        WIN_SCORE("[Score] Win score"),
-        LOSE_PENALTY("[Score] Lose penalty"),
-        A_CONSTANT("[Score] A constant"),
-        B_CONSTANT("[Score] B constant"),
-        C_CONSTANT("[Score] C constant"),
-        D_CONSTANT("[Score] D constant");
+        WIN_SCORE,
+        LOSE_PENALTY,
+        A_CONSTANT,
+        B_CONSTANT,
+        C_CONSTANT,
+        D_CONSTANT;
 
         private String key;
 
-        Keys(String key) {
-            this.key = key;
+        Keys() {
+            this.key = key(GAME_NAME);
         }
 
         @Override
