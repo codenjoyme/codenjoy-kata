@@ -23,14 +23,14 @@ package com.codenjoy.dojo.kata.model.levels;
  */
 
 
-import com.codenjoy.dojo.games.kata.Element;
+import static com.codenjoy.dojo.games.kata.Command.START_NEXT_LEVEL;
 
 public class WaitLevel extends NullLevel implements Level {
     
     @Override
     public String description() {
         return "Wait for next level. Please send " +
-                "'message(\'" + Element.START_NEXT_LEVEL +
+                "'message(\'" + START_NEXT_LEVEL +
                 "\')' command.";
     }
 }

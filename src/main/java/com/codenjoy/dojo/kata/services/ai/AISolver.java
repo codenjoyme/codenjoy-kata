@@ -25,7 +25,6 @@ package com.codenjoy.dojo.kata.services.ai;
 
 import com.codenjoy.dojo.client.AbstractTextBoard;
 import com.codenjoy.dojo.games.kata.AbstractTextSolver;
-import com.codenjoy.dojo.games.kata.Element;
 import com.codenjoy.dojo.games.kata.Strings;
 import com.codenjoy.dojo.kata.model.levels.Algorithm;
 import com.codenjoy.dojo.kata.model.levels.Level;
@@ -34,6 +33,8 @@ import com.codenjoy.dojo.kata.model.levels.NullAlgorithm;
 import com.codenjoy.dojo.services.Dice;
 
 import java.util.List;
+
+import static com.codenjoy.dojo.games.kata.Command.START_NEXT_LEVEL;
 
 public class AISolver extends AbstractTextSolver {
 
@@ -47,7 +48,7 @@ public class AISolver extends AbstractTextSolver {
     @Override
     public Strings getAnswers(int level, Strings questions) {
         if (!questions.iterator().hasNext()) {
-            return new Strings(Element.START_NEXT_LEVEL);
+            return new Strings(START_NEXT_LEVEL);
         }
         Algorithm algorithm = getAlgorithm(level);
 

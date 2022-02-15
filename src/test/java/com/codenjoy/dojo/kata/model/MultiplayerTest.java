@@ -23,7 +23,6 @@ package com.codenjoy.dojo.kata.model;
  */
 
 
-import com.codenjoy.dojo.games.kata.Element;
 import com.codenjoy.dojo.kata.TestGameSettings;
 import com.codenjoy.dojo.kata.model.levels.Level;
 import com.codenjoy.dojo.kata.model.levels.LevelsPoolImpl;
@@ -43,6 +42,7 @@ import org.mockito.ArgumentCaptor;
 
 import java.util.Arrays;
 
+import static com.codenjoy.dojo.games.kata.Command.START_NEXT_LEVEL;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
@@ -645,7 +645,7 @@ public class MultiplayerTest {
                 "}");
         
         // when
-        game1.getJoystick().message(Element.START_NEXT_LEVEL);
+        game1.getJoystick().message(START_NEXT_LEVEL);
         field.tick();
 
         // then

@@ -23,7 +23,6 @@ package com.codenjoy.dojo.kata.model;
  */
 
 
-import com.codenjoy.dojo.games.kata.Element;
 import com.codenjoy.dojo.services.joystick.MessageJoystick;
 import com.codenjoy.dojo.services.multiplayer.PlayerHero;
 import org.json.JSONArray;
@@ -31,6 +30,9 @@ import org.json.JSONArray;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+
+import static com.codenjoy.dojo.games.kata.Command.SKIP_THIS_LEVEL;
+import static com.codenjoy.dojo.games.kata.Command.START_NEXT_LEVEL;
 
 public class Hero extends PlayerHero<Field> implements MessageJoystick {
 
@@ -47,12 +49,12 @@ public class Hero extends PlayerHero<Field> implements MessageJoystick {
 
     @Override
     public void message(String answers) {
-        if (Element.START_NEXT_LEVEL.equals(answers)) {
+        if (START_NEXT_LEVEL.equals(answers)) {
             nextLevel = true;
             return;
         }
 
-        if (Element.SKIP_THIS_LEVEL.equals(answers)) {
+        if (SKIP_THIS_LEVEL.equals(answers)) {
             skipLevel = true;
             return;
         }
