@@ -25,7 +25,6 @@ package com.codenjoy.dojo.kata.model;
 
 import com.codenjoy.dojo.kata.services.GameSettings;
 import com.codenjoy.dojo.services.Dice;
-import com.codenjoy.dojo.services.printer.BoardReader;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -56,12 +55,6 @@ public class Kata implements Field {
             result.add(player.getHero());
         }
         return result;
-    }
-
-    @Override
-    public BoardReader<Player> reader() {
-        // do nothing, this is text game
-        return null;
     }
 
     public void newGame(Player player) {
