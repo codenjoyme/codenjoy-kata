@@ -88,6 +88,6 @@ public class Hero extends PlayerHero<Field> implements MessageJoystick, Responde
     @Override
     public void clearFlags() {
         skipLevel = false;
-        nextLevel = false;        
+        nextLevel = false;
     }
 }
