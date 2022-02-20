@@ -79,5 +79,4 @@ public class Kata implements Field {
     public GameSettings settings() {
         return settings;
     }
-
 }

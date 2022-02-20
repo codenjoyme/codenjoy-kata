@@ -39,8 +39,6 @@ import com.codenjoy.dojo.services.multiplayer.MultiplayerType;
 import com.codenjoy.dojo.services.printer.BoardReader;
 import com.codenjoy.dojo.services.printer.CharElement;
 import com.codenjoy.dojo.services.printer.PrinterFactory;
-import com.codenjoy.dojo.services.questionanswer.levels.LevelsPool;
-import com.codenjoy.dojo.services.questionanswer.levels.LevelsPoolImpl;
 import com.codenjoy.dojo.services.settings.Parameter;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.json.JSONObject;
@@ -99,20 +97,18 @@ public class GameRunner extends AbstractGameType<GameSettings> {
 
     @Override
     public GamePlayer createPlayer(EventListener listener, int teamId, String playerId, GameSettings settings) {
-        LevelsPool pool = new LevelsPoolImpl(settings.levels());
-        return new Player(listener, pool, settings).inTeam(teamId);
+        return new Player(listener, settings).inTeam(teamId);
     }
 
     @Override
     public PrinterFactory getPrinterFactory() {
         return PrinterFactory.get((BoardReader boardReader, Player player) -> {
             JSONObject result = new JSONObject();
-            result.put("description", StringEscapeUtils.escapeJava(player.level().getDescription()));
-            result.put("level", player.level().getLevelIndex());
-            result.put("questions", player.level().getQuestions());
-            result.put("nextQuestion", player.level().getNextQuestion());
+            result.put("description", StringEscapeUtils.escapeJava(player.levels().getDescription()));
+            result.put("level", player.levels().getLevelIndex());
+            result.put("questions", player.levels().getQuestions());
+            result.put("nextQuestion", player.levels().getNextQuestion());
             result.put("history", player.examiner().getLastHistory());
-
             return result;
         });
     }

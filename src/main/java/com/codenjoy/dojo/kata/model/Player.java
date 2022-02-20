@@ -29,6 +29,7 @@ import com.codenjoy.dojo.services.Point;
 import com.codenjoy.dojo.services.multiplayer.GamePlayer;
 import com.codenjoy.dojo.services.questionanswer.Examiner;
 import com.codenjoy.dojo.services.questionanswer.levels.LevelsPool;
+import com.codenjoy.dojo.services.questionanswer.levels.LevelsPoolImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,9 +40,9 @@ public class Player extends GamePlayer<Hero, Field> {
     private LevelsPool level;
     private Examiner examiner;
 
-    public Player(EventListener listener, LevelsPool level, GameSettings settings) {
+    public Player(EventListener listener, GameSettings settings) {
         super(listener, settings);
-        this.level = level;
+        this.level = new LevelsPoolImpl(settings.levels());
         examiner = new Examiner(level);
     }
 
@@ -79,7 +80,7 @@ public class Player extends GamePlayer<Hero, Field> {
         }
     }
 
-    public LevelsPool level() {
+    public LevelsPool levels() {
         return level;
     }
 

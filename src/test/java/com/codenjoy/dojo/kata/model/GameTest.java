@@ -29,16 +29,16 @@ import com.codenjoy.dojo.services.EventListener;
 import com.codenjoy.dojo.services.dice.MockDice;
 import com.codenjoy.dojo.services.questionanswer.levels.Level;
 import com.codenjoy.dojo.services.questionanswer.levels.LevelsPool;
-import com.codenjoy.dojo.services.questionanswer.levels.LevelsPoolImpl;
 import com.codenjoy.dojo.services.questionanswer.levels.QuestionAnswerLevelImpl;
 import com.codenjoy.dojo.utils.JsonUtils;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.List;
 
-import static com.codenjoy.dojo.games.kata.Command.SKIP_THIS_LEVEL;
-import static com.codenjoy.dojo.games.kata.Command.START_NEXT_LEVEL;
+import static com.codenjoy.dojo.client.Command.SKIP_THIS_LEVEL;
+import static com.codenjoy.dojo.client.Command.START_NEXT_LEVEL;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 
@@ -55,7 +55,6 @@ public class GameTest {
     @Before
     public void setup() {
         dice = new MockDice();
-        settings = new TestGameSettings();
     }
 
     private void dice(Integer... next) {
@@ -83,8 +82,14 @@ public class GameTest {
     private void givenGame(Level... levels) {
         game = new Kata(dice, settings);
         listener = mock(EventListener.class);
-        pool = new LevelsPoolImpl(Arrays.asList(levels));
-        player = new Player(listener, pool, settings);
+        settings = new TestGameSettings(){
+            @Override
+            public List<Level> levels() {
+                return Arrays.asList(levels);
+            }
+        };
+        player = new Player(listener, settings);
+        pool = player.levels();
         game.newGame(player);
         hero = player.getHero();
     }
@@ -94,7 +99,7 @@ public class GameTest {
     }
 
     private void thenQuestions(String expected) {
-        assertEquals(expected, JsonUtils.prettyPrint(player.level().getQuestions()));
+        assertEquals(expected, JsonUtils.prettyPrint(player.levels().getQuestions()));
     }
 
     @Test
@@ -814,7 +819,7 @@ public class GameTest {
     }
 
     private void assertStillOnLevel(int expected) {
-        assertEquals(expected, player.level().getLevelIndex());
+        assertEquals(expected, player.levels().getLevelIndex());
         assertEquals(false, pool.isWaitNext());
     }
 
@@ -906,7 +911,7 @@ public class GameTest {
     }
 
     private void assertWaitAfter(int level) {
-        assertEquals(level, player.level().getLevelIndex());
+        assertEquals(level, player.levels().getLevelIndex());
         assertEquals(true, pool.isWaitNext());
     }
 

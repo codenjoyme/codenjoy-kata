@@ -31,18 +31,19 @@ import com.codenjoy.dojo.services.Game;
 import com.codenjoy.dojo.services.dice.MockDice;
 import com.codenjoy.dojo.services.multiplayer.Single;
 import com.codenjoy.dojo.services.printer.PrinterFactory;
+import com.codenjoy.dojo.services.questionanswer.event.FailTestEvent;
 import com.codenjoy.dojo.services.questionanswer.event.NextAlgorithmEvent;
 import com.codenjoy.dojo.services.questionanswer.event.PassTestEvent;
 import com.codenjoy.dojo.services.questionanswer.levels.Level;
-import com.codenjoy.dojo.services.questionanswer.levels.LevelsPoolImpl;
 import com.codenjoy.dojo.utils.JsonUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 
 import java.util.Arrays;
+import java.util.List;
 
-import static com.codenjoy.dojo.games.kata.Command.START_NEXT_LEVEL;
+import static com.codenjoy.dojo.client.Command.START_NEXT_LEVEL;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
@@ -66,25 +67,27 @@ public class MultiplayerTest {
                 "question3=answer3");
 
         dice = new MockDice();
-        GameSettings settings = new TestGameSettings();
+        GameSettings settings = new TestGameSettings(){
+            @Override
+            public List<Level> levels() {
+                return Arrays.asList(level);
+            }
+        };
         field = new Kata(dice, settings);
         PrinterFactory factory = new GameRunner().getPrinterFactory();
 
         listener1 = mock(EventListener.class);
-        LevelsPoolImpl levelsPool1 = new LevelsPoolImpl(Arrays.asList(level));
-        Player player1 = new Player(listener1, levelsPool1, settings);
+        Player player1 = new Player(listener1, settings);
         game1 = new Single(player1, factory);
         game1.on(field);
 
         listener2 = mock(EventListener.class);
-        LevelsPoolImpl levelsPool2 = new LevelsPoolImpl(Arrays.asList(level));
-        Player player2 = new Player(listener2, levelsPool2, settings);
+        Player player2 = new Player(listener2, settings);
         game2 = new Single(player2, factory);
         game2.on(field);
 
         listener3 = mock(EventListener.class);
-        LevelsPoolImpl levelsPool3 = new LevelsPoolImpl(Arrays.asList(level));
-        Player player3 = new Player(listener3, levelsPool3, settings);
+        Player player3 = new Player(listener3, settings);
         game3 = new Single(player3, factory);
         game3.on(field);
 
@@ -430,8 +433,8 @@ public class MultiplayerTest {
 
         // then
         assertPassTestEvent(listener1, "PassTest{complexity=30, testCount=3}");
-        verifyNoMoreInteractions(listener2);
-        verifyNoMoreInteractions(listener3);
+        assertFailTestEvent(listener2, "FailTest{complexity=30, testCount=3}");
+        assertFailTestEvent(listener3, "FailTest{complexity=30, testCount=3}");
 
         // when
         field.tick();
@@ -444,6 +447,13 @@ public class MultiplayerTest {
 
     private void assertPassTestEvent(EventListener listener, String expected) {
         ArgumentCaptor<PassTestEvent> captor = ArgumentCaptor.forClass(PassTestEvent.class);
+        verify(listener).event(captor.capture());
+        PassTestEvent value = captor.getValue();
+        assertEquals(expected, value.toString());
+    }
+
+    private void assertFailTestEvent(EventListener listener, String expected) {
+        ArgumentCaptor<FailTestEvent> captor = ArgumentCaptor.forClass(FailTestEvent.class);
         verify(listener).event(captor.capture());
         PassTestEvent value = captor.getValue();
         assertEquals(expected, value.toString());

@@ -23,9 +23,8 @@ package com.codenjoy.dojo.kata.services.ai;
  */
 
 
-import com.codenjoy.dojo.client.AbstractTextBoard;
-import com.codenjoy.dojo.games.kata.AbstractTextSolver;
-import com.codenjoy.dojo.games.kata.Strings;
+import com.codenjoy.dojo.client.AbstractTextSolver;
+import com.codenjoy.dojo.client.Strings;
 import com.codenjoy.dojo.services.Dice;
 import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 import com.codenjoy.dojo.services.questionanswer.levels.Level;
@@ -34,11 +33,10 @@ import com.codenjoy.dojo.services.questionanswer.levels.NullAlgorithm;
 
 import java.util.List;
 
-import static com.codenjoy.dojo.games.kata.Command.START_NEXT_LEVEL;
+import static com.codenjoy.dojo.client.Command.START_NEXT_LEVEL;
 
 public class AISolver extends AbstractTextSolver {
 
-    private AbstractTextBoard board;
     private List<Level> levels = LevelsLoader.getAlgorithms();
 
     public AISolver(Dice dice) {
