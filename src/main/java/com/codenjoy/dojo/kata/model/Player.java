@@ -29,15 +29,14 @@ import com.codenjoy.dojo.kata.services.events.PassTestEvent;
 import com.codenjoy.dojo.services.EventListener;
 import com.codenjoy.dojo.services.Point;
 import com.codenjoy.dojo.services.multiplayer.GamePlayer;
+import com.codenjoy.dojo.services.questionanswer.Processor;
 import com.codenjoy.dojo.services.questionanswer.QuestionAnswer;
 import com.codenjoy.dojo.services.questionanswer.QuestionAnswers;
 import com.codenjoy.dojo.services.questionanswer.levels.LevelsPool;
 import com.codenjoy.dojo.services.time.Timer;
-import org.json.JSONArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.LinkedList;
 import java.util.List;
 
 public class Player extends GamePlayer<Hero, Field> {
@@ -45,12 +44,12 @@ public class Player extends GamePlayer<Hero, Field> {
     private static Logger logger = LoggerFactory.getLogger(Player.class);
 
     private LevelsPool level;
-    private List<QuestionAnswers> history;
+    private Processor processor;
     private Timer timer = new Timer();
 
     public Player(EventListener listener, LevelsPool level, GameSettings settings) {
         super(listener, settings);
-        this.history = new LinkedList<>();
+        processor = new Processor();
         this.level = level;
         level.firstLevel();
     }
@@ -76,8 +75,8 @@ public class Player extends GamePlayer<Hero, Field> {
     }
 
     public void clearScore() {
-        if (history != null) {
-            history.clear();
+        if (processor != null) {
+            processor.clear();
             level.firstLevel();
         }
     }
@@ -90,17 +89,8 @@ public class Player extends GamePlayer<Hero, Field> {
         return level.getQuestions();
     }
 
-    public List<QuestionAnswer> getLastHistory() {
-        if (history.isEmpty()) {
-            return null;
-        }
-        return history.get(history.size() - 1).getQuestionAnswers();
-    }
-
-    public List<QuestionAnswers> getHistory() {
-        List<QuestionAnswers> result = new LinkedList<>();
-        result.addAll(history);
-        return result;
+    public String getNextQuestion() {
+        return level.getNextQuestion();
     }
 
     public void checkAnswer() {
@@ -117,7 +107,7 @@ public class Player extends GamePlayer<Hero, Field> {
             if (level.isWaitNext()) {
                 timer.start();
                 level.nextLevel();
-                logNextAttempt();
+                processor.logNextAttempt();
             }
             return;
         }
@@ -127,13 +117,7 @@ public class Player extends GamePlayer<Hero, Field> {
             return;
         }
 
-        JSONArray array = new JSONArray(answersString);
-        List<String> answers = new LinkedList<>();
-        for (Object object : array) {
-            answers.add(object.toString());
-        }
-
-        logNextAttempt();
+        List<String> actualAnswers = processor.nextAnswer(answersString);
 
         if (level.isLastQuestion()) {
             return;
@@ -141,22 +125,8 @@ public class Player extends GamePlayer<Hero, Field> {
 
         List<String> questions = level.getQuestions();
         List<String> expectedAnswers = level.getAnswers();
-        boolean isWin = true;
-        for (int index = 0; index < questions.size(); index++) {
-            String question = questions.get(index);
-            String expectedAnswer = expectedAnswers.get(index);
-            String actualAnswer = "???";
-            if (index < answers.size()) {
-                actualAnswer = answers.get(index);
-            }
 
-            if (expectedAnswer.equals(actualAnswer)) {
-                logSuccess(question, actualAnswer);
-            } else {
-                logFailure(question, actualAnswer);
-                isWin = false;
-            }
-        }
+        boolean isWin = processor.checkAnswers(questions, expectedAnswers, actualAnswers);
 
         if (isWin) {
             event(new PassTestEvent(level.getComplexity(), level.getTotalQuestions()));
@@ -172,30 +142,15 @@ public class Player extends GamePlayer<Hero, Field> {
         }
     }
 
-    private void logSuccess(String question, String answer) {
-        log(question, answer, true);
-    }
-
-    private void logFailure(String question, String answer) {
-        log(question, answer, false);
-    }
-
-    private void logNextAttempt() {
-        history.add(new QuestionAnswers());
-    }
-
-    private void log(String question, String answer, boolean valid) {
-        QuestionAnswer qa = new QuestionAnswer(question, answer);
-        qa.setValid(valid);
-        history.get(history.size() - 1).add(qa);
-    }
-
     public String getDescription() {
         return level.getDescription();
     }
 
-    public String getNextQuestion() {
-        List<String> questions = getQuestions();
-        return (questions.isEmpty()) ? null : questions.get(questions.size() - 1);
+    public List<QuestionAnswer> getLastHistory() {
+        return processor.getLastHistory();
+    }
+
+    public List<QuestionAnswers> getHistory() {
+        return processor.getHistory();
     }
 }
