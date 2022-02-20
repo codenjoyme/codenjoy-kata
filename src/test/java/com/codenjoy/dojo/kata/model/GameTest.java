@@ -90,11 +90,11 @@ public class GameTest {
     }
 
     private void thenHistory(String expected) {
-        assertEquals(expected, JsonUtils.prettyPrint(player.getHistory()));
+        assertEquals(expected, JsonUtils.prettyPrint(player.processor().getHistory()));
     }
 
     private void thenQuestions(String expected) {
-        assertEquals(expected, JsonUtils.prettyPrint(player.getQuestions()));
+        assertEquals(expected, JsonUtils.prettyPrint(player.level().getQuestions()));
     }
 
     @Test
@@ -814,7 +814,7 @@ public class GameTest {
     }
 
     private void assertStillOnLevel(int expected) {
-        assertEquals(expected, player.getLevel());
+        assertEquals(expected, player.level().getLevelIndex());
         assertEquals(false, pool.isWaitNext());
     }
 
@@ -906,7 +906,7 @@ public class GameTest {
     }
 
     private void assertWaitAfter(int level) {
-        assertEquals(level, player.getLevel());
+        assertEquals(level, player.level().getLevelIndex());
         assertEquals(true, pool.isWaitNext());
     }
 

@@ -107,11 +107,11 @@ public class GameRunner extends AbstractGameType<GameSettings> {
     public PrinterFactory getPrinterFactory() {
         return PrinterFactory.get((BoardReader boardReader, Player player) -> {
             JSONObject result = new JSONObject();
-            result.put("description", StringEscapeUtils.escapeJava(player.getDescription()));
-            result.put("level", player.getLevel());
-            result.put("questions", player.getQuestions());
-            result.put("nextQuestion", player.getNextQuestion());
-            result.put("history", player.getLastHistory());
+            result.put("description", StringEscapeUtils.escapeJava(player.level().getDescription()));
+            result.put("level", player.level().getLevelIndex());
+            result.put("questions", player.level().getQuestions());
+            result.put("nextQuestion", player.level().getNextQuestion());
+            result.put("history", player.processor().getLastHistory());
 
             return result;
         });

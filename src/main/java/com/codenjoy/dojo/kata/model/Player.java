@@ -30,8 +30,6 @@ import com.codenjoy.dojo.services.EventListener;
 import com.codenjoy.dojo.services.Point;
 import com.codenjoy.dojo.services.multiplayer.GamePlayer;
 import com.codenjoy.dojo.services.questionanswer.Processor;
-import com.codenjoy.dojo.services.questionanswer.QuestionAnswer;
-import com.codenjoy.dojo.services.questionanswer.QuestionAnswers;
 import com.codenjoy.dojo.services.questionanswer.levels.LevelsPool;
 import com.codenjoy.dojo.services.time.Timer;
 import org.slf4j.Logger;
@@ -52,10 +50,6 @@ public class Player extends GamePlayer<Hero, Field> {
         processor = new Processor();
         this.level = level;
         level.firstLevel();
-    }
-
-    public int getLevel() {
-        return level.getLevelIndex();
     }
 
     @Override
@@ -83,14 +77,6 @@ public class Player extends GamePlayer<Hero, Field> {
 
     public Hero createHero(Point pt) {
         return new Hero();
-    }
-
-    public List<String> getQuestions() {
-        return level.getQuestions();
-    }
-
-    public String getNextQuestion() {
-        return level.getNextQuestion();
     }
 
     public void checkAnswer() {
@@ -142,15 +128,11 @@ public class Player extends GamePlayer<Hero, Field> {
         }
     }
 
-    public String getDescription() {
-        return level.getDescription();
+    public LevelsPool level() {
+        return level;
     }
 
-    public List<QuestionAnswer> getLastHistory() {
-        return processor.getLastHistory();
-    }
-
-    public List<QuestionAnswers> getHistory() {
-        return processor.getHistory();
+    public Processor processor() {
+        return processor;
     }
 }
