@@ -23,11 +23,11 @@ package com.codenjoy.dojo.kata.services;
  */
 
 import com.codenjoy.dojo.kata.TestGameSettings;
-import com.codenjoy.dojo.kata.services.events.NextAlgorithmEvent;
-import com.codenjoy.dojo.kata.services.events.PassTestEvent;
 import com.codenjoy.dojo.services.PlayerScores;
 import com.codenjoy.dojo.services.event.Calculator;
 import com.codenjoy.dojo.services.event.ScoresImpl;
+import com.codenjoy.dojo.services.questionanswer.event.NextAlgorithmEvent;
+import com.codenjoy.dojo.services.questionanswer.event.PassTestEvent;
 import org.junit.Before;
 import org.junit.Test;
 

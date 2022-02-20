@@ -1,4 +1,4 @@
-package com.codenjoy.dojo.kata.services.events;
+package com.codenjoy.dojo.kata.services;
 
 /*-
  * #%L
@@ -23,14 +23,16 @@ package com.codenjoy.dojo.kata.services.events;
  */
 
 
-import com.codenjoy.dojo.kata.services.Scores;
+import com.codenjoy.dojo.kata.TestGameSettings;
 import org.junit.Test;
 
-import static com.codenjoy.dojo.kata.services.events.TestScores.A;
-import static com.codenjoy.dojo.kata.services.events.TestScores.D;
+import static com.codenjoy.dojo.kata.services.GameSettings.Keys.A_CONSTANT;
+import static com.codenjoy.dojo.kata.services.GameSettings.Keys.D_CONSTANT;
 import static org.junit.Assert.assertEquals;
 
-public class PassTestEventTest {
+public class PassTestScoresTest {
+
+    private TestGameSettings settings = new TestGameSettings();
 
     @Test
     public void shouldWork() {
@@ -58,6 +60,7 @@ public class PassTestEventTest {
     private void assertScores(int expected, int complexity, int testCount) {
         assertEquals(expected,
                 Scores.passTestScore(complexity, testCount,
-                        A.getValue(), D.getValue()));
+                        settings.integer(A_CONSTANT),
+                        settings.integer(D_CONSTANT)));
     }
 }

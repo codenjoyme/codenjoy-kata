@@ -22,9 +22,9 @@ package com.codenjoy.dojo.kata.services;
  * #L%
  */
 
-import com.codenjoy.dojo.kata.services.events.NextAlgorithmEvent;
-import com.codenjoy.dojo.kata.services.events.PassTestEvent;
 import com.codenjoy.dojo.services.event.ScoresMap;
+import com.codenjoy.dojo.services.questionanswer.event.NextAlgorithmEvent;
+import com.codenjoy.dojo.services.questionanswer.event.PassTestEvent;
 import com.codenjoy.dojo.services.settings.SettingsReader;
 
 import static com.codenjoy.dojo.kata.services.GameSettings.Keys.*;

@@ -24,12 +24,12 @@ package com.codenjoy.dojo.kata.model;
 
 
 import com.codenjoy.dojo.kata.services.GameSettings;
-import com.codenjoy.dojo.kata.services.events.NextAlgorithmEvent;
-import com.codenjoy.dojo.kata.services.events.PassTestEvent;
 import com.codenjoy.dojo.services.EventListener;
 import com.codenjoy.dojo.services.Point;
 import com.codenjoy.dojo.services.multiplayer.GamePlayer;
 import com.codenjoy.dojo.services.questionanswer.Processor;
+import com.codenjoy.dojo.services.questionanswer.event.NextAlgorithmEvent;
+import com.codenjoy.dojo.services.questionanswer.event.PassTestEvent;
 import com.codenjoy.dojo.services.questionanswer.levels.LevelsPool;
 import com.codenjoy.dojo.services.time.Timer;
 import org.slf4j.Logger;

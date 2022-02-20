@@ -1,4 +1,4 @@
-package com.codenjoy.dojo.kata.services.events;
+package com.codenjoy.dojo.kata.services;
 
 /*-
  * #%L
@@ -23,13 +23,15 @@ package com.codenjoy.dojo.kata.services.events;
  */
 
 
-import com.codenjoy.dojo.kata.services.Scores;
+import com.codenjoy.dojo.kata.TestGameSettings;
 import org.junit.Test;
 
-import static com.codenjoy.dojo.kata.services.events.TestScores.*;
+import static com.codenjoy.dojo.kata.services.GameSettings.Keys.*;
 import static org.junit.Assert.assertEquals;
 
-public class NextAlgorithmEventTest {
+public class NextAlgorithmScoresTest {
+
+    private TestGameSettings settings = new TestGameSettings();
 
     @Test
     public void shouldWork_whenComplexityIs0() {
@@ -50,7 +52,6 @@ public class NextAlgorithmEventTest {
         assertScores(100-18, complexity, 1.5);
         assertScores(30, complexity, 4);
     }
-
 
     @Test
     public void shouldWork_whenComplexityIs30Minutes() {
@@ -89,6 +90,8 @@ public class NextAlgorithmEventTest {
     private void assertScores(int expected, int complexity, double time) {
         assertEquals(expected,
                 Scores.nextAlgorithmScore(complexity, time,
-                        A.getValue(), B.getValue(), C.getValue()));
+                        settings.integer(A_CONSTANT),
+                        settings.integer(B_CONSTANT),
+                        settings.integer(C_CONSTANT)));
     }
 }
