@@ -35,14 +35,6 @@ public class NextAlgorithmEvent {
         this.time = time;
     }
 
-    public int getScore(double a, double b, double c) {
-        c = c / 100D;
-        if (time > b*complexity) {
-            time = b*complexity;
-        }
-        return (int)(a * (((c - 1)*time + (b - c)*complexity)/(b - 1)));
-    }
-
     @Override
     public String toString() {
         DecimalFormat format = new DecimalFormat("#.#");
@@ -52,4 +44,11 @@ public class NextAlgorithmEvent {
                 '}';
     }
 
+    public double time() {
+        return time;
+    }
+
+    public double complexity() {
+        return complexity;
+    }
 }

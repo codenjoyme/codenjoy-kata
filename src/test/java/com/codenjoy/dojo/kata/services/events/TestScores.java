@@ -26,7 +26,7 @@ package com.codenjoy.dojo.kata.services.events;
 import com.codenjoy.dojo.services.settings.Parameter;
 import com.codenjoy.dojo.services.settings.SimpleParameter;
 
-public class Scores {
+public class TestScores {
     public static final Parameter<Integer> A = new SimpleParameter<>(100);
     public static final Parameter<Integer> B = new SimpleParameter<>(3);
     public static final Parameter<Integer> C = new SimpleParameter<>(30);

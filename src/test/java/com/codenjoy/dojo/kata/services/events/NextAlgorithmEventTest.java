@@ -23,9 +23,10 @@ package com.codenjoy.dojo.kata.services.events;
  */
 
 
+import com.codenjoy.dojo.kata.services.Scores;
 import org.junit.Test;
 
-import static com.codenjoy.dojo.kata.services.events.Scores.*;
+import static com.codenjoy.dojo.kata.services.events.TestScores.*;
 import static org.junit.Assert.assertEquals;
 
 public class NextAlgorithmEventTest {
@@ -86,8 +87,8 @@ public class NextAlgorithmEventTest {
     }
 
     private void assertScores(int expected, int complexity, double time) {
-        assertEquals(expected, new NextAlgorithmEvent(complexity, time)
-                .getScore(A.getValue(), B.getValue(), C.getValue()));
+        assertEquals(expected,
+                Scores.nextAlgorithmScore(complexity, time,
+                        A.getValue(), B.getValue(), C.getValue()));
     }
-
 }

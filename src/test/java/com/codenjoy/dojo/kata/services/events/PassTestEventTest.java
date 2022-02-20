@@ -23,10 +23,11 @@ package com.codenjoy.dojo.kata.services.events;
  */
 
 
+import com.codenjoy.dojo.kata.services.Scores;
 import org.junit.Test;
 
-import static com.codenjoy.dojo.kata.services.events.Scores.A;
-import static com.codenjoy.dojo.kata.services.events.Scores.D;
+import static com.codenjoy.dojo.kata.services.events.TestScores.A;
+import static com.codenjoy.dojo.kata.services.events.TestScores.D;
 import static org.junit.Assert.assertEquals;
 
 public class PassTestEventTest {
@@ -55,8 +56,8 @@ public class PassTestEventTest {
     }
 
     private void assertScores(int expected, int complexity, int testCount) {
-        assertEquals(expected, new PassTestEvent(complexity, testCount)
-                .getScore(A.getValue(), D.getValue()));
+        assertEquals(expected,
+                Scores.passTestScore(complexity, testCount,
+                        A.getValue(), D.getValue()));
     }
-
 }

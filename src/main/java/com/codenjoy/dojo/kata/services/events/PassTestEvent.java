@@ -35,14 +35,6 @@ public class PassTestEvent {
         this.testCount = testCount;
     }
 
-    public int getScore(double a, double d) {
-        double perTest = complexity * a * d / (100 * testCount);
-        if (perTest < 1) {
-            return 1;
-        }
-        return (int)(perTest);
-    }
-
     @Override
     public String toString() {
         DecimalFormat format = new DecimalFormat("#.#");
@@ -50,6 +42,14 @@ public class PassTestEvent {
                 "complexity=" + format.format(complexity) +
                 ", testCount=" + format.format(testCount) +
                 '}';
+    }
+
+    public double testCount() {
+        return testCount;
+    }
+
+    public double complexity() {
+        return complexity;
     }
 
 }

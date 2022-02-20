@@ -34,15 +34,35 @@ public class Scores extends ScoresMap<Object> {
     public Scores(SettingsReader settings) {
         super(settings);
 
-        put(PassTestEvent.class,
-                event -> ((PassTestEvent) event).getScore(
+        putAs(PassTestEvent.class,
+                event -> passTestScore(
+                        event.complexity(),
+                        event.testCount(),
                         settings.integer(A_CONSTANT),
                         settings.integer(D_CONSTANT)));
 
-        put(NextAlgorithmEvent.class,
-                event -> ((NextAlgorithmEvent) event).getScore(
+        putAs(NextAlgorithmEvent.class,
+                event -> nextAlgorithmScore(
+                        event.complexity(),
+                        event.time(),
                         settings.integer(A_CONSTANT),
                         settings.integer(B_CONSTANT),
                         settings.integer(C_CONSTANT)));
+    }
+
+    public static int nextAlgorithmScore(double complexity, double time, double a, double b, double c) {
+        c = c / 100D;
+        if (time > b * complexity) {
+            time = b * complexity;
+        }
+        return (int) (a * (((c - 1) * time + (b - c) * complexity) / (b - 1)));
+    }
+
+    public static int passTestScore(double complexity, double testCount, double a, double d) {
+        double perTest = complexity * a * d / (100 * testCount);
+        if (perTest < 1) {
+            return 1;
+        }
+        return (int)(perTest);
     }
 }
