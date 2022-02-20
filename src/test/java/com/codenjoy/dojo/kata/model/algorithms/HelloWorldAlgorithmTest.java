@@ -1,4 +1,4 @@
-package com.codenjoy.dojo.kata.model;
+package com.codenjoy.dojo.kata.model.algorithms;
 
 /*-
  * #%L
@@ -23,21 +23,18 @@ package com.codenjoy.dojo.kata.model;
  */
 
 
-import com.codenjoy.dojo.services.questionanswer.levels.QuestionAnswerLevelImpl;
+import org.junit.Test;
 
-public class SimpleQATestLevel extends QuestionAnswerLevelImpl {
+import static org.junit.Assert.assertEquals;
 
-    public SimpleQATestLevel(String... qa) {
-        super(qa);
-    }
+public class HelloWorldAlgorithmTest {
 
-    @Override
-    public int complexity() {
-        return 30;
-    }
-
-    @Override
-    public String description() {
-        return "description";
+    @Test
+    public void shouldWork() {
+        HelloWorldAlgorithm algorithm = new HelloWorldAlgorithm();
+        assertEquals("hello", algorithm.get("world"));
+        assertEquals("world", algorithm.get("hello"));
+        assertEquals("qwe", algorithm.get("qwe"));
+        assertEquals("asd", algorithm.get("asd"));
     }
 }

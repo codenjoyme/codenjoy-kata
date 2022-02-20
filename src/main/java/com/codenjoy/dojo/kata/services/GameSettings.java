@@ -23,9 +23,9 @@ package com.codenjoy.dojo.kata.services;
  */
 
 
-import com.codenjoy.dojo.kata.model.levels.Level;
-import com.codenjoy.dojo.kata.model.levels.LevelsLoader;
 import com.codenjoy.dojo.services.event.Calculator;
+import com.codenjoy.dojo.services.questionanswer.levels.Level;
+import com.codenjoy.dojo.services.questionanswer.levels.LevelsLoader;
 import com.codenjoy.dojo.services.settings.PropertiesKey;
 import com.codenjoy.dojo.services.settings.SettingsImpl;
 import com.codenjoy.dojo.services.settings.SettingsReader;

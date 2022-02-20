@@ -23,13 +23,16 @@ package com.codenjoy.dojo.kata.model;
  */
 
 
-import com.codenjoy.dojo.kata.model.levels.LevelsPool;
 import com.codenjoy.dojo.kata.services.GameSettings;
 import com.codenjoy.dojo.kata.services.events.NextAlgorithmEvent;
 import com.codenjoy.dojo.kata.services.events.PassTestEvent;
 import com.codenjoy.dojo.services.EventListener;
 import com.codenjoy.dojo.services.Point;
 import com.codenjoy.dojo.services.multiplayer.GamePlayer;
+import com.codenjoy.dojo.services.questionanswer.QuestionAnswer;
+import com.codenjoy.dojo.services.questionanswer.QuestionAnswers;
+import com.codenjoy.dojo.services.questionanswer.levels.LevelsPool;
+import com.codenjoy.dojo.services.time.Timer;
 import org.json.JSONArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

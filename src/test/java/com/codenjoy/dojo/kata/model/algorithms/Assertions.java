@@ -1,4 +1,4 @@
-package com.codenjoy.dojo.kata.model;
+package com.codenjoy.dojo.kata.model.algorithms;
 
 /*-
  * #%L
@@ -23,21 +23,24 @@ package com.codenjoy.dojo.kata.model;
  */
 
 
-import com.codenjoy.dojo.services.questionanswer.levels.QuestionAnswerLevelImpl;
+import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 
-public class SimpleQATestLevel extends QuestionAnswerLevelImpl {
+import static org.junit.Assert.assertEquals;
 
-    public SimpleQATestLevel(String... qa) {
-        super(qa);
+public class Assertions {
+    public static void assertAlgorithm(String[] expected, Algorithm algorithm) {
+        for (int index = 0; index < expected.length; index++) {
+            assertEquals("At index " + index,
+                    expected[index],
+                    algorithm.get(String.valueOf(index)));
+        }
     }
 
-    @Override
-    public int complexity() {
-        return 30;
-    }
-
-    @Override
-    public String description() {
-        return "description";
+    public static void assertAlgorithm(int[] expected, Algorithm algorithm) {
+        for (int index = 0; index < expected.length; index++) {
+            assertEquals("At index " + index,
+                    String.valueOf(expected[index]),
+                    algorithm.get(String.valueOf(index)));
+        }
     }
 }

@@ -24,8 +24,6 @@ package com.codenjoy.dojo.kata.model;
 
 
 import com.codenjoy.dojo.kata.TestGameSettings;
-import com.codenjoy.dojo.kata.model.levels.Level;
-import com.codenjoy.dojo.kata.model.levels.LevelsPoolImpl;
 import com.codenjoy.dojo.kata.services.GameRunner;
 import com.codenjoy.dojo.kata.services.GameSettings;
 import com.codenjoy.dojo.kata.services.events.NextAlgorithmEvent;
@@ -35,6 +33,8 @@ import com.codenjoy.dojo.services.Game;
 import com.codenjoy.dojo.services.dice.MockDice;
 import com.codenjoy.dojo.services.multiplayer.Single;
 import com.codenjoy.dojo.services.printer.PrinterFactory;
+import com.codenjoy.dojo.services.questionanswer.levels.Level;
+import com.codenjoy.dojo.services.questionanswer.levels.LevelsPoolImpl;
 import com.codenjoy.dojo.utils.JsonUtils;
 import org.junit.Before;
 import org.junit.Test;

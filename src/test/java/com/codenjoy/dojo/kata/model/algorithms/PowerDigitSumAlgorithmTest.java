@@ -1,4 +1,4 @@
-package com.codenjoy.dojo.kata.model;
+package com.codenjoy.dojo.kata.model.algorithms;
 
 /*-
  * #%L
@@ -23,21 +23,15 @@ package com.codenjoy.dojo.kata.model;
  */
 
 
-import com.codenjoy.dojo.services.questionanswer.levels.QuestionAnswerLevelImpl;
+import org.junit.Test;
 
-public class SimpleQATestLevel extends QuestionAnswerLevelImpl {
+public class PowerDigitSumAlgorithmTest {
 
-    public SimpleQATestLevel(String... qa) {
-        super(qa);
+    @Test
+    public void shouldWork() {
+        int[] primes = new int[]{1, 2, 4, 8, 7, 5, 10, 11, 13, 8, 7, 14, 19, 20, 22, 26, 25, 14, 19, 29, 31, 26, 25};
+        Assertions.assertAlgorithm(primes, new PowerDigitSumAlgorithm());
     }
 
-    @Override
-    public int complexity() {
-        return 30;
-    }
 
-    @Override
-    public String description() {
-        return "description";
-    }
 }

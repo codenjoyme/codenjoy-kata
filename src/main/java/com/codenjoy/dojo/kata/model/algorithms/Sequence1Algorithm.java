@@ -1,4 +1,4 @@
-package com.codenjoy.dojo.kata.model;
+package com.codenjoy.dojo.kata.model.algorithms;
 
 /*-
  * #%L
@@ -23,21 +23,38 @@ package com.codenjoy.dojo.kata.model;
  */
 
 
-import com.codenjoy.dojo.services.questionanswer.levels.QuestionAnswerLevelImpl;
+import com.codenjoy.dojo.services.questionanswer.levels.AlgorithmLevelImpl;
 
-public class SimpleQATestLevel extends QuestionAnswerLevelImpl {
-
-    public SimpleQATestLevel(String... qa) {
-        super(qa);
-    }
+public class Sequence1Algorithm extends AlgorithmLevelImpl {
 
     @Override
-    public int complexity() {
-        return 30;
+    public String get(int n) {
+        StringBuilder b = new StringBuilder();
+
+        for(int i = 0; i < 1000; i++) {
+            b.append(String.valueOf(10 + i));
+        }
+
+        String result = b.toString();
+
+        return result.substring((n - 1)*3, n*3);
     }
 
     @Override
     public String description() {
-        return "description";
+        return "Continue the sequence 101, 112, 131, 415, 161, 718... \n" +
+                "i.e f(1) = 101, f(2) = 112, ...\n" +
+                "Hint: Look at the whole picture";
+    }
+
+    @Override
+    public int complexity() {
+        return 15;
+    }
+
+    @Override
+    public String author() {
+        return "Alexey.Shcheglov (Alexey_Shcheglov@epam.com)\n" +
+                "http://nazva.net/78";
     }
 }

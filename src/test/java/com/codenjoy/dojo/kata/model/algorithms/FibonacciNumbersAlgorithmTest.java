@@ -1,4 +1,4 @@
-package com.codenjoy.dojo.kata.model;
+package com.codenjoy.dojo.kata.model.algorithms;
 
 /*-
  * #%L
@@ -23,21 +23,14 @@ package com.codenjoy.dojo.kata.model;
  */
 
 
-import com.codenjoy.dojo.services.questionanswer.levels.QuestionAnswerLevelImpl;
+import org.junit.Test;
 
-public class SimpleQATestLevel extends QuestionAnswerLevelImpl {
+public class FibonacciNumbersAlgorithmTest {
 
-    public SimpleQATestLevel(String... qa) {
-        super(qa);
-    }
-
-    @Override
-    public int complexity() {
-        return 30;
-    }
-
-    @Override
-    public String description() {
-        return "description";
+    @Test
+    public void shouldWork() {
+        int[] expected = new int[]{0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,
+                233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711};
+        Assertions.assertAlgorithm(expected, new FibonacciNumbersAlgorithm());
     }
 }

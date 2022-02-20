@@ -24,13 +24,13 @@ package com.codenjoy.dojo.kata.model;
 
 
 import com.codenjoy.dojo.kata.TestGameSettings;
-import com.codenjoy.dojo.kata.model.levels.Level;
-import com.codenjoy.dojo.kata.model.levels.LevelsPool;
-import com.codenjoy.dojo.kata.model.levels.LevelsPoolImpl;
-import com.codenjoy.dojo.kata.model.levels.QuestionAnswerLevelImpl;
 import com.codenjoy.dojo.kata.services.GameSettings;
 import com.codenjoy.dojo.services.EventListener;
 import com.codenjoy.dojo.services.dice.MockDice;
+import com.codenjoy.dojo.services.questionanswer.levels.Level;
+import com.codenjoy.dojo.services.questionanswer.levels.LevelsPool;
+import com.codenjoy.dojo.services.questionanswer.levels.LevelsPoolImpl;
+import com.codenjoy.dojo.services.questionanswer.levels.QuestionAnswerLevelImpl;
 import com.codenjoy.dojo.utils.JsonUtils;
 import org.junit.Before;
 import org.junit.Test;

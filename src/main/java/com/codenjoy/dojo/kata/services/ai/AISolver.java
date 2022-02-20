@@ -26,11 +26,11 @@ package com.codenjoy.dojo.kata.services.ai;
 import com.codenjoy.dojo.client.AbstractTextBoard;
 import com.codenjoy.dojo.games.kata.AbstractTextSolver;
 import com.codenjoy.dojo.games.kata.Strings;
-import com.codenjoy.dojo.kata.model.levels.Algorithm;
-import com.codenjoy.dojo.kata.model.levels.Level;
-import com.codenjoy.dojo.kata.model.levels.LevelsLoader;
-import com.codenjoy.dojo.kata.model.levels.NullAlgorithm;
 import com.codenjoy.dojo.services.Dice;
+import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
+import com.codenjoy.dojo.services.questionanswer.levels.Level;
+import com.codenjoy.dojo.services.questionanswer.levels.LevelsLoader;
+import com.codenjoy.dojo.services.questionanswer.levels.NullAlgorithm;
 
 import java.util.List;
 

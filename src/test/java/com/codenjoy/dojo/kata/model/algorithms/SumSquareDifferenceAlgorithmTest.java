@@ -1,4 +1,4 @@
-package com.codenjoy.dojo.kata.model;
+package com.codenjoy.dojo.kata.model.algorithms;
 
 /*-
  * #%L
@@ -23,21 +23,20 @@ package com.codenjoy.dojo.kata.model;
  */
 
 
-import com.codenjoy.dojo.services.questionanswer.levels.QuestionAnswerLevelImpl;
+import org.junit.Test;
 
-public class SimpleQATestLevel extends QuestionAnswerLevelImpl {
+import static org.junit.Assert.assertEquals;
 
-    public SimpleQATestLevel(String... qa) {
-        super(qa);
-    }
+public class SumSquareDifferenceAlgorithmTest {
 
-    @Override
-    public int complexity() {
-        return 30;
-    }
+    @Test
+    public void shouldWork() {
+        int[] primes = new int[]{0, 0, 4, 22, 70, 170, 350, 644, 1092, 1740, 2640, 3850, 5434, 7462, 10010, 13160, 17000, 21624};
+        SumSquareDifferenceAlgorithm algorithm = new SumSquareDifferenceAlgorithm();
+        Assertions.assertAlgorithm(primes, algorithm);
 
-    @Override
-    public String description() {
-        return "description";
+        assertEquals("25164150", algorithm.get("100"));
+        assertEquals("250166416500", algorithm.get("1000"));
+        assertEquals("2500166641665000", algorithm.get("10000"));
     }
 }
