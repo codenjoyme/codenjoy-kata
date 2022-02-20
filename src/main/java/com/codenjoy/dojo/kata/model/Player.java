@@ -30,6 +30,7 @@ import com.codenjoy.dojo.kata.services.events.PassTestEvent;
 import com.codenjoy.dojo.services.EventListener;
 import com.codenjoy.dojo.services.Point;
 import com.codenjoy.dojo.services.multiplayer.GamePlayer;
+import org.json.JSONArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -63,7 +64,7 @@ public class Player extends GamePlayer<Hero, Field> {
     public void event(Object event) {
         if (logger.isDebugEnabled()) {
             logger.debug("Player '{}' on Level '{}:{}' fired event '{}'",
-                    this.toString(),
+                    this,
                     level.getLevelIndex(), level.getQuestionIndex(),
                     event);
         }
@@ -118,9 +119,15 @@ public class Player extends GamePlayer<Hero, Field> {
             return;
         }
 
-        List<String> actualAnswers = hero.popAnswers();
-        if (actualAnswers.isEmpty()) {
+        String answersString = hero.popAnswers();
+        if (answersString == null) {
             return;
+        }
+
+        JSONArray array = new JSONArray(answersString);
+        List<String> answers = new LinkedList<>();
+        for (Object object : array) {
+            answers.add(object.toString());
         }
 
         logNextAttempt();
@@ -136,8 +143,8 @@ public class Player extends GamePlayer<Hero, Field> {
             String question = questions.get(index);
             String expectedAnswer = expectedAnswers.get(index);
             String actualAnswer = "???";
-            if (index < actualAnswers.size()) {
-                actualAnswer = actualAnswers.get(index);
+            if (index < answers.size()) {
+                actualAnswer = answers.get(index);
             }
 
             if (expectedAnswer.equals(actualAnswer)) {

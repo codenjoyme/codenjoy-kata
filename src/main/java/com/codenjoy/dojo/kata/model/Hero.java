@@ -25,11 +25,6 @@ package com.codenjoy.dojo.kata.model;
 
 import com.codenjoy.dojo.services.joystick.MessageJoystick;
 import com.codenjoy.dojo.services.multiplayer.PlayerHero;
-import org.json.JSONArray;
-
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 
 import static com.codenjoy.dojo.games.kata.Command.SKIP_THIS_LEVEL;
 import static com.codenjoy.dojo.games.kata.Command.START_NEXT_LEVEL;
@@ -72,20 +67,10 @@ public class Hero extends PlayerHero<Field> implements MessageJoystick {
         return alive;
     }
 
-    public List<String> popAnswers() {
+    public String popAnswers() {
         String answers = this.answers;
         this.answers = null;
-
-        if (answers == null) {
-            return Arrays.asList();
-        }
-
-        JSONArray array = new JSONArray(answers);
-        List<String> result = new LinkedList<>();
-        for (Object object : array) {
-            result.add(object.toString());
-        }
-        return result;
+        return answers;
     }
 
     public boolean wantsSkipLevel() {
