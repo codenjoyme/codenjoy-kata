@@ -25,11 +25,12 @@ package com.codenjoy.dojo.kata.model;
 
 import com.codenjoy.dojo.services.joystick.MessageJoystick;
 import com.codenjoy.dojo.services.multiplayer.PlayerHero;
+import com.codenjoy.dojo.services.questionanswer.Respondent;
 
 import static com.codenjoy.dojo.games.kata.Command.SKIP_THIS_LEVEL;
 import static com.codenjoy.dojo.games.kata.Command.START_NEXT_LEVEL;
 
-public class Hero extends PlayerHero<Field> implements MessageJoystick {
+public class Hero extends PlayerHero<Field> implements MessageJoystick, Respondent {
 
     private boolean alive;
     private String answers;
@@ -67,20 +68,24 @@ public class Hero extends PlayerHero<Field> implements MessageJoystick {
         return alive;
     }
 
+    @Override
     public String popAnswers() {
         String answers = this.answers;
         this.answers = null;
         return answers;
     }
 
+    @Override
     public boolean wantsSkipLevel() {
         return skipLevel;
     }
 
+    @Override
     public boolean wantsNextLevel() {
         return nextLevel;
     }
 
+    @Override
     public void clearFlags() {
         skipLevel = false;
         nextLevel = false;        
