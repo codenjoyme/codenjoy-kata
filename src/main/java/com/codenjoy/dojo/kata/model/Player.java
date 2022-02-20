@@ -27,7 +27,7 @@ import com.codenjoy.dojo.kata.services.GameSettings;
 import com.codenjoy.dojo.services.EventListener;
 import com.codenjoy.dojo.services.Point;
 import com.codenjoy.dojo.services.multiplayer.GamePlayer;
-import com.codenjoy.dojo.services.questionanswer.Processor;
+import com.codenjoy.dojo.services.questionanswer.Examiner;
 import com.codenjoy.dojo.services.questionanswer.levels.LevelsPool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,12 +37,12 @@ public class Player extends GamePlayer<Hero, Field> {
     private static Logger logger = LoggerFactory.getLogger(Player.class);
 
     private LevelsPool level;
-    private Processor processor;
+    private Examiner examiner;
 
     public Player(EventListener listener, LevelsPool level, GameSettings settings) {
         super(listener, settings);
         this.level = level;
-        processor = new Processor(level);
+        examiner = new Examiner(level);
     }
 
     @Override
@@ -62,8 +62,8 @@ public class Player extends GamePlayer<Hero, Field> {
     }
 
     public void clearScore() {
-        if (processor != null) {
-            processor.clear();
+        if (examiner != null) {
+            examiner.clear();
         }
     }
 
@@ -74,7 +74,7 @@ public class Player extends GamePlayer<Hero, Field> {
     public void checkAnswer() {
         hero.tick();
 
-        for (Object event : processor.ask(hero)) {
+        for (Object event : examiner.ask(hero)) {
             event(event);
         }
     }
@@ -83,7 +83,7 @@ public class Player extends GamePlayer<Hero, Field> {
         return level;
     }
 
-    public Processor processor() {
-        return processor;
+    public Examiner examiner() {
+        return examiner;
     }
 }

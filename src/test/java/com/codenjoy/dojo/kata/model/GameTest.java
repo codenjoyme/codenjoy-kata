@@ -90,7 +90,7 @@ public class GameTest {
     }
 
     private void thenHistory(String expected) {
-        assertEquals(expected, JsonUtils.prettyPrint(player.processor().getHistory()));
+        assertEquals(expected, JsonUtils.prettyPrint(player.examiner().getHistory()));
     }
 
     private void thenQuestions(String expected) {

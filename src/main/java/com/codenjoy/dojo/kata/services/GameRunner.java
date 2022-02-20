@@ -111,7 +111,7 @@ public class GameRunner extends AbstractGameType<GameSettings> {
             result.put("level", player.level().getLevelIndex());
             result.put("questions", player.level().getQuestions());
             result.put("nextQuestion", player.level().getNextQuestion());
-            result.put("history", player.processor().getLastHistory());
+            result.put("history", player.examiner().getLastHistory());
 
             return result;
         });
