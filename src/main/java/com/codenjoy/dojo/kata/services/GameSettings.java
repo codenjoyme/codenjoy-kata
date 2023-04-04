@@ -46,7 +46,8 @@ public class GameSettings extends SettingsImpl implements SettingsReader<GameSet
         B_CONSTANT,
         C_CONSTANT,
         D_CONSTANT,
-        SHOW_DESCRIPTION;
+        SHOW_DESCRIPTION,
+        LEVELS_COUNT;
 
         private String key;
 
@@ -75,10 +76,38 @@ public class GameSettings extends SettingsImpl implements SettingsReader<GameSet
         integer(D_CONSTANT, 10);
 
         bool(SHOW_DESCRIPTION, true);
+
+        Levels.setup(this);
     }
 
     public List<Level> levels() {
-        return LevelsLoader.getAlgorithms();
+        return Levels.sorted(this);
+    }
+
+    public int levelsCount() {
+        return integer(LEVELS_COUNT);
+    }
+
+    public String levelName(int index) {
+        return string(nameKey(index));
+    }
+
+    public GameSettings addLevel(int index, Level level) {
+        integer(LEVELS_COUNT, index);
+
+        string(nameKey(index), level.name());
+//        string(helpKey(index), level.description());
+//        string(defaultCodeKey(index), level.defaultCode());
+//        string(winCodeKey(index), level.winCode());
+        return this;
+    }
+
+    private String levelPrefix(int index) {
+        return "Level" + index + " ";
+    }
+
+    private Key nameKey(int index) {
+        return () -> levelPrefix(index) + "name";
     }
 
     public Calculator<Object> calculator() {
