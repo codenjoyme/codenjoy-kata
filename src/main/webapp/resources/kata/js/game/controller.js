@@ -99,7 +99,7 @@ function initController(socket, runner, logger, buttons, levelProgress, getRobot
                     return;
                 }
             } else {
-                logger.print('function program(robot) not implemented!');
+                logger.print('function program(question) not implemented!');
                 logger.print('Info: if you clean your code you will get info about commands')
             }
         }

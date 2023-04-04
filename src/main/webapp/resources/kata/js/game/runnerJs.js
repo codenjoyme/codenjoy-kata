@@ -29,8 +29,8 @@ function initRunnerJs(setup, libs, getLevelInfo, storage) {
 
     var container = $('#ide-content');
     container.empty();
-    container.append('<pre id="ide-block" class="editor">function program(robot) {\n' +
-                      '    return "answer";\n' +
+    container.append('<pre id="ide-block" class="editor">function program(question) {\n' +
+                      '    return \'answer\';\n' +
                       '}</pre>');
 
     var editor = initEditor(libs, 'ide-block', autocomplete);
@@ -125,7 +125,7 @@ function initRunnerJs(setup, libs, getLevelInfo, storage) {
             return editor.getValue();
         },
         setStubValue : function() {
-            editor.setValue('function program(robot) {\n' +
+            editor.setValue('function program(question) {\n' +
                     '    // PLEASE LOGIN\n' +
                     '}');
         },

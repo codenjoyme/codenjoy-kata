@@ -126,16 +126,13 @@ Send program to Robot by clicking the <button class="button commit">Commit</butt
 If something is wrong - check Robot message in the Console.
 You can always stop the program by clicking the <button class="button reset">Reset</button> button.</p>
           <p>The code looks like the below and will be executed each step (every second):</p>
-              <pre>function program(robot) {
+              <pre>function program(question) {
     // enter yor code here
 }</pre>
 
           <p>Robot can detect walls and other obstacles with help of Scanner. To use scanner it is necessary to execute the following code:</p>
-          <pre>function program(robot) {
-    var scanner = robot.getScanner();
-    if (scanner.at("RIGHT") != "WALL") {
-        robot.go("RIGHT");
-    };
+          <pre>function program(question) {
+    return 'answer';
 }</pre>
 
         <p>Board can contain the following objects:</p>

@@ -73,10 +73,10 @@ var initLevelInfo = function(contextPath) {
             return {
                 name:'',
                 help:'<pre>// under construction</pre>',
-                defaultCode:'function program(robot) {\n'  +
+                defaultCode:'function program(question) {\n'  +
                 '    // TODO write your code here\n' +
                 '}',
-                winCode:'function program(robot) {\n'  +
+                winCode:'function program(question) {\n'  +
                 '    robot.nextLevel();\n' +
                 '}'
             };
