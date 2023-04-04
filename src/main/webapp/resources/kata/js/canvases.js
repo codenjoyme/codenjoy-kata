@@ -29,10 +29,6 @@ const MODE_CONTEST = 'contest';
 
 setup.setupSprites = function() {
 
-    // так как спрайты icancode вылазят за сетку элемента,
-    // то надо рисовать всегда все спрайты
-    setup.isDrawOnlyChanges = false;
-
     var toLowerCase = function (param) {
         return (!!param) ? param.toLowerCase() : param;
     }
@@ -75,7 +71,6 @@ setup.setupSprites = function() {
         setup.sprites = SPRITES_ROBOT;
         setup.onlyLeaderBoard = true;
     } else {
-        throw new Error("Unknown iCanCode mode: " + setup.gameMode);
+        throw new Error("Unknown Kata mode: " + setup.gameMode);
     }
-    setup.isDrawByOrder = true;
 }

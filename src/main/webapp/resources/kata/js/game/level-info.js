@@ -42,7 +42,7 @@ var initLevelInfo = function(contextPath) {
     }
 
     var load = function(onLoad, onError) {
-        var ajax = new AdminSettings(contextPath, 'icancode', '_settings_');
+        var ajax = new AdminSettings(contextPath, 'kata', '_settings_');
         ajax.load(function(data) {
             settings = data.parameters;
             count = get('[Game] Levels count').value;
@@ -56,7 +56,7 @@ var initLevelInfo = function(contextPath) {
         get(name).value = value;
 
         // TODO не городить столько запросов, а послать 1
-        var ajax = new AdminSettings(contextPath, 'icancode', name);
+        var ajax = new AdminSettings(contextPath, 'kata', name);
         ajax.save(value);
     }
 

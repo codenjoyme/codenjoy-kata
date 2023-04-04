@@ -23,7 +23,7 @@
 
 <html lang="en">
   <head>
-    <title>ICanCode : Rules</title>
+    <title>Kata : Rules</title>
     <link href="../css/reset.css" rel="stylesheet" />
     <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="../fonts/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
@@ -36,7 +36,7 @@
     <script>
         $(document).ready(function () {
           $('.dropdown-toggle').dropdown();
-            var url = '/codenjoy-contest/resources/icancode/registration.html';
+            var url = '/codenjoy-contest/resources/kata/registration.html';
             $('.go-registration').click(function() {
                window.location.href = url;
             });
@@ -112,11 +112,11 @@
         <div class="container">
         <header class="header row">
           <div class="logo-container col-md-6 col-xs-12">
-            <div class="logo-dojo inline" href="#" title="DOJO"><img id="logo" src="img/dojo-logo.png"><span class="logo-title"><span class="text-uppercase after-line">Coding DOJO</span>iCanCode</span></div>
+            <div class="logo-dojo inline" href="#" title="DOJO"><img id="logo" src="img/dojo-logo.png"><span class="logo-title"><span class="text-uppercase after-line">Coding DOJO</span>Kata</span></div>
           </div>
           <h1 class="nav col-md-6 col-xs-12 text-right rules-title">
             <div class="dropdown navbar-right" id="nav">
-              <div class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="rules dr">iCanCode</span> <span></span>Rules<span class="caret"></span></div>
+              <div class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="rules dr">Kata</span> <span></span>Rules<span class="caret"></span></div>
                <ul class="dropdown-menu">
                 <li class="text-right"><a href="#overview">Game overview</a></li>
                 <li class="text-right"><a href="#command">Command methods</a></li>
@@ -262,16 +262,16 @@ var YourSolver = function(board){
                 <li><span class="list-values">Import project from dotNet folder</span></li>
                 <li><span class="list-values">Open in browser <span class="func" id="registration-page">http://server:8080/codenjoy-contest</span></span></li>
                 <li><span class="list-values">Register your game (you should select <span class="func">Contest</span> on registration)</span></li>
-                <li><span class="list-values">Go to <span class="func">ICanCode.Client/Program.cs</span></span></li>
+                <li><span class="list-values">Go to <span class="func">Kata.Client/Program.cs</span></span></li>
                 <li><span class="list-values">Set your board page url in the <span class="func" id="connection-line">static string ServerUrl ="...</span> line</span></li>
                 <li><span class="list-values">Build and run project</span></li>
                 <li><span class="list-values">Check in the console that client connected</span></li>
-                <li><span class="list-values">Do your changes in the <span class="func">ICanCode.Client/YourSolver.cs</span> method <span class="func">Command WhatToDo(Board board)</span></span></li>
+                <li><span class="list-values">Do your changes in the <span class="func">Kata.Client/YourSolver.cs</span> method <span class="func">Command WhatToDo(Board board)</span></span></li>
                 <pre>
-namespace ICanCode.Client
+namespace Kata.Client
 {
     /// <summary>
-    /// This is ICanCode client demo.
+    /// This is Kata client demo.
     /// </summary>
     internal class YourSolver : AbstractSolver
     {
@@ -453,8 +453,8 @@ System.out.println(me);</pre>
             <p>You can use static import for good performance :).</p>
             <pre>import static com.codenjoy.dojo.client.Direction.*;
 import static com.codenjoy.dojo.services.PointImpl.*;
-import static com.codenjoy.dojo.games.icancode.Element.*;
-import static com.codenjoy.dojo.games.icancode.Element.Layers.*;</pre>
+import static com.codenjoy.dojo.games.kata.Element.*;
+import static com.codenjoy.dojo.games.kata.Element.Layers.*;</pre>
 
         <p><b>Important!</b> You can change any class that you want: Board, AbstractSolver and YourSolver. Also you can wryte your own Unit test.</p>
 

@@ -164,7 +164,7 @@ var boardPageLoad = function() {
             $('#ide-help-window').html(help);
             $("#modal").removeClass("close");
         } else {
-            window.open(setup.contextPath + '/resources/icancode/landing-training.html', '_blank');
+            window.open(setup.contextPath + '/resources/kata/landing-training.html', '_blank');
             window.focus();
         }
     };
@@ -238,7 +238,7 @@ var boardPageLoad = function() {
 
         // ----------------------- starting UI -------------------
         if (setup.demo) {
-            var data = '{"' + setup.playerId + '":{"board":"{"levelProgress":{"total":18,"current":3,"lastPassed":15,"multiple":false},"layers":["OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOCDDDDEOOOOOOOOOOJXBBYFOOOOOOOOOOIHHHHGOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO","AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"]}","game":"icancode","score":150,"maxLength":0,"length":0,"level":1,"boardSize":16,"info":"","scores":"{"' + setup.playerId + '":150}","coordinates":"{"' + setup.playerId + '":{"y":8,"x":9}}"}}';
+            var data = '{"' + setup.playerId + '":{"board":"{"levelProgress":{"total":18,"current":3,"lastPassed":15,"multiple":false},"layers":["OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOCDDDDEOOOOOOOOOOJXBBYFOOOOOOOOOOIHHHHGOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO","AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"]}","game":"kata","score":150,"maxLength":0,"length":0,"level":1,"boardSize":16,"info":"","scores":"{"' + setup.playerId + '":150}","coordinates":"{"' + setup.playerId + '":{"y":8,"x":9}}"}}';
             $('body').trigger('board-updated', JSON.parse(data));
         }
         buttons.disableAll();

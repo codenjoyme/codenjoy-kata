@@ -48,7 +48,7 @@ var initLeaderboardLink = function() {
 
 var initHelpLink = function() {
     var pageName = setup.gameMode.split(' ').join('-').toLowerCase();
-    $('#help-link').attr('href', setup.contextPath + '/resources/icancode/landing-' + pageName + '.html')
+    $('#help-link').attr('href', setup.contextPath + '/resources/kata/landing-' + pageName + '.html')
 }
 
 var initAdditionalLink = function() {
@@ -64,7 +64,7 @@ var initLoginLogoutLink = function() {
         $('#login-logout-link').attr('href', link);
         $('#login-logout-link').html('Logout');
     } else {
-        var link = setup.contextPath + '/login?game=icancode';
+        var link = setup.contextPath + '/login?game=kata';
         $('#login-logout-link').attr('href', link);
         $('#login-logout-link').html('Login');
     }
