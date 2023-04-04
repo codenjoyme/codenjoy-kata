@@ -23,6 +23,7 @@ package com.codenjoy.dojo.kata.services;
  */
 
 
+import com.codenjoy.dojo.services.multiplayer.LevelProgress;
 import com.codenjoy.dojo.services.questionanswer.levels.Level;
 import com.codenjoy.dojo.services.questionanswer.levels.LevelsLoader;
 
@@ -49,7 +50,8 @@ public final class Levels {
     }
 
     public static List<Level> sorted(GameSettings settings) {
-        List<String> sorted = IntStream.range(1, settings.levelsCount())
+        List<String> sorted = IntStream.range(0, settings.levelsCount())
+                .map(index -> index + LevelProgress.levelsStartsFrom1)
                 .mapToObj(settings::levelName)
                 .collect(toList());
 
