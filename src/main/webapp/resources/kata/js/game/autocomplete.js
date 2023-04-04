@@ -19,9 +19,6 @@
  * <http://www.gnu.org/licenses/gpl-3.0.html>.
  * #L%
  */
-/**
- * Created by Mikhail_Udalyi on 09.08.2016.
- */
 
 var autocompleteMaps = {};
 
