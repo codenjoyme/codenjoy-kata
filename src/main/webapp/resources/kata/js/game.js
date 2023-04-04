@@ -33,7 +33,7 @@ function compileProgram(code) {
 
 function runProgram(program, robot) {
     try {
-        program(robot);
+        return program(robot);
     } catch (e) {
         throw e;
     }

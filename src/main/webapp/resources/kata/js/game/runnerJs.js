@@ -30,12 +30,7 @@ function initRunnerJs(setup, libs, getLevelInfo, storage) {
     var container = $('#ide-content');
     container.empty();
     container.append('<pre id="ide-block" class="editor">function program(robot) {\n' +
-                      '    var scanner = robot.getScanner();\n' +
-                      '    if (scanner.atRight() != "HOLE"){\n' +
-                      '        robot.goRight();\n' +
-                      '    } else {\n' +
-                      '        robot.jumpRight();\n' +
-                      '    }\n' +
+                      '    return "answer";\n' +
                       '}</pre>');
 
     var editor = initEditor(libs, 'ide-block', autocomplete);
@@ -79,8 +74,6 @@ function initRunnerJs(setup, libs, getLevelInfo, storage) {
                     editor.setValue(getDefaultEditorValue(), 1);
                 } else if (editor.getValue() == 'win') {
                     editor.setValue(getWinEditorValue(), 1);
-                } else if (editor.getValue() == 'ref') {
-                    editor.setValue(getRefactoringEditorValue(), 1);
                 }
             }
         }
@@ -92,15 +85,6 @@ function initRunnerJs(setup, libs, getLevelInfo, storage) {
 
     var getWinEditorValue = function() {
         return getLevelInfo().winCode;
-    }
-
-    var getRefactoringEditorValue = function() {
-        var code = getLevelInfo().refactoringCode;
-        if (!!code) {
-            return code;
-        } else {
-            return getWinEditorValue();
-        }
     }
 
     // ----------------------- save ide code -------------------
@@ -156,7 +140,7 @@ function initRunnerJs(setup, libs, getLevelInfo, storage) {
             return functionToRun != null;
         },
         runProgram : function(robot) {
-            runProgram(functionToRun, robot);
+            return runProgram(functionToRun, robot);
         },
         levelUpdate: function(level, multiple, lastPassed) {
             // do nothing

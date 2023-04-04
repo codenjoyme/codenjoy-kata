@@ -103,16 +103,14 @@ function initSocket(setup, buttons, logger, onSocketMessage, onSocketClose) {
 
     var encode = function(command) {
         command = replace(command, 'WAIT', 'STOP');
-        command = replace(command, 'JUMP', 'ACT(1)');
-        command = replace(command, 'PULL', 'ACT(2)');
-        command = replace(command, 'FIRE', 'ACT(3)');
-        command = replace(command, 'RESET', 'ACT(0)');
-        command = replace(command, 'WIN', 'ACT(-1)');
+        command = replace(command, 'RESET', 'StartNextLevel');
+        command = replace(command, 'WIN', 'SkipThisLevel');
         return command;
     }
 
     var send = function(command) {
         command = encode(command);
+        command = `message('${command}')`
         if (socket == null) {
             setTimeout(function() {
                 connect(function() {

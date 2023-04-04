@@ -55,8 +55,6 @@ function initController(socket, runner, logger, buttons, levelProgress, getRobot
 
         if (board) {
             var b = new Board(board);
-            var hero = b.getHero();
-            var exit = b.getExit();
             var levelFinished = b.isLevelFinished();
         }
 
@@ -84,7 +82,16 @@ function initController(socket, runner, logger, buttons, levelProgress, getRobot
         } else {
             if (runner.isProgramCompiled()) {
                 try {
-                    runner.runProgram(getRobot());
+                    var answers = [];
+                    var robot = getRobot();
+                    var questions = robot.getScanner().getQuestions();
+                    for (var i in questions) {
+                        var question = questions[i];
+                        answers.push(runner.runProgram(question, robot));
+                    }
+                    if (answers.length > 0) {
+                        addCommand(JSON.stringify(answers));
+                    }
                 } catch (e) {
                     logger.error(e, false);
                     finish();
@@ -252,7 +259,7 @@ function initController(socket, runner, logger, buttons, levelProgress, getRobot
 
         var command = popLastCommand();
         if (!!command && command != 'WAIT') {
-            logger.print('Hero do "' + command + '"');
+            logger.print('Your answer is ' + command);
             if (setup.demo) {
                 if (command == 'RESET') {
                     runner.cleanProgram();

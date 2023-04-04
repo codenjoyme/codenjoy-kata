@@ -62,40 +62,32 @@ var initLevelInfo = function(contextPath) {
 
     var save = function(level, data) {
         var prefix = 'Level' + level + ' ';
-        saveParameter(prefix + 'map', encode(data.map));
+        saveParameter(prefix + 'name', encode(data.name));
         saveParameter(prefix + 'help', encode(data.help));
         saveParameter(prefix + 'default code', encode(data.defaultCode));
         saveParameter(prefix + 'win code', encode(data.winCode));
-        saveParameter(prefix + 'refactoring code', encode(data.refactoringCode));
-//        saveParameter(prefix + 'autocomplete', JSON.stringify(data.autocomplete)); // TODO разобраться с этим
     }
 
     var getLevel = function(level) {
         if (level > count) {
             return {
-                map:'',
+                name:'',
                 help:'<pre>// under construction</pre>',
                 defaultCode:'function program(robot) {\n'  +
                 '    // TODO write your code here\n' +
                 '}',
                 winCode:'function program(robot) {\n'  +
                 '    robot.nextLevel();\n' +
-                '}',
-                refactoringCode:'function program(robot) {\n'  +
-                '    robot.nextLevel();\n' +
-                '}',
-                autocomplete:'{}'
+                '}'
             };
         }
 
         var prefix = 'Level' + level + ' ';
         return {
-            map :             decode(get(prefix + 'map').value),
-            help :            decode(get(prefix + 'help').value),
-            defaultCode :     decode(get(prefix + 'default code').value),
-            winCode :         decode(get(prefix + 'win code').value),
-            refactoringCode : decode(get(prefix + 'refactoring code').value),
-//            autocomplete :    JSON.parse(get(prefix + 'autocomplete').value) // TODO разобраться с этим
+            name :             decode(get(prefix + 'name').value)
+            // help :            decode(get(prefix + 'help').value),
+            // defaultCode :     decode(get(prefix + 'default code').value),
+            // winCode :         decode(get(prefix + 'win code').value)
         };
     }
 
