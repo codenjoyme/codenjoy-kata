@@ -139,8 +139,8 @@ function initRunnerJs(setup, libs, getLevelInfo, storage) {
         isProgramCompiled : function() {
             return functionToRun != null;
         },
-        runProgram : function(robot) {
-            return runProgram(functionToRun, robot);
+        runProgram : function(question, robot) {
+            return runProgram(functionToRun, question, robot);
         },
         levelUpdate: function(level, multiple, lastPassed) {
             // do nothing

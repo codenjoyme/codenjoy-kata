@@ -31,9 +31,9 @@ function compileProgram(code) {
     }
 }
 
-function runProgram(program, robot) {
+function runProgram(program, question, robot) {
     try {
-        return program(robot);
+        return program(question, robot);
     } catch (e) {
         throw e;
     }
