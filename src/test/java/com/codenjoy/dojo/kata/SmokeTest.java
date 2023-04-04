@@ -34,6 +34,8 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
+import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_EXPECTED_ANSWER;
+
 public class SmokeTest {
 
     private Smoke smoke;
@@ -59,7 +61,8 @@ public class SmokeTest {
 
                     @Override
                     public GameSettings getSettings() {
-                        return new TestGameSettings();
+                        return new TestGameSettings().
+                                bool(SHOW_EXPECTED_ANSWER, true);
                     }
                 },
                 Arrays.asList(new AISolver(dice)),

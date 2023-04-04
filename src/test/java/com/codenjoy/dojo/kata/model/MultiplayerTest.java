@@ -45,6 +45,7 @@ import java.util.List;
 
 import static com.codenjoy.dojo.client.Command.START_NEXT_LEVEL;
 import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_DESCRIPTION;
+import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_EXPECTED_ANSWER;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
@@ -166,10 +167,12 @@ public class MultiplayerTest {
     @Test
     public void shouldPrint_whenDescriptionIsDisabled() {
         // given
-        settings.bool(SHOW_DESCRIPTION, false);
+        settings.bool(SHOW_DESCRIPTION, false)
+                .bool(SHOW_EXPECTED_ANSWER, true);
 
         // when then
         asrtFl1("{\n" +
+                "  'expectedAnswer':'answer1',\n" + // instead of description
                 "  'history':[],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -179,6 +182,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
+                "  'expectedAnswer':'answer1',\n" +
                 "  'history':[],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -188,6 +192,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
+                "  'expectedAnswer':'answer1',\n" +
                 "  'history':[],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -197,7 +202,7 @@ public class MultiplayerTest {
                 "}");
     }
 
-    // Каждый игрок может упраыляться за тик игры независимо,
+    // Каждый игрок может управляться за тик игры независимо,
     // все их последние ходы применяются после тика любой борды
     @Test
     public void shouldJoystick() {

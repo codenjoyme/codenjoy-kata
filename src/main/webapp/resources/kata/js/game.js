@@ -106,15 +106,11 @@ var getQuestionCoordinate = function(x, y) {
 }
 
 var getQuestionFormatted = function(value) {
-    if (!!value.question) {
-        var equals = (value.valid)?'==':'!=';
-        var message = 'f(' + value.question + ') '
-            + equals + ' ' + value.answer;
-        return message;
-    } else {
-        var message = 'f(' + value + ') = ?';
-        return message;
-    }
+    var equals = (value.last) ? '=' : (value.valid) ? '==' : '!=';
+    var answer = (!!value.answer) ? value.answer : '?';
+    var result = 'f(' + value.question + ') '
+                     + equals + ' ' + answer;
+    return result;
 }
 
 function unescapeUnicode(unicode) {
@@ -159,8 +155,13 @@ setup.drawBoard = function(drawer) {
         }
     }
 
-    drawer.drawText(getQuestionFormatted(data.nextQuestion),
-        getQuestionCoordinate(centerX, ++index), '#099');
+    var current = {
+        last : true,
+        question : data.nextQuestion,
+        answer : data.expectedAnswer
+    };
+    drawer.drawText(getQuestionFormatted(current),
+        getQuestionCoordinate(centerX, ++index), '#990');
 }
 
 // ========================== game setup ==========================

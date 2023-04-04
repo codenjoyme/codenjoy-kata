@@ -34,14 +34,15 @@ public class GameSettingsTest {
 
     @Test
     public void shouldGetAllParameters_withKeys() {
-        assertEquals("WIN_SCORE        =[Score] Win score\n" +
-                    "LOSE_PENALTY     =[Score] Lose penalty\n" +
-                    "A_CONSTANT       =[Score] A constant\n" +
-                    "B_CONSTANT       =[Score] B constant\n" +
-                    "C_CONSTANT       =[Score] C constant\n" +
-                    "D_CONSTANT       =[Score] D constant\n" +
-                    "SHOW_DESCRIPTION =[Game] Show algorithm description in the request\n" +
-                    "LEVELS_COUNT     =[Game] Levels count",
+        assertEquals("WIN_SCORE            =[Score] Win score\n" +
+                    "LOSE_PENALTY         =[Score] Lose penalty\n" +
+                    "A_CONSTANT           =[Score] A constant\n" +
+                    "B_CONSTANT           =[Score] B constant\n" +
+                    "C_CONSTANT           =[Score] C constant\n" +
+                    "D_CONSTANT           =[Score] D constant\n" +
+                    "SHOW_DESCRIPTION     =[Game] Show algorithm description in the request\n" +
+                    "SHOW_EXPECTED_ANSWER =[Game] Show expected answer for last question\n" +
+                    "LEVELS_COUNT         =[Game] Levels count",
                 TestUtils.toString(new GameSettings().allKeys()));
     }
 
@@ -63,6 +64,7 @@ public class GameSettingsTest {
                         "  'Level9 name':'FactorialAlgorithm',\n" +
                         "  '[Game] Levels count':13,\n" +
                         "  '[Game] Show algorithm description in the request':true,\n" +
+                        "  '[Game] Show expected answer for last question':true,\n" +
                         "  '[Score] A constant':100,\n" +
                         "  '[Score] B constant':3,\n" +
                         "  '[Score] C constant':30,\n" +

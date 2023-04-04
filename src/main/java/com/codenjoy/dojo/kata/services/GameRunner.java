@@ -44,6 +44,7 @@ import org.apache.commons.lang3.StringEscapeUtils;
 import org.json.JSONObject;
 
 import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_DESCRIPTION;
+import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_EXPECTED_ANSWER;
 import static com.codenjoy.dojo.services.settings.SimpleParameter.v;
 
 public class GameRunner extends AbstractGameType<GameSettings> {
@@ -93,7 +94,7 @@ public class GameRunner extends AbstractGameType<GameSettings> {
 
     @Override
     public MultiplayerType getMultiplayerType(GameSettings settings) {
-        return MultiplayerType.SINGLE;
+        return MultiplayerType.ALL_SINGLE.apply(Levels.all().size());
     }
 
     @Override
@@ -107,6 +108,9 @@ public class GameRunner extends AbstractGameType<GameSettings> {
             JSONObject result = new JSONObject();
             if (getSettings().bool(SHOW_DESCRIPTION)) {
                 result.put("description", StringEscapeUtils.escapeJava(player.levels().getDescription()));
+            }
+            if (getSettings().bool(SHOW_EXPECTED_ANSWER)) {
+                result.put("expectedAnswer", player.levels().getExpectedAnswer());
             }
             result.put("level", player.levels().getLevelIndex());
             result.put("questions", player.levels().getQuestions());

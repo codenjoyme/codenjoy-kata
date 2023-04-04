@@ -47,6 +47,7 @@ public class GameSettings extends SettingsImpl implements SettingsReader<GameSet
         C_CONSTANT,
         D_CONSTANT,
         SHOW_DESCRIPTION,
+        SHOW_EXPECTED_ANSWER,
         LEVELS_COUNT;
 
         private String key;
@@ -76,6 +77,7 @@ public class GameSettings extends SettingsImpl implements SettingsReader<GameSet
         integer(D_CONSTANT, 10);
 
         bool(SHOW_DESCRIPTION, true);
+        bool(SHOW_EXPECTED_ANSWER, true);
 
         Levels.setup(this);
     }

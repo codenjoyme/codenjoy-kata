@@ -24,12 +24,14 @@ package com.codenjoy.dojo.kata;
 
 import com.codenjoy.dojo.kata.services.GameSettings;
 
+import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_EXPECTED_ANSWER;
+
 public class TestGameSettings extends GameSettings {
 
     /**
      * Here you can override the settings for all tests.
      */
     public TestGameSettings() {
-
+        bool(SHOW_EXPECTED_ANSWER, false);
     }
 }
