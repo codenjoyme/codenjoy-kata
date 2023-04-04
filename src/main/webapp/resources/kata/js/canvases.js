@@ -20,63 +20,73 @@
  * #L%
  */
 
-var setup = setup || {};
+const PARAM_GAME_MODE = 'gameMode';
 
-var onlyBoard = window.location.href.includes("only=true");
+const SPRITES_EKIDS = 'ekids';
+const SPRITES_ROBOT = 'robot';
 
-var getQuestionCoordinate = function(x, y) {
-    return {x:(onlyBoard ? x : 7), y:y + 1};
-}
+const MODE_JS = 'javascript';
+const MODE_EKIDS = 'ekids';
+const MODE_BEFUNGE = 'befunge';
+const MODE_CONTEST = 'contest';
 
-var getQuestionFormatted = function(value) {
-    if (!!value.question) {
-        var equals = (value.valid)?'==':'!=';
-        var message = 'f(' + value.question + ') '
-            + equals + ' ' + value.answer;
-        return message;
+setup.setupSprites = function() {
+
+    // так как спрайты icancode вылазят за сетку элемента,
+    // то надо рисовать всегда все спрайты
+    setup.isDrawOnlyChanges = false;
+
+    var toLowerCase = function (param) {
+        return (!!param) ? param.toLowerCase() : param;
+    }
+
+    setup.gameMode = toLowerCase(getSettings(PARAM_GAME_MODE, '#query'));
+    setup.onlyControls = getSettings('controlsOnly', '#query');
+
+    if (setup.onlyControls) {
+        setup.drawCanvases = false;
+        setup.enableHeader = false;
+        setup.enableFooter = false;
+        if (!setup.gameMode) { // TODO удалить if после изменения линков на dojorena
+            setup.gameMode = MODE_JS;
+        }
     } else {
-        var message = 'f(' + value + ') = ?';
-        return message;
-    }
-}
-
-function unescapeUnicode(unicode) {
-    var r = /\\u([\d\w]{4})/gi;
-    var temp = unicode.replace(r, function (match, grp) {
-        return String.fromCharCode(parseInt(grp, 16));
-    });
-    return decodeURIComponent(temp).split("\\\"").join("\"");
-}
-
-setup.drawBoard = function(drawer) {
-    drawer.clear();
-    var centerX = (drawer.canvas.width() / drawer.canvas.plotSize())/2;
-
-    var data = drawer.playerData.board;
-    if (typeof setDescription != 'undefined') {
-        setDescription(unescapeUnicode(data.description));
+        setup.enableHeader = true;
+        setup.enableFooter = true;
     }
 
-    var isWaitNext = (data.questions.length == 0);
-    if (isWaitNext) {
-        drawer.drawText('Algorithm done! Wait next...',
-            getQuestionCoordinate(centerX, 0), '#099');
-        return;
-    }
+    if (!setup.gameMode) {
+        // check KEYS constants in register.js
+        setup.gameMode = toLowerCase(localStorage.getItem(PARAM_GAME_MODE));
 
-    var index = -1;
-    var isNewLevel = (data.questions.length < data.history.length);
-    if (!isNewLevel) {
-        for (var key in data.history) {
-            var value = data.history[key];
-            if (value.question == data.nextQuestion) continue;
-
-            drawer.drawText(getQuestionFormatted(value),
-                getQuestionCoordinate(centerX, ++index),
-                (value.valid)?'#090':'#900');
+        // TODO почему-то сторится в сторадж строчка "undefined"
+        if (setup.gameMode == 'undefined') {
+            localStorage.removeItem(PARAM_GAME_MODE);
+            setup.gameMode = null;
         }
     }
 
-    drawer.drawText(getQuestionFormatted(data.nextQuestion),
-        getQuestionCoordinate(centerX, ++index), '#099');
+    // TODO это тут надо потому что join на main page и
+    //      форма регистрации иногда отпускает без указания мода
+    if (!setup.gameMode) {
+        setup.gameMode = MODE_JS;
+    }
+
+    if (setup.gameMode == MODE_JS) {
+        setup.enableBefunge = false;
+        setup.sprites = SPRITES_ROBOT;
+    } else if (setup.gameMode == MODE_EKIDS) {
+        setup.enableBefunge = true;
+        setup.sprites = SPRITES_EKIDS;
+    } else if (setup.gameMode == MODE_BEFUNGE) {
+        setup.enableBefunge = true;
+        setup.sprites = SPRITES_ROBOT;
+    } else if (setup.gameMode == MODE_CONTEST) {
+        setup.enableBefunge = false;
+        setup.sprites = SPRITES_ROBOT;
+        setup.onlyLeaderBoard = true;
+    } else {
+        throw new Error("Unknown iCanCode mode: " + setup.gameMode);
+    }
+    setup.isDrawByOrder = true;
 }

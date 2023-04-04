@@ -20,30 +20,150 @@
  * #L%
  */
 
-setup.enableJoystick = false;
+// ========================== for debugging ==========================
 
-var description = null;
-var setDescription = function(text) {
-    description = text;
-}
-
-var showDescriptionOnClick = function() {
-    if (!setup.registered) {
-        return;
+function compileProgram(code) {
+    try {
+        eval(code);
+        return program;
+    } catch (e) {
+        throw e;
     }
-    var container = "#div_" + setup.playerId;
-    $(container + " #player_name").click(function(){
-        if (!!description) {
-            alert(description.replace(/\\n/g, "\n"));
-        }
-    });
 }
 
-setup.onBoardPageLoad = function() {
-    showDescriptionOnClick();
+function runProgram(program, robot) {
+    try {
+        program(robot);
+    } catch (e) {
+        throw e;
+    }
 }
 
-setup.onBoardAllPageLoad = function() {
-    showDescriptionOnClick();
+// ========================== leaderboard page ==========================
+
+var initLeaderboardLink = function() {
+    var room = getSettings('room')
+    $('#leaderboard-link').attr('href', setup.contextPath + '/board/room/' + room);
 }
 
+var initHelpLink = function() {
+    if (setup.gameMode == MODE_EKIDS) {
+        $('#help-link').hide();
+        return; // TODO написать нормально мануал и убрать это
+    }
+    var pageName = setup.gameMode.split(' ').join('-').toLowerCase();
+    $('#help-link').attr('href', setup.contextPath + '/resources/icancode/landing-' + pageName + '.html')
+}
+
+var initAdditionalLink = function() {
+    if (setup.onlyLeaderBoard) {
+        $('#additional-link').attr('href', 'https://github.com/codenjoyme/codenjoy-clients.git')
+        $('#additional-link').text('Get client')
+    }
+}
+
+var initLoginLogoutLink = function() {
+    if (!!setup.code) {
+        var link = setup.contextPath + '/process_logout';
+        $('#login-logout-link').attr('href', link);
+        $('#login-logout-link').html('Logout');
+    } else {
+        var link = setup.contextPath + '/login?game=icancode';
+        $('#login-logout-link').attr('href', link);
+        $('#login-logout-link').html('Login');
+    }
+}
+
+// ========================== user page ==========================
+
+var leaderBoard = function(showProgress) {
+    initLayout(setup.game, 'leaderboard.html', setup.contextPath,
+        null,
+        [],
+        function() {
+            boardAllPageLoad(!!showProgress);
+            initHelpLink();
+            initAdditionalLink();
+            initLoginLogoutLink();
+        });
+}
+
+var playerBoard = function() {
+    initLayout(setup.game, 'board.html', setup.contextPath,
+        null,
+        [],
+        function() {
+            if (this.hasOwnProperty('boardPageLoad')) {
+                boardPageLoad();
+                initLeaderboardLink();
+                initHelpLink();
+                initAdditionalLink();
+                initLoginLogoutLink();
+            }
+        });
+}
+
+setup.drawBoard = function(drawer) {
+    drawer.clear();
+    drawer.drawBack();
+    drawer.drawLayers();
+
+    var fonts = {};
+    fonts.userName = {};
+    fonts.userName.dx = -15;
+    fonts.userName.dy = -45;
+    fonts.userName.font = "20px 'Verdana, sans-serif'";
+    fonts.userName.fillStyle = "#0FF";
+    fonts.userName.textAlign = "left";
+    fonts.userName.shadowColor = "#000";
+    fonts.userName.shadowOffsetX = 0;
+    fonts.userName.shadowOffsetY = 0;
+    fonts.userName.shadowBlur = 5;
+    drawer.drawPlayerNames(fonts.userName);
+
+    drawer.drawFog();
+}
+
+// ========================== game setup ==========================
+
+if (typeof setup == 'undefined') {
+    setup = {};
+    setup.demo = true;
+    setup.code = 123;
+    setup.playerId = 'userId';
+    setup.readableName = 'Stiven Pupkin';
+    initLayout = function(setup, html, context, transformations, scripts, onLoad) {
+        onLoad();
+    }
+}
+
+var controller;
+
+setup.setupGame = function() {
+    setup.enableDonate = false;
+    setup.enableJoystick = false;
+    setup.enablePlayerInfo = false;
+    setup.enablePlayerInfoLevel = false;
+    setup.enableLeadersTable = false;
+    setup.enableChat = false;
+    setup.enableInfo = false;
+    setup.enableHotkeys = true;
+    setup.enableForkMe = false;
+    setup.enableAdvertisement = false;
+    setup.showBody = false;
+    setup.debug = false;
+}
+
+setup.onPageLoad = function(allPlayers) {
+    if (allPlayers) {
+        leaderBoard(false);
+    } else if (setup.onlyLeaderBoard) {
+        leaderBoard(true);
+    } else {
+        playerBoard();
+    }
+}
+
+if (setup.demo) {
+    setup.onPageLoad(false);
+}
