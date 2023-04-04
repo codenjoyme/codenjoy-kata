@@ -43,6 +43,7 @@ import com.codenjoy.dojo.services.settings.Parameter;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.json.JSONObject;
 
+import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_DESCRIPTION;
 import static com.codenjoy.dojo.services.settings.SimpleParameter.v;
 
 public class GameRunner extends AbstractGameType<GameSettings> {
@@ -104,7 +105,9 @@ public class GameRunner extends AbstractGameType<GameSettings> {
     public PrinterFactory getPrinterFactory() {
         return PrinterFactory.get((BoardReader boardReader, Player player) -> {
             JSONObject result = new JSONObject();
-            result.put("description", StringEscapeUtils.escapeJava(player.levels().getDescription()));
+            if (getSettings().bool(SHOW_DESCRIPTION)) {
+                result.put("description", StringEscapeUtils.escapeJava(player.levels().getDescription()));
+            }
             result.put("level", player.levels().getLevelIndex());
             result.put("questions", player.levels().getQuestions());
             result.put("nextQuestion", player.levels().getNextQuestion());

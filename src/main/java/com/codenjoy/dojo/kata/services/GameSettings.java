@@ -45,7 +45,8 @@ public class GameSettings extends SettingsImpl implements SettingsReader<GameSet
         A_CONSTANT,
         B_CONSTANT,
         C_CONSTANT,
-        D_CONSTANT;
+        D_CONSTANT,
+        SHOW_DESCRIPTION;
 
         private String key;
 
@@ -72,6 +73,8 @@ public class GameSettings extends SettingsImpl implements SettingsReader<GameSet
         integer(B_CONSTANT, 3);
         integer(C_CONSTANT, 30);
         integer(D_CONSTANT, 10);
+
+        bool(SHOW_DESCRIPTION, true);
     }
 
     public List<Level> levels() {

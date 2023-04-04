@@ -44,6 +44,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static com.codenjoy.dojo.client.Command.START_NEXT_LEVEL;
+import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_DESCRIPTION;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
@@ -57,6 +58,7 @@ public class MultiplayerTest {
     private Game game3;
     private MockDice dice;
     private Kata field;
+    private TestGameSettings settings;
 
     // появляется другие игроки, игра становится мультипользовательской
     @Before
@@ -67,14 +69,20 @@ public class MultiplayerTest {
                 "question3=answer3");
 
         dice = new MockDice();
-        GameSettings settings = new TestGameSettings(){
+        settings = new TestGameSettings(){
             @Override
             public List<Level> levels() {
                 return Arrays.asList(level);
             }
         };
         field = new Kata(dice, settings);
-        PrinterFactory factory = new GameRunner().getPrinterFactory();
+        GameRunner gameRunner = new GameRunner(){
+            @Override
+            public GameSettings getSettings() {
+                return settings;
+            }
+        };
+        PrinterFactory factory = gameRunner.getPrinterFactory();
 
         listener1 = mock(EventListener.class);
         Player player1 = new Player(listener1, settings);
@@ -146,6 +154,40 @@ public class MultiplayerTest {
 
         asrtFl3("{\n" +
                 "  'description':'description',\n" +
+                "  'history':[],\n" +
+                "  'level':0,\n" +
+                "  'nextQuestion':'question1',\n" +
+                "  'questions':[\n" +
+                "    'question1'\n" +
+                "  ]\n" +
+                "}");
+    }
+
+    @Test
+    public void shouldPrint_whenDescriptionIsDisabled() {
+        // given
+        settings.bool(SHOW_DESCRIPTION, false);
+
+        // when then
+        asrtFl1("{\n" +
+                "  'history':[],\n" +
+                "  'level':0,\n" +
+                "  'nextQuestion':'question1',\n" +
+                "  'questions':[\n" +
+                "    'question1'\n" +
+                "  ]\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'history':[],\n" +
+                "  'level':0,\n" +
+                "  'nextQuestion':'question1',\n" +
+                "  'questions':[\n" +
+                "    'question1'\n" +
+                "  ]\n" +
+                "}");
+
+        asrtFl3("{\n" +
                 "  'history':[],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +

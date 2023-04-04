@@ -31,12 +31,13 @@ public class GameSettingsTest {
 
     @Test
     public void shouldGetAllKeys() {
-        assertEquals("WIN_SCORE    =[Score] Win score\n" +
-                    "LOSE_PENALTY =[Score] Lose penalty\n" +
-                    "A_CONSTANT   =[Score] A constant\n" +
-                    "B_CONSTANT   =[Score] B constant\n" +
-                    "C_CONSTANT   =[Score] C constant\n" +
-                    "D_CONSTANT   =[Score] D constant",
+        assertEquals("WIN_SCORE        =[Score] Win score\n" +
+                    "LOSE_PENALTY     =[Score] Lose penalty\n" +
+                    "A_CONSTANT       =[Score] A constant\n" +
+                    "B_CONSTANT       =[Score] B constant\n" +
+                    "C_CONSTANT       =[Score] C constant\n" +
+                    "D_CONSTANT       =[Score] D constant\n" +
+                    "SHOW_DESCRIPTION =[Game] Show quest description in the request",
                 TestUtils.toString(new GameSettings().allKeys()));
     }
 }
