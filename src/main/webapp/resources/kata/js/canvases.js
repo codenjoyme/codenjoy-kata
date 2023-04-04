@@ -22,8 +22,6 @@
 
 const PARAM_GAME_MODE = 'gameMode';
 
-const SPRITES_ROBOT = 'robot';
-
 const MODE_JS = 'javascript';
 const MODE_CONTEST = 'contest';
 
@@ -35,6 +33,7 @@ setup.setupSprites = function() {
 
     setup.gameMode = toLowerCase(getSettings(PARAM_GAME_MODE, '#query'));
     setup.onlyControls = getSettings('controlsOnly', '#query');
+    setup.onlyBoard = getSettings('only', '#query');
 
     if (setup.onlyControls) {
         setup.drawCanvases = false;
@@ -68,7 +67,6 @@ setup.setupSprites = function() {
     if (setup.gameMode == MODE_JS) {
         // do nothing
     } else if (setup.gameMode == MODE_CONTEST) {
-        setup.sprites = SPRITES_ROBOT;
         setup.onlyLeaderBoard = true;
     } else {
         throw new Error("Unknown Kata mode: " + setup.gameMode);

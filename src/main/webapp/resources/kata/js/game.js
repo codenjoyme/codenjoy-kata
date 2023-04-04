@@ -99,25 +99,68 @@ var playerBoard = function() {
         });
 }
 
+// ========================== draw board ==========================
+
+var getQuestionCoordinate = function(x, y) {
+    return {x:(setup.onlyBoard ? x : 7), y:y + 1};
+}
+
+var getQuestionFormatted = function(value) {
+    if (!!value.question) {
+        var equals = (value.valid)?'==':'!=';
+        var message = 'f(' + value.question + ') '
+            + equals + ' ' + value.answer;
+        return message;
+    } else {
+        var message = 'f(' + value + ') = ?';
+        return message;
+    }
+}
+
+function unescapeUnicode(unicode) {
+    var r = /\\u([\d\w]{4})/gi;
+    var temp = unicode.replace(r, function (match, grp) {
+        return String.fromCharCode(parseInt(grp, 16));
+    });
+    return decodeURIComponent(temp).split("\\\"").join("\"");
+}
+
+var description = null;
+var setDescription = function(text) {
+    description = text;
+}
+
 setup.drawBoard = function(drawer) {
     drawer.clear();
-    drawer.drawBack();
-    drawer.drawLayers();
+    var centerX = (drawer.canvas.width() / drawer.canvas.plotSize())/2;
 
-    var fonts = {};
-    fonts.userName = {};
-    fonts.userName.dx = -15;
-    fonts.userName.dy = -45;
-    fonts.userName.font = "20px 'Verdana, sans-serif'";
-    fonts.userName.fillStyle = "#0FF";
-    fonts.userName.textAlign = "left";
-    fonts.userName.shadowColor = "#000";
-    fonts.userName.shadowOffsetX = 0;
-    fonts.userName.shadowOffsetY = 0;
-    fonts.userName.shadowBlur = 5;
-    drawer.drawPlayerNames(fonts.userName);
+    var data = drawer.playerData.board;
+    if (typeof setDescription != 'undefined') {
+        setDescription(unescapeUnicode(data.description));
+    }
 
-    drawer.drawFog();
+    var isWaitNext = (data.questions.length == 0);
+    if (isWaitNext) {
+        drawer.drawText('Algorithm done! Wait next...',
+            getQuestionCoordinate(centerX, 0), '#099');
+        return;
+    }
+
+    var index = -1;
+    var isNewLevel = (data.questions.length < data.history.length);
+    if (!isNewLevel) {
+        for (var key in data.history) {
+            var value = data.history[key];
+            if (value.question == data.nextQuestion) continue;
+
+            drawer.drawText(getQuestionFormatted(value),
+                getQuestionCoordinate(centerX, ++index),
+                (value.valid)?'#090':'#900');
+        }
+    }
+
+    drawer.drawText(getQuestionFormatted(data.nextQuestion),
+        getQuestionCoordinate(centerX, ++index), '#099');
 }
 
 // ========================== game setup ==========================
