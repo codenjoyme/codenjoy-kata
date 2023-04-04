@@ -22,12 +22,9 @@
 
 const PARAM_GAME_MODE = 'gameMode';
 
-const SPRITES_EKIDS = 'ekids';
 const SPRITES_ROBOT = 'robot';
 
 const MODE_JS = 'javascript';
-const MODE_EKIDS = 'ekids';
-const MODE_BEFUNGE = 'befunge';
 const MODE_CONTEST = 'contest';
 
 setup.setupSprites = function() {
@@ -73,16 +70,8 @@ setup.setupSprites = function() {
     }
 
     if (setup.gameMode == MODE_JS) {
-        setup.enableBefunge = false;
-        setup.sprites = SPRITES_ROBOT;
-    } else if (setup.gameMode == MODE_EKIDS) {
-        setup.enableBefunge = true;
-        setup.sprites = SPRITES_EKIDS;
-    } else if (setup.gameMode == MODE_BEFUNGE) {
-        setup.enableBefunge = true;
-        setup.sprites = SPRITES_ROBOT;
+        // do nothing
     } else if (setup.gameMode == MODE_CONTEST) {
-        setup.enableBefunge = false;
         setup.sprites = SPRITES_ROBOT;
         setup.onlyLeaderBoard = true;
     } else {

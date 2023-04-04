@@ -67,7 +67,6 @@ var initLevelInfo = function(contextPath) {
         saveParameter(prefix + 'default code', encode(data.defaultCode));
         saveParameter(prefix + 'win code', encode(data.winCode));
         saveParameter(prefix + 'refactoring code', encode(data.refactoringCode));
-        saveParameter(prefix + 'befunge commands', encode(data.befungeCommands));
 //        saveParameter(prefix + 'autocomplete', JSON.stringify(data.autocomplete)); // TODO разобраться с этим
     }
 
@@ -85,8 +84,7 @@ var initLevelInfo = function(contextPath) {
                 refactoringCode:'function program(robot) {\n'  +
                 '    robot.nextLevel();\n' +
                 '}',
-                autocomplete:'{}',
-                befungeCommands:''
+                autocomplete:'{}'
             };
         }
 
@@ -97,7 +95,6 @@ var initLevelInfo = function(contextPath) {
             defaultCode :     decode(get(prefix + 'default code').value),
             winCode :         decode(get(prefix + 'win code').value),
             refactoringCode : decode(get(prefix + 'refactoring code').value),
-            befungeCommands : decode(get(prefix + 'befunge commands').value),
 //            autocomplete :    JSON.parse(get(prefix + 'autocomplete').value) // TODO разобраться с этим
         };
     }

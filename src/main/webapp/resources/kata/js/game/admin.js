@@ -31,7 +31,6 @@ function initAdmin(contextPath) {
     var defaultEditor = initEditor(libs, 'default');
     var winEditor = initEditor(libs, 'win');
     var refactoredEditor = initEditor(libs, 'refactored');
-    var befungeCommandsEditor = initEditor(libs, 'befungeCommands');
 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         mapEditor.resize(true);
@@ -39,7 +38,6 @@ function initAdmin(contextPath) {
         defaultEditor.resize(true);
         winEditor.resize(true);
         refactoredEditor.resize(true);
-        befungeCommandsEditor.resize(true);
     })
 
     // ----------------------- init scrollbar ----------------------
@@ -84,7 +82,6 @@ function initAdmin(contextPath) {
             defaultCode :     defaultEditor.getValue(),
             winCode :         winEditor.getValue(),
             refactoringCode : refactoredEditor.getValue(),
-            befungeCommands : befungeCommandsEditor.getValue(),
             autocomplete :    current.autocomplete // TODO научиться редактировать
         };
         levelInfo.save(index, updated);
@@ -103,7 +100,6 @@ function initAdmin(contextPath) {
         setEditorValue(defaultEditor, level.defaultCode);
         setEditorValue(winEditor, level.winCode);
         setEditorValue(refactoredEditor, level.refactoringCode);
-        setEditorValue(befungeCommandsEditor, level.befungeCommands);
         // autocomplete.setValue(level.autocomplete); // TODO научиться редактировать
     }
 

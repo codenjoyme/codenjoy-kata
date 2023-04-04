@@ -47,10 +47,6 @@ var initLeaderboardLink = function() {
 }
 
 var initHelpLink = function() {
-    if (setup.gameMode == MODE_EKIDS) {
-        $('#help-link').hide();
-        return; // TODO написать нормально мануал и убрать это
-    }
     var pageName = setup.gameMode.split(' ').join('-').toLowerCase();
     $('#help-link').attr('href', setup.contextPath + '/resources/icancode/landing-' + pageName + '.html')
 }

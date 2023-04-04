@@ -134,9 +134,6 @@ var boardPageLoad = function() {
         };
     };
     var win = initWin();
-    if (setup.enableBefunge) {
-        win.hidePrevious();
-    }
 
     // ----------------------- init help modal -------------------
     $("#close").click(function(){
@@ -206,11 +203,7 @@ var boardPageLoad = function() {
 
     var nextStep = function() {
         // ----------------------- init runner -------------------
-        if (setup.enableBefunge) {
-            runner = initRunnerBefunge(logger, getCurrentLevelInfo, storage);
-        } else {
-            runner = initRunnerJs(setup, libs, getCurrentLevelInfo, storage);
-        }
+        runner = initRunnerJs(setup, libs, getCurrentLevelInfo, storage);
         // ------------------------ init socket ----------------------
         var onSocketMessage = function(data) {
             controller.onMessage(data);
