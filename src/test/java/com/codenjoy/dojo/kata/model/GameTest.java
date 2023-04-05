@@ -52,6 +52,9 @@ public class GameTest {
     private LevelsPool pool;
     private GameSettings settings;
 
+    private List<Level> levels;
+    private int levelIndex;
+
     @Before
     public void setup() {
         dice = new MockDice();
@@ -62,7 +65,8 @@ public class GameTest {
     }
 
     private void givenQA(String... questionAnswers) {
-        givenGame(qa(questionAnswers));
+        withLevels(qa(questionAnswers));
+        givenGame();
     }
 
     private Level qa(String... questionAnswers) {
@@ -79,19 +83,19 @@ public class GameTest {
         };
     }
 
-    private void givenGame(Level... levels) {
-        game = new Kata(dice, settings);
+    private void givenGame() {
         listener = mock(EventListener.class);
         settings = new TestGameSettings(){
             @Override
             public List<Level> levels() {
-                return Arrays.asList(levels);
+                return levels;
             }
         };
+        game = new Kata(dice, levelIndex, settings);
         player = new Player(listener, settings);
-        pool = player.levels();
         game.newGame(player);
         hero = player.getHero();
+        pool = player.levels();
     }
 
     private void thenHistory(String expected) {
@@ -104,10 +108,12 @@ public class GameTest {
 
     @Test
     public void shouldNoAnswersAtStart() {
+        // given
         givenQA("question1=answer1",
                 "question2=answer2",
                 "question3=answer3");
 
+        // then
         thenHistory("[]");
 
         thenQuestions("[\n" +
@@ -117,6 +123,7 @@ public class GameTest {
 
     @Test
     public void shouldNoAnswersAtStartAfterTick() {
+        // given
         givenQA("question1=answer1",
                 "question2=answer2",
                 "question3=answer3");
@@ -124,6 +131,7 @@ public class GameTest {
         // when
         game.tick();
 
+        // then
         thenHistory("[]");
 
         thenQuestions("[\n" +
@@ -133,6 +141,7 @@ public class GameTest {
 
     @Test
     public void should_invalid() {
+        // given
         givenQA("question1=answer1",
                 "question2=answer2",
                 "question3=answer3");
@@ -141,6 +150,7 @@ public class GameTest {
         hero.message("['wrong-answer']");
         game.tick();
 
+        // then
         thenHistory(
                 "[\n" +
                 "  {\n" +
@@ -161,6 +171,7 @@ public class GameTest {
 
     @Test
     public void should_invalid_invalid() {
+        // given
         givenQA("question1=answer1",
                 "question2=answer2",
                 "question3=answer3");
@@ -172,6 +183,7 @@ public class GameTest {
         hero.message("['wrong-answer2']");
         game.tick();
 
+        // then
         thenHistory(
                 "[\n" +
                 "  {\n" +
@@ -201,6 +213,7 @@ public class GameTest {
 
     @Test
     public void should_invalid_valid() {
+        // given
         givenQA("question1=answer1",
                 "question2=answer2",
                 "question3=answer3");
@@ -212,6 +225,7 @@ public class GameTest {
         hero.message("['answer1']");
         game.tick();
 
+        // then
         thenHistory(
             "[\n" +
             "  {\n" +
@@ -242,6 +256,7 @@ public class GameTest {
 
     @Test
     public void should_invalid_valid_tick() {
+        // given
         givenQA("question1=answer1",
                 "question2=answer2",
                 "question3=answer3");
@@ -255,6 +270,7 @@ public class GameTest {
 
         game.tick();
 
+        // then
         thenHistory(
             "[\n" +
             "  {\n" +
@@ -285,6 +301,7 @@ public class GameTest {
 
     @Test
     public void should_invalid_valid_valid() {
+        // given
         givenQA("question1=answer1",
                 "question2=answer2",
                 "question3=answer3");
@@ -299,6 +316,7 @@ public class GameTest {
         hero.message("['answer1','answer2']");
         game.tick();
 
+        // then
         thenHistory(
                 "[\n" +
                 "  {\n" +
@@ -344,6 +362,7 @@ public class GameTest {
 
     @Test
     public void should_invalid_valid_tick_valid_tick() {
+        // given
         givenQA("question1=answer1",
                 "question2=answer2",
                 "question3=answer3");
@@ -362,6 +381,7 @@ public class GameTest {
 
         game.tick();
 
+        // then
         thenHistory(
                 "[\n" +
                 "  {\n" +
@@ -407,6 +427,7 @@ public class GameTest {
 
     @Test
     public void shouldAfterLastQuestion() {
+        // given
         givenQA("question1=answer1",
                 "question2=answer2",
                 "question3=answer3");
@@ -424,6 +445,7 @@ public class GameTest {
         hero.message("['answer1','answer2','answer3','answer4']");
         game.tick();
 
+        // then
         thenHistory(
                 "[\n" +
                 "  {\n" +
@@ -478,6 +500,7 @@ public class GameTest {
 
     @Test
     public void should_stringAnswers() {
+        // given
         givenQA("question1=answer1",
                 "question2=answer2");
 
@@ -485,6 +508,7 @@ public class GameTest {
         hero.message("['answer1']");
         game.tick();
 
+        // then
         thenHistory(
                 "[\n" +
                 "  {\n" +
@@ -539,6 +563,7 @@ public class GameTest {
 
     @Test
     public void should_integerAnswers() {
+        // given
         givenQA("question1=1",
                 "question2=2");
 
@@ -546,6 +571,7 @@ public class GameTest {
         hero.message("['1']");
         game.tick();
 
+        // then
         thenHistory(
                 "[\n" +
                 "  {\n" +
@@ -600,6 +626,7 @@ public class GameTest {
 
     @Test
     public void should_integersAnswers() {
+        // given
         givenQA("question1=1, 2",
                 "question2=3, 4");
 
@@ -629,6 +656,7 @@ public class GameTest {
         hero.message("['1, 2', '3, 4']");
         game.tick();
 
+        // then
         thenHistory(
                 "[\n" +
                 "  {\n" +
@@ -661,6 +689,7 @@ public class GameTest {
 
     @Test
     public void shouldCleanHistoryWhenLastLevel() {
+        // given
         givenQA("question1=answer1");
 
         // when
@@ -686,6 +715,7 @@ public class GameTest {
         hero.message("['blabla']");
         game.tick();
 
+        // then
         thenHistory(
                 "[\n" +
                 "  {\n" +
@@ -707,6 +737,7 @@ public class GameTest {
 
     @Test
     public void should_unansweredQuestion() {
+        // given
         givenQA("question1=answer1",
                 "question2=answer2",
                 "question3=answer3");
@@ -721,6 +752,7 @@ public class GameTest {
         hero.message("['answer1','answer2']");
         game.tick();
 
+        // then
         thenHistory(
                 "[\n" +
                 "  {\n" +
@@ -776,11 +808,13 @@ public class GameTest {
 
     @Test
     public void shouldPlayerHasLevels() {
-        givenGame(qa("question1=answer1"),
+        // given
+        withLevels(qa("question1=answer1"),
                 qa("question2=answer2",
-                    "question3=answer3"),
+                        "question3=answer3"),
                 qa("question4=answer4",
-                    "question5=answer5"));
+                        "question5=answer5"));
+        givenGame();
 
         // then
         assertStillOnLevel(0);
@@ -818,6 +852,11 @@ public class GameTest {
         assertGoToNextLevel(3);
     }
 
+    private void withLevels(Level... levels) {
+        this.levels = Arrays.asList(levels);
+        levelIndex = 0;
+    }
+
     private void assertStillOnLevel(int expected) {
         assertEquals(expected, player.levels().getLevelIndex());
         assertEquals(false, pool.isWaitNext());
@@ -833,15 +872,21 @@ public class GameTest {
 
         // then
         assertStillOnLevel(level);
+
+        // given
+        levelIndex = level;
+        givenGame();
     }
 
     @Test
     public void shouldPlayerAskNextLevelOnlyIfNowWeAreWaiting() {
-        givenGame(qa("question1=answer1"),
+        // given
+        withLevels(qa("question1=answer1"),
                 qa("question2=answer2",
                         "question3=answer3"),
                 qa("question4=answer4",
                         "question5=answer5"));
+        givenGame();
 
         // then
         int sameLevel = 0;
@@ -866,11 +911,13 @@ public class GameTest {
 
     @Test
     public void shouldPlayerSkipLevelOnlyIfNowWeArePlaying() {
-        givenGame(qa("question1=answer1"),
+        // given
+        withLevels(qa("question1=answer1"),
                 qa("question2=answer2",
                         "question3=answer3"),
                 qa("question4=answer4",
                         "question5=answer5"));
+        givenGame();
 
         // then
         assertStillOnLevel(0);
@@ -917,11 +964,13 @@ public class GameTest {
 
     @Test
     public void shouldPlayerSkipFirstTwoLevels_thenAnswer_case2() {
-        givenGame(qa("question1=answer1"),
+        // given
+        withLevels(qa("question1=answer1"),
                 qa("question2=answer2",
                         "question3=answer3"),
                 qa("question4=answer4",
                         "question5=answer5"));
+        givenGame();
 
         // then
         assertStillOnLevel(0);
@@ -956,6 +1005,7 @@ public class GameTest {
 
     @Test
     public void should_ignoreBadCommand_caseTwoParameters() {
+        // given
         givenQA("question1=answer1",
                 "question2=answer2",
                 "question3=answer3");

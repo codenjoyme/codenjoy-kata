@@ -35,6 +35,7 @@ import com.codenjoy.dojo.services.PlayerScores;
 import com.codenjoy.dojo.services.event.ScoresImpl;
 import com.codenjoy.dojo.services.multiplayer.GameField;
 import com.codenjoy.dojo.services.multiplayer.GamePlayer;
+import com.codenjoy.dojo.services.multiplayer.LevelProgress;
 import com.codenjoy.dojo.services.multiplayer.MultiplayerType;
 import com.codenjoy.dojo.services.printer.BoardReader;
 import com.codenjoy.dojo.services.printer.CharElement;
@@ -63,7 +64,8 @@ public class GameRunner extends AbstractGameType<GameSettings> {
 
     @Override
     public GameField createGame(int levelNumber, GameSettings settings) {
-        return new Kata(getDice(), settings);
+        int levelIndex = levelNumber - LevelProgress.levelsStartsFrom1;
+        return new Kata(getDice(), levelIndex, settings);
     }
 
     @Override
@@ -94,7 +96,7 @@ public class GameRunner extends AbstractGameType<GameSettings> {
 
     @Override
     public MultiplayerType getMultiplayerType(GameSettings settings) {
-        return MultiplayerType.ALL_SINGLE.apply(Levels.all().size());
+        return MultiplayerType.ALL_SINGLE.apply(settings.getLevelsCount());
     }
 
     @Override

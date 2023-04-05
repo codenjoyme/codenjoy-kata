@@ -24,7 +24,13 @@ package com.codenjoy.dojo.kata.model;
 
 
 import com.codenjoy.dojo.services.multiplayer.GameField;
+import com.codenjoy.dojo.services.questionanswer.levels.Level;
+
+import java.util.List;
 
 public interface Field extends GameField<Player, Hero> {
 
+    List<Level> levels();
+
+    int levelIndex();
 }

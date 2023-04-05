@@ -41,30 +41,29 @@ public class GameSettingsTest {
                     "C_CONSTANT           =[Score] C constant\n" +
                     "D_CONSTANT           =[Score] D constant\n" +
                     "SHOW_DESCRIPTION     =[Game] Show algorithm description in the request\n" +
-                    "SHOW_EXPECTED_ANSWER =[Game] Show expected answer for last question\n" +
-                    "LEVELS_COUNT         =[Game] Levels count",
+                    "SHOW_EXPECTED_ANSWER =[Game] Show expected answer for last question",
                 TestUtils.toString(new GameSettings().allKeys()));
     }
 
     @Test
     public void shouldGetAllParameters_alsoWithoutKeys() {
         assertEquals("{\n" +
-                        "  'Level1 name':'HelloWorldAlgorithm',\n" +
-                        "  'Level10 name':'ReverseAddPalindromeAlgorithm',\n" +
-                        "  'Level11 name':'Sequence2Algorithm',\n" +
-                        "  'Level12 name':'XthPrimeAlgorithm',\n" +
-                        "  'Level13 name':'LongDivisionAlgorithm',\n" +
-                        "  'Level2 name':'FizzBuzzAlgorithm',\n" +
-                        "  'Level3 name':'SumSquareDifferenceAlgorithm',\n" +
-                        "  'Level4 name':'Sequence1Algorithm',\n" +
-                        "  'Level5 name':'FibonacciNumbersAlgorithm',\n" +
-                        "  'Level6 name':'PrimeFactoryAlgorithm',\n" +
-                        "  'Level7 name':'PowerDigitSumAlgorithm',\n" +
-                        "  'Level8 name':'MakeBricksAlgorithm',\n" +
-                        "  'Level9 name':'FactorialAlgorithm',\n" +
-                        "  '[Game] Levels count':13,\n" +
                         "  '[Game] Show algorithm description in the request':true,\n" +
                         "  '[Game] Show expected answer for last question':true,\n" +
+                        "  '[Level] Map[10]':'ReverseAddPalindromeAlgorithm',\n" +
+                        "  '[Level] Map[11]':'Sequence2Algorithm',\n" +
+                        "  '[Level] Map[12]':'XthPrimeAlgorithm',\n" +
+                        "  '[Level] Map[13]':'LongDivisionAlgorithm',\n" +
+                        "  '[Level] Map[14]':'NullLevel',\n" +
+                        "  '[Level] Map[1]':'HelloWorldAlgorithm',\n" +
+                        "  '[Level] Map[2]':'FizzBuzzAlgorithm',\n" +
+                        "  '[Level] Map[3]':'SumSquareDifferenceAlgorithm',\n" +
+                        "  '[Level] Map[4]':'Sequence1Algorithm',\n" +
+                        "  '[Level] Map[5]':'FibonacciNumbersAlgorithm',\n" +
+                        "  '[Level] Map[6]':'PrimeFactoryAlgorithm',\n" +
+                        "  '[Level] Map[7]':'PowerDigitSumAlgorithm',\n" +
+                        "  '[Level] Map[8]':'MakeBricksAlgorithm',\n" +
+                        "  '[Level] Map[9]':'FactorialAlgorithm',\n" +
                         "  '[Score] A constant':100,\n" +
                         "  '[Score] B constant':3,\n" +
                         "  '[Score] C constant':30,\n" +
@@ -518,6 +517,13 @@ public class GameSettingsTest {
                         "      '999, 0=Div by zero error!'\n" +
                         "    ],\n" +
                         "    'size':28\n" +
+                        "  },\n" +
+                        "  {\n" +
+                        "    'complexity':2147483647,\n" +
+                        "    'description':'No more Levels. You win!',\n" +
+                        "    'name':'NullLevel',\n" +
+                        "    'qa':[],\n" +
+                        "    'size':0\n" +
                         "  }\n" +
                         "]",
                 JsonUtils.prettyPrint(

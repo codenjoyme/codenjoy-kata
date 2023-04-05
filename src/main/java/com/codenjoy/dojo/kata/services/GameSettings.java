@@ -24,8 +24,8 @@ package com.codenjoy.dojo.kata.services;
 
 
 import com.codenjoy.dojo.services.event.Calculator;
+import com.codenjoy.dojo.services.level.LevelsSettings;
 import com.codenjoy.dojo.services.questionanswer.levels.Level;
-import com.codenjoy.dojo.services.questionanswer.levels.LevelsLoader;
 import com.codenjoy.dojo.services.settings.PropertiesKey;
 import com.codenjoy.dojo.services.settings.SettingsImpl;
 import com.codenjoy.dojo.services.settings.SettingsReader;
@@ -36,7 +36,9 @@ import java.util.List;
 import static com.codenjoy.dojo.kata.services.GameRunner.GAME_NAME;
 import static com.codenjoy.dojo.kata.services.GameSettings.Keys.*;
 
-public class GameSettings extends SettingsImpl implements SettingsReader<GameSettings> {
+public class GameSettings extends SettingsImpl
+        implements SettingsReader<GameSettings>,
+                   LevelsSettings<GameSettings> {
 
     public enum Keys implements PropertiesKey {
 
@@ -47,8 +49,7 @@ public class GameSettings extends SettingsImpl implements SettingsReader<GameSet
         C_CONSTANT,
         D_CONSTANT,
         SHOW_DESCRIPTION,
-        SHOW_EXPECTED_ANSWER,
-        LEVELS_COUNT;
+        SHOW_EXPECTED_ANSWER;
 
         private String key;
 
@@ -68,6 +69,8 @@ public class GameSettings extends SettingsImpl implements SettingsReader<GameSet
     }
 
     public GameSettings() {
+        initLevels();
+
         integer(WIN_SCORE, 30);
         integer(LOSE_PENALTY, -100);
 
@@ -84,32 +87,6 @@ public class GameSettings extends SettingsImpl implements SettingsReader<GameSet
 
     public List<Level> levels() {
         return Levels.sorted(this);
-    }
-
-    public int levelsCount() {
-        return integer(LEVELS_COUNT);
-    }
-
-    public String levelName(int index) {
-        return string(nameKey(index));
-    }
-
-    public GameSettings addLevel(int index, Level level) {
-        integer(LEVELS_COUNT, index);
-
-        string(nameKey(index), level.name());
-//        string(helpKey(index), level.description());
-//        string(defaultCodeKey(index), level.defaultCode());
-//        string(winCodeKey(index), level.winCode());
-        return this;
-    }
-
-    private String levelPrefix(int index) {
-        return "Level" + index + " ";
-    }
-
-    private Key nameKey(int index) {
-        return () -> levelPrefix(index) + "name";
     }
 
     public Calculator<Object> calculator() {

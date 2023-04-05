@@ -42,8 +42,6 @@ public class Player extends GamePlayer<Hero, Field> {
 
     public Player(EventListener listener, GameSettings settings) {
         super(listener, settings);
-        this.level = new LevelsPoolImpl(settings.levels());
-        examiner = new Examiner(level);
     }
 
     @Override
@@ -64,11 +62,15 @@ public class Player extends GamePlayer<Hero, Field> {
 
     public void clearScore() {
         if (examiner != null) {
-            examiner.clear();
+            examiner.clear(field.levelIndex());
         }
     }
 
     public Hero createHero(Point pt) {
+        level = new LevelsPoolImpl(field.levels());
+        examiner = new Examiner(level);
+        clearScore();
+
         return new Hero();
     }
 
@@ -78,6 +80,21 @@ public class Player extends GamePlayer<Hero, Field> {
         for (Object event : examiner.ask(hero)) {
             event(event);
         }
+    }
+
+    @Override
+    public boolean isWin() {
+        return hero.wantsNextLevel();
+    }
+
+    @Override
+    public boolean isAlive() {
+        return !hero.wantsNextLevel();
+    }
+
+    @Override
+    public boolean shouldLeave() {
+        return true;
     }
 
     public LevelsPool levels() {

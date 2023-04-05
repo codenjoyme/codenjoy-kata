@@ -163,6 +163,7 @@
 6: 1:}
 6: 1:Scores: 5
 6: 1:Answer: message('StartNextLevel')
+6: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 7: 1:BoardData {
 7: 1:  'description': 'Напиши метод, принимающий один int аргумент и возвращающий String. Для тех чисел, которые делятся нацело на 3 метод должен вернуть \u201cFizz\u201d, для тех, что делятся на 5 - \u201cBuzz\u201d, для тех же, что делятся и на 3 и на 5 - \u201cFizzBuzz\u201d, ну а для всех остальных - само число.',
@@ -2469,6 +2470,7 @@
 32: 1:}
 32: 1:Scores: 729
 32: 1:Answer: message('StartNextLevel')
+32: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 33: 1:BoardData {
 33: 1:  'description': 'Сумма квадратов первых десяти натуральных чисел 1^2 + 2^2 + ... + 10^2 = 385. А квадрат суммы - (1 + 2 + ... + 10)^2 = 55^2 = 3025. Потому разность между суммой квадратов и квадратом суммы первых десяти натуральных чисел равна 3025 − 385 = 2640. Создай метод, вычисляющий разность между суммой квадратов и квадратом суммы для натурального числа i.',
@@ -4775,6 +4777,7 @@
 58: 1:}
 58: 1:Scores: 2178
 58: 1:Answer: message('StartNextLevel')
+58: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 59: 1:BoardData {
 59: 1:  'description': 'Continue the sequence 101, 112, 131, 415, 161, 718... \ni.e f(1) = 101, f(2) = 112, ...\nHint: Look at the whole picture',
@@ -7081,6 +7084,7 @@
 84: 1:}
 84: 1:Scores: 4352
 84: 1:Answer: message('StartNextLevel')
+84: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 85: 1:BoardData {
 85: 1:  'description': 'Сделай метод, возвращающий числ Фибоначчи из ряда по его номеру:\nf(0) = 0\nf(1) = 1\nf(2) = 0 + 1 = 1\nf(3) = 1 + 1 = 2\nf(4) = 1 + 2 = 3\nf(5) = 2 + 3 = 5\nf(6) = 3 + 5 = 8\nf(7) = 5 + 8 = 13\nf(8) = 8 + 13 = 21\nf(9) = 13 + 21 = 34\nи так далее...',
@@ -9387,6 +9391,7 @@
 110: 1:}
 110: 1:Scores: 7251
 110: 1:Answer: message('StartNextLevel')
+110: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 111: 1:BoardData {
 111: 1:  'description': 'Разложи целое число на множители из простых чисел:\n1 -> [1]\n2 -> [2]\n3 -> [3]\n4 -> [2,2]\n6 -> [2,3]\n9 -> [3,3]\n12 -> [2,2,3]\n15 -> [3,5]\nи так далее...',
@@ -11693,6 +11698,7 @@
 136: 1:}
 136: 1:Scores: 10875
 136: 1:Answer: message('StartNextLevel')
+136: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 137: 1:BoardData {
 137: 1:  'description': '2 в степени 15 = 32768, сумма цифр результата 3 + 2 + 7 + 6 + 8 = 26. Какова сумма цифр 2 в степени i? Напиши для расчета метод принимающий int и возвращающий результат в виде String',
@@ -13999,6 +14005,7 @@
 162: 1:}
 162: 1:Scores: 15224
 162: 1:Answer: message('StartNextLevel')
+162: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 163: 1:BoardData {
 163: 1:  'description': 'У тебя есть кирпичики размером 5 (bigCount) и 1 (smallCount). Напиши метод, который смог бы определить получится из заданного набора кирпичиков  построить стенку заданной длинны (length). Например: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
@@ -21733,6 +21740,7 @@
 211: 1:}
 211: 1:Scores: 20284
 211: 1:Answer: message('StartNextLevel')
+211: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 212: 1:BoardData {
 212: 1:  'description': 'Напиши метод, принимающий один int аргумент и возвращающий факториал этого числа в виде String. \nВнимание! Возможно переполнение int/long.',
@@ -24039,6 +24047,7 @@
 237: 1:}
 237: 1:Scores: 26083
 237: 1:Answer: message('StartNextLevel')
+237: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 238: 1:BoardData {
 238: 1:  'description': 'For the most of numbers iterative 'reverse and add' actions lead to palindrome number. For example: \nNumber 23: 23 + 32 = 55; \nNumber 254: 254 + 452 = 706; 706 + 607 = 1313; 1313 + 3131 = 4444;\nWrite a method which calculates 'ReverseAndAdd' polyndrom for a number. i.e f(23) = 55; f(254) = 4444',
@@ -27455,6 +27464,7 @@
 269: 1:}
 269: 1:Scores: 32591
 269: 1:Answer: message('StartNextLevel')
+269: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 270: 1:BoardData {
 270: 1:  'description': 'Continue the sequence 971, 874, 787, 709, 639...\ni.e f(1) = 971, f(2) = 874, ...\nHint: Use subtraction',
@@ -29761,6 +29771,7 @@
 295: 1:}
 295: 1:Scores: 39840
 295: 1:Answer: message('StartNextLevel')
+295: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 296: 1:BoardData {
 296: 1:  'description': 'Первые 10 простых чисел - 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Напиши метод, который вернет i-тое простое число.',
@@ -32067,6 +32078,7 @@
 321: 1:}
 321: 1:Scores: 47814
 321: 1:Answer: message('StartNextLevel')
+321: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 322: 1:BoardData {
 322: 1:  'description': 'Напиши метод, который делит два числа в столбик с точностью до 100 знака. Если в результате встречается период, его стоит записать так: \n212/133 = 1.(593984962406015037)\n87/78   = 1.1(153846)',
@@ -34901,6 +34913,7 @@
 350: 1:}
 350: 1:Scores: 56501
 350: 1:Answer: message('StartNextLevel')
+350: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 351: 1:BoardData {
 351: 1:  'description': 'No more Levels. You win!',
@@ -34910,6 +34923,7 @@
 351: 1:}
 351: 1:Scores: 56501
 351: 1:Answer: message('StartNextLevel')
+351: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 352: 1:BoardData {
 352: 1:  'description': 'No more Levels. You win!',
@@ -34919,6 +34933,7 @@
 352: 1:}
 352: 1:Scores: 56501
 352: 1:Answer: message('StartNextLevel')
+352: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 353: 1:BoardData {
 353: 1:  'description': 'No more Levels. You win!',
@@ -34928,6 +34943,7 @@
 353: 1:}
 353: 1:Scores: 56501
 353: 1:Answer: message('StartNextLevel')
+353: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 354: 1:BoardData {
 354: 1:  'description': 'No more Levels. You win!',
@@ -34937,6 +34953,7 @@
 354: 1:}
 354: 1:Scores: 56501
 354: 1:Answer: message('StartNextLevel')
+354: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 355: 1:BoardData {
 355: 1:  'description': 'No more Levels. You win!',
@@ -34946,6 +34963,7 @@
 355: 1:}
 355: 1:Scores: 56501
 355: 1:Answer: message('StartNextLevel')
+355: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 356: 1:BoardData {
 356: 1:  'description': 'No more Levels. You win!',
@@ -34955,6 +34973,7 @@
 356: 1:}
 356: 1:Scores: 56501
 356: 1:Answer: message('StartNextLevel')
+356: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 357: 1:BoardData {
 357: 1:  'description': 'No more Levels. You win!',
@@ -34964,6 +34983,7 @@
 357: 1:}
 357: 1:Scores: 56501
 357: 1:Answer: message('StartNextLevel')
+357: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 358: 1:BoardData {
 358: 1:  'description': 'No more Levels. You win!',
@@ -34973,6 +34993,7 @@
 358: 1:}
 358: 1:Scores: 56501
 358: 1:Answer: message('StartNextLevel')
+358: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 359: 1:BoardData {
 359: 1:  'description': 'No more Levels. You win!',
@@ -34982,6 +35003,7 @@
 359: 1:}
 359: 1:Scores: 56501
 359: 1:Answer: message('StartNextLevel')
+359: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 360: 1:BoardData {
 360: 1:  'description': 'No more Levels. You win!',
@@ -34991,6 +35013,7 @@
 360: 1:}
 360: 1:Scores: 56501
 360: 1:Answer: message('StartNextLevel')
+360: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 361: 1:BoardData {
 361: 1:  'description': 'No more Levels. You win!',
@@ -35000,6 +35023,7 @@
 361: 1:}
 361: 1:Scores: 56501
 361: 1:Answer: message('StartNextLevel')
+361: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 362: 1:BoardData {
 362: 1:  'description': 'No more Levels. You win!',
@@ -35009,6 +35033,7 @@
 362: 1:}
 362: 1:Scores: 56501
 362: 1:Answer: message('StartNextLevel')
+362: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 363: 1:BoardData {
 363: 1:  'description': 'No more Levels. You win!',
@@ -35018,6 +35043,7 @@
 363: 1:}
 363: 1:Scores: 56501
 363: 1:Answer: message('StartNextLevel')
+363: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 364: 1:BoardData {
 364: 1:  'description': 'No more Levels. You win!',
@@ -35027,6 +35053,7 @@
 364: 1:}
 364: 1:Scores: 56501
 364: 1:Answer: message('StartNextLevel')
+364: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 365: 1:BoardData {
 365: 1:  'description': 'No more Levels. You win!',
@@ -35036,6 +35063,7 @@
 365: 1:}
 365: 1:Scores: 56501
 365: 1:Answer: message('StartNextLevel')
+365: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 366: 1:BoardData {
 366: 1:  'description': 'No more Levels. You win!',
@@ -35045,6 +35073,7 @@
 366: 1:}
 366: 1:Scores: 56501
 366: 1:Answer: message('StartNextLevel')
+366: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 367: 1:BoardData {
 367: 1:  'description': 'No more Levels. You win!',
@@ -35054,6 +35083,7 @@
 367: 1:}
 367: 1:Scores: 56501
 367: 1:Answer: message('StartNextLevel')
+367: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 368: 1:BoardData {
 368: 1:  'description': 'No more Levels. You win!',
@@ -35063,6 +35093,7 @@
 368: 1:}
 368: 1:Scores: 56501
 368: 1:Answer: message('StartNextLevel')
+368: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 369: 1:BoardData {
 369: 1:  'description': 'No more Levels. You win!',
@@ -35072,6 +35103,7 @@
 369: 1:}
 369: 1:Scores: 56501
 369: 1:Answer: message('StartNextLevel')
+369: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 370: 1:BoardData {
 370: 1:  'description': 'No more Levels. You win!',
@@ -35081,6 +35113,7 @@
 370: 1:}
 370: 1:Scores: 56501
 370: 1:Answer: message('StartNextLevel')
+370: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 371: 1:BoardData {
 371: 1:  'description': 'No more Levels. You win!',
@@ -35090,6 +35123,7 @@
 371: 1:}
 371: 1:Scores: 56501
 371: 1:Answer: message('StartNextLevel')
+371: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 372: 1:BoardData {
 372: 1:  'description': 'No more Levels. You win!',
@@ -35099,6 +35133,7 @@
 372: 1:}
 372: 1:Scores: 56501
 372: 1:Answer: message('StartNextLevel')
+372: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 373: 1:BoardData {
 373: 1:  'description': 'No more Levels. You win!',
@@ -35108,6 +35143,7 @@
 373: 1:}
 373: 1:Scores: 56501
 373: 1:Answer: message('StartNextLevel')
+373: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 374: 1:BoardData {
 374: 1:  'description': 'No more Levels. You win!',
@@ -35117,6 +35153,7 @@
 374: 1:}
 374: 1:Scores: 56501
 374: 1:Answer: message('StartNextLevel')
+374: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 375: 1:BoardData {
 375: 1:  'description': 'No more Levels. You win!',
@@ -35126,6 +35163,7 @@
 375: 1:}
 375: 1:Scores: 56501
 375: 1:Answer: message('StartNextLevel')
+375: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 376: 1:BoardData {
 376: 1:  'description': 'No more Levels. You win!',
@@ -35135,6 +35173,7 @@
 376: 1:}
 376: 1:Scores: 56501
 376: 1:Answer: message('StartNextLevel')
+376: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 377: 1:BoardData {
 377: 1:  'description': 'No more Levels. You win!',
@@ -35144,6 +35183,7 @@
 377: 1:}
 377: 1:Scores: 56501
 377: 1:Answer: message('StartNextLevel')
+377: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 378: 1:BoardData {
 378: 1:  'description': 'No more Levels. You win!',
@@ -35153,6 +35193,7 @@
 378: 1:}
 378: 1:Scores: 56501
 378: 1:Answer: message('StartNextLevel')
+378: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 379: 1:BoardData {
 379: 1:  'description': 'No more Levels. You win!',
@@ -35162,6 +35203,7 @@
 379: 1:}
 379: 1:Scores: 56501
 379: 1:Answer: message('StartNextLevel')
+379: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 380: 1:BoardData {
 380: 1:  'description': 'No more Levels. You win!',
@@ -35171,6 +35213,7 @@
 380: 1:}
 380: 1:Scores: 56501
 380: 1:Answer: message('StartNextLevel')
+380: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 381: 1:BoardData {
 381: 1:  'description': 'No more Levels. You win!',
@@ -35180,6 +35223,7 @@
 381: 1:}
 381: 1:Scores: 56501
 381: 1:Answer: message('StartNextLevel')
+381: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 382: 1:BoardData {
 382: 1:  'description': 'No more Levels. You win!',
@@ -35189,6 +35233,7 @@
 382: 1:}
 382: 1:Scores: 56501
 382: 1:Answer: message('StartNextLevel')
+382: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 383: 1:BoardData {
 383: 1:  'description': 'No more Levels. You win!',
@@ -35198,6 +35243,7 @@
 383: 1:}
 383: 1:Scores: 56501
 383: 1:Answer: message('StartNextLevel')
+383: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 384: 1:BoardData {
 384: 1:  'description': 'No more Levels. You win!',
@@ -35207,6 +35253,7 @@
 384: 1:}
 384: 1:Scores: 56501
 384: 1:Answer: message('StartNextLevel')
+384: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 385: 1:BoardData {
 385: 1:  'description': 'No more Levels. You win!',
@@ -35216,6 +35263,7 @@
 385: 1:}
 385: 1:Scores: 56501
 385: 1:Answer: message('StartNextLevel')
+385: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 386: 1:BoardData {
 386: 1:  'description': 'No more Levels. You win!',
@@ -35225,6 +35273,7 @@
 386: 1:}
 386: 1:Scores: 56501
 386: 1:Answer: message('StartNextLevel')
+386: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 387: 1:BoardData {
 387: 1:  'description': 'No more Levels. You win!',
@@ -35234,6 +35283,7 @@
 387: 1:}
 387: 1:Scores: 56501
 387: 1:Answer: message('StartNextLevel')
+387: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 388: 1:BoardData {
 388: 1:  'description': 'No more Levels. You win!',
@@ -35243,6 +35293,7 @@
 388: 1:}
 388: 1:Scores: 56501
 388: 1:Answer: message('StartNextLevel')
+388: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 389: 1:BoardData {
 389: 1:  'description': 'No more Levels. You win!',
@@ -35252,6 +35303,7 @@
 389: 1:}
 389: 1:Scores: 56501
 389: 1:Answer: message('StartNextLevel')
+389: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 390: 1:BoardData {
 390: 1:  'description': 'No more Levels. You win!',
@@ -35261,6 +35313,7 @@
 390: 1:}
 390: 1:Scores: 56501
 390: 1:Answer: message('StartNextLevel')
+390: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 391: 1:BoardData {
 391: 1:  'description': 'No more Levels. You win!',
@@ -35270,6 +35323,7 @@
 391: 1:}
 391: 1:Scores: 56501
 391: 1:Answer: message('StartNextLevel')
+391: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 392: 1:BoardData {
 392: 1:  'description': 'No more Levels. You win!',
@@ -35279,6 +35333,7 @@
 392: 1:}
 392: 1:Scores: 56501
 392: 1:Answer: message('StartNextLevel')
+392: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 393: 1:BoardData {
 393: 1:  'description': 'No more Levels. You win!',
@@ -35288,6 +35343,7 @@
 393: 1:}
 393: 1:Scores: 56501
 393: 1:Answer: message('StartNextLevel')
+393: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 394: 1:BoardData {
 394: 1:  'description': 'No more Levels. You win!',
@@ -35297,6 +35353,7 @@
 394: 1:}
 394: 1:Scores: 56501
 394: 1:Answer: message('StartNextLevel')
+394: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 395: 1:BoardData {
 395: 1:  'description': 'No more Levels. You win!',
@@ -35306,6 +35363,7 @@
 395: 1:}
 395: 1:Scores: 56501
 395: 1:Answer: message('StartNextLevel')
+395: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 396: 1:BoardData {
 396: 1:  'description': 'No more Levels. You win!',
@@ -35315,6 +35373,7 @@
 396: 1:}
 396: 1:Scores: 56501
 396: 1:Answer: message('StartNextLevel')
+396: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 397: 1:BoardData {
 397: 1:  'description': 'No more Levels. You win!',
@@ -35324,6 +35383,7 @@
 397: 1:}
 397: 1:Scores: 56501
 397: 1:Answer: message('StartNextLevel')
+397: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 398: 1:BoardData {
 398: 1:  'description': 'No more Levels. You win!',
@@ -35333,6 +35393,7 @@
 398: 1:}
 398: 1:Scores: 56501
 398: 1:Answer: message('StartNextLevel')
+398: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 399: 1:BoardData {
 399: 1:  'description': 'No more Levels. You win!',
@@ -35342,6 +35403,7 @@
 399: 1:}
 399: 1:Scores: 56501
 399: 1:Answer: message('StartNextLevel')
+399: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 400: 1:BoardData {
 400: 1:  'description': 'No more Levels. You win!',
@@ -35351,6 +35413,7 @@
 400: 1:}
 400: 1:Scores: 56501
 400: 1:Answer: message('StartNextLevel')
+400: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 401: 1:BoardData {
 401: 1:  'description': 'No more Levels. You win!',
@@ -35360,6 +35423,7 @@
 401: 1:}
 401: 1:Scores: 56501
 401: 1:Answer: message('StartNextLevel')
+401: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 402: 1:BoardData {
 402: 1:  'description': 'No more Levels. You win!',
@@ -35369,6 +35433,7 @@
 402: 1:}
 402: 1:Scores: 56501
 402: 1:Answer: message('StartNextLevel')
+402: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 403: 1:BoardData {
 403: 1:  'description': 'No more Levels. You win!',
@@ -35378,6 +35443,7 @@
 403: 1:}
 403: 1:Scores: 56501
 403: 1:Answer: message('StartNextLevel')
+403: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 404: 1:BoardData {
 404: 1:  'description': 'No more Levels. You win!',
@@ -35387,6 +35453,7 @@
 404: 1:}
 404: 1:Scores: 56501
 404: 1:Answer: message('StartNextLevel')
+404: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 405: 1:BoardData {
 405: 1:  'description': 'No more Levels. You win!',
@@ -35396,6 +35463,7 @@
 405: 1:}
 405: 1:Scores: 56501
 405: 1:Answer: message('StartNextLevel')
+405: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 406: 1:BoardData {
 406: 1:  'description': 'No more Levels. You win!',
@@ -35405,6 +35473,7 @@
 406: 1:}
 406: 1:Scores: 56501
 406: 1:Answer: message('StartNextLevel')
+406: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 407: 1:BoardData {
 407: 1:  'description': 'No more Levels. You win!',
@@ -35414,6 +35483,7 @@
 407: 1:}
 407: 1:Scores: 56501
 407: 1:Answer: message('StartNextLevel')
+407: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 408: 1:BoardData {
 408: 1:  'description': 'No more Levels. You win!',
@@ -35423,6 +35493,7 @@
 408: 1:}
 408: 1:Scores: 56501
 408: 1:Answer: message('StartNextLevel')
+408: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 409: 1:BoardData {
 409: 1:  'description': 'No more Levels. You win!',
@@ -35432,6 +35503,7 @@
 409: 1:}
 409: 1:Scores: 56501
 409: 1:Answer: message('StartNextLevel')
+409: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 410: 1:BoardData {
 410: 1:  'description': 'No more Levels. You win!',
@@ -35441,6 +35513,7 @@
 410: 1:}
 410: 1:Scores: 56501
 410: 1:Answer: message('StartNextLevel')
+410: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 411: 1:BoardData {
 411: 1:  'description': 'No more Levels. You win!',
@@ -35450,6 +35523,7 @@
 411: 1:}
 411: 1:Scores: 56501
 411: 1:Answer: message('StartNextLevel')
+411: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 412: 1:BoardData {
 412: 1:  'description': 'No more Levels. You win!',
@@ -35459,6 +35533,7 @@
 412: 1:}
 412: 1:Scores: 56501
 412: 1:Answer: message('StartNextLevel')
+412: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 413: 1:BoardData {
 413: 1:  'description': 'No more Levels. You win!',
@@ -35468,6 +35543,7 @@
 413: 1:}
 413: 1:Scores: 56501
 413: 1:Answer: message('StartNextLevel')
+413: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 414: 1:BoardData {
 414: 1:  'description': 'No more Levels. You win!',
@@ -35477,6 +35553,7 @@
 414: 1:}
 414: 1:Scores: 56501
 414: 1:Answer: message('StartNextLevel')
+414: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 415: 1:BoardData {
 415: 1:  'description': 'No more Levels. You win!',
@@ -35486,6 +35563,7 @@
 415: 1:}
 415: 1:Scores: 56501
 415: 1:Answer: message('StartNextLevel')
+415: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 416: 1:BoardData {
 416: 1:  'description': 'No more Levels. You win!',
@@ -35495,6 +35573,7 @@
 416: 1:}
 416: 1:Scores: 56501
 416: 1:Answer: message('StartNextLevel')
+416: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 417: 1:BoardData {
 417: 1:  'description': 'No more Levels. You win!',
@@ -35504,6 +35583,7 @@
 417: 1:}
 417: 1:Scores: 56501
 417: 1:Answer: message('StartNextLevel')
+417: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 418: 1:BoardData {
 418: 1:  'description': 'No more Levels. You win!',
@@ -35513,6 +35593,7 @@
 418: 1:}
 418: 1:Scores: 56501
 418: 1:Answer: message('StartNextLevel')
+418: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 419: 1:BoardData {
 419: 1:  'description': 'No more Levels. You win!',
@@ -35522,6 +35603,7 @@
 419: 1:}
 419: 1:Scores: 56501
 419: 1:Answer: message('StartNextLevel')
+419: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 420: 1:BoardData {
 420: 1:  'description': 'No more Levels. You win!',
@@ -35531,6 +35613,7 @@
 420: 1:}
 420: 1:Scores: 56501
 420: 1:Answer: message('StartNextLevel')
+420: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 421: 1:BoardData {
 421: 1:  'description': 'No more Levels. You win!',
@@ -35540,6 +35623,7 @@
 421: 1:}
 421: 1:Scores: 56501
 421: 1:Answer: message('StartNextLevel')
+421: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 422: 1:BoardData {
 422: 1:  'description': 'No more Levels. You win!',
@@ -35549,6 +35633,7 @@
 422: 1:}
 422: 1:Scores: 56501
 422: 1:Answer: message('StartNextLevel')
+422: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 423: 1:BoardData {
 423: 1:  'description': 'No more Levels. You win!',
@@ -35558,6 +35643,7 @@
 423: 1:}
 423: 1:Scores: 56501
 423: 1:Answer: message('StartNextLevel')
+423: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 424: 1:BoardData {
 424: 1:  'description': 'No more Levels. You win!',
@@ -35567,6 +35653,7 @@
 424: 1:}
 424: 1:Scores: 56501
 424: 1:Answer: message('StartNextLevel')
+424: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 425: 1:BoardData {
 425: 1:  'description': 'No more Levels. You win!',
@@ -35576,6 +35663,7 @@
 425: 1:}
 425: 1:Scores: 56501
 425: 1:Answer: message('StartNextLevel')
+425: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 426: 1:BoardData {
 426: 1:  'description': 'No more Levels. You win!',
@@ -35585,6 +35673,7 @@
 426: 1:}
 426: 1:Scores: 56501
 426: 1:Answer: message('StartNextLevel')
+426: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 427: 1:BoardData {
 427: 1:  'description': 'No more Levels. You win!',
@@ -35594,6 +35683,7 @@
 427: 1:}
 427: 1:Scores: 56501
 427: 1:Answer: message('StartNextLevel')
+427: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 428: 1:BoardData {
 428: 1:  'description': 'No more Levels. You win!',
@@ -35603,6 +35693,7 @@
 428: 1:}
 428: 1:Scores: 56501
 428: 1:Answer: message('StartNextLevel')
+428: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 429: 1:BoardData {
 429: 1:  'description': 'No more Levels. You win!',
@@ -35612,6 +35703,7 @@
 429: 1:}
 429: 1:Scores: 56501
 429: 1:Answer: message('StartNextLevel')
+429: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 430: 1:BoardData {
 430: 1:  'description': 'No more Levels. You win!',
@@ -35621,6 +35713,7 @@
 430: 1:}
 430: 1:Scores: 56501
 430: 1:Answer: message('StartNextLevel')
+430: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 431: 1:BoardData {
 431: 1:  'description': 'No more Levels. You win!',
@@ -35630,6 +35723,7 @@
 431: 1:}
 431: 1:Scores: 56501
 431: 1:Answer: message('StartNextLevel')
+431: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 432: 1:BoardData {
 432: 1:  'description': 'No more Levels. You win!',
@@ -35639,6 +35733,7 @@
 432: 1:}
 432: 1:Scores: 56501
 432: 1:Answer: message('StartNextLevel')
+432: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 433: 1:BoardData {
 433: 1:  'description': 'No more Levels. You win!',
@@ -35648,6 +35743,7 @@
 433: 1:}
 433: 1:Scores: 56501
 433: 1:Answer: message('StartNextLevel')
+433: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 434: 1:BoardData {
 434: 1:  'description': 'No more Levels. You win!',
@@ -35657,6 +35753,7 @@
 434: 1:}
 434: 1:Scores: 56501
 434: 1:Answer: message('StartNextLevel')
+434: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 435: 1:BoardData {
 435: 1:  'description': 'No more Levels. You win!',
@@ -35666,6 +35763,7 @@
 435: 1:}
 435: 1:Scores: 56501
 435: 1:Answer: message('StartNextLevel')
+435: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 436: 1:BoardData {
 436: 1:  'description': 'No more Levels. You win!',
@@ -35675,6 +35773,7 @@
 436: 1:}
 436: 1:Scores: 56501
 436: 1:Answer: message('StartNextLevel')
+436: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 437: 1:BoardData {
 437: 1:  'description': 'No more Levels. You win!',
@@ -35684,6 +35783,7 @@
 437: 1:}
 437: 1:Scores: 56501
 437: 1:Answer: message('StartNextLevel')
+437: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 438: 1:BoardData {
 438: 1:  'description': 'No more Levels. You win!',
@@ -35693,6 +35793,7 @@
 438: 1:}
 438: 1:Scores: 56501
 438: 1:Answer: message('StartNextLevel')
+438: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 439: 1:BoardData {
 439: 1:  'description': 'No more Levels. You win!',
@@ -35702,6 +35803,7 @@
 439: 1:}
 439: 1:Scores: 56501
 439: 1:Answer: message('StartNextLevel')
+439: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 440: 1:BoardData {
 440: 1:  'description': 'No more Levels. You win!',
@@ -35711,6 +35813,7 @@
 440: 1:}
 440: 1:Scores: 56501
 440: 1:Answer: message('StartNextLevel')
+440: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 441: 1:BoardData {
 441: 1:  'description': 'No more Levels. You win!',
@@ -35720,6 +35823,7 @@
 441: 1:}
 441: 1:Scores: 56501
 441: 1:Answer: message('StartNextLevel')
+441: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 442: 1:BoardData {
 442: 1:  'description': 'No more Levels. You win!',
@@ -35729,6 +35833,7 @@
 442: 1:}
 442: 1:Scores: 56501
 442: 1:Answer: message('StartNextLevel')
+442: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 443: 1:BoardData {
 443: 1:  'description': 'No more Levels. You win!',
@@ -35738,6 +35843,7 @@
 443: 1:}
 443: 1:Scores: 56501
 443: 1:Answer: message('StartNextLevel')
+443: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 444: 1:BoardData {
 444: 1:  'description': 'No more Levels. You win!',
@@ -35747,6 +35853,7 @@
 444: 1:}
 444: 1:Scores: 56501
 444: 1:Answer: message('StartNextLevel')
+444: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 445: 1:BoardData {
 445: 1:  'description': 'No more Levels. You win!',
@@ -35756,6 +35863,7 @@
 445: 1:}
 445: 1:Scores: 56501
 445: 1:Answer: message('StartNextLevel')
+445: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 446: 1:BoardData {
 446: 1:  'description': 'No more Levels. You win!',
@@ -35765,6 +35873,7 @@
 446: 1:}
 446: 1:Scores: 56501
 446: 1:Answer: message('StartNextLevel')
+446: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 447: 1:BoardData {
 447: 1:  'description': 'No more Levels. You win!',
@@ -35774,6 +35883,7 @@
 447: 1:}
 447: 1:Scores: 56501
 447: 1:Answer: message('StartNextLevel')
+447: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 448: 1:BoardData {
 448: 1:  'description': 'No more Levels. You win!',
@@ -35783,6 +35893,7 @@
 448: 1:}
 448: 1:Scores: 56501
 448: 1:Answer: message('StartNextLevel')
+448: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 449: 1:BoardData {
 449: 1:  'description': 'No more Levels. You win!',
@@ -35792,6 +35903,7 @@
 449: 1:}
 449: 1:Scores: 56501
 449: 1:Answer: message('StartNextLevel')
+449: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 450: 1:BoardData {
 450: 1:  'description': 'No more Levels. You win!',
@@ -35801,6 +35913,7 @@
 450: 1:}
 450: 1:Scores: 56501
 450: 1:Answer: message('StartNextLevel')
+450: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 451: 1:BoardData {
 451: 1:  'description': 'No more Levels. You win!',
@@ -35810,6 +35923,7 @@
 451: 1:}
 451: 1:Scores: 56501
 451: 1:Answer: message('StartNextLevel')
+451: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 452: 1:BoardData {
 452: 1:  'description': 'No more Levels. You win!',
@@ -35819,6 +35933,7 @@
 452: 1:}
 452: 1:Scores: 56501
 452: 1:Answer: message('StartNextLevel')
+452: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 453: 1:BoardData {
 453: 1:  'description': 'No more Levels. You win!',
@@ -35828,6 +35943,7 @@
 453: 1:}
 453: 1:Scores: 56501
 453: 1:Answer: message('StartNextLevel')
+453: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 454: 1:BoardData {
 454: 1:  'description': 'No more Levels. You win!',
@@ -35837,6 +35953,7 @@
 454: 1:}
 454: 1:Scores: 56501
 454: 1:Answer: message('StartNextLevel')
+454: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 455: 1:BoardData {
 455: 1:  'description': 'No more Levels. You win!',
@@ -35846,6 +35963,7 @@
 455: 1:}
 455: 1:Scores: 56501
 455: 1:Answer: message('StartNextLevel')
+455: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 456: 1:BoardData {
 456: 1:  'description': 'No more Levels. You win!',
@@ -35855,6 +35973,7 @@
 456: 1:}
 456: 1:Scores: 56501
 456: 1:Answer: message('StartNextLevel')
+456: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 457: 1:BoardData {
 457: 1:  'description': 'No more Levels. You win!',
@@ -35864,6 +35983,7 @@
 457: 1:}
 457: 1:Scores: 56501
 457: 1:Answer: message('StartNextLevel')
+457: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 458: 1:BoardData {
 458: 1:  'description': 'No more Levels. You win!',
@@ -35873,6 +35993,7 @@
 458: 1:}
 458: 1:Scores: 56501
 458: 1:Answer: message('StartNextLevel')
+458: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 459: 1:BoardData {
 459: 1:  'description': 'No more Levels. You win!',
@@ -35882,6 +36003,7 @@
 459: 1:}
 459: 1:Scores: 56501
 459: 1:Answer: message('StartNextLevel')
+459: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 460: 1:BoardData {
 460: 1:  'description': 'No more Levels. You win!',
@@ -35891,6 +36013,7 @@
 460: 1:}
 460: 1:Scores: 56501
 460: 1:Answer: message('StartNextLevel')
+460: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 461: 1:BoardData {
 461: 1:  'description': 'No more Levels. You win!',
@@ -35900,6 +36023,7 @@
 461: 1:}
 461: 1:Scores: 56501
 461: 1:Answer: message('StartNextLevel')
+461: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 462: 1:BoardData {
 462: 1:  'description': 'No more Levels. You win!',
@@ -35909,6 +36033,7 @@
 462: 1:}
 462: 1:Scores: 56501
 462: 1:Answer: message('StartNextLevel')
+462: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 463: 1:BoardData {
 463: 1:  'description': 'No more Levels. You win!',
@@ -35918,6 +36043,7 @@
 463: 1:}
 463: 1:Scores: 56501
 463: 1:Answer: message('StartNextLevel')
+463: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 464: 1:BoardData {
 464: 1:  'description': 'No more Levels. You win!',
@@ -35927,6 +36053,7 @@
 464: 1:}
 464: 1:Scores: 56501
 464: 1:Answer: message('StartNextLevel')
+464: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 465: 1:BoardData {
 465: 1:  'description': 'No more Levels. You win!',
@@ -35936,6 +36063,7 @@
 465: 1:}
 465: 1:Scores: 56501
 465: 1:Answer: message('StartNextLevel')
+465: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 466: 1:BoardData {
 466: 1:  'description': 'No more Levels. You win!',
@@ -35945,6 +36073,7 @@
 466: 1:}
 466: 1:Scores: 56501
 466: 1:Answer: message('StartNextLevel')
+466: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 467: 1:BoardData {
 467: 1:  'description': 'No more Levels. You win!',
@@ -35954,6 +36083,7 @@
 467: 1:}
 467: 1:Scores: 56501
 467: 1:Answer: message('StartNextLevel')
+467: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 468: 1:BoardData {
 468: 1:  'description': 'No more Levels. You win!',
@@ -35963,6 +36093,7 @@
 468: 1:}
 468: 1:Scores: 56501
 468: 1:Answer: message('StartNextLevel')
+468: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 469: 1:BoardData {
 469: 1:  'description': 'No more Levels. You win!',
@@ -35972,6 +36103,7 @@
 469: 1:}
 469: 1:Scores: 56501
 469: 1:Answer: message('StartNextLevel')
+469: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 470: 1:BoardData {
 470: 1:  'description': 'No more Levels. You win!',
@@ -35981,6 +36113,7 @@
 470: 1:}
 470: 1:Scores: 56501
 470: 1:Answer: message('StartNextLevel')
+470: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 471: 1:BoardData {
 471: 1:  'description': 'No more Levels. You win!',
@@ -35990,6 +36123,7 @@
 471: 1:}
 471: 1:Scores: 56501
 471: 1:Answer: message('StartNextLevel')
+471: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 472: 1:BoardData {
 472: 1:  'description': 'No more Levels. You win!',
@@ -35999,6 +36133,7 @@
 472: 1:}
 472: 1:Scores: 56501
 472: 1:Answer: message('StartNextLevel')
+472: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 473: 1:BoardData {
 473: 1:  'description': 'No more Levels. You win!',
@@ -36008,6 +36143,7 @@
 473: 1:}
 473: 1:Scores: 56501
 473: 1:Answer: message('StartNextLevel')
+473: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 474: 1:BoardData {
 474: 1:  'description': 'No more Levels. You win!',
@@ -36017,6 +36153,7 @@
 474: 1:}
 474: 1:Scores: 56501
 474: 1:Answer: message('StartNextLevel')
+474: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 475: 1:BoardData {
 475: 1:  'description': 'No more Levels. You win!',
@@ -36026,6 +36163,7 @@
 475: 1:}
 475: 1:Scores: 56501
 475: 1:Answer: message('StartNextLevel')
+475: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 476: 1:BoardData {
 476: 1:  'description': 'No more Levels. You win!',
@@ -36035,6 +36173,7 @@
 476: 1:}
 476: 1:Scores: 56501
 476: 1:Answer: message('StartNextLevel')
+476: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 477: 1:BoardData {
 477: 1:  'description': 'No more Levels. You win!',
@@ -36044,6 +36183,7 @@
 477: 1:}
 477: 1:Scores: 56501
 477: 1:Answer: message('StartNextLevel')
+477: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 478: 1:BoardData {
 478: 1:  'description': 'No more Levels. You win!',
@@ -36053,6 +36193,7 @@
 478: 1:}
 478: 1:Scores: 56501
 478: 1:Answer: message('StartNextLevel')
+478: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 479: 1:BoardData {
 479: 1:  'description': 'No more Levels. You win!',
@@ -36062,6 +36203,7 @@
 479: 1:}
 479: 1:Scores: 56501
 479: 1:Answer: message('StartNextLevel')
+479: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 480: 1:BoardData {
 480: 1:  'description': 'No more Levels. You win!',
@@ -36071,6 +36213,7 @@
 480: 1:}
 480: 1:Scores: 56501
 480: 1:Answer: message('StartNextLevel')
+480: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 481: 1:BoardData {
 481: 1:  'description': 'No more Levels. You win!',
@@ -36080,6 +36223,7 @@
 481: 1:}
 481: 1:Scores: 56501
 481: 1:Answer: message('StartNextLevel')
+481: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 482: 1:BoardData {
 482: 1:  'description': 'No more Levels. You win!',
@@ -36089,6 +36233,7 @@
 482: 1:}
 482: 1:Scores: 56501
 482: 1:Answer: message('StartNextLevel')
+482: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 483: 1:BoardData {
 483: 1:  'description': 'No more Levels. You win!',
@@ -36098,6 +36243,7 @@
 483: 1:}
 483: 1:Scores: 56501
 483: 1:Answer: message('StartNextLevel')
+483: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 484: 1:BoardData {
 484: 1:  'description': 'No more Levels. You win!',
@@ -36107,6 +36253,7 @@
 484: 1:}
 484: 1:Scores: 56501
 484: 1:Answer: message('StartNextLevel')
+484: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 485: 1:BoardData {
 485: 1:  'description': 'No more Levels. You win!',
@@ -36116,6 +36263,7 @@
 485: 1:}
 485: 1:Scores: 56501
 485: 1:Answer: message('StartNextLevel')
+485: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 486: 1:BoardData {
 486: 1:  'description': 'No more Levels. You win!',
@@ -36125,6 +36273,7 @@
 486: 1:}
 486: 1:Scores: 56501
 486: 1:Answer: message('StartNextLevel')
+486: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 487: 1:BoardData {
 487: 1:  'description': 'No more Levels. You win!',
@@ -36134,6 +36283,7 @@
 487: 1:}
 487: 1:Scores: 56501
 487: 1:Answer: message('StartNextLevel')
+487: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 488: 1:BoardData {
 488: 1:  'description': 'No more Levels. You win!',
@@ -36143,6 +36293,7 @@
 488: 1:}
 488: 1:Scores: 56501
 488: 1:Answer: message('StartNextLevel')
+488: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 489: 1:BoardData {
 489: 1:  'description': 'No more Levels. You win!',
@@ -36152,6 +36303,7 @@
 489: 1:}
 489: 1:Scores: 56501
 489: 1:Answer: message('StartNextLevel')
+489: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 490: 1:BoardData {
 490: 1:  'description': 'No more Levels. You win!',
@@ -36161,6 +36313,7 @@
 490: 1:}
 490: 1:Scores: 56501
 490: 1:Answer: message('StartNextLevel')
+490: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 491: 1:BoardData {
 491: 1:  'description': 'No more Levels. You win!',
@@ -36170,6 +36323,7 @@
 491: 1:}
 491: 1:Scores: 56501
 491: 1:Answer: message('StartNextLevel')
+491: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 492: 1:BoardData {
 492: 1:  'description': 'No more Levels. You win!',
@@ -36179,6 +36333,7 @@
 492: 1:}
 492: 1:Scores: 56501
 492: 1:Answer: message('StartNextLevel')
+492: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 493: 1:BoardData {
 493: 1:  'description': 'No more Levels. You win!',
@@ -36188,6 +36343,7 @@
 493: 1:}
 493: 1:Scores: 56501
 493: 1:Answer: message('StartNextLevel')
+493: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 494: 1:BoardData {
 494: 1:  'description': 'No more Levels. You win!',
@@ -36197,6 +36353,7 @@
 494: 1:}
 494: 1:Scores: 56501
 494: 1:Answer: message('StartNextLevel')
+494: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 495: 1:BoardData {
 495: 1:  'description': 'No more Levels. You win!',
@@ -36206,6 +36363,7 @@
 495: 1:}
 495: 1:Scores: 56501
 495: 1:Answer: message('StartNextLevel')
+495: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 496: 1:BoardData {
 496: 1:  'description': 'No more Levels. You win!',
@@ -36215,6 +36373,7 @@
 496: 1:}
 496: 1:Scores: 56501
 496: 1:Answer: message('StartNextLevel')
+496: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 497: 1:BoardData {
 497: 1:  'description': 'No more Levels. You win!',
@@ -36224,6 +36383,7 @@
 497: 1:}
 497: 1:Scores: 56501
 497: 1:Answer: message('StartNextLevel')
+497: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 498: 1:BoardData {
 498: 1:  'description': 'No more Levels. You win!',
@@ -36233,6 +36393,7 @@
 498: 1:}
 498: 1:Scores: 56501
 498: 1:Answer: message('StartNextLevel')
+498: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 499: 1:BoardData {
 499: 1:  'description': 'No more Levels. You win!',
@@ -36242,6 +36403,7 @@
 499: 1:}
 499: 1:Scores: 56501
 499: 1:Answer: message('StartNextLevel')
+499: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 500: 1:BoardData {
 500: 1:  'description': 'No more Levels. You win!',
@@ -36251,6 +36413,7 @@
 500: 1:}
 500: 1:Scores: 56501
 500: 1:Answer: message('StartNextLevel')
+500: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 501: 1:BoardData {
 501: 1:  'description': 'No more Levels. You win!',
@@ -36260,6 +36423,7 @@
 501: 1:}
 501: 1:Scores: 56501
 501: 1:Answer: message('StartNextLevel')
+501: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 502: 1:BoardData {
 502: 1:  'description': 'No more Levels. You win!',
@@ -36269,6 +36433,7 @@
 502: 1:}
 502: 1:Scores: 56501
 502: 1:Answer: message('StartNextLevel')
+502: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 503: 1:BoardData {
 503: 1:  'description': 'No more Levels. You win!',
@@ -36278,6 +36443,7 @@
 503: 1:}
 503: 1:Scores: 56501
 503: 1:Answer: message('StartNextLevel')
+503: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 504: 1:BoardData {
 504: 1:  'description': 'No more Levels. You win!',
@@ -36287,6 +36453,7 @@
 504: 1:}
 504: 1:Scores: 56501
 504: 1:Answer: message('StartNextLevel')
+504: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 505: 1:BoardData {
 505: 1:  'description': 'No more Levels. You win!',
@@ -36296,6 +36463,7 @@
 505: 1:}
 505: 1:Scores: 56501
 505: 1:Answer: message('StartNextLevel')
+505: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 506: 1:BoardData {
 506: 1:  'description': 'No more Levels. You win!',
@@ -36305,6 +36473,7 @@
 506: 1:}
 506: 1:Scores: 56501
 506: 1:Answer: message('StartNextLevel')
+506: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 507: 1:BoardData {
 507: 1:  'description': 'No more Levels. You win!',
@@ -36314,6 +36483,7 @@
 507: 1:}
 507: 1:Scores: 56501
 507: 1:Answer: message('StartNextLevel')
+507: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 508: 1:BoardData {
 508: 1:  'description': 'No more Levels. You win!',
@@ -36323,6 +36493,7 @@
 508: 1:}
 508: 1:Scores: 56501
 508: 1:Answer: message('StartNextLevel')
+508: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 509: 1:BoardData {
 509: 1:  'description': 'No more Levels. You win!',
@@ -36332,6 +36503,7 @@
 509: 1:}
 509: 1:Scores: 56501
 509: 1:Answer: message('StartNextLevel')
+509: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 510: 1:BoardData {
 510: 1:  'description': 'No more Levels. You win!',
@@ -36341,6 +36513,7 @@
 510: 1:}
 510: 1:Scores: 56501
 510: 1:Answer: message('StartNextLevel')
+510: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 511: 1:BoardData {
 511: 1:  'description': 'No more Levels. You win!',
@@ -36350,6 +36523,7 @@
 511: 1:}
 511: 1:Scores: 56501
 511: 1:Answer: message('StartNextLevel')
+511: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 512: 1:BoardData {
 512: 1:  'description': 'No more Levels. You win!',
@@ -36359,6 +36533,7 @@
 512: 1:}
 512: 1:Scores: 56501
 512: 1:Answer: message('StartNextLevel')
+512: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 513: 1:BoardData {
 513: 1:  'description': 'No more Levels. You win!',
@@ -36368,6 +36543,7 @@
 513: 1:}
 513: 1:Scores: 56501
 513: 1:Answer: message('StartNextLevel')
+513: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 514: 1:BoardData {
 514: 1:  'description': 'No more Levels. You win!',
@@ -36377,6 +36553,7 @@
 514: 1:}
 514: 1:Scores: 56501
 514: 1:Answer: message('StartNextLevel')
+514: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 515: 1:BoardData {
 515: 1:  'description': 'No more Levels. You win!',
@@ -36386,6 +36563,7 @@
 515: 1:}
 515: 1:Scores: 56501
 515: 1:Answer: message('StartNextLevel')
+515: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 516: 1:BoardData {
 516: 1:  'description': 'No more Levels. You win!',
@@ -36395,6 +36573,7 @@
 516: 1:}
 516: 1:Scores: 56501
 516: 1:Answer: message('StartNextLevel')
+516: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 517: 1:BoardData {
 517: 1:  'description': 'No more Levels. You win!',
@@ -36404,6 +36583,7 @@
 517: 1:}
 517: 1:Scores: 56501
 517: 1:Answer: message('StartNextLevel')
+517: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 518: 1:BoardData {
 518: 1:  'description': 'No more Levels. You win!',
@@ -36413,6 +36593,7 @@
 518: 1:}
 518: 1:Scores: 56501
 518: 1:Answer: message('StartNextLevel')
+518: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 519: 1:BoardData {
 519: 1:  'description': 'No more Levels. You win!',
@@ -36422,6 +36603,7 @@
 519: 1:}
 519: 1:Scores: 56501
 519: 1:Answer: message('StartNextLevel')
+519: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 520: 1:BoardData {
 520: 1:  'description': 'No more Levels. You win!',
@@ -36431,6 +36613,7 @@
 520: 1:}
 520: 1:Scores: 56501
 520: 1:Answer: message('StartNextLevel')
+520: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 521: 1:BoardData {
 521: 1:  'description': 'No more Levels. You win!',
@@ -36440,6 +36623,7 @@
 521: 1:}
 521: 1:Scores: 56501
 521: 1:Answer: message('StartNextLevel')
+521: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 522: 1:BoardData {
 522: 1:  'description': 'No more Levels. You win!',
@@ -36449,6 +36633,7 @@
 522: 1:}
 522: 1:Scores: 56501
 522: 1:Answer: message('StartNextLevel')
+522: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 523: 1:BoardData {
 523: 1:  'description': 'No more Levels. You win!',
@@ -36458,6 +36643,7 @@
 523: 1:}
 523: 1:Scores: 56501
 523: 1:Answer: message('StartNextLevel')
+523: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 524: 1:BoardData {
 524: 1:  'description': 'No more Levels. You win!',
@@ -36467,6 +36653,7 @@
 524: 1:}
 524: 1:Scores: 56501
 524: 1:Answer: message('StartNextLevel')
+524: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 525: 1:BoardData {
 525: 1:  'description': 'No more Levels. You win!',
@@ -36476,6 +36663,7 @@
 525: 1:}
 525: 1:Scores: 56501
 525: 1:Answer: message('StartNextLevel')
+525: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 526: 1:BoardData {
 526: 1:  'description': 'No more Levels. You win!',
@@ -36485,6 +36673,7 @@
 526: 1:}
 526: 1:Scores: 56501
 526: 1:Answer: message('StartNextLevel')
+526: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 527: 1:BoardData {
 527: 1:  'description': 'No more Levels. You win!',
@@ -36494,6 +36683,7 @@
 527: 1:}
 527: 1:Scores: 56501
 527: 1:Answer: message('StartNextLevel')
+527: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 528: 1:BoardData {
 528: 1:  'description': 'No more Levels. You win!',
@@ -36503,6 +36693,7 @@
 528: 1:}
 528: 1:Scores: 56501
 528: 1:Answer: message('StartNextLevel')
+528: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 529: 1:BoardData {
 529: 1:  'description': 'No more Levels. You win!',
@@ -36512,6 +36703,7 @@
 529: 1:}
 529: 1:Scores: 56501
 529: 1:Answer: message('StartNextLevel')
+529: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 530: 1:BoardData {
 530: 1:  'description': 'No more Levels. You win!',
@@ -36521,6 +36713,7 @@
 530: 1:}
 530: 1:Scores: 56501
 530: 1:Answer: message('StartNextLevel')
+530: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 531: 1:BoardData {
 531: 1:  'description': 'No more Levels. You win!',
@@ -36530,6 +36723,7 @@
 531: 1:}
 531: 1:Scores: 56501
 531: 1:Answer: message('StartNextLevel')
+531: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 532: 1:BoardData {
 532: 1:  'description': 'No more Levels. You win!',
@@ -36539,6 +36733,7 @@
 532: 1:}
 532: 1:Scores: 56501
 532: 1:Answer: message('StartNextLevel')
+532: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 533: 1:BoardData {
 533: 1:  'description': 'No more Levels. You win!',
@@ -36548,6 +36743,7 @@
 533: 1:}
 533: 1:Scores: 56501
 533: 1:Answer: message('StartNextLevel')
+533: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 534: 1:BoardData {
 534: 1:  'description': 'No more Levels. You win!',
@@ -36557,6 +36753,7 @@
 534: 1:}
 534: 1:Scores: 56501
 534: 1:Answer: message('StartNextLevel')
+534: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 535: 1:BoardData {
 535: 1:  'description': 'No more Levels. You win!',
@@ -36566,6 +36763,7 @@
 535: 1:}
 535: 1:Scores: 56501
 535: 1:Answer: message('StartNextLevel')
+535: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 536: 1:BoardData {
 536: 1:  'description': 'No more Levels. You win!',
@@ -36575,6 +36773,7 @@
 536: 1:}
 536: 1:Scores: 56501
 536: 1:Answer: message('StartNextLevel')
+536: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 537: 1:BoardData {
 537: 1:  'description': 'No more Levels. You win!',
@@ -36584,6 +36783,7 @@
 537: 1:}
 537: 1:Scores: 56501
 537: 1:Answer: message('StartNextLevel')
+537: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 538: 1:BoardData {
 538: 1:  'description': 'No more Levels. You win!',
@@ -36593,6 +36793,7 @@
 538: 1:}
 538: 1:Scores: 56501
 538: 1:Answer: message('StartNextLevel')
+538: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 539: 1:BoardData {
 539: 1:  'description': 'No more Levels. You win!',
@@ -36602,6 +36803,7 @@
 539: 1:}
 539: 1:Scores: 56501
 539: 1:Answer: message('StartNextLevel')
+539: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 540: 1:BoardData {
 540: 1:  'description': 'No more Levels. You win!',
@@ -36611,6 +36813,7 @@
 540: 1:}
 540: 1:Scores: 56501
 540: 1:Answer: message('StartNextLevel')
+540: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 541: 1:BoardData {
 541: 1:  'description': 'No more Levels. You win!',
@@ -36620,6 +36823,7 @@
 541: 1:}
 541: 1:Scores: 56501
 541: 1:Answer: message('StartNextLevel')
+541: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 542: 1:BoardData {
 542: 1:  'description': 'No more Levels. You win!',
@@ -36629,6 +36833,7 @@
 542: 1:}
 542: 1:Scores: 56501
 542: 1:Answer: message('StartNextLevel')
+542: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 543: 1:BoardData {
 543: 1:  'description': 'No more Levels. You win!',
@@ -36638,6 +36843,7 @@
 543: 1:}
 543: 1:Scores: 56501
 543: 1:Answer: message('StartNextLevel')
+543: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 544: 1:BoardData {
 544: 1:  'description': 'No more Levels. You win!',
@@ -36647,6 +36853,7 @@
 544: 1:}
 544: 1:Scores: 56501
 544: 1:Answer: message('StartNextLevel')
+544: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 545: 1:BoardData {
 545: 1:  'description': 'No more Levels. You win!',
@@ -36656,6 +36863,7 @@
 545: 1:}
 545: 1:Scores: 56501
 545: 1:Answer: message('StartNextLevel')
+545: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 546: 1:BoardData {
 546: 1:  'description': 'No more Levels. You win!',
@@ -36665,6 +36873,7 @@
 546: 1:}
 546: 1:Scores: 56501
 546: 1:Answer: message('StartNextLevel')
+546: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 547: 1:BoardData {
 547: 1:  'description': 'No more Levels. You win!',
@@ -36674,6 +36883,7 @@
 547: 1:}
 547: 1:Scores: 56501
 547: 1:Answer: message('StartNextLevel')
+547: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 548: 1:BoardData {
 548: 1:  'description': 'No more Levels. You win!',
@@ -36683,6 +36893,7 @@
 548: 1:}
 548: 1:Scores: 56501
 548: 1:Answer: message('StartNextLevel')
+548: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 549: 1:BoardData {
 549: 1:  'description': 'No more Levels. You win!',
@@ -36692,6 +36903,7 @@
 549: 1:}
 549: 1:Scores: 56501
 549: 1:Answer: message('StartNextLevel')
+549: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 550: 1:BoardData {
 550: 1:  'description': 'No more Levels. You win!',
@@ -36701,6 +36913,7 @@
 550: 1:}
 550: 1:Scores: 56501
 550: 1:Answer: message('StartNextLevel')
+550: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 551: 1:BoardData {
 551: 1:  'description': 'No more Levels. You win!',
@@ -36710,6 +36923,7 @@
 551: 1:}
 551: 1:Scores: 56501
 551: 1:Answer: message('StartNextLevel')
+551: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 552: 1:BoardData {
 552: 1:  'description': 'No more Levels. You win!',
@@ -36719,6 +36933,7 @@
 552: 1:}
 552: 1:Scores: 56501
 552: 1:Answer: message('StartNextLevel')
+552: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 553: 1:BoardData {
 553: 1:  'description': 'No more Levels. You win!',
@@ -36728,6 +36943,7 @@
 553: 1:}
 553: 1:Scores: 56501
 553: 1:Answer: message('StartNextLevel')
+553: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 554: 1:BoardData {
 554: 1:  'description': 'No more Levels. You win!',
@@ -36737,6 +36953,7 @@
 554: 1:}
 554: 1:Scores: 56501
 554: 1:Answer: message('StartNextLevel')
+554: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 555: 1:BoardData {
 555: 1:  'description': 'No more Levels. You win!',
@@ -36746,6 +36963,7 @@
 555: 1:}
 555: 1:Scores: 56501
 555: 1:Answer: message('StartNextLevel')
+555: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 556: 1:BoardData {
 556: 1:  'description': 'No more Levels. You win!',
@@ -36755,6 +36973,7 @@
 556: 1:}
 556: 1:Scores: 56501
 556: 1:Answer: message('StartNextLevel')
+556: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 557: 1:BoardData {
 557: 1:  'description': 'No more Levels. You win!',
@@ -36764,6 +36983,7 @@
 557: 1:}
 557: 1:Scores: 56501
 557: 1:Answer: message('StartNextLevel')
+557: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 558: 1:BoardData {
 558: 1:  'description': 'No more Levels. You win!',
@@ -36773,6 +36993,7 @@
 558: 1:}
 558: 1:Scores: 56501
 558: 1:Answer: message('StartNextLevel')
+558: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 559: 1:BoardData {
 559: 1:  'description': 'No more Levels. You win!',
@@ -36782,6 +37003,7 @@
 559: 1:}
 559: 1:Scores: 56501
 559: 1:Answer: message('StartNextLevel')
+559: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 560: 1:BoardData {
 560: 1:  'description': 'No more Levels. You win!',
@@ -36791,6 +37013,7 @@
 560: 1:}
 560: 1:Scores: 56501
 560: 1:Answer: message('StartNextLevel')
+560: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 561: 1:BoardData {
 561: 1:  'description': 'No more Levels. You win!',
@@ -36800,6 +37023,7 @@
 561: 1:}
 561: 1:Scores: 56501
 561: 1:Answer: message('StartNextLevel')
+561: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 562: 1:BoardData {
 562: 1:  'description': 'No more Levels. You win!',
@@ -36809,6 +37033,7 @@
 562: 1:}
 562: 1:Scores: 56501
 562: 1:Answer: message('StartNextLevel')
+562: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 563: 1:BoardData {
 563: 1:  'description': 'No more Levels. You win!',
@@ -36818,6 +37043,7 @@
 563: 1:}
 563: 1:Scores: 56501
 563: 1:Answer: message('StartNextLevel')
+563: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 564: 1:BoardData {
 564: 1:  'description': 'No more Levels. You win!',
@@ -36827,6 +37053,7 @@
 564: 1:}
 564: 1:Scores: 56501
 564: 1:Answer: message('StartNextLevel')
+564: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 565: 1:BoardData {
 565: 1:  'description': 'No more Levels. You win!',
@@ -36836,6 +37063,7 @@
 565: 1:}
 565: 1:Scores: 56501
 565: 1:Answer: message('StartNextLevel')
+565: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 566: 1:BoardData {
 566: 1:  'description': 'No more Levels. You win!',
@@ -36845,6 +37073,7 @@
 566: 1:}
 566: 1:Scores: 56501
 566: 1:Answer: message('StartNextLevel')
+566: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 567: 1:BoardData {
 567: 1:  'description': 'No more Levels. You win!',
@@ -36854,6 +37083,7 @@
 567: 1:}
 567: 1:Scores: 56501
 567: 1:Answer: message('StartNextLevel')
+567: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 568: 1:BoardData {
 568: 1:  'description': 'No more Levels. You win!',
@@ -36863,6 +37093,7 @@
 568: 1:}
 568: 1:Scores: 56501
 568: 1:Answer: message('StartNextLevel')
+568: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 569: 1:BoardData {
 569: 1:  'description': 'No more Levels. You win!',
@@ -36872,6 +37103,7 @@
 569: 1:}
 569: 1:Scores: 56501
 569: 1:Answer: message('StartNextLevel')
+569: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 570: 1:BoardData {
 570: 1:  'description': 'No more Levels. You win!',
@@ -36881,6 +37113,7 @@
 570: 1:}
 570: 1:Scores: 56501
 570: 1:Answer: message('StartNextLevel')
+570: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 571: 1:BoardData {
 571: 1:  'description': 'No more Levels. You win!',
@@ -36890,6 +37123,7 @@
 571: 1:}
 571: 1:Scores: 56501
 571: 1:Answer: message('StartNextLevel')
+571: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 572: 1:BoardData {
 572: 1:  'description': 'No more Levels. You win!',
@@ -36899,6 +37133,7 @@
 572: 1:}
 572: 1:Scores: 56501
 572: 1:Answer: message('StartNextLevel')
+572: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 573: 1:BoardData {
 573: 1:  'description': 'No more Levels. You win!',
@@ -36908,6 +37143,7 @@
 573: 1:}
 573: 1:Scores: 56501
 573: 1:Answer: message('StartNextLevel')
+573: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 574: 1:BoardData {
 574: 1:  'description': 'No more Levels. You win!',
@@ -36917,6 +37153,7 @@
 574: 1:}
 574: 1:Scores: 56501
 574: 1:Answer: message('StartNextLevel')
+574: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 575: 1:BoardData {
 575: 1:  'description': 'No more Levels. You win!',
@@ -36926,6 +37163,7 @@
 575: 1:}
 575: 1:Scores: 56501
 575: 1:Answer: message('StartNextLevel')
+575: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 576: 1:BoardData {
 576: 1:  'description': 'No more Levels. You win!',
@@ -36935,6 +37173,7 @@
 576: 1:}
 576: 1:Scores: 56501
 576: 1:Answer: message('StartNextLevel')
+576: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 577: 1:BoardData {
 577: 1:  'description': 'No more Levels. You win!',
@@ -36944,6 +37183,7 @@
 577: 1:}
 577: 1:Scores: 56501
 577: 1:Answer: message('StartNextLevel')
+577: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 578: 1:BoardData {
 578: 1:  'description': 'No more Levels. You win!',
@@ -36953,6 +37193,7 @@
 578: 1:}
 578: 1:Scores: 56501
 578: 1:Answer: message('StartNextLevel')
+578: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 579: 1:BoardData {
 579: 1:  'description': 'No more Levels. You win!',
@@ -36962,6 +37203,7 @@
 579: 1:}
 579: 1:Scores: 56501
 579: 1:Answer: message('StartNextLevel')
+579: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 580: 1:BoardData {
 580: 1:  'description': 'No more Levels. You win!',
@@ -36971,6 +37213,7 @@
 580: 1:}
 580: 1:Scores: 56501
 580: 1:Answer: message('StartNextLevel')
+580: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 581: 1:BoardData {
 581: 1:  'description': 'No more Levels. You win!',
@@ -36980,6 +37223,7 @@
 581: 1:}
 581: 1:Scores: 56501
 581: 1:Answer: message('StartNextLevel')
+581: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 582: 1:BoardData {
 582: 1:  'description': 'No more Levels. You win!',
@@ -36989,6 +37233,7 @@
 582: 1:}
 582: 1:Scores: 56501
 582: 1:Answer: message('StartNextLevel')
+582: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 583: 1:BoardData {
 583: 1:  'description': 'No more Levels. You win!',
@@ -36998,6 +37243,7 @@
 583: 1:}
 583: 1:Scores: 56501
 583: 1:Answer: message('StartNextLevel')
+583: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 584: 1:BoardData {
 584: 1:  'description': 'No more Levels. You win!',
@@ -37007,6 +37253,7 @@
 584: 1:}
 584: 1:Scores: 56501
 584: 1:Answer: message('StartNextLevel')
+584: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 585: 1:BoardData {
 585: 1:  'description': 'No more Levels. You win!',
@@ -37016,6 +37263,7 @@
 585: 1:}
 585: 1:Scores: 56501
 585: 1:Answer: message('StartNextLevel')
+585: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 586: 1:BoardData {
 586: 1:  'description': 'No more Levels. You win!',
@@ -37025,6 +37273,7 @@
 586: 1:}
 586: 1:Scores: 56501
 586: 1:Answer: message('StartNextLevel')
+586: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 587: 1:BoardData {
 587: 1:  'description': 'No more Levels. You win!',
@@ -37034,6 +37283,7 @@
 587: 1:}
 587: 1:Scores: 56501
 587: 1:Answer: message('StartNextLevel')
+587: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 588: 1:BoardData {
 588: 1:  'description': 'No more Levels. You win!',
@@ -37043,6 +37293,7 @@
 588: 1:}
 588: 1:Scores: 56501
 588: 1:Answer: message('StartNextLevel')
+588: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 589: 1:BoardData {
 589: 1:  'description': 'No more Levels. You win!',
@@ -37052,6 +37303,7 @@
 589: 1:}
 589: 1:Scores: 56501
 589: 1:Answer: message('StartNextLevel')
+589: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 590: 1:BoardData {
 590: 1:  'description': 'No more Levels. You win!',
@@ -37061,6 +37313,7 @@
 590: 1:}
 590: 1:Scores: 56501
 590: 1:Answer: message('StartNextLevel')
+590: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 591: 1:BoardData {
 591: 1:  'description': 'No more Levels. You win!',
@@ -37070,6 +37323,7 @@
 591: 1:}
 591: 1:Scores: 56501
 591: 1:Answer: message('StartNextLevel')
+591: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 592: 1:BoardData {
 592: 1:  'description': 'No more Levels. You win!',
@@ -37079,6 +37333,7 @@
 592: 1:}
 592: 1:Scores: 56501
 592: 1:Answer: message('StartNextLevel')
+592: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 593: 1:BoardData {
 593: 1:  'description': 'No more Levels. You win!',
@@ -37088,6 +37343,7 @@
 593: 1:}
 593: 1:Scores: 56501
 593: 1:Answer: message('StartNextLevel')
+593: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 594: 1:BoardData {
 594: 1:  'description': 'No more Levels. You win!',
@@ -37097,6 +37353,7 @@
 594: 1:}
 594: 1:Scores: 56501
 594: 1:Answer: message('StartNextLevel')
+594: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 595: 1:BoardData {
 595: 1:  'description': 'No more Levels. You win!',
@@ -37106,6 +37363,7 @@
 595: 1:}
 595: 1:Scores: 56501
 595: 1:Answer: message('StartNextLevel')
+595: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 596: 1:BoardData {
 596: 1:  'description': 'No more Levels. You win!',
@@ -37115,6 +37373,7 @@
 596: 1:}
 596: 1:Scores: 56501
 596: 1:Answer: message('StartNextLevel')
+596: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 597: 1:BoardData {
 597: 1:  'description': 'No more Levels. You win!',
@@ -37124,6 +37383,7 @@
 597: 1:}
 597: 1:Scores: 56501
 597: 1:Answer: message('StartNextLevel')
+597: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 598: 1:BoardData {
 598: 1:  'description': 'No more Levels. You win!',
@@ -37133,6 +37393,7 @@
 598: 1:}
 598: 1:Scores: 56501
 598: 1:Answer: message('StartNextLevel')
+598: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 599: 1:BoardData {
 599: 1:  'description': 'No more Levels. You win!',
@@ -37142,6 +37403,7 @@
 599: 1:}
 599: 1:Scores: 56501
 599: 1:Answer: message('StartNextLevel')
+599: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 600: 1:BoardData {
 600: 1:  'description': 'No more Levels. You win!',
@@ -37151,6 +37413,7 @@
 600: 1:}
 600: 1:Scores: 56501
 600: 1:Answer: message('StartNextLevel')
+600: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 601: 1:BoardData {
 601: 1:  'description': 'No more Levels. You win!',
@@ -37160,6 +37423,7 @@
 601: 1:}
 601: 1:Scores: 56501
 601: 1:Answer: message('StartNextLevel')
+601: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 602: 1:BoardData {
 602: 1:  'description': 'No more Levels. You win!',
@@ -37169,6 +37433,7 @@
 602: 1:}
 602: 1:Scores: 56501
 602: 1:Answer: message('StartNextLevel')
+602: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 603: 1:BoardData {
 603: 1:  'description': 'No more Levels. You win!',
@@ -37178,6 +37443,7 @@
 603: 1:}
 603: 1:Scores: 56501
 603: 1:Answer: message('StartNextLevel')
+603: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 604: 1:BoardData {
 604: 1:  'description': 'No more Levels. You win!',
@@ -37187,6 +37453,7 @@
 604: 1:}
 604: 1:Scores: 56501
 604: 1:Answer: message('StartNextLevel')
+604: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 605: 1:BoardData {
 605: 1:  'description': 'No more Levels. You win!',
@@ -37196,6 +37463,7 @@
 605: 1:}
 605: 1:Scores: 56501
 605: 1:Answer: message('StartNextLevel')
+605: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 606: 1:BoardData {
 606: 1:  'description': 'No more Levels. You win!',
@@ -37205,6 +37473,7 @@
 606: 1:}
 606: 1:Scores: 56501
 606: 1:Answer: message('StartNextLevel')
+606: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 607: 1:BoardData {
 607: 1:  'description': 'No more Levels. You win!',
@@ -37214,6 +37483,7 @@
 607: 1:}
 607: 1:Scores: 56501
 607: 1:Answer: message('StartNextLevel')
+607: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 608: 1:BoardData {
 608: 1:  'description': 'No more Levels. You win!',
@@ -37223,6 +37493,7 @@
 608: 1:}
 608: 1:Scores: 56501
 608: 1:Answer: message('StartNextLevel')
+608: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 609: 1:BoardData {
 609: 1:  'description': 'No more Levels. You win!',
@@ -37232,6 +37503,7 @@
 609: 1:}
 609: 1:Scores: 56501
 609: 1:Answer: message('StartNextLevel')
+609: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 610: 1:BoardData {
 610: 1:  'description': 'No more Levels. You win!',
@@ -37241,6 +37513,7 @@
 610: 1:}
 610: 1:Scores: 56501
 610: 1:Answer: message('StartNextLevel')
+610: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 611: 1:BoardData {
 611: 1:  'description': 'No more Levels. You win!',
@@ -37250,6 +37523,7 @@
 611: 1:}
 611: 1:Scores: 56501
 611: 1:Answer: message('StartNextLevel')
+611: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 612: 1:BoardData {
 612: 1:  'description': 'No more Levels. You win!',
@@ -37259,6 +37533,7 @@
 612: 1:}
 612: 1:Scores: 56501
 612: 1:Answer: message('StartNextLevel')
+612: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 613: 1:BoardData {
 613: 1:  'description': 'No more Levels. You win!',
@@ -37268,6 +37543,7 @@
 613: 1:}
 613: 1:Scores: 56501
 613: 1:Answer: message('StartNextLevel')
+613: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 614: 1:BoardData {
 614: 1:  'description': 'No more Levels. You win!',
@@ -37277,6 +37553,7 @@
 614: 1:}
 614: 1:Scores: 56501
 614: 1:Answer: message('StartNextLevel')
+614: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 615: 1:BoardData {
 615: 1:  'description': 'No more Levels. You win!',
@@ -37286,6 +37563,7 @@
 615: 1:}
 615: 1:Scores: 56501
 615: 1:Answer: message('StartNextLevel')
+615: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 616: 1:BoardData {
 616: 1:  'description': 'No more Levels. You win!',
@@ -37295,6 +37573,7 @@
 616: 1:}
 616: 1:Scores: 56501
 616: 1:Answer: message('StartNextLevel')
+616: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 617: 1:BoardData {
 617: 1:  'description': 'No more Levels. You win!',
@@ -37304,6 +37583,7 @@
 617: 1:}
 617: 1:Scores: 56501
 617: 1:Answer: message('StartNextLevel')
+617: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 618: 1:BoardData {
 618: 1:  'description': 'No more Levels. You win!',
@@ -37313,6 +37593,7 @@
 618: 1:}
 618: 1:Scores: 56501
 618: 1:Answer: message('StartNextLevel')
+618: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 619: 1:BoardData {
 619: 1:  'description': 'No more Levels. You win!',
@@ -37322,6 +37603,7 @@
 619: 1:}
 619: 1:Scores: 56501
 619: 1:Answer: message('StartNextLevel')
+619: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 620: 1:BoardData {
 620: 1:  'description': 'No more Levels. You win!',
@@ -37331,6 +37613,7 @@
 620: 1:}
 620: 1:Scores: 56501
 620: 1:Answer: message('StartNextLevel')
+620: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 621: 1:BoardData {
 621: 1:  'description': 'No more Levels. You win!',
@@ -37340,6 +37623,7 @@
 621: 1:}
 621: 1:Scores: 56501
 621: 1:Answer: message('StartNextLevel')
+621: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 622: 1:BoardData {
 622: 1:  'description': 'No more Levels. You win!',
@@ -37349,6 +37633,7 @@
 622: 1:}
 622: 1:Scores: 56501
 622: 1:Answer: message('StartNextLevel')
+622: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 623: 1:BoardData {
 623: 1:  'description': 'No more Levels. You win!',
@@ -37358,6 +37643,7 @@
 623: 1:}
 623: 1:Scores: 56501
 623: 1:Answer: message('StartNextLevel')
+623: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 624: 1:BoardData {
 624: 1:  'description': 'No more Levels. You win!',
@@ -37367,6 +37653,7 @@
 624: 1:}
 624: 1:Scores: 56501
 624: 1:Answer: message('StartNextLevel')
+624: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 625: 1:BoardData {
 625: 1:  'description': 'No more Levels. You win!',
@@ -37376,6 +37663,7 @@
 625: 1:}
 625: 1:Scores: 56501
 625: 1:Answer: message('StartNextLevel')
+625: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 626: 1:BoardData {
 626: 1:  'description': 'No more Levels. You win!',
@@ -37385,6 +37673,7 @@
 626: 1:}
 626: 1:Scores: 56501
 626: 1:Answer: message('StartNextLevel')
+626: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 627: 1:BoardData {
 627: 1:  'description': 'No more Levels. You win!',
@@ -37394,6 +37683,7 @@
 627: 1:}
 627: 1:Scores: 56501
 627: 1:Answer: message('StartNextLevel')
+627: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 628: 1:BoardData {
 628: 1:  'description': 'No more Levels. You win!',
@@ -37403,6 +37693,7 @@
 628: 1:}
 628: 1:Scores: 56501
 628: 1:Answer: message('StartNextLevel')
+628: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 629: 1:BoardData {
 629: 1:  'description': 'No more Levels. You win!',
@@ -37412,6 +37703,7 @@
 629: 1:}
 629: 1:Scores: 56501
 629: 1:Answer: message('StartNextLevel')
+629: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 630: 1:BoardData {
 630: 1:  'description': 'No more Levels. You win!',
@@ -37421,6 +37713,7 @@
 630: 1:}
 630: 1:Scores: 56501
 630: 1:Answer: message('StartNextLevel')
+630: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 631: 1:BoardData {
 631: 1:  'description': 'No more Levels. You win!',
@@ -37430,6 +37723,7 @@
 631: 1:}
 631: 1:Scores: 56501
 631: 1:Answer: message('StartNextLevel')
+631: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 632: 1:BoardData {
 632: 1:  'description': 'No more Levels. You win!',
@@ -37439,6 +37733,7 @@
 632: 1:}
 632: 1:Scores: 56501
 632: 1:Answer: message('StartNextLevel')
+632: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 633: 1:BoardData {
 633: 1:  'description': 'No more Levels. You win!',
@@ -37448,6 +37743,7 @@
 633: 1:}
 633: 1:Scores: 56501
 633: 1:Answer: message('StartNextLevel')
+633: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 634: 1:BoardData {
 634: 1:  'description': 'No more Levels. You win!',
@@ -37457,6 +37753,7 @@
 634: 1:}
 634: 1:Scores: 56501
 634: 1:Answer: message('StartNextLevel')
+634: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 635: 1:BoardData {
 635: 1:  'description': 'No more Levels. You win!',
@@ -37466,6 +37763,7 @@
 635: 1:}
 635: 1:Scores: 56501
 635: 1:Answer: message('StartNextLevel')
+635: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 636: 1:BoardData {
 636: 1:  'description': 'No more Levels. You win!',
@@ -37475,6 +37773,7 @@
 636: 1:}
 636: 1:Scores: 56501
 636: 1:Answer: message('StartNextLevel')
+636: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 637: 1:BoardData {
 637: 1:  'description': 'No more Levels. You win!',
@@ -37484,6 +37783,7 @@
 637: 1:}
 637: 1:Scores: 56501
 637: 1:Answer: message('StartNextLevel')
+637: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 638: 1:BoardData {
 638: 1:  'description': 'No more Levels. You win!',
@@ -37493,6 +37793,7 @@
 638: 1:}
 638: 1:Scores: 56501
 638: 1:Answer: message('StartNextLevel')
+638: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 639: 1:BoardData {
 639: 1:  'description': 'No more Levels. You win!',
@@ -37502,6 +37803,7 @@
 639: 1:}
 639: 1:Scores: 56501
 639: 1:Answer: message('StartNextLevel')
+639: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 640: 1:BoardData {
 640: 1:  'description': 'No more Levels. You win!',
@@ -37511,6 +37813,7 @@
 640: 1:}
 640: 1:Scores: 56501
 640: 1:Answer: message('StartNextLevel')
+640: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 641: 1:BoardData {
 641: 1:  'description': 'No more Levels. You win!',
@@ -37520,6 +37823,7 @@
 641: 1:}
 641: 1:Scores: 56501
 641: 1:Answer: message('StartNextLevel')
+641: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 642: 1:BoardData {
 642: 1:  'description': 'No more Levels. You win!',
@@ -37529,6 +37833,7 @@
 642: 1:}
 642: 1:Scores: 56501
 642: 1:Answer: message('StartNextLevel')
+642: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 643: 1:BoardData {
 643: 1:  'description': 'No more Levels. You win!',
@@ -37538,6 +37843,7 @@
 643: 1:}
 643: 1:Scores: 56501
 643: 1:Answer: message('StartNextLevel')
+643: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 644: 1:BoardData {
 644: 1:  'description': 'No more Levels. You win!',
@@ -37547,6 +37853,7 @@
 644: 1:}
 644: 1:Scores: 56501
 644: 1:Answer: message('StartNextLevel')
+644: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 645: 1:BoardData {
 645: 1:  'description': 'No more Levels. You win!',
@@ -37556,6 +37863,7 @@
 645: 1:}
 645: 1:Scores: 56501
 645: 1:Answer: message('StartNextLevel')
+645: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 646: 1:BoardData {
 646: 1:  'description': 'No more Levels. You win!',
@@ -37565,6 +37873,7 @@
 646: 1:}
 646: 1:Scores: 56501
 646: 1:Answer: message('StartNextLevel')
+646: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 647: 1:BoardData {
 647: 1:  'description': 'No more Levels. You win!',
@@ -37574,6 +37883,7 @@
 647: 1:}
 647: 1:Scores: 56501
 647: 1:Answer: message('StartNextLevel')
+647: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 648: 1:BoardData {
 648: 1:  'description': 'No more Levels. You win!',
@@ -37583,6 +37893,7 @@
 648: 1:}
 648: 1:Scores: 56501
 648: 1:Answer: message('StartNextLevel')
+648: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 649: 1:BoardData {
 649: 1:  'description': 'No more Levels. You win!',
@@ -37592,6 +37903,7 @@
 649: 1:}
 649: 1:Scores: 56501
 649: 1:Answer: message('StartNextLevel')
+649: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 650: 1:BoardData {
 650: 1:  'description': 'No more Levels. You win!',
@@ -37601,6 +37913,7 @@
 650: 1:}
 650: 1:Scores: 56501
 650: 1:Answer: message('StartNextLevel')
+650: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 651: 1:BoardData {
 651: 1:  'description': 'No more Levels. You win!',
@@ -37610,6 +37923,7 @@
 651: 1:}
 651: 1:Scores: 56501
 651: 1:Answer: message('StartNextLevel')
+651: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 652: 1:BoardData {
 652: 1:  'description': 'No more Levels. You win!',
@@ -37619,6 +37933,7 @@
 652: 1:}
 652: 1:Scores: 56501
 652: 1:Answer: message('StartNextLevel')
+652: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 653: 1:BoardData {
 653: 1:  'description': 'No more Levels. You win!',
@@ -37628,6 +37943,7 @@
 653: 1:}
 653: 1:Scores: 56501
 653: 1:Answer: message('StartNextLevel')
+653: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 654: 1:BoardData {
 654: 1:  'description': 'No more Levels. You win!',
@@ -37637,6 +37953,7 @@
 654: 1:}
 654: 1:Scores: 56501
 654: 1:Answer: message('StartNextLevel')
+654: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 655: 1:BoardData {
 655: 1:  'description': 'No more Levels. You win!',
@@ -37646,6 +37963,7 @@
 655: 1:}
 655: 1:Scores: 56501
 655: 1:Answer: message('StartNextLevel')
+655: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 656: 1:BoardData {
 656: 1:  'description': 'No more Levels. You win!',
@@ -37655,6 +37973,7 @@
 656: 1:}
 656: 1:Scores: 56501
 656: 1:Answer: message('StartNextLevel')
+656: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 657: 1:BoardData {
 657: 1:  'description': 'No more Levels. You win!',
@@ -37664,6 +37983,7 @@
 657: 1:}
 657: 1:Scores: 56501
 657: 1:Answer: message('StartNextLevel')
+657: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 658: 1:BoardData {
 658: 1:  'description': 'No more Levels. You win!',
@@ -37673,6 +37993,7 @@
 658: 1:}
 658: 1:Scores: 56501
 658: 1:Answer: message('StartNextLevel')
+658: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 659: 1:BoardData {
 659: 1:  'description': 'No more Levels. You win!',
@@ -37682,6 +38003,7 @@
 659: 1:}
 659: 1:Scores: 56501
 659: 1:Answer: message('StartNextLevel')
+659: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 660: 1:BoardData {
 660: 1:  'description': 'No more Levels. You win!',
@@ -37691,6 +38013,7 @@
 660: 1:}
 660: 1:Scores: 56501
 660: 1:Answer: message('StartNextLevel')
+660: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 661: 1:BoardData {
 661: 1:  'description': 'No more Levels. You win!',
@@ -37700,6 +38023,7 @@
 661: 1:}
 661: 1:Scores: 56501
 661: 1:Answer: message('StartNextLevel')
+661: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 662: 1:BoardData {
 662: 1:  'description': 'No more Levels. You win!',
@@ -37709,6 +38033,7 @@
 662: 1:}
 662: 1:Scores: 56501
 662: 1:Answer: message('StartNextLevel')
+662: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 663: 1:BoardData {
 663: 1:  'description': 'No more Levels. You win!',
@@ -37718,6 +38043,7 @@
 663: 1:}
 663: 1:Scores: 56501
 663: 1:Answer: message('StartNextLevel')
+663: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 664: 1:BoardData {
 664: 1:  'description': 'No more Levels. You win!',
@@ -37727,6 +38053,7 @@
 664: 1:}
 664: 1:Scores: 56501
 664: 1:Answer: message('StartNextLevel')
+664: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 665: 1:BoardData {
 665: 1:  'description': 'No more Levels. You win!',
@@ -37736,6 +38063,7 @@
 665: 1:}
 665: 1:Scores: 56501
 665: 1:Answer: message('StartNextLevel')
+665: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 666: 1:BoardData {
 666: 1:  'description': 'No more Levels. You win!',
@@ -37745,6 +38073,7 @@
 666: 1:}
 666: 1:Scores: 56501
 666: 1:Answer: message('StartNextLevel')
+666: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 667: 1:BoardData {
 667: 1:  'description': 'No more Levels. You win!',
@@ -37754,6 +38083,7 @@
 667: 1:}
 667: 1:Scores: 56501
 667: 1:Answer: message('StartNextLevel')
+667: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 668: 1:BoardData {
 668: 1:  'description': 'No more Levels. You win!',
@@ -37763,6 +38093,7 @@
 668: 1:}
 668: 1:Scores: 56501
 668: 1:Answer: message('StartNextLevel')
+668: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 669: 1:BoardData {
 669: 1:  'description': 'No more Levels. You win!',
@@ -37772,6 +38103,7 @@
 669: 1:}
 669: 1:Scores: 56501
 669: 1:Answer: message('StartNextLevel')
+669: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 670: 1:BoardData {
 670: 1:  'description': 'No more Levels. You win!',
@@ -37781,6 +38113,7 @@
 670: 1:}
 670: 1:Scores: 56501
 670: 1:Answer: message('StartNextLevel')
+670: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 671: 1:BoardData {
 671: 1:  'description': 'No more Levels. You win!',
@@ -37790,6 +38123,7 @@
 671: 1:}
 671: 1:Scores: 56501
 671: 1:Answer: message('StartNextLevel')
+671: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 672: 1:BoardData {
 672: 1:  'description': 'No more Levels. You win!',
@@ -37799,6 +38133,7 @@
 672: 1:}
 672: 1:Scores: 56501
 672: 1:Answer: message('StartNextLevel')
+672: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 673: 1:BoardData {
 673: 1:  'description': 'No more Levels. You win!',
@@ -37808,6 +38143,7 @@
 673: 1:}
 673: 1:Scores: 56501
 673: 1:Answer: message('StartNextLevel')
+673: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 674: 1:BoardData {
 674: 1:  'description': 'No more Levels. You win!',
@@ -37817,6 +38153,7 @@
 674: 1:}
 674: 1:Scores: 56501
 674: 1:Answer: message('StartNextLevel')
+674: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 675: 1:BoardData {
 675: 1:  'description': 'No more Levels. You win!',
@@ -37826,6 +38163,7 @@
 675: 1:}
 675: 1:Scores: 56501
 675: 1:Answer: message('StartNextLevel')
+675: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 676: 1:BoardData {
 676: 1:  'description': 'No more Levels. You win!',
@@ -37835,6 +38173,7 @@
 676: 1:}
 676: 1:Scores: 56501
 676: 1:Answer: message('StartNextLevel')
+676: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 677: 1:BoardData {
 677: 1:  'description': 'No more Levels. You win!',
@@ -37844,6 +38183,7 @@
 677: 1:}
 677: 1:Scores: 56501
 677: 1:Answer: message('StartNextLevel')
+677: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 678: 1:BoardData {
 678: 1:  'description': 'No more Levels. You win!',
@@ -37853,6 +38193,7 @@
 678: 1:}
 678: 1:Scores: 56501
 678: 1:Answer: message('StartNextLevel')
+678: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 679: 1:BoardData {
 679: 1:  'description': 'No more Levels. You win!',
@@ -37862,6 +38203,7 @@
 679: 1:}
 679: 1:Scores: 56501
 679: 1:Answer: message('StartNextLevel')
+679: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 680: 1:BoardData {
 680: 1:  'description': 'No more Levels. You win!',
@@ -37871,6 +38213,7 @@
 680: 1:}
 680: 1:Scores: 56501
 680: 1:Answer: message('StartNextLevel')
+680: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 681: 1:BoardData {
 681: 1:  'description': 'No more Levels. You win!',
@@ -37880,6 +38223,7 @@
 681: 1:}
 681: 1:Scores: 56501
 681: 1:Answer: message('StartNextLevel')
+681: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 682: 1:BoardData {
 682: 1:  'description': 'No more Levels. You win!',
@@ -37889,6 +38233,7 @@
 682: 1:}
 682: 1:Scores: 56501
 682: 1:Answer: message('StartNextLevel')
+682: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 683: 1:BoardData {
 683: 1:  'description': 'No more Levels. You win!',
@@ -37898,6 +38243,7 @@
 683: 1:}
 683: 1:Scores: 56501
 683: 1:Answer: message('StartNextLevel')
+683: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 684: 1:BoardData {
 684: 1:  'description': 'No more Levels. You win!',
@@ -37907,6 +38253,7 @@
 684: 1:}
 684: 1:Scores: 56501
 684: 1:Answer: message('StartNextLevel')
+684: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 685: 1:BoardData {
 685: 1:  'description': 'No more Levels. You win!',
@@ -37916,6 +38263,7 @@
 685: 1:}
 685: 1:Scores: 56501
 685: 1:Answer: message('StartNextLevel')
+685: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 686: 1:BoardData {
 686: 1:  'description': 'No more Levels. You win!',
@@ -37925,6 +38273,7 @@
 686: 1:}
 686: 1:Scores: 56501
 686: 1:Answer: message('StartNextLevel')
+686: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 687: 1:BoardData {
 687: 1:  'description': 'No more Levels. You win!',
@@ -37934,6 +38283,7 @@
 687: 1:}
 687: 1:Scores: 56501
 687: 1:Answer: message('StartNextLevel')
+687: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 688: 1:BoardData {
 688: 1:  'description': 'No more Levels. You win!',
@@ -37943,6 +38293,7 @@
 688: 1:}
 688: 1:Scores: 56501
 688: 1:Answer: message('StartNextLevel')
+688: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 689: 1:BoardData {
 689: 1:  'description': 'No more Levels. You win!',
@@ -37952,6 +38303,7 @@
 689: 1:}
 689: 1:Scores: 56501
 689: 1:Answer: message('StartNextLevel')
+689: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 690: 1:BoardData {
 690: 1:  'description': 'No more Levels. You win!',
@@ -37961,6 +38313,7 @@
 690: 1:}
 690: 1:Scores: 56501
 690: 1:Answer: message('StartNextLevel')
+690: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 691: 1:BoardData {
 691: 1:  'description': 'No more Levels. You win!',
@@ -37970,6 +38323,7 @@
 691: 1:}
 691: 1:Scores: 56501
 691: 1:Answer: message('StartNextLevel')
+691: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 692: 1:BoardData {
 692: 1:  'description': 'No more Levels. You win!',
@@ -37979,6 +38333,7 @@
 692: 1:}
 692: 1:Scores: 56501
 692: 1:Answer: message('StartNextLevel')
+692: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 693: 1:BoardData {
 693: 1:  'description': 'No more Levels. You win!',
@@ -37988,6 +38343,7 @@
 693: 1:}
 693: 1:Scores: 56501
 693: 1:Answer: message('StartNextLevel')
+693: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 694: 1:BoardData {
 694: 1:  'description': 'No more Levels. You win!',
@@ -37997,6 +38353,7 @@
 694: 1:}
 694: 1:Scores: 56501
 694: 1:Answer: message('StartNextLevel')
+694: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 695: 1:BoardData {
 695: 1:  'description': 'No more Levels. You win!',
@@ -38006,6 +38363,7 @@
 695: 1:}
 695: 1:Scores: 56501
 695: 1:Answer: message('StartNextLevel')
+695: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 696: 1:BoardData {
 696: 1:  'description': 'No more Levels. You win!',
@@ -38015,6 +38373,7 @@
 696: 1:}
 696: 1:Scores: 56501
 696: 1:Answer: message('StartNextLevel')
+696: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 697: 1:BoardData {
 697: 1:  'description': 'No more Levels. You win!',
@@ -38024,6 +38383,7 @@
 697: 1:}
 697: 1:Scores: 56501
 697: 1:Answer: message('StartNextLevel')
+697: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 698: 1:BoardData {
 698: 1:  'description': 'No more Levels. You win!',
@@ -38033,6 +38393,7 @@
 698: 1:}
 698: 1:Scores: 56501
 698: 1:Answer: message('StartNextLevel')
+698: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 699: 1:BoardData {
 699: 1:  'description': 'No more Levels. You win!',
@@ -38042,6 +38403,7 @@
 699: 1:}
 699: 1:Scores: 56501
 699: 1:Answer: message('StartNextLevel')
+699: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 700: 1:BoardData {
 700: 1:  'description': 'No more Levels. You win!',
@@ -38051,6 +38413,7 @@
 700: 1:}
 700: 1:Scores: 56501
 700: 1:Answer: message('StartNextLevel')
+700: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 701: 1:BoardData {
 701: 1:  'description': 'No more Levels. You win!',
@@ -38060,6 +38423,7 @@
 701: 1:}
 701: 1:Scores: 56501
 701: 1:Answer: message('StartNextLevel')
+701: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 702: 1:BoardData {
 702: 1:  'description': 'No more Levels. You win!',
@@ -38069,6 +38433,7 @@
 702: 1:}
 702: 1:Scores: 56501
 702: 1:Answer: message('StartNextLevel')
+702: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 703: 1:BoardData {
 703: 1:  'description': 'No more Levels. You win!',
@@ -38078,6 +38443,7 @@
 703: 1:}
 703: 1:Scores: 56501
 703: 1:Answer: message('StartNextLevel')
+703: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 704: 1:BoardData {
 704: 1:  'description': 'No more Levels. You win!',
@@ -38087,6 +38453,7 @@
 704: 1:}
 704: 1:Scores: 56501
 704: 1:Answer: message('StartNextLevel')
+704: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 705: 1:BoardData {
 705: 1:  'description': 'No more Levels. You win!',
@@ -38096,6 +38463,7 @@
 705: 1:}
 705: 1:Scores: 56501
 705: 1:Answer: message('StartNextLevel')
+705: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 706: 1:BoardData {
 706: 1:  'description': 'No more Levels. You win!',
@@ -38105,6 +38473,7 @@
 706: 1:}
 706: 1:Scores: 56501
 706: 1:Answer: message('StartNextLevel')
+706: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 707: 1:BoardData {
 707: 1:  'description': 'No more Levels. You win!',
@@ -38114,6 +38483,7 @@
 707: 1:}
 707: 1:Scores: 56501
 707: 1:Answer: message('StartNextLevel')
+707: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 708: 1:BoardData {
 708: 1:  'description': 'No more Levels. You win!',
@@ -38123,6 +38493,7 @@
 708: 1:}
 708: 1:Scores: 56501
 708: 1:Answer: message('StartNextLevel')
+708: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 709: 1:BoardData {
 709: 1:  'description': 'No more Levels. You win!',
@@ -38132,6 +38503,7 @@
 709: 1:}
 709: 1:Scores: 56501
 709: 1:Answer: message('StartNextLevel')
+709: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 710: 1:BoardData {
 710: 1:  'description': 'No more Levels. You win!',
@@ -38141,6 +38513,7 @@
 710: 1:}
 710: 1:Scores: 56501
 710: 1:Answer: message('StartNextLevel')
+710: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 711: 1:BoardData {
 711: 1:  'description': 'No more Levels. You win!',
@@ -38150,6 +38523,7 @@
 711: 1:}
 711: 1:Scores: 56501
 711: 1:Answer: message('StartNextLevel')
+711: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 712: 1:BoardData {
 712: 1:  'description': 'No more Levels. You win!',
@@ -38159,6 +38533,7 @@
 712: 1:}
 712: 1:Scores: 56501
 712: 1:Answer: message('StartNextLevel')
+712: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 713: 1:BoardData {
 713: 1:  'description': 'No more Levels. You win!',
@@ -38168,6 +38543,7 @@
 713: 1:}
 713: 1:Scores: 56501
 713: 1:Answer: message('StartNextLevel')
+713: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 714: 1:BoardData {
 714: 1:  'description': 'No more Levels. You win!',
@@ -38177,6 +38553,7 @@
 714: 1:}
 714: 1:Scores: 56501
 714: 1:Answer: message('StartNextLevel')
+714: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 715: 1:BoardData {
 715: 1:  'description': 'No more Levels. You win!',
@@ -38186,6 +38563,7 @@
 715: 1:}
 715: 1:Scores: 56501
 715: 1:Answer: message('StartNextLevel')
+715: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 716: 1:BoardData {
 716: 1:  'description': 'No more Levels. You win!',
@@ -38195,6 +38573,7 @@
 716: 1:}
 716: 1:Scores: 56501
 716: 1:Answer: message('StartNextLevel')
+716: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 717: 1:BoardData {
 717: 1:  'description': 'No more Levels. You win!',
@@ -38204,6 +38583,7 @@
 717: 1:}
 717: 1:Scores: 56501
 717: 1:Answer: message('StartNextLevel')
+717: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 718: 1:BoardData {
 718: 1:  'description': 'No more Levels. You win!',
@@ -38213,6 +38593,7 @@
 718: 1:}
 718: 1:Scores: 56501
 718: 1:Answer: message('StartNextLevel')
+718: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 719: 1:BoardData {
 719: 1:  'description': 'No more Levels. You win!',
@@ -38222,6 +38603,7 @@
 719: 1:}
 719: 1:Scores: 56501
 719: 1:Answer: message('StartNextLevel')
+719: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 720: 1:BoardData {
 720: 1:  'description': 'No more Levels. You win!',
@@ -38231,6 +38613,7 @@
 720: 1:}
 720: 1:Scores: 56501
 720: 1:Answer: message('StartNextLevel')
+720: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 721: 1:BoardData {
 721: 1:  'description': 'No more Levels. You win!',
@@ -38240,6 +38623,7 @@
 721: 1:}
 721: 1:Scores: 56501
 721: 1:Answer: message('StartNextLevel')
+721: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 722: 1:BoardData {
 722: 1:  'description': 'No more Levels. You win!',
@@ -38249,6 +38633,7 @@
 722: 1:}
 722: 1:Scores: 56501
 722: 1:Answer: message('StartNextLevel')
+722: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 723: 1:BoardData {
 723: 1:  'description': 'No more Levels. You win!',
@@ -38258,6 +38643,7 @@
 723: 1:}
 723: 1:Scores: 56501
 723: 1:Answer: message('StartNextLevel')
+723: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 724: 1:BoardData {
 724: 1:  'description': 'No more Levels. You win!',
@@ -38267,6 +38653,7 @@
 724: 1:}
 724: 1:Scores: 56501
 724: 1:Answer: message('StartNextLevel')
+724: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 725: 1:BoardData {
 725: 1:  'description': 'No more Levels. You win!',
@@ -38276,6 +38663,7 @@
 725: 1:}
 725: 1:Scores: 56501
 725: 1:Answer: message('StartNextLevel')
+725: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 726: 1:BoardData {
 726: 1:  'description': 'No more Levels. You win!',
@@ -38285,6 +38673,7 @@
 726: 1:}
 726: 1:Scores: 56501
 726: 1:Answer: message('StartNextLevel')
+726: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 727: 1:BoardData {
 727: 1:  'description': 'No more Levels. You win!',
@@ -38294,6 +38683,7 @@
 727: 1:}
 727: 1:Scores: 56501
 727: 1:Answer: message('StartNextLevel')
+727: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 728: 1:BoardData {
 728: 1:  'description': 'No more Levels. You win!',
@@ -38303,6 +38693,7 @@
 728: 1:}
 728: 1:Scores: 56501
 728: 1:Answer: message('StartNextLevel')
+728: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 729: 1:BoardData {
 729: 1:  'description': 'No more Levels. You win!',
@@ -38312,6 +38703,7 @@
 729: 1:}
 729: 1:Scores: 56501
 729: 1:Answer: message('StartNextLevel')
+729: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 730: 1:BoardData {
 730: 1:  'description': 'No more Levels. You win!',
@@ -38321,6 +38713,7 @@
 730: 1:}
 730: 1:Scores: 56501
 730: 1:Answer: message('StartNextLevel')
+730: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 731: 1:BoardData {
 731: 1:  'description': 'No more Levels. You win!',
@@ -38330,6 +38723,7 @@
 731: 1:}
 731: 1:Scores: 56501
 731: 1:Answer: message('StartNextLevel')
+731: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 732: 1:BoardData {
 732: 1:  'description': 'No more Levels. You win!',
@@ -38339,6 +38733,7 @@
 732: 1:}
 732: 1:Scores: 56501
 732: 1:Answer: message('StartNextLevel')
+732: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 733: 1:BoardData {
 733: 1:  'description': 'No more Levels. You win!',
@@ -38348,6 +38743,7 @@
 733: 1:}
 733: 1:Scores: 56501
 733: 1:Answer: message('StartNextLevel')
+733: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 734: 1:BoardData {
 734: 1:  'description': 'No more Levels. You win!',
@@ -38357,6 +38753,7 @@
 734: 1:}
 734: 1:Scores: 56501
 734: 1:Answer: message('StartNextLevel')
+734: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 735: 1:BoardData {
 735: 1:  'description': 'No more Levels. You win!',
@@ -38366,6 +38763,7 @@
 735: 1:}
 735: 1:Scores: 56501
 735: 1:Answer: message('StartNextLevel')
+735: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 736: 1:BoardData {
 736: 1:  'description': 'No more Levels. You win!',
@@ -38375,6 +38773,7 @@
 736: 1:}
 736: 1:Scores: 56501
 736: 1:Answer: message('StartNextLevel')
+736: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 737: 1:BoardData {
 737: 1:  'description': 'No more Levels. You win!',
@@ -38384,6 +38783,7 @@
 737: 1:}
 737: 1:Scores: 56501
 737: 1:Answer: message('StartNextLevel')
+737: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 738: 1:BoardData {
 738: 1:  'description': 'No more Levels. You win!',
@@ -38393,6 +38793,7 @@
 738: 1:}
 738: 1:Scores: 56501
 738: 1:Answer: message('StartNextLevel')
+738: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 739: 1:BoardData {
 739: 1:  'description': 'No more Levels. You win!',
@@ -38402,6 +38803,7 @@
 739: 1:}
 739: 1:Scores: 56501
 739: 1:Answer: message('StartNextLevel')
+739: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 740: 1:BoardData {
 740: 1:  'description': 'No more Levels. You win!',
@@ -38411,6 +38813,7 @@
 740: 1:}
 740: 1:Scores: 56501
 740: 1:Answer: message('StartNextLevel')
+740: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 741: 1:BoardData {
 741: 1:  'description': 'No more Levels. You win!',
@@ -38420,6 +38823,7 @@
 741: 1:}
 741: 1:Scores: 56501
 741: 1:Answer: message('StartNextLevel')
+741: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 742: 1:BoardData {
 742: 1:  'description': 'No more Levels. You win!',
@@ -38429,6 +38833,7 @@
 742: 1:}
 742: 1:Scores: 56501
 742: 1:Answer: message('StartNextLevel')
+742: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 743: 1:BoardData {
 743: 1:  'description': 'No more Levels. You win!',
@@ -38438,6 +38843,7 @@
 743: 1:}
 743: 1:Scores: 56501
 743: 1:Answer: message('StartNextLevel')
+743: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 744: 1:BoardData {
 744: 1:  'description': 'No more Levels. You win!',
@@ -38447,6 +38853,7 @@
 744: 1:}
 744: 1:Scores: 56501
 744: 1:Answer: message('StartNextLevel')
+744: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 745: 1:BoardData {
 745: 1:  'description': 'No more Levels. You win!',
@@ -38456,6 +38863,7 @@
 745: 1:}
 745: 1:Scores: 56501
 745: 1:Answer: message('StartNextLevel')
+745: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 746: 1:BoardData {
 746: 1:  'description': 'No more Levels. You win!',
@@ -38465,6 +38873,7 @@
 746: 1:}
 746: 1:Scores: 56501
 746: 1:Answer: message('StartNextLevel')
+746: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 747: 1:BoardData {
 747: 1:  'description': 'No more Levels. You win!',
@@ -38474,6 +38883,7 @@
 747: 1:}
 747: 1:Scores: 56501
 747: 1:Answer: message('StartNextLevel')
+747: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 748: 1:BoardData {
 748: 1:  'description': 'No more Levels. You win!',
@@ -38483,6 +38893,7 @@
 748: 1:}
 748: 1:Scores: 56501
 748: 1:Answer: message('StartNextLevel')
+748: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 749: 1:BoardData {
 749: 1:  'description': 'No more Levels. You win!',
@@ -38492,6 +38903,7 @@
 749: 1:}
 749: 1:Scores: 56501
 749: 1:Answer: message('StartNextLevel')
+749: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 750: 1:BoardData {
 750: 1:  'description': 'No more Levels. You win!',
@@ -38501,6 +38913,7 @@
 750: 1:}
 750: 1:Scores: 56501
 750: 1:Answer: message('StartNextLevel')
+750: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 751: 1:BoardData {
 751: 1:  'description': 'No more Levels. You win!',
@@ -38510,6 +38923,7 @@
 751: 1:}
 751: 1:Scores: 56501
 751: 1:Answer: message('StartNextLevel')
+751: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 752: 1:BoardData {
 752: 1:  'description': 'No more Levels. You win!',
@@ -38519,6 +38933,7 @@
 752: 1:}
 752: 1:Scores: 56501
 752: 1:Answer: message('StartNextLevel')
+752: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 753: 1:BoardData {
 753: 1:  'description': 'No more Levels. You win!',
@@ -38528,6 +38943,7 @@
 753: 1:}
 753: 1:Scores: 56501
 753: 1:Answer: message('StartNextLevel')
+753: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 754: 1:BoardData {
 754: 1:  'description': 'No more Levels. You win!',
@@ -38537,6 +38953,7 @@
 754: 1:}
 754: 1:Scores: 56501
 754: 1:Answer: message('StartNextLevel')
+754: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 755: 1:BoardData {
 755: 1:  'description': 'No more Levels. You win!',
@@ -38546,6 +38963,7 @@
 755: 1:}
 755: 1:Scores: 56501
 755: 1:Answer: message('StartNextLevel')
+755: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 756: 1:BoardData {
 756: 1:  'description': 'No more Levels. You win!',
@@ -38555,6 +38973,7 @@
 756: 1:}
 756: 1:Scores: 56501
 756: 1:Answer: message('StartNextLevel')
+756: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 757: 1:BoardData {
 757: 1:  'description': 'No more Levels. You win!',
@@ -38564,6 +38983,7 @@
 757: 1:}
 757: 1:Scores: 56501
 757: 1:Answer: message('StartNextLevel')
+757: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 758: 1:BoardData {
 758: 1:  'description': 'No more Levels. You win!',
@@ -38573,6 +38993,7 @@
 758: 1:}
 758: 1:Scores: 56501
 758: 1:Answer: message('StartNextLevel')
+758: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 759: 1:BoardData {
 759: 1:  'description': 'No more Levels. You win!',
@@ -38582,6 +39003,7 @@
 759: 1:}
 759: 1:Scores: 56501
 759: 1:Answer: message('StartNextLevel')
+759: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 760: 1:BoardData {
 760: 1:  'description': 'No more Levels. You win!',
@@ -38591,6 +39013,7 @@
 760: 1:}
 760: 1:Scores: 56501
 760: 1:Answer: message('StartNextLevel')
+760: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 761: 1:BoardData {
 761: 1:  'description': 'No more Levels. You win!',
@@ -38600,6 +39023,7 @@
 761: 1:}
 761: 1:Scores: 56501
 761: 1:Answer: message('StartNextLevel')
+761: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 762: 1:BoardData {
 762: 1:  'description': 'No more Levels. You win!',
@@ -38609,6 +39033,7 @@
 762: 1:}
 762: 1:Scores: 56501
 762: 1:Answer: message('StartNextLevel')
+762: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 763: 1:BoardData {
 763: 1:  'description': 'No more Levels. You win!',
@@ -38618,6 +39043,7 @@
 763: 1:}
 763: 1:Scores: 56501
 763: 1:Answer: message('StartNextLevel')
+763: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 764: 1:BoardData {
 764: 1:  'description': 'No more Levels. You win!',
@@ -38627,6 +39053,7 @@
 764: 1:}
 764: 1:Scores: 56501
 764: 1:Answer: message('StartNextLevel')
+764: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 765: 1:BoardData {
 765: 1:  'description': 'No more Levels. You win!',
@@ -38636,6 +39063,7 @@
 765: 1:}
 765: 1:Scores: 56501
 765: 1:Answer: message('StartNextLevel')
+765: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 766: 1:BoardData {
 766: 1:  'description': 'No more Levels. You win!',
@@ -38645,6 +39073,7 @@
 766: 1:}
 766: 1:Scores: 56501
 766: 1:Answer: message('StartNextLevel')
+766: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 767: 1:BoardData {
 767: 1:  'description': 'No more Levels. You win!',
@@ -38654,6 +39083,7 @@
 767: 1:}
 767: 1:Scores: 56501
 767: 1:Answer: message('StartNextLevel')
+767: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 768: 1:BoardData {
 768: 1:  'description': 'No more Levels. You win!',
@@ -38663,6 +39093,7 @@
 768: 1:}
 768: 1:Scores: 56501
 768: 1:Answer: message('StartNextLevel')
+768: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 769: 1:BoardData {
 769: 1:  'description': 'No more Levels. You win!',
@@ -38672,6 +39103,7 @@
 769: 1:}
 769: 1:Scores: 56501
 769: 1:Answer: message('StartNextLevel')
+769: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 770: 1:BoardData {
 770: 1:  'description': 'No more Levels. You win!',
@@ -38681,6 +39113,7 @@
 770: 1:}
 770: 1:Scores: 56501
 770: 1:Answer: message('StartNextLevel')
+770: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 771: 1:BoardData {
 771: 1:  'description': 'No more Levels. You win!',
@@ -38690,6 +39123,7 @@
 771: 1:}
 771: 1:Scores: 56501
 771: 1:Answer: message('StartNextLevel')
+771: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 772: 1:BoardData {
 772: 1:  'description': 'No more Levels. You win!',
@@ -38699,6 +39133,7 @@
 772: 1:}
 772: 1:Scores: 56501
 772: 1:Answer: message('StartNextLevel')
+772: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 773: 1:BoardData {
 773: 1:  'description': 'No more Levels. You win!',
@@ -38708,6 +39143,7 @@
 773: 1:}
 773: 1:Scores: 56501
 773: 1:Answer: message('StartNextLevel')
+773: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 774: 1:BoardData {
 774: 1:  'description': 'No more Levels. You win!',
@@ -38717,6 +39153,7 @@
 774: 1:}
 774: 1:Scores: 56501
 774: 1:Answer: message('StartNextLevel')
+774: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 775: 1:BoardData {
 775: 1:  'description': 'No more Levels. You win!',
@@ -38726,6 +39163,7 @@
 775: 1:}
 775: 1:Scores: 56501
 775: 1:Answer: message('StartNextLevel')
+775: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 776: 1:BoardData {
 776: 1:  'description': 'No more Levels. You win!',
@@ -38735,6 +39173,7 @@
 776: 1:}
 776: 1:Scores: 56501
 776: 1:Answer: message('StartNextLevel')
+776: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 777: 1:BoardData {
 777: 1:  'description': 'No more Levels. You win!',
@@ -38744,6 +39183,7 @@
 777: 1:}
 777: 1:Scores: 56501
 777: 1:Answer: message('StartNextLevel')
+777: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 778: 1:BoardData {
 778: 1:  'description': 'No more Levels. You win!',
@@ -38753,6 +39193,7 @@
 778: 1:}
 778: 1:Scores: 56501
 778: 1:Answer: message('StartNextLevel')
+778: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 779: 1:BoardData {
 779: 1:  'description': 'No more Levels. You win!',
@@ -38762,6 +39203,7 @@
 779: 1:}
 779: 1:Scores: 56501
 779: 1:Answer: message('StartNextLevel')
+779: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 780: 1:BoardData {
 780: 1:  'description': 'No more Levels. You win!',
@@ -38771,6 +39213,7 @@
 780: 1:}
 780: 1:Scores: 56501
 780: 1:Answer: message('StartNextLevel')
+780: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 781: 1:BoardData {
 781: 1:  'description': 'No more Levels. You win!',
@@ -38780,6 +39223,7 @@
 781: 1:}
 781: 1:Scores: 56501
 781: 1:Answer: message('StartNextLevel')
+781: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 782: 1:BoardData {
 782: 1:  'description': 'No more Levels. You win!',
@@ -38789,6 +39233,7 @@
 782: 1:}
 782: 1:Scores: 56501
 782: 1:Answer: message('StartNextLevel')
+782: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 783: 1:BoardData {
 783: 1:  'description': 'No more Levels. You win!',
@@ -38798,6 +39243,7 @@
 783: 1:}
 783: 1:Scores: 56501
 783: 1:Answer: message('StartNextLevel')
+783: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 784: 1:BoardData {
 784: 1:  'description': 'No more Levels. You win!',
@@ -38807,6 +39253,7 @@
 784: 1:}
 784: 1:Scores: 56501
 784: 1:Answer: message('StartNextLevel')
+784: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 785: 1:BoardData {
 785: 1:  'description': 'No more Levels. You win!',
@@ -38816,6 +39263,7 @@
 785: 1:}
 785: 1:Scores: 56501
 785: 1:Answer: message('StartNextLevel')
+785: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 786: 1:BoardData {
 786: 1:  'description': 'No more Levels. You win!',
@@ -38825,6 +39273,7 @@
 786: 1:}
 786: 1:Scores: 56501
 786: 1:Answer: message('StartNextLevel')
+786: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 787: 1:BoardData {
 787: 1:  'description': 'No more Levels. You win!',
@@ -38834,6 +39283,7 @@
 787: 1:}
 787: 1:Scores: 56501
 787: 1:Answer: message('StartNextLevel')
+787: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 788: 1:BoardData {
 788: 1:  'description': 'No more Levels. You win!',
@@ -38843,6 +39293,7 @@
 788: 1:}
 788: 1:Scores: 56501
 788: 1:Answer: message('StartNextLevel')
+788: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 789: 1:BoardData {
 789: 1:  'description': 'No more Levels. You win!',
@@ -38852,6 +39303,7 @@
 789: 1:}
 789: 1:Scores: 56501
 789: 1:Answer: message('StartNextLevel')
+789: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 790: 1:BoardData {
 790: 1:  'description': 'No more Levels. You win!',
@@ -38861,6 +39313,7 @@
 790: 1:}
 790: 1:Scores: 56501
 790: 1:Answer: message('StartNextLevel')
+790: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 791: 1:BoardData {
 791: 1:  'description': 'No more Levels. You win!',
@@ -38870,6 +39323,7 @@
 791: 1:}
 791: 1:Scores: 56501
 791: 1:Answer: message('StartNextLevel')
+791: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 792: 1:BoardData {
 792: 1:  'description': 'No more Levels. You win!',
@@ -38879,6 +39333,7 @@
 792: 1:}
 792: 1:Scores: 56501
 792: 1:Answer: message('StartNextLevel')
+792: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 793: 1:BoardData {
 793: 1:  'description': 'No more Levels. You win!',
@@ -38888,6 +39343,7 @@
 793: 1:}
 793: 1:Scores: 56501
 793: 1:Answer: message('StartNextLevel')
+793: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 794: 1:BoardData {
 794: 1:  'description': 'No more Levels. You win!',
@@ -38897,6 +39353,7 @@
 794: 1:}
 794: 1:Scores: 56501
 794: 1:Answer: message('StartNextLevel')
+794: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 795: 1:BoardData {
 795: 1:  'description': 'No more Levels. You win!',
@@ -38906,6 +39363,7 @@
 795: 1:}
 795: 1:Scores: 56501
 795: 1:Answer: message('StartNextLevel')
+795: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 796: 1:BoardData {
 796: 1:  'description': 'No more Levels. You win!',
@@ -38915,6 +39373,7 @@
 796: 1:}
 796: 1:Scores: 56501
 796: 1:Answer: message('StartNextLevel')
+796: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 797: 1:BoardData {
 797: 1:  'description': 'No more Levels. You win!',
@@ -38924,6 +39383,7 @@
 797: 1:}
 797: 1:Scores: 56501
 797: 1:Answer: message('StartNextLevel')
+797: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 798: 1:BoardData {
 798: 1:  'description': 'No more Levels. You win!',
@@ -38933,6 +39393,7 @@
 798: 1:}
 798: 1:Scores: 56501
 798: 1:Answer: message('StartNextLevel')
+798: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 799: 1:BoardData {
 799: 1:  'description': 'No more Levels. You win!',
@@ -38942,6 +39403,7 @@
 799: 1:}
 799: 1:Scores: 56501
 799: 1:Answer: message('StartNextLevel')
+799: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 800: 1:BoardData {
 800: 1:  'description': 'No more Levels. You win!',
@@ -38951,6 +39413,7 @@
 800: 1:}
 800: 1:Scores: 56501
 800: 1:Answer: message('StartNextLevel')
+800: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 801: 1:BoardData {
 801: 1:  'description': 'No more Levels. You win!',
@@ -38960,6 +39423,7 @@
 801: 1:}
 801: 1:Scores: 56501
 801: 1:Answer: message('StartNextLevel')
+801: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 802: 1:BoardData {
 802: 1:  'description': 'No more Levels. You win!',
@@ -38969,6 +39433,7 @@
 802: 1:}
 802: 1:Scores: 56501
 802: 1:Answer: message('StartNextLevel')
+802: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 803: 1:BoardData {
 803: 1:  'description': 'No more Levels. You win!',
@@ -38978,6 +39443,7 @@
 803: 1:}
 803: 1:Scores: 56501
 803: 1:Answer: message('StartNextLevel')
+803: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 804: 1:BoardData {
 804: 1:  'description': 'No more Levels. You win!',
@@ -38987,6 +39453,7 @@
 804: 1:}
 804: 1:Scores: 56501
 804: 1:Answer: message('StartNextLevel')
+804: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 805: 1:BoardData {
 805: 1:  'description': 'No more Levels. You win!',
@@ -38996,6 +39463,7 @@
 805: 1:}
 805: 1:Scores: 56501
 805: 1:Answer: message('StartNextLevel')
+805: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 806: 1:BoardData {
 806: 1:  'description': 'No more Levels. You win!',
@@ -39005,6 +39473,7 @@
 806: 1:}
 806: 1:Scores: 56501
 806: 1:Answer: message('StartNextLevel')
+806: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 807: 1:BoardData {
 807: 1:  'description': 'No more Levels. You win!',
@@ -39014,6 +39483,7 @@
 807: 1:}
 807: 1:Scores: 56501
 807: 1:Answer: message('StartNextLevel')
+807: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 808: 1:BoardData {
 808: 1:  'description': 'No more Levels. You win!',
@@ -39023,6 +39493,7 @@
 808: 1:}
 808: 1:Scores: 56501
 808: 1:Answer: message('StartNextLevel')
+808: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 809: 1:BoardData {
 809: 1:  'description': 'No more Levels. You win!',
@@ -39032,6 +39503,7 @@
 809: 1:}
 809: 1:Scores: 56501
 809: 1:Answer: message('StartNextLevel')
+809: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 810: 1:BoardData {
 810: 1:  'description': 'No more Levels. You win!',
@@ -39041,6 +39513,7 @@
 810: 1:}
 810: 1:Scores: 56501
 810: 1:Answer: message('StartNextLevel')
+810: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 811: 1:BoardData {
 811: 1:  'description': 'No more Levels. You win!',
@@ -39050,6 +39523,7 @@
 811: 1:}
 811: 1:Scores: 56501
 811: 1:Answer: message('StartNextLevel')
+811: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 812: 1:BoardData {
 812: 1:  'description': 'No more Levels. You win!',
@@ -39059,6 +39533,7 @@
 812: 1:}
 812: 1:Scores: 56501
 812: 1:Answer: message('StartNextLevel')
+812: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 813: 1:BoardData {
 813: 1:  'description': 'No more Levels. You win!',
@@ -39068,6 +39543,7 @@
 813: 1:}
 813: 1:Scores: 56501
 813: 1:Answer: message('StartNextLevel')
+813: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 814: 1:BoardData {
 814: 1:  'description': 'No more Levels. You win!',
@@ -39077,6 +39553,7 @@
 814: 1:}
 814: 1:Scores: 56501
 814: 1:Answer: message('StartNextLevel')
+814: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 815: 1:BoardData {
 815: 1:  'description': 'No more Levels. You win!',
@@ -39086,6 +39563,7 @@
 815: 1:}
 815: 1:Scores: 56501
 815: 1:Answer: message('StartNextLevel')
+815: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 816: 1:BoardData {
 816: 1:  'description': 'No more Levels. You win!',
@@ -39095,6 +39573,7 @@
 816: 1:}
 816: 1:Scores: 56501
 816: 1:Answer: message('StartNextLevel')
+816: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 817: 1:BoardData {
 817: 1:  'description': 'No more Levels. You win!',
@@ -39104,6 +39583,7 @@
 817: 1:}
 817: 1:Scores: 56501
 817: 1:Answer: message('StartNextLevel')
+817: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 818: 1:BoardData {
 818: 1:  'description': 'No more Levels. You win!',
@@ -39113,6 +39593,7 @@
 818: 1:}
 818: 1:Scores: 56501
 818: 1:Answer: message('StartNextLevel')
+818: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 819: 1:BoardData {
 819: 1:  'description': 'No more Levels. You win!',
@@ -39122,6 +39603,7 @@
 819: 1:}
 819: 1:Scores: 56501
 819: 1:Answer: message('StartNextLevel')
+819: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 820: 1:BoardData {
 820: 1:  'description': 'No more Levels. You win!',
@@ -39131,6 +39613,7 @@
 820: 1:}
 820: 1:Scores: 56501
 820: 1:Answer: message('StartNextLevel')
+820: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 821: 1:BoardData {
 821: 1:  'description': 'No more Levels. You win!',
@@ -39140,6 +39623,7 @@
 821: 1:}
 821: 1:Scores: 56501
 821: 1:Answer: message('StartNextLevel')
+821: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 822: 1:BoardData {
 822: 1:  'description': 'No more Levels. You win!',
@@ -39149,6 +39633,7 @@
 822: 1:}
 822: 1:Scores: 56501
 822: 1:Answer: message('StartNextLevel')
+822: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 823: 1:BoardData {
 823: 1:  'description': 'No more Levels. You win!',
@@ -39158,6 +39643,7 @@
 823: 1:}
 823: 1:Scores: 56501
 823: 1:Answer: message('StartNextLevel')
+823: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 824: 1:BoardData {
 824: 1:  'description': 'No more Levels. You win!',
@@ -39167,6 +39653,7 @@
 824: 1:}
 824: 1:Scores: 56501
 824: 1:Answer: message('StartNextLevel')
+824: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 825: 1:BoardData {
 825: 1:  'description': 'No more Levels. You win!',
@@ -39176,6 +39663,7 @@
 825: 1:}
 825: 1:Scores: 56501
 825: 1:Answer: message('StartNextLevel')
+825: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 826: 1:BoardData {
 826: 1:  'description': 'No more Levels. You win!',
@@ -39185,6 +39673,7 @@
 826: 1:}
 826: 1:Scores: 56501
 826: 1:Answer: message('StartNextLevel')
+826: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 827: 1:BoardData {
 827: 1:  'description': 'No more Levels. You win!',
@@ -39194,6 +39683,7 @@
 827: 1:}
 827: 1:Scores: 56501
 827: 1:Answer: message('StartNextLevel')
+827: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 828: 1:BoardData {
 828: 1:  'description': 'No more Levels. You win!',
@@ -39203,6 +39693,7 @@
 828: 1:}
 828: 1:Scores: 56501
 828: 1:Answer: message('StartNextLevel')
+828: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 829: 1:BoardData {
 829: 1:  'description': 'No more Levels. You win!',
@@ -39212,6 +39703,7 @@
 829: 1:}
 829: 1:Scores: 56501
 829: 1:Answer: message('StartNextLevel')
+829: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 830: 1:BoardData {
 830: 1:  'description': 'No more Levels. You win!',
@@ -39221,6 +39713,7 @@
 830: 1:}
 830: 1:Scores: 56501
 830: 1:Answer: message('StartNextLevel')
+830: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 831: 1:BoardData {
 831: 1:  'description': 'No more Levels. You win!',
@@ -39230,6 +39723,7 @@
 831: 1:}
 831: 1:Scores: 56501
 831: 1:Answer: message('StartNextLevel')
+831: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 832: 1:BoardData {
 832: 1:  'description': 'No more Levels. You win!',
@@ -39239,6 +39733,7 @@
 832: 1:}
 832: 1:Scores: 56501
 832: 1:Answer: message('StartNextLevel')
+832: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 833: 1:BoardData {
 833: 1:  'description': 'No more Levels. You win!',
@@ -39248,6 +39743,7 @@
 833: 1:}
 833: 1:Scores: 56501
 833: 1:Answer: message('StartNextLevel')
+833: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 834: 1:BoardData {
 834: 1:  'description': 'No more Levels. You win!',
@@ -39257,6 +39753,7 @@
 834: 1:}
 834: 1:Scores: 56501
 834: 1:Answer: message('StartNextLevel')
+834: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 835: 1:BoardData {
 835: 1:  'description': 'No more Levels. You win!',
@@ -39266,6 +39763,7 @@
 835: 1:}
 835: 1:Scores: 56501
 835: 1:Answer: message('StartNextLevel')
+835: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 836: 1:BoardData {
 836: 1:  'description': 'No more Levels. You win!',
@@ -39275,6 +39773,7 @@
 836: 1:}
 836: 1:Scores: 56501
 836: 1:Answer: message('StartNextLevel')
+836: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 837: 1:BoardData {
 837: 1:  'description': 'No more Levels. You win!',
@@ -39284,6 +39783,7 @@
 837: 1:}
 837: 1:Scores: 56501
 837: 1:Answer: message('StartNextLevel')
+837: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 838: 1:BoardData {
 838: 1:  'description': 'No more Levels. You win!',
@@ -39293,6 +39793,7 @@
 838: 1:}
 838: 1:Scores: 56501
 838: 1:Answer: message('StartNextLevel')
+838: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 839: 1:BoardData {
 839: 1:  'description': 'No more Levels. You win!',
@@ -39302,6 +39803,7 @@
 839: 1:}
 839: 1:Scores: 56501
 839: 1:Answer: message('StartNextLevel')
+839: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 840: 1:BoardData {
 840: 1:  'description': 'No more Levels. You win!',
@@ -39311,6 +39813,7 @@
 840: 1:}
 840: 1:Scores: 56501
 840: 1:Answer: message('StartNextLevel')
+840: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 841: 1:BoardData {
 841: 1:  'description': 'No more Levels. You win!',
@@ -39320,6 +39823,7 @@
 841: 1:}
 841: 1:Scores: 56501
 841: 1:Answer: message('StartNextLevel')
+841: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 842: 1:BoardData {
 842: 1:  'description': 'No more Levels. You win!',
@@ -39329,6 +39833,7 @@
 842: 1:}
 842: 1:Scores: 56501
 842: 1:Answer: message('StartNextLevel')
+842: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 843: 1:BoardData {
 843: 1:  'description': 'No more Levels. You win!',
@@ -39338,6 +39843,7 @@
 843: 1:}
 843: 1:Scores: 56501
 843: 1:Answer: message('StartNextLevel')
+843: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 844: 1:BoardData {
 844: 1:  'description': 'No more Levels. You win!',
@@ -39347,6 +39853,7 @@
 844: 1:}
 844: 1:Scores: 56501
 844: 1:Answer: message('StartNextLevel')
+844: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 845: 1:BoardData {
 845: 1:  'description': 'No more Levels. You win!',
@@ -39356,6 +39863,7 @@
 845: 1:}
 845: 1:Scores: 56501
 845: 1:Answer: message('StartNextLevel')
+845: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 846: 1:BoardData {
 846: 1:  'description': 'No more Levels. You win!',
@@ -39365,6 +39873,7 @@
 846: 1:}
 846: 1:Scores: 56501
 846: 1:Answer: message('StartNextLevel')
+846: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 847: 1:BoardData {
 847: 1:  'description': 'No more Levels. You win!',
@@ -39374,6 +39883,7 @@
 847: 1:}
 847: 1:Scores: 56501
 847: 1:Answer: message('StartNextLevel')
+847: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 848: 1:BoardData {
 848: 1:  'description': 'No more Levels. You win!',
@@ -39383,6 +39893,7 @@
 848: 1:}
 848: 1:Scores: 56501
 848: 1:Answer: message('StartNextLevel')
+848: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 849: 1:BoardData {
 849: 1:  'description': 'No more Levels. You win!',
@@ -39392,6 +39903,7 @@
 849: 1:}
 849: 1:Scores: 56501
 849: 1:Answer: message('StartNextLevel')
+849: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 850: 1:BoardData {
 850: 1:  'description': 'No more Levels. You win!',
@@ -39401,6 +39913,7 @@
 850: 1:}
 850: 1:Scores: 56501
 850: 1:Answer: message('StartNextLevel')
+850: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 851: 1:BoardData {
 851: 1:  'description': 'No more Levels. You win!',
@@ -39410,6 +39923,7 @@
 851: 1:}
 851: 1:Scores: 56501
 851: 1:Answer: message('StartNextLevel')
+851: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 852: 1:BoardData {
 852: 1:  'description': 'No more Levels. You win!',
@@ -39419,6 +39933,7 @@
 852: 1:}
 852: 1:Scores: 56501
 852: 1:Answer: message('StartNextLevel')
+852: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 853: 1:BoardData {
 853: 1:  'description': 'No more Levels. You win!',
@@ -39428,6 +39943,7 @@
 853: 1:}
 853: 1:Scores: 56501
 853: 1:Answer: message('StartNextLevel')
+853: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 854: 1:BoardData {
 854: 1:  'description': 'No more Levels. You win!',
@@ -39437,6 +39953,7 @@
 854: 1:}
 854: 1:Scores: 56501
 854: 1:Answer: message('StartNextLevel')
+854: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 855: 1:BoardData {
 855: 1:  'description': 'No more Levels. You win!',
@@ -39446,6 +39963,7 @@
 855: 1:}
 855: 1:Scores: 56501
 855: 1:Answer: message('StartNextLevel')
+855: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 856: 1:BoardData {
 856: 1:  'description': 'No more Levels. You win!',
@@ -39455,6 +39973,7 @@
 856: 1:}
 856: 1:Scores: 56501
 856: 1:Answer: message('StartNextLevel')
+856: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 857: 1:BoardData {
 857: 1:  'description': 'No more Levels. You win!',
@@ -39464,6 +39983,7 @@
 857: 1:}
 857: 1:Scores: 56501
 857: 1:Answer: message('StartNextLevel')
+857: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 858: 1:BoardData {
 858: 1:  'description': 'No more Levels. You win!',
@@ -39473,6 +39993,7 @@
 858: 1:}
 858: 1:Scores: 56501
 858: 1:Answer: message('StartNextLevel')
+858: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 859: 1:BoardData {
 859: 1:  'description': 'No more Levels. You win!',
@@ -39482,6 +40003,7 @@
 859: 1:}
 859: 1:Scores: 56501
 859: 1:Answer: message('StartNextLevel')
+859: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 860: 1:BoardData {
 860: 1:  'description': 'No more Levels. You win!',
@@ -39491,6 +40013,7 @@
 860: 1:}
 860: 1:Scores: 56501
 860: 1:Answer: message('StartNextLevel')
+860: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 861: 1:BoardData {
 861: 1:  'description': 'No more Levels. You win!',
@@ -39500,6 +40023,7 @@
 861: 1:}
 861: 1:Scores: 56501
 861: 1:Answer: message('StartNextLevel')
+861: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 862: 1:BoardData {
 862: 1:  'description': 'No more Levels. You win!',
@@ -39509,6 +40033,7 @@
 862: 1:}
 862: 1:Scores: 56501
 862: 1:Answer: message('StartNextLevel')
+862: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 863: 1:BoardData {
 863: 1:  'description': 'No more Levels. You win!',
@@ -39518,6 +40043,7 @@
 863: 1:}
 863: 1:Scores: 56501
 863: 1:Answer: message('StartNextLevel')
+863: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 864: 1:BoardData {
 864: 1:  'description': 'No more Levels. You win!',
@@ -39527,6 +40053,7 @@
 864: 1:}
 864: 1:Scores: 56501
 864: 1:Answer: message('StartNextLevel')
+864: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 865: 1:BoardData {
 865: 1:  'description': 'No more Levels. You win!',
@@ -39536,6 +40063,7 @@
 865: 1:}
 865: 1:Scores: 56501
 865: 1:Answer: message('StartNextLevel')
+865: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 866: 1:BoardData {
 866: 1:  'description': 'No more Levels. You win!',
@@ -39545,6 +40073,7 @@
 866: 1:}
 866: 1:Scores: 56501
 866: 1:Answer: message('StartNextLevel')
+866: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 867: 1:BoardData {
 867: 1:  'description': 'No more Levels. You win!',
@@ -39554,6 +40083,7 @@
 867: 1:}
 867: 1:Scores: 56501
 867: 1:Answer: message('StartNextLevel')
+867: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 868: 1:BoardData {
 868: 1:  'description': 'No more Levels. You win!',
@@ -39563,6 +40093,7 @@
 868: 1:}
 868: 1:Scores: 56501
 868: 1:Answer: message('StartNextLevel')
+868: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 869: 1:BoardData {
 869: 1:  'description': 'No more Levels. You win!',
@@ -39572,6 +40103,7 @@
 869: 1:}
 869: 1:Scores: 56501
 869: 1:Answer: message('StartNextLevel')
+869: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 870: 1:BoardData {
 870: 1:  'description': 'No more Levels. You win!',
@@ -39581,6 +40113,7 @@
 870: 1:}
 870: 1:Scores: 56501
 870: 1:Answer: message('StartNextLevel')
+870: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 871: 1:BoardData {
 871: 1:  'description': 'No more Levels. You win!',
@@ -39590,6 +40123,7 @@
 871: 1:}
 871: 1:Scores: 56501
 871: 1:Answer: message('StartNextLevel')
+871: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 872: 1:BoardData {
 872: 1:  'description': 'No more Levels. You win!',
@@ -39599,6 +40133,7 @@
 872: 1:}
 872: 1:Scores: 56501
 872: 1:Answer: message('StartNextLevel')
+872: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 873: 1:BoardData {
 873: 1:  'description': 'No more Levels. You win!',
@@ -39608,6 +40143,7 @@
 873: 1:}
 873: 1:Scores: 56501
 873: 1:Answer: message('StartNextLevel')
+873: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 874: 1:BoardData {
 874: 1:  'description': 'No more Levels. You win!',
@@ -39617,6 +40153,7 @@
 874: 1:}
 874: 1:Scores: 56501
 874: 1:Answer: message('StartNextLevel')
+874: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 875: 1:BoardData {
 875: 1:  'description': 'No more Levels. You win!',
@@ -39626,6 +40163,7 @@
 875: 1:}
 875: 1:Scores: 56501
 875: 1:Answer: message('StartNextLevel')
+875: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 876: 1:BoardData {
 876: 1:  'description': 'No more Levels. You win!',
@@ -39635,6 +40173,7 @@
 876: 1:}
 876: 1:Scores: 56501
 876: 1:Answer: message('StartNextLevel')
+876: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 877: 1:BoardData {
 877: 1:  'description': 'No more Levels. You win!',
@@ -39644,6 +40183,7 @@
 877: 1:}
 877: 1:Scores: 56501
 877: 1:Answer: message('StartNextLevel')
+877: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 878: 1:BoardData {
 878: 1:  'description': 'No more Levels. You win!',
@@ -39653,6 +40193,7 @@
 878: 1:}
 878: 1:Scores: 56501
 878: 1:Answer: message('StartNextLevel')
+878: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 879: 1:BoardData {
 879: 1:  'description': 'No more Levels. You win!',
@@ -39662,6 +40203,7 @@
 879: 1:}
 879: 1:Scores: 56501
 879: 1:Answer: message('StartNextLevel')
+879: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 880: 1:BoardData {
 880: 1:  'description': 'No more Levels. You win!',
@@ -39671,6 +40213,7 @@
 880: 1:}
 880: 1:Scores: 56501
 880: 1:Answer: message('StartNextLevel')
+880: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 881: 1:BoardData {
 881: 1:  'description': 'No more Levels. You win!',
@@ -39680,6 +40223,7 @@
 881: 1:}
 881: 1:Scores: 56501
 881: 1:Answer: message('StartNextLevel')
+881: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 882: 1:BoardData {
 882: 1:  'description': 'No more Levels. You win!',
@@ -39689,6 +40233,7 @@
 882: 1:}
 882: 1:Scores: 56501
 882: 1:Answer: message('StartNextLevel')
+882: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 883: 1:BoardData {
 883: 1:  'description': 'No more Levels. You win!',
@@ -39698,6 +40243,7 @@
 883: 1:}
 883: 1:Scores: 56501
 883: 1:Answer: message('StartNextLevel')
+883: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 884: 1:BoardData {
 884: 1:  'description': 'No more Levels. You win!',
@@ -39707,6 +40253,7 @@
 884: 1:}
 884: 1:Scores: 56501
 884: 1:Answer: message('StartNextLevel')
+884: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 885: 1:BoardData {
 885: 1:  'description': 'No more Levels. You win!',
@@ -39716,6 +40263,7 @@
 885: 1:}
 885: 1:Scores: 56501
 885: 1:Answer: message('StartNextLevel')
+885: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 886: 1:BoardData {
 886: 1:  'description': 'No more Levels. You win!',
@@ -39725,6 +40273,7 @@
 886: 1:}
 886: 1:Scores: 56501
 886: 1:Answer: message('StartNextLevel')
+886: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 887: 1:BoardData {
 887: 1:  'description': 'No more Levels. You win!',
@@ -39734,6 +40283,7 @@
 887: 1:}
 887: 1:Scores: 56501
 887: 1:Answer: message('StartNextLevel')
+887: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 888: 1:BoardData {
 888: 1:  'description': 'No more Levels. You win!',
@@ -39743,6 +40293,7 @@
 888: 1:}
 888: 1:Scores: 56501
 888: 1:Answer: message('StartNextLevel')
+888: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 889: 1:BoardData {
 889: 1:  'description': 'No more Levels. You win!',
@@ -39752,6 +40303,7 @@
 889: 1:}
 889: 1:Scores: 56501
 889: 1:Answer: message('StartNextLevel')
+889: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 890: 1:BoardData {
 890: 1:  'description': 'No more Levels. You win!',
@@ -39761,6 +40313,7 @@
 890: 1:}
 890: 1:Scores: 56501
 890: 1:Answer: message('StartNextLevel')
+890: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 891: 1:BoardData {
 891: 1:  'description': 'No more Levels. You win!',
@@ -39770,6 +40323,7 @@
 891: 1:}
 891: 1:Scores: 56501
 891: 1:Answer: message('StartNextLevel')
+891: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 892: 1:BoardData {
 892: 1:  'description': 'No more Levels. You win!',
@@ -39779,6 +40333,7 @@
 892: 1:}
 892: 1:Scores: 56501
 892: 1:Answer: message('StartNextLevel')
+892: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 893: 1:BoardData {
 893: 1:  'description': 'No more Levels. You win!',
@@ -39788,6 +40343,7 @@
 893: 1:}
 893: 1:Scores: 56501
 893: 1:Answer: message('StartNextLevel')
+893: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 894: 1:BoardData {
 894: 1:  'description': 'No more Levels. You win!',
@@ -39797,6 +40353,7 @@
 894: 1:}
 894: 1:Scores: 56501
 894: 1:Answer: message('StartNextLevel')
+894: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 895: 1:BoardData {
 895: 1:  'description': 'No more Levels. You win!',
@@ -39806,6 +40363,7 @@
 895: 1:}
 895: 1:Scores: 56501
 895: 1:Answer: message('StartNextLevel')
+895: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 896: 1:BoardData {
 896: 1:  'description': 'No more Levels. You win!',
@@ -39815,6 +40373,7 @@
 896: 1:}
 896: 1:Scores: 56501
 896: 1:Answer: message('StartNextLevel')
+896: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 897: 1:BoardData {
 897: 1:  'description': 'No more Levels. You win!',
@@ -39824,6 +40383,7 @@
 897: 1:}
 897: 1:Scores: 56501
 897: 1:Answer: message('StartNextLevel')
+897: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 898: 1:BoardData {
 898: 1:  'description': 'No more Levels. You win!',
@@ -39833,6 +40393,7 @@
 898: 1:}
 898: 1:Scores: 56501
 898: 1:Answer: message('StartNextLevel')
+898: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 899: 1:BoardData {
 899: 1:  'description': 'No more Levels. You win!',
@@ -39842,6 +40403,7 @@
 899: 1:}
 899: 1:Scores: 56501
 899: 1:Answer: message('StartNextLevel')
+899: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 900: 1:BoardData {
 900: 1:  'description': 'No more Levels. You win!',
@@ -39851,6 +40413,7 @@
 900: 1:}
 900: 1:Scores: 56501
 900: 1:Answer: message('StartNextLevel')
+900: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 901: 1:BoardData {
 901: 1:  'description': 'No more Levels. You win!',
@@ -39860,6 +40423,7 @@
 901: 1:}
 901: 1:Scores: 56501
 901: 1:Answer: message('StartNextLevel')
+901: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 902: 1:BoardData {
 902: 1:  'description': 'No more Levels. You win!',
@@ -39869,6 +40433,7 @@
 902: 1:}
 902: 1:Scores: 56501
 902: 1:Answer: message('StartNextLevel')
+902: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 903: 1:BoardData {
 903: 1:  'description': 'No more Levels. You win!',
@@ -39878,6 +40443,7 @@
 903: 1:}
 903: 1:Scores: 56501
 903: 1:Answer: message('StartNextLevel')
+903: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 904: 1:BoardData {
 904: 1:  'description': 'No more Levels. You win!',
@@ -39887,6 +40453,7 @@
 904: 1:}
 904: 1:Scores: 56501
 904: 1:Answer: message('StartNextLevel')
+904: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 905: 1:BoardData {
 905: 1:  'description': 'No more Levels. You win!',
@@ -39896,6 +40463,7 @@
 905: 1:}
 905: 1:Scores: 56501
 905: 1:Answer: message('StartNextLevel')
+905: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 906: 1:BoardData {
 906: 1:  'description': 'No more Levels. You win!',
@@ -39905,6 +40473,7 @@
 906: 1:}
 906: 1:Scores: 56501
 906: 1:Answer: message('StartNextLevel')
+906: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 907: 1:BoardData {
 907: 1:  'description': 'No more Levels. You win!',
@@ -39914,6 +40483,7 @@
 907: 1:}
 907: 1:Scores: 56501
 907: 1:Answer: message('StartNextLevel')
+907: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 908: 1:BoardData {
 908: 1:  'description': 'No more Levels. You win!',
@@ -39923,6 +40493,7 @@
 908: 1:}
 908: 1:Scores: 56501
 908: 1:Answer: message('StartNextLevel')
+908: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 909: 1:BoardData {
 909: 1:  'description': 'No more Levels. You win!',
@@ -39932,6 +40503,7 @@
 909: 1:}
 909: 1:Scores: 56501
 909: 1:Answer: message('StartNextLevel')
+909: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 910: 1:BoardData {
 910: 1:  'description': 'No more Levels. You win!',
@@ -39941,6 +40513,7 @@
 910: 1:}
 910: 1:Scores: 56501
 910: 1:Answer: message('StartNextLevel')
+910: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 911: 1:BoardData {
 911: 1:  'description': 'No more Levels. You win!',
@@ -39950,6 +40523,7 @@
 911: 1:}
 911: 1:Scores: 56501
 911: 1:Answer: message('StartNextLevel')
+911: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 912: 1:BoardData {
 912: 1:  'description': 'No more Levels. You win!',
@@ -39959,6 +40533,7 @@
 912: 1:}
 912: 1:Scores: 56501
 912: 1:Answer: message('StartNextLevel')
+912: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 913: 1:BoardData {
 913: 1:  'description': 'No more Levels. You win!',
@@ -39968,6 +40543,7 @@
 913: 1:}
 913: 1:Scores: 56501
 913: 1:Answer: message('StartNextLevel')
+913: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 914: 1:BoardData {
 914: 1:  'description': 'No more Levels. You win!',
@@ -39977,6 +40553,7 @@
 914: 1:}
 914: 1:Scores: 56501
 914: 1:Answer: message('StartNextLevel')
+914: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 915: 1:BoardData {
 915: 1:  'description': 'No more Levels. You win!',
@@ -39986,6 +40563,7 @@
 915: 1:}
 915: 1:Scores: 56501
 915: 1:Answer: message('StartNextLevel')
+915: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 916: 1:BoardData {
 916: 1:  'description': 'No more Levels. You win!',
@@ -39995,6 +40573,7 @@
 916: 1:}
 916: 1:Scores: 56501
 916: 1:Answer: message('StartNextLevel')
+916: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 917: 1:BoardData {
 917: 1:  'description': 'No more Levels. You win!',
@@ -40004,6 +40583,7 @@
 917: 1:}
 917: 1:Scores: 56501
 917: 1:Answer: message('StartNextLevel')
+917: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 918: 1:BoardData {
 918: 1:  'description': 'No more Levels. You win!',
@@ -40013,6 +40593,7 @@
 918: 1:}
 918: 1:Scores: 56501
 918: 1:Answer: message('StartNextLevel')
+918: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 919: 1:BoardData {
 919: 1:  'description': 'No more Levels. You win!',
@@ -40022,6 +40603,7 @@
 919: 1:}
 919: 1:Scores: 56501
 919: 1:Answer: message('StartNextLevel')
+919: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 920: 1:BoardData {
 920: 1:  'description': 'No more Levels. You win!',
@@ -40031,6 +40613,7 @@
 920: 1:}
 920: 1:Scores: 56501
 920: 1:Answer: message('StartNextLevel')
+920: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 921: 1:BoardData {
 921: 1:  'description': 'No more Levels. You win!',
@@ -40040,6 +40623,7 @@
 921: 1:}
 921: 1:Scores: 56501
 921: 1:Answer: message('StartNextLevel')
+921: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 922: 1:BoardData {
 922: 1:  'description': 'No more Levels. You win!',
@@ -40049,6 +40633,7 @@
 922: 1:}
 922: 1:Scores: 56501
 922: 1:Answer: message('StartNextLevel')
+922: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 923: 1:BoardData {
 923: 1:  'description': 'No more Levels. You win!',
@@ -40058,6 +40643,7 @@
 923: 1:}
 923: 1:Scores: 56501
 923: 1:Answer: message('StartNextLevel')
+923: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 924: 1:BoardData {
 924: 1:  'description': 'No more Levels. You win!',
@@ -40067,6 +40653,7 @@
 924: 1:}
 924: 1:Scores: 56501
 924: 1:Answer: message('StartNextLevel')
+924: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 925: 1:BoardData {
 925: 1:  'description': 'No more Levels. You win!',
@@ -40076,6 +40663,7 @@
 925: 1:}
 925: 1:Scores: 56501
 925: 1:Answer: message('StartNextLevel')
+925: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 926: 1:BoardData {
 926: 1:  'description': 'No more Levels. You win!',
@@ -40085,6 +40673,7 @@
 926: 1:}
 926: 1:Scores: 56501
 926: 1:Answer: message('StartNextLevel')
+926: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 927: 1:BoardData {
 927: 1:  'description': 'No more Levels. You win!',
@@ -40094,6 +40683,7 @@
 927: 1:}
 927: 1:Scores: 56501
 927: 1:Answer: message('StartNextLevel')
+927: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 928: 1:BoardData {
 928: 1:  'description': 'No more Levels. You win!',
@@ -40103,6 +40693,7 @@
 928: 1:}
 928: 1:Scores: 56501
 928: 1:Answer: message('StartNextLevel')
+928: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 929: 1:BoardData {
 929: 1:  'description': 'No more Levels. You win!',
@@ -40112,6 +40703,7 @@
 929: 1:}
 929: 1:Scores: 56501
 929: 1:Answer: message('StartNextLevel')
+929: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 930: 1:BoardData {
 930: 1:  'description': 'No more Levels. You win!',
@@ -40121,6 +40713,7 @@
 930: 1:}
 930: 1:Scores: 56501
 930: 1:Answer: message('StartNextLevel')
+930: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 931: 1:BoardData {
 931: 1:  'description': 'No more Levels. You win!',
@@ -40130,6 +40723,7 @@
 931: 1:}
 931: 1:Scores: 56501
 931: 1:Answer: message('StartNextLevel')
+931: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 932: 1:BoardData {
 932: 1:  'description': 'No more Levels. You win!',
@@ -40139,6 +40733,7 @@
 932: 1:}
 932: 1:Scores: 56501
 932: 1:Answer: message('StartNextLevel')
+932: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 933: 1:BoardData {
 933: 1:  'description': 'No more Levels. You win!',
@@ -40148,6 +40743,7 @@
 933: 1:}
 933: 1:Scores: 56501
 933: 1:Answer: message('StartNextLevel')
+933: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 934: 1:BoardData {
 934: 1:  'description': 'No more Levels. You win!',
@@ -40157,6 +40753,7 @@
 934: 1:}
 934: 1:Scores: 56501
 934: 1:Answer: message('StartNextLevel')
+934: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 935: 1:BoardData {
 935: 1:  'description': 'No more Levels. You win!',
@@ -40166,6 +40763,7 @@
 935: 1:}
 935: 1:Scores: 56501
 935: 1:Answer: message('StartNextLevel')
+935: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 936: 1:BoardData {
 936: 1:  'description': 'No more Levels. You win!',
@@ -40175,6 +40773,7 @@
 936: 1:}
 936: 1:Scores: 56501
 936: 1:Answer: message('StartNextLevel')
+936: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 937: 1:BoardData {
 937: 1:  'description': 'No more Levels. You win!',
@@ -40184,6 +40783,7 @@
 937: 1:}
 937: 1:Scores: 56501
 937: 1:Answer: message('StartNextLevel')
+937: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 938: 1:BoardData {
 938: 1:  'description': 'No more Levels. You win!',
@@ -40193,6 +40793,7 @@
 938: 1:}
 938: 1:Scores: 56501
 938: 1:Answer: message('StartNextLevel')
+938: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 939: 1:BoardData {
 939: 1:  'description': 'No more Levels. You win!',
@@ -40202,6 +40803,7 @@
 939: 1:}
 939: 1:Scores: 56501
 939: 1:Answer: message('StartNextLevel')
+939: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 940: 1:BoardData {
 940: 1:  'description': 'No more Levels. You win!',
@@ -40211,6 +40813,7 @@
 940: 1:}
 940: 1:Scores: 56501
 940: 1:Answer: message('StartNextLevel')
+940: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 941: 1:BoardData {
 941: 1:  'description': 'No more Levels. You win!',
@@ -40220,6 +40823,7 @@
 941: 1:}
 941: 1:Scores: 56501
 941: 1:Answer: message('StartNextLevel')
+941: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 942: 1:BoardData {
 942: 1:  'description': 'No more Levels. You win!',
@@ -40229,6 +40833,7 @@
 942: 1:}
 942: 1:Scores: 56501
 942: 1:Answer: message('StartNextLevel')
+942: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 943: 1:BoardData {
 943: 1:  'description': 'No more Levels. You win!',
@@ -40238,6 +40843,7 @@
 943: 1:}
 943: 1:Scores: 56501
 943: 1:Answer: message('StartNextLevel')
+943: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 944: 1:BoardData {
 944: 1:  'description': 'No more Levels. You win!',
@@ -40247,6 +40853,7 @@
 944: 1:}
 944: 1:Scores: 56501
 944: 1:Answer: message('StartNextLevel')
+944: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 945: 1:BoardData {
 945: 1:  'description': 'No more Levels. You win!',
@@ -40256,6 +40863,7 @@
 945: 1:}
 945: 1:Scores: 56501
 945: 1:Answer: message('StartNextLevel')
+945: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 946: 1:BoardData {
 946: 1:  'description': 'No more Levels. You win!',
@@ -40265,6 +40873,7 @@
 946: 1:}
 946: 1:Scores: 56501
 946: 1:Answer: message('StartNextLevel')
+946: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 947: 1:BoardData {
 947: 1:  'description': 'No more Levels. You win!',
@@ -40274,6 +40883,7 @@
 947: 1:}
 947: 1:Scores: 56501
 947: 1:Answer: message('StartNextLevel')
+947: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 948: 1:BoardData {
 948: 1:  'description': 'No more Levels. You win!',
@@ -40283,6 +40893,7 @@
 948: 1:}
 948: 1:Scores: 56501
 948: 1:Answer: message('StartNextLevel')
+948: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 949: 1:BoardData {
 949: 1:  'description': 'No more Levels. You win!',
@@ -40292,6 +40903,7 @@
 949: 1:}
 949: 1:Scores: 56501
 949: 1:Answer: message('StartNextLevel')
+949: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 950: 1:BoardData {
 950: 1:  'description': 'No more Levels. You win!',
@@ -40301,6 +40913,7 @@
 950: 1:}
 950: 1:Scores: 56501
 950: 1:Answer: message('StartNextLevel')
+950: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 951: 1:BoardData {
 951: 1:  'description': 'No more Levels. You win!',
@@ -40310,6 +40923,7 @@
 951: 1:}
 951: 1:Scores: 56501
 951: 1:Answer: message('StartNextLevel')
+951: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 952: 1:BoardData {
 952: 1:  'description': 'No more Levels. You win!',
@@ -40319,6 +40933,7 @@
 952: 1:}
 952: 1:Scores: 56501
 952: 1:Answer: message('StartNextLevel')
+952: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 953: 1:BoardData {
 953: 1:  'description': 'No more Levels. You win!',
@@ -40328,6 +40943,7 @@
 953: 1:}
 953: 1:Scores: 56501
 953: 1:Answer: message('StartNextLevel')
+953: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 954: 1:BoardData {
 954: 1:  'description': 'No more Levels. You win!',
@@ -40337,6 +40953,7 @@
 954: 1:}
 954: 1:Scores: 56501
 954: 1:Answer: message('StartNextLevel')
+954: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 955: 1:BoardData {
 955: 1:  'description': 'No more Levels. You win!',
@@ -40346,6 +40963,7 @@
 955: 1:}
 955: 1:Scores: 56501
 955: 1:Answer: message('StartNextLevel')
+955: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 956: 1:BoardData {
 956: 1:  'description': 'No more Levels. You win!',
@@ -40355,6 +40973,7 @@
 956: 1:}
 956: 1:Scores: 56501
 956: 1:Answer: message('StartNextLevel')
+956: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 957: 1:BoardData {
 957: 1:  'description': 'No more Levels. You win!',
@@ -40364,6 +40983,7 @@
 957: 1:}
 957: 1:Scores: 56501
 957: 1:Answer: message('StartNextLevel')
+957: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 958: 1:BoardData {
 958: 1:  'description': 'No more Levels. You win!',
@@ -40373,6 +40993,7 @@
 958: 1:}
 958: 1:Scores: 56501
 958: 1:Answer: message('StartNextLevel')
+958: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 959: 1:BoardData {
 959: 1:  'description': 'No more Levels. You win!',
@@ -40382,6 +41003,7 @@
 959: 1:}
 959: 1:Scores: 56501
 959: 1:Answer: message('StartNextLevel')
+959: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 960: 1:BoardData {
 960: 1:  'description': 'No more Levels. You win!',
@@ -40391,6 +41013,7 @@
 960: 1:}
 960: 1:Scores: 56501
 960: 1:Answer: message('StartNextLevel')
+960: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 961: 1:BoardData {
 961: 1:  'description': 'No more Levels. You win!',
@@ -40400,6 +41023,7 @@
 961: 1:}
 961: 1:Scores: 56501
 961: 1:Answer: message('StartNextLevel')
+961: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 962: 1:BoardData {
 962: 1:  'description': 'No more Levels. You win!',
@@ -40409,6 +41033,7 @@
 962: 1:}
 962: 1:Scores: 56501
 962: 1:Answer: message('StartNextLevel')
+962: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 963: 1:BoardData {
 963: 1:  'description': 'No more Levels. You win!',
@@ -40418,6 +41043,7 @@
 963: 1:}
 963: 1:Scores: 56501
 963: 1:Answer: message('StartNextLevel')
+963: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 964: 1:BoardData {
 964: 1:  'description': 'No more Levels. You win!',
@@ -40427,6 +41053,7 @@
 964: 1:}
 964: 1:Scores: 56501
 964: 1:Answer: message('StartNextLevel')
+964: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 965: 1:BoardData {
 965: 1:  'description': 'No more Levels. You win!',
@@ -40436,6 +41063,7 @@
 965: 1:}
 965: 1:Scores: 56501
 965: 1:Answer: message('StartNextLevel')
+965: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 966: 1:BoardData {
 966: 1:  'description': 'No more Levels. You win!',
@@ -40445,6 +41073,7 @@
 966: 1:}
 966: 1:Scores: 56501
 966: 1:Answer: message('StartNextLevel')
+966: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 967: 1:BoardData {
 967: 1:  'description': 'No more Levels. You win!',
@@ -40454,6 +41083,7 @@
 967: 1:}
 967: 1:Scores: 56501
 967: 1:Answer: message('StartNextLevel')
+967: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 968: 1:BoardData {
 968: 1:  'description': 'No more Levels. You win!',
@@ -40463,6 +41093,7 @@
 968: 1:}
 968: 1:Scores: 56501
 968: 1:Answer: message('StartNextLevel')
+968: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 969: 1:BoardData {
 969: 1:  'description': 'No more Levels. You win!',
@@ -40472,6 +41103,7 @@
 969: 1:}
 969: 1:Scores: 56501
 969: 1:Answer: message('StartNextLevel')
+969: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 970: 1:BoardData {
 970: 1:  'description': 'No more Levels. You win!',
@@ -40481,6 +41113,7 @@
 970: 1:}
 970: 1:Scores: 56501
 970: 1:Answer: message('StartNextLevel')
+970: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 971: 1:BoardData {
 971: 1:  'description': 'No more Levels. You win!',
@@ -40490,6 +41123,7 @@
 971: 1:}
 971: 1:Scores: 56501
 971: 1:Answer: message('StartNextLevel')
+971: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 972: 1:BoardData {
 972: 1:  'description': 'No more Levels. You win!',
@@ -40499,6 +41133,7 @@
 972: 1:}
 972: 1:Scores: 56501
 972: 1:Answer: message('StartNextLevel')
+972: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 973: 1:BoardData {
 973: 1:  'description': 'No more Levels. You win!',
@@ -40508,6 +41143,7 @@
 973: 1:}
 973: 1:Scores: 56501
 973: 1:Answer: message('StartNextLevel')
+973: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 974: 1:BoardData {
 974: 1:  'description': 'No more Levels. You win!',
@@ -40517,6 +41153,7 @@
 974: 1:}
 974: 1:Scores: 56501
 974: 1:Answer: message('StartNextLevel')
+974: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 975: 1:BoardData {
 975: 1:  'description': 'No more Levels. You win!',
@@ -40526,6 +41163,7 @@
 975: 1:}
 975: 1:Scores: 56501
 975: 1:Answer: message('StartNextLevel')
+975: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 976: 1:BoardData {
 976: 1:  'description': 'No more Levels. You win!',
@@ -40535,6 +41173,7 @@
 976: 1:}
 976: 1:Scores: 56501
 976: 1:Answer: message('StartNextLevel')
+976: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 977: 1:BoardData {
 977: 1:  'description': 'No more Levels. You win!',
@@ -40544,6 +41183,7 @@
 977: 1:}
 977: 1:Scores: 56501
 977: 1:Answer: message('StartNextLevel')
+977: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 978: 1:BoardData {
 978: 1:  'description': 'No more Levels. You win!',
@@ -40553,6 +41193,7 @@
 978: 1:}
 978: 1:Scores: 56501
 978: 1:Answer: message('StartNextLevel')
+978: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 979: 1:BoardData {
 979: 1:  'description': 'No more Levels. You win!',
@@ -40562,6 +41203,7 @@
 979: 1:}
 979: 1:Scores: 56501
 979: 1:Answer: message('StartNextLevel')
+979: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 980: 1:BoardData {
 980: 1:  'description': 'No more Levels. You win!',
@@ -40571,6 +41213,7 @@
 980: 1:}
 980: 1:Scores: 56501
 980: 1:Answer: message('StartNextLevel')
+980: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 981: 1:BoardData {
 981: 1:  'description': 'No more Levels. You win!',
@@ -40580,6 +41223,7 @@
 981: 1:}
 981: 1:Scores: 56501
 981: 1:Answer: message('StartNextLevel')
+981: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 982: 1:BoardData {
 982: 1:  'description': 'No more Levels. You win!',
@@ -40589,6 +41233,7 @@
 982: 1:}
 982: 1:Scores: 56501
 982: 1:Answer: message('StartNextLevel')
+982: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 983: 1:BoardData {
 983: 1:  'description': 'No more Levels. You win!',
@@ -40598,6 +41243,7 @@
 983: 1:}
 983: 1:Scores: 56501
 983: 1:Answer: message('StartNextLevel')
+983: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 984: 1:BoardData {
 984: 1:  'description': 'No more Levels. You win!',
@@ -40607,6 +41253,7 @@
 984: 1:}
 984: 1:Scores: 56501
 984: 1:Answer: message('StartNextLevel')
+984: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 985: 1:BoardData {
 985: 1:  'description': 'No more Levels. You win!',
@@ -40616,6 +41263,7 @@
 985: 1:}
 985: 1:Scores: 56501
 985: 1:Answer: message('StartNextLevel')
+985: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 986: 1:BoardData {
 986: 1:  'description': 'No more Levels. You win!',
@@ -40625,6 +41273,7 @@
 986: 1:}
 986: 1:Scores: 56501
 986: 1:Answer: message('StartNextLevel')
+986: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 987: 1:BoardData {
 987: 1:  'description': 'No more Levels. You win!',
@@ -40634,6 +41283,7 @@
 987: 1:}
 987: 1:Scores: 56501
 987: 1:Answer: message('StartNextLevel')
+987: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 988: 1:BoardData {
 988: 1:  'description': 'No more Levels. You win!',
@@ -40643,6 +41293,7 @@
 988: 1:}
 988: 1:Scores: 56501
 988: 1:Answer: message('StartNextLevel')
+988: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 989: 1:BoardData {
 989: 1:  'description': 'No more Levels. You win!',
@@ -40652,6 +41303,7 @@
 989: 1:}
 989: 1:Scores: 56501
 989: 1:Answer: message('StartNextLevel')
+989: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 990: 1:BoardData {
 990: 1:  'description': 'No more Levels. You win!',
@@ -40661,6 +41313,7 @@
 990: 1:}
 990: 1:Scores: 56501
 990: 1:Answer: message('StartNextLevel')
+990: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 991: 1:BoardData {
 991: 1:  'description': 'No more Levels. You win!',
@@ -40670,6 +41323,7 @@
 991: 1:}
 991: 1:Scores: 56501
 991: 1:Answer: message('StartNextLevel')
+991: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 992: 1:BoardData {
 992: 1:  'description': 'No more Levels. You win!',
@@ -40679,6 +41333,7 @@
 992: 1:}
 992: 1:Scores: 56501
 992: 1:Answer: message('StartNextLevel')
+992: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 993: 1:BoardData {
 993: 1:  'description': 'No more Levels. You win!',
@@ -40688,6 +41343,7 @@
 993: 1:}
 993: 1:Scores: 56501
 993: 1:Answer: message('StartNextLevel')
+993: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 994: 1:BoardData {
 994: 1:  'description': 'No more Levels. You win!',
@@ -40697,6 +41353,7 @@
 994: 1:}
 994: 1:Scores: 56501
 994: 1:Answer: message('StartNextLevel')
+994: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 995: 1:BoardData {
 995: 1:  'description': 'No more Levels. You win!',
@@ -40706,6 +41363,7 @@
 995: 1:}
 995: 1:Scores: 56501
 995: 1:Answer: message('StartNextLevel')
+995: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 996: 1:BoardData {
 996: 1:  'description': 'No more Levels. You win!',
@@ -40715,6 +41373,7 @@
 996: 1:}
 996: 1:Scores: 56501
 996: 1:Answer: message('StartNextLevel')
+996: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 997: 1:BoardData {
 997: 1:  'description': 'No more Levels. You win!',
@@ -40724,6 +41383,7 @@
 997: 1:}
 997: 1:Scores: 56501
 997: 1:Answer: message('StartNextLevel')
+997: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 998: 1:BoardData {
 998: 1:  'description': 'No more Levels. You win!',
@@ -40733,6 +41393,7 @@
 998: 1:}
 998: 1:Scores: 56501
 998: 1:Answer: message('StartNextLevel')
+998: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 999: 1:BoardData {
 999: 1:  'description': 'No more Levels. You win!',
@@ -40742,6 +41403,7 @@
 999: 1:}
 999: 1:Scores: 56501
 999: 1:Answer: message('StartNextLevel')
+999: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 1000: 1:BoardData {
 1000: 1:  'description': 'No more Levels. You win!',
@@ -40751,4 +41413,5 @@
 1000: 1:}
 1000: 1:Scores: 56501
 1000: 1:Answer: message('StartNextLevel')
+1000: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------

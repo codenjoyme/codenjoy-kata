@@ -54,7 +54,7 @@ public class LevelsLoaderTest {
                         "PowerDigitSumAlgorithm, MakeBricksAlgorithm, " +
                         "FactorialAlgorithm, ReverseAddPalindromeAlgorithm, " +
                         "Sequence2Algorithm, XthPrimeAlgorithm, " +
-                        "LongDivisionAlgorithm",
+                        "LongDivisionAlgorithm, NullLevel",
                 levels.stream()
                         .sorted(Comparator.comparingInt(Level::complexity))
                         .map(it -> it.getClass().getSimpleName())

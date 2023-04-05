@@ -52,6 +52,11 @@ public class SmokeTest {
         // about 5.0 sec
         int ticks = 1000;
 
+        smoke.settings().removeWhenWin(true);
+        smoke.settings().removeWhenGameOver(true);
+        smoke.settings().reloadPlayersWhenGameOverAll(true);
+        smoke.settings().increaseLevelAfterReload(true);
+
         smoke.play(ticks, "SmokeTest.data",
                 new GameRunner() {
                     @Override

@@ -40,19 +40,19 @@ public final class Levels {
         throw new IllegalAccessError("Utility class");
     }
 
-    public static List<Level> all() {
+    private static List<Level> all() {
         return LevelsLoader.getAlgorithms();
     }
 
     public static void setup(GameSettings settings) {
         AtomicInteger index = new AtomicInteger();
-        all().forEach(level -> settings.addLevel(index.incrementAndGet(), level));
+        all().forEach(level -> settings.setLevelMap(index.incrementAndGet(), level.name()));
     }
 
     public static List<Level> sorted(GameSettings settings) {
-        List<String> sorted = IntStream.range(0, settings.levelsCount())
+        List<String> sorted = IntStream.range(0, settings.getLevelsCount())
                 .map(index -> index + LevelProgress.levelsStartsFrom1)
-                .mapToObj(settings::levelName)
+                .mapToObj(settings::getLevelMap)
                 .collect(toList());
 
         return all().stream()

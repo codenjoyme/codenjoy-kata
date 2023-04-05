@@ -25,6 +25,7 @@ package com.codenjoy.dojo.kata.model;
 
 import com.codenjoy.dojo.kata.services.GameSettings;
 import com.codenjoy.dojo.services.Dice;
+import com.codenjoy.dojo.services.questionanswer.levels.Level;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -35,9 +36,11 @@ public class Kata implements Field {
     private List<Player> players;
     private Dice dice;
     private GameSettings settings;
+    private int levelIndex;
 
-    public Kata(Dice dice, GameSettings settings) {
+    public Kata(Dice dice, int levelIndex, GameSettings settings) {
         this.dice = dice;
+        this.levelIndex = levelIndex;
         this.settings = settings;
         players = new LinkedList<>();
     }
@@ -69,6 +72,17 @@ public class Kata implements Field {
     @Override
     public int size() {
         return 0;
+    }
+
+
+    @Override
+    public List<Level> levels() {
+        return settings.levels();
+    }
+
+    @Override
+    public int levelIndex() {
+        return levelIndex;
     }
 
     public void remove(Player player) {

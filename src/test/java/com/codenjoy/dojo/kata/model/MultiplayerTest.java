@@ -49,6 +49,7 @@ import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_EXPECTED_AN
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
+// TODO А точно Kata это мультиплеерная игра?
 public class MultiplayerTest {
 
     private EventListener listener1;
@@ -76,7 +77,7 @@ public class MultiplayerTest {
                 return Arrays.asList(level);
             }
         };
-        field = new Kata(dice, settings);
+        field = new Kata(dice, 0, settings);
         GameRunner gameRunner = new GameRunner(){
             @Override
             public GameSettings getSettings() {
