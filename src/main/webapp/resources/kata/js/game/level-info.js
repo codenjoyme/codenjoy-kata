@@ -32,22 +32,20 @@ var initLevelInfo = function(contextPath) {
         return value;
     }
 
-    var get = function(key) {
-        for (var index in settings) {
-            var option = settings[index];
-            if (key == option.name) {
-                return option;
-            }
-        }
-    }
+    var filterKeys = function(settings, prefix) {
+        return Object.keys(settings).filter(function(key) {
+            return key.startsWith(prefix);
+        });
+    };
 
     var load = function(onLoad, onError) {
         var ajax = new AdminSettings(contextPath, 'kata', '_settings_');
         ajax.load(function(data) {
             settings = data.parameters;
-            count = get('[Game] Levels count').value;
+            var keys = filterKeys(settings, '[Level] Map');
+            var count = keys.length;
             if (!!onLoad) {
-                onLoad();
+                onLoad(count);
             }
         }, onError);
     }
