@@ -37,8 +37,7 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.codenjoy.dojo.client.Command.SKIP_THIS_LEVEL;
-import static com.codenjoy.dojo.client.Command.START_NEXT_LEVEL;
+import static com.codenjoy.dojo.client.Command.*;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 
@@ -559,6 +558,70 @@ public class GameTest {
                 "]");
 
         thenQuestions("[]");
+    }
+
+    @Test
+    public void should_resetLevel() {
+        // given
+        givenQA("question1=answer1",
+                "question2=answer2");
+
+        // when
+        hero.message("['answer1']");
+        game.tick();
+
+        // then
+        thenHistory(
+                "[\n" +
+                "  {\n" +
+                "    'questionAnswers':[\n" +
+                "      {\n" +
+                "        'answer':'answer1',\n" +
+                "        'question':'question1',\n" +
+                "        'valid':true\n" +
+                "      }\n" +
+                "    ]\n" +
+                "  }\n" +
+                "]");
+
+        thenQuestions("[\n" +
+                "  'question1',\n" +
+                "  'question2'\n" +
+                "]");
+
+        // when
+        hero.message(RESET_THIS_LEVEL);
+        game.tick();
+
+        // then
+        thenHistory("[]");
+
+        thenQuestions("[\n" +
+                "  'question1'\n" +
+                "]");
+
+        // when
+        hero.message("['answer1']");
+        game.tick();
+
+        // then
+        thenHistory(
+                "[\n" +
+                "  {\n" +
+                "    'questionAnswers':[\n" +
+                "      {\n" +
+                "        'answer':'answer1',\n" +
+                "        'question':'question1',\n" +
+                "        'valid':true\n" +
+                "      }\n" +
+                "    ]\n" +
+                "  }\n" +
+                "]");
+
+        thenQuestions("[\n" +
+                "  'question1',\n" +
+                "  'question2'\n" +
+                "]");
     }
 
     @Test
