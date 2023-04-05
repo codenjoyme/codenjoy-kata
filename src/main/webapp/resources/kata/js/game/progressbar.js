@@ -53,7 +53,7 @@ function initProgressbar(container) {
         for (var level = levelsStartsFrom1; level <= progressBar.length; level++) {
             progressBar.name(level, "Level " + level);
             if (level == count) {
-                progressBar.name(level, "Contest");
+                progressBar.name(level, "Finish");
             }
             if (level <= count) {
                 progressBar.show(level);
