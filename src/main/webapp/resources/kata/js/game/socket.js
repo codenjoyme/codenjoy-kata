@@ -103,7 +103,7 @@ function initSocket(setup, buttons, logger, onSocketMessage, onSocketClose) {
 
     var encode = function(command) {
         command = replace(command, 'WAIT', 'STOP');
-        command = replace(command, 'RESET', 'ResetThisLevel');
+        command = replace(command, 'RESET', 'StartNextLevel');
         command = replace(command, 'WIN', 'SkipThisLevel');
         return command;
     }

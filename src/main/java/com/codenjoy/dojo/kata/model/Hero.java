@@ -36,7 +36,6 @@ public class Hero extends PlayerHero<Field> implements MessageJoystick, Responde
     
     private boolean skipLevel;
     private boolean nextLevel;
-    private boolean resetLevel;
 
     public Hero() {
         alive = true;
@@ -52,11 +51,6 @@ public class Hero extends PlayerHero<Field> implements MessageJoystick, Responde
 
         if (SKIP_THIS_LEVEL.equals(answers)) {
             skipLevel = true;
-            return;
-        }
-
-        if (RESET_THIS_LEVEL.equals(answers)) {
-            resetLevel = true;
             return;
         }
 
@@ -91,14 +85,8 @@ public class Hero extends PlayerHero<Field> implements MessageJoystick, Responde
     }
 
     @Override
-    public boolean wantsResetLevel() {
-        return resetLevel;
-    }
-
-    @Override
     public void clearFlags() {
         skipLevel = false;
         nextLevel = false;
-        resetLevel = false;
     }
 }
