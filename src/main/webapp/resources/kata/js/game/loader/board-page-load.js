@@ -106,6 +106,12 @@ var boardPageLoad = function() {
             $("#modal-level").addClass("close");
         };
 
+        var hidePrevious = function() {
+            // previous.hide() мы не можем использовать потому
+            // что элемент еще не отображен
+            previous.css('visibility', 'hidden');
+        }
+
         close.click(function(){
             hide();
         });
@@ -116,7 +122,7 @@ var boardPageLoad = function() {
 
         previous.click(function(){
             hide();
-            levelProgress.selectLevel(levelsStartsFrom1);
+            // levelProgress.selectLevel(levelsStartsFrom1);
         });
 
         $("body").keydown(function(event){
@@ -124,13 +130,12 @@ var boardPageLoad = function() {
                 close.click();
             }
         });
+
+        hidePrevious();
+
         return {
             show : show,
-            hidePrevious: function() {
-                // previous.hide() мы не можем использовать потому
-                // что элемент еще не отображен
-                previous.css('visibility', 'hidden');
-            }
+            hidePrevious: hidePrevious
         };
     };
     var win = initWin();
