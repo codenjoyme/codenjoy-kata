@@ -37,7 +37,8 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.codenjoy.dojo.client.Command.*;
+import static com.codenjoy.dojo.client.Command.SKIP_THIS_LEVEL;
+import static com.codenjoy.dojo.client.Command.START_NEXT_LEVEL;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 
@@ -909,7 +910,7 @@ public class GameTest {
     }
 
     @Test
-    public void shouldPlayerSkipLevelOnlyIfNowWeArePlaying() {
+    public void shouldPlayerSkipLevel_onlyIfNowWeArePlaying() {
         // given
         withLevels(qa("question1=answer1"),
                 qa("question2=answer2",
@@ -1015,5 +1016,123 @@ public class GameTest {
 
         // then
         assertStillOnLevel(0);
+    }
+
+    @Test
+    public void shouldHeroWin_whenSkipThisLevel_whenWaiting() {
+        // given
+        withLevels(qa("question1=answer1"),
+                qa("question2=answer2",
+                        "question3=answer3"),
+                qa("question4=answer4",
+                        "question5=answer5"));
+        givenGame();
+
+        // then
+        assertStillOnLevel(0);
+        assertRequestedNextLevel(false);
+
+        // when
+        hero.message("['answer1']");
+        game.tick();
+
+        // then
+        // WaitLevel
+        int sameLevel = 0;
+        assertWaitAfter(sameLevel);
+        assertRequestedNextLevel(false);
+
+        // when
+        // try to skip
+        hero.message(SKIP_THIS_LEVEL);
+
+        // then
+        // we are waiting and skip this level
+        assertRequestedNextLevel(true);
+    }
+
+    @Test
+    public void shouldHeroWin_whenStartNextLevel_whenWaiting() {
+        // given
+        withLevels(qa("question1=answer1"),
+                qa("question2=answer2",
+                        "question3=answer3"),
+                qa("question4=answer4",
+                        "question5=answer5"));
+        givenGame();
+
+        // then
+        assertStillOnLevel(0);
+        assertRequestedNextLevel(false);
+
+        // when
+        hero.message("['answer1']");
+        game.tick();
+
+        // then
+        // WaitLevel
+        int sameLevel = 0;
+        assertWaitAfter(sameLevel);
+        assertRequestedNextLevel(false);
+
+        // when
+        // try to skip
+        hero.message(START_NEXT_LEVEL);
+
+        // then
+        // we are waiting and start next level
+        assertRequestedNextLevel(true);
+    }
+
+    @Test
+    public void shouldHeroWin_whenSkipThisLevel_whenPlaying() {
+        // given
+        withLevels(qa("question1=answer1"),
+                qa("question2=answer2",
+                        "question3=answer3"),
+                qa("question4=answer4",
+                        "question5=answer5"));
+        givenGame();
+
+        // then
+        assertStillOnLevel(0);
+        assertRequestedNextLevel(false);
+
+        // when
+        // try to skip
+        hero.message(SKIP_THIS_LEVEL);
+
+        // then
+        // we are playing and skip this level
+        assertRequestedNextLevel(true);
+    }
+
+    @Test
+    public void shouldHeroNotWin_whenStartNextLevel_whenPlaying() {
+        // given
+        withLevels(qa("question1=answer1"),
+                qa("question2=answer2",
+                        "question3=answer3"),
+                qa("question4=answer4",
+                        "question5=answer5"));
+        givenGame();
+
+        // then
+        assertStillOnLevel(0);
+        assertRequestedNextLevel(false);
+
+        // when
+        // try to skip
+        hero.message(START_NEXT_LEVEL);
+
+        // then
+        // we are playing and trying to start next level
+        // but unsuccessful
+        assertRequestedNextLevel(false);
+    }
+
+    private void assertRequestedNextLevel(boolean requested) {
+        assertEquals(!requested, player.isAlive());
+        assertEquals(requested, player.isWin());
     }
 }

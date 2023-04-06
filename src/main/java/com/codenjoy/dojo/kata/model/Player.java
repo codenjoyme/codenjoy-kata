@@ -84,12 +84,17 @@ public class Player extends GamePlayer<Hero, Field> {
 
     @Override
     public boolean isWin() {
-        return hero.wantsNextLevel();
+        return isNextLevelRequested();
+    }
+
+    private boolean isNextLevelRequested() {
+        return (hero.wantsNextLevel() && level.isWaitNext())
+                || hero.wantsSkipLevel();
     }
 
     @Override
     public boolean isAlive() {
-        return !hero.wantsNextLevel();
+        return !isWin();
     }
 
     @Override
