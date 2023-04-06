@@ -1,0 +1,10 @@
+game:
+  ai: false
+kata:
+  page:
+    main:
+      url: ''
+    registration:
+      nickname: false
+    admin:
+      url: /kata/admin
