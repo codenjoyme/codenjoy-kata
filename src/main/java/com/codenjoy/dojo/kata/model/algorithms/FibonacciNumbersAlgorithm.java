@@ -53,7 +53,7 @@ public class FibonacciNumbersAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String description() {
-        return "Сделай метод, возвращающий числ Фибоначчи из ряда по его номеру:\n" +
+        return "Make a method that returns a Fibonacci number from the series by its number:\n" +
                 "f(0) = 0\n" +
                 "f(1) = 1\n" +
                 "f(2) = 0 + 1 = 1\n" +
@@ -64,7 +64,7 @@ public class FibonacciNumbersAlgorithm extends AlgorithmLevelImpl {
                 "f(7) = 5 + 8 = 13\n" +
                 "f(8) = 8 + 13 = 21\n" +
                 "f(9) = 13 + 21 = 34\n" +
-                "и так далее...";
+                "etc...";
     }
 
     @Override

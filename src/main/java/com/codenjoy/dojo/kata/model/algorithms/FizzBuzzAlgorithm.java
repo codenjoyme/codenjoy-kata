@@ -55,11 +55,11 @@ public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String description() {
-        return "Напиши метод, принимающий один int аргумент и " +
-                "возвращающий String. Для тех чисел, которые делятся " +
-                "нацело на 3 метод должен вернуть “Fizz”, для тех, " +
-                "что делятся на 5 - “Buzz”, для тех же, что делятся и на 3 " +
-                "и на 5 - “FizzBuzz”, ну а для всех остальных - само число.";
+        return "Write a method that takes one int argument and \n" +
+                "that returns a String. For those numbers that are divisible by 3,\n" +
+                "the method should return 'Fizz', for those numbers divisible by 5\n" +
+                "it should return 'Buzz', for those numbers divisible\n" +
+                "by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.";
     }
 
     @Override

@@ -79,7 +79,7 @@ public class GameSettingsTest {
         assertEquals("[\n" +
                         "  {\n" +
                         "    'complexity':0,\n" +
-                        "    'description':'Напиши метод, принимающий один String аргумент и возвращающий строку 'world' если на вход пришло 'hello',и 'hello' - если пришло 'world', в противном случае алгоритм должен вернуть ту же строчку, что пришла на вход. \\nАлгоритм реализован для проверки конневшена клиента к серверу.',\n" +
+                        "    'description':'Write a method that takes a single String argument \\nand return the string 'world' if 'hello' came in,\\nand 'hello' if 'world', otherwise the algorithm \\nshould return the same string that came in.\\nThis is the first and simplest algorithm -\\nits purpose is to check if everything works\\nwell and how you understand the problem.',\n" +
                         "    'name':'HelloWorldAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      'hello=world',\n" +
@@ -92,7 +92,7 @@ public class GameSettingsTest {
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':5,\n" +
-                        "    'description':'Напиши метод, принимающий один int аргумент и возвращающий String. Для тех чисел, которые делятся нацело на 3 метод должен вернуть “Fizz”, для тех, что делятся на 5 - “Buzz”, для тех же, что делятся и на 3 и на 5 - “FizzBuzz”, ну а для всех остальных - само число.',\n" +
+                        "    'description':'Write a method that takes one int argument and \\nthat returns a String. For those numbers that are divisible by 3,\\nthe method should return 'Fizz', for those numbers divisible by 5\\nit should return 'Buzz', for those numbers divisible\\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',\n" +
                         "    'name':'FizzBuzzAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      '1=1',\n" +
@@ -125,7 +125,7 @@ public class GameSettingsTest {
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':10,\n" +
-                        "    'description':'Сумма квадратов первых десяти натуральных чисел 1^2 + 2^2 + ... + 10^2 = 385. А квадрат суммы - (1 + 2 + ... + 10)^2 = 55^2 = 3025. Потому разность между суммой квадратов и квадратом суммы первых десяти натуральных чисел равна 3025 − 385 = 2640. Создай метод, вычисляющий разность между суммой квадратов и квадратом суммы для натурального числа i.',\n" +
+                        "    'description':'The sum of the squares of the first ten positive integers \\n1^2 + 2^2 + ... + 10^2 = 385. \\nAnd the square of the sum is \\n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \\nTherefore, the difference between the sum of the squares and \\nthe square of the sum of the first ten natural \\nnumbers is equal to 3025 - 385 = 2640. \\nCreate a method that calculates the difference between the sum\\nsquares and the square of the sum for the natural number i.',\n" +
                         "    'name':'SumSquareDifferenceAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      '1=0',\n" +
@@ -191,7 +191,7 @@ public class GameSettingsTest {
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':20,\n" +
-                        "    'description':'Сделай метод, возвращающий числ Фибоначчи из ряда по его номеру:\\nf(0) = 0\\nf(1) = 1\\nf(2) = 0 + 1 = 1\\nf(3) = 1 + 1 = 2\\nf(4) = 1 + 2 = 3\\nf(5) = 2 + 3 = 5\\nf(6) = 3 + 5 = 8\\nf(7) = 5 + 8 = 13\\nf(8) = 8 + 13 = 21\\nf(9) = 13 + 21 = 34\\nи так далее...',\n" +
+                        "    'description':'Make a method that returns a Fibonacci number from the series by its number:\\nf(0) = 0\\nf(1) = 1\\nf(2) = 0 + 1 = 1\\nf(3) = 1 + 1 = 2\\nf(4) = 1 + 2 = 3\\nf(5) = 2 + 3 = 5\\nf(6) = 3 + 5 = 8\\nf(7) = 5 + 8 = 13\\nf(8) = 8 + 13 = 21\\nf(9) = 13 + 21 = 34\\netc...',\n" +
                         "    'name':'FibonacciNumbersAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      '1=1',\n" +
@@ -224,7 +224,7 @@ public class GameSettingsTest {
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':25,\n" +
-                        "    'description':'Разложи целое число на множители из простых чисел:\\n1 -> [1]\\n2 -> [2]\\n3 -> [3]\\n4 -> [2,2]\\n6 -> [2,3]\\n9 -> [3,3]\\n12 -> [2,2,3]\\n15 -> [3,5]\\nи так далее...',\n" +
+                        "    'description':'Divide an integer into multiples of prime numbers:\\n1 -> [1]\\n2 -> [2]\\n3 -> [3]\\n4 -> [2,2]\\n6 -> [2,3]\\n9 -> [3,3]\\n12 -> [2,2,3]\\n15 -> [3,5]\\netc...',\n" +
                         "    'name':'PrimeFactoryAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      '1=[1]',\n" +
@@ -257,7 +257,7 @@ public class GameSettingsTest {
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':30,\n" +
-                        "    'description':'2 в степени 15 = 32768, сумма цифр результата 3 + 2 + 7 + 6 + 8 = 26. Какова сумма цифр 2 в степени i? Напиши для расчета метод принимающий int и возвращающий результат в виде String',\n" +
+                        "    'description':'2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \\nWhat is the sum of the digits of 2 to the power of i? \\nWrite a method for calculation that takes int \\nand returns the result as a String',\n" +
                         "    'name':'PowerDigitSumAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      '1=2',\n" +
@@ -290,7 +290,7 @@ public class GameSettingsTest {
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':35,\n" +
-                        "    'description':'У тебя есть кирпичики размером 5 (bigCount) и 1 (smallCount). Напиши метод, который смог бы определить получится из заданного набора кирпичиков  построить стенку заданной длинны (length). Например: \\nmethod(3, 1, 8) → true\\nmethod(3, 1, 9) → false\\nmethod(3, 2, 10) → true',\n" +
+                        "    'description':'You have bricks of size 5 (bigCount) and 1 (smallCount).\\nWrite a method that can determine if a given\\nset of bricks can be used to build a wall of a given length.\\na given set of bricks to build a wall of a given length (length).\\nFor example: \\nmethod(3, 1, 8) → true\\nmethod(3, 1, 9) → false\\nmethod(3, 2, 10) → true',\n" +
                         "    'name':'MakeBricksAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      '0, 1, 5=true',\n" +
@@ -346,7 +346,7 @@ public class GameSettingsTest {
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':40,\n" +
-                        "    'description':'Напиши метод, принимающий один int аргумент и возвращающий факториал этого числа в виде String. \\nВнимание! Возможно переполнение int/long.',\n" +
+                        "    'description':'Write a method that takes one int argument and \\nthat returns the factorial of that number as a String.\\nWarning: Int/long overflow is possible.',\n" +
                         "    'name':'FactorialAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      '1=1',\n" +
@@ -379,7 +379,7 @@ public class GameSettingsTest {
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':45,\n" +
-                        "    'description':'For the most of numbers iterative 'reverse and add' actions lead to palindrome number. For example: \\nNumber 23: 23 + 32 = 55; \\nNumber 254: 254 + 452 = 706; 706 + 607 = 1313; 1313 + 3131 = 4444;\\nWrite a method which calculates 'ReverseAndAdd' polyndrom for a number. i.e f(23) = 55; f(254) = 4444',\n" +
+                        "    'description':'For the most of numbers iterative 'reverse and add' actions lead to palindrome number. For example: \\nNumber 23: 23 + 32 = 55; \\nNumber 254: 254 + 452 = 706; 706 + 607 = 1313; 1313 + 3131 = 4444;\\nWrite a method which calculates 'ReverseAndAdd' palindrome for a number. i.e f(23) = 55; f(254) = 4444',\n" +
                         "    'name':'ReverseAddPalindromeAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      '1=2',\n" +
@@ -451,7 +451,7 @@ public class GameSettingsTest {
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':55,\n" +
-                        "    'description':'Первые 10 простых чисел - 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Напиши метод, который вернет i-тое простое число.',\n" +
+                        "    'description':'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \\nWrite a method that returns the i-th prime number.',\n" +
                         "    'name':'XthPrimeAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      '1=2',\n" +
@@ -484,7 +484,7 @@ public class GameSettingsTest {
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':60,\n" +
-                        "    'description':'Напиши метод, который делит два числа в столбик с точностью до 100 знака. Если в результате встречается период, его стоит записать так: \\n212/133 = 1.(593984962406015037)\\n87/78   = 1.1(153846)',\n" +
+                        "    'description':'Write a method that divides two numbers\\nin a column to within 100 digits.\\nIf there is a period in the result,\\nit should be written as follows: \\n212/133 = 1.(593984962406015037)\\n87/78 = 1.1(153846)',\n" +
                         "    'name':'LongDivisionAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      '1, 2=0.5',\n" +

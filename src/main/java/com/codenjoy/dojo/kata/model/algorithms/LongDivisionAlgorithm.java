@@ -145,12 +145,12 @@ public class LongDivisionAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String description() {
-        return "Напиши метод, который делит два числа в столбик " +
-                "с точностью до 100 знака. " +
-                "Если в результате встречается период, " +
-                "его стоит записать так: \n" +
+        return "Write a method that divides two numbers\n" +
+                "in a column to within 100 digits.\n" +
+                "If there is a period in the result,\n" +
+                "it should be written as follows: \n" +
                 "212/133 = 1.(593984962406015037)\n" +
-                "87/78   = 1.1(153846)";
+                "87/78 = 1.1(153846)";
     }
 
     @Override

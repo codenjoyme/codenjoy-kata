@@ -36,11 +36,11 @@ public class ReverseAddPalindromeAlgorithm extends AlgorithmLevelImpl {
         BigInteger result = BigInteger.valueOf(number);
         do {
             result = result.add(new BigInteger(reverse(String.valueOf(result))));
-        } while (!isPolyndrome(result));
+        } while (!isPalindrome(result));
         return result.toString();
     }
 
-    private boolean isPolyndrome(BigInteger input) {
+    private boolean isPalindrome(BigInteger input) {
         String number = String.valueOf(input);
         return number.equals(reverse(number));
     }
@@ -55,11 +55,11 @@ public class ReverseAddPalindromeAlgorithm extends AlgorithmLevelImpl {
                 "    let result = BigInt(number);\n" +
                 "    do {\n" +
                 "        result += BigInt(reverse(String(result))); \n" +
-                "    } while (!isPolyndrome(result));\n" +
+                "    } while (!isPalindrome(result));\n" +
                 "    return String(result);\n" +
                 "}\n" +
                 "\n" +
-                "function isPolyndrome(input) {\n" +
+                "function isPalindrome(input) {\n" +
                 "    let number = String(input);\n" +
                 "    return number === reverse(number);\n" +
                 "}\n" +
@@ -75,7 +75,7 @@ public class ReverseAddPalindromeAlgorithm extends AlgorithmLevelImpl {
                 "actions lead to palindrome number. For example: \n" +
                 "Number 23: 23 + 32 = 55; \n" +
                 "Number 254: 254 + 452 = 706; 706 + 607 = 1313; 1313 + 3131 = 4444;\n" +
-                "Write a method which calculates 'ReverseAndAdd' polyndrom " +
+                "Write a method which calculates 'ReverseAndAdd' palindrome " +
                 "for a number. i.e f(23) = 55; f(254) = 4444";
     }
 

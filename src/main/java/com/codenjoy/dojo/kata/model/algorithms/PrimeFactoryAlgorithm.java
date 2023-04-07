@@ -68,7 +68,7 @@ public class PrimeFactoryAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String description() {
-        return "Разложи целое число на множители из простых чисел:\n" +
+        return "Divide an integer into multiples of prime numbers:\n" +
                 "1 -> [1]\n" +
                 "2 -> [2]\n" +
                 "3 -> [3]\n" +
@@ -77,7 +77,7 @@ public class PrimeFactoryAlgorithm extends AlgorithmLevelImpl {
                 "9 -> [3,3]\n" +
                 "12 -> [2,2,3]\n" +
                 "15 -> [3,5]\n" +
-                "и так далее...";
+                "etc...";
     }
 
     @Override

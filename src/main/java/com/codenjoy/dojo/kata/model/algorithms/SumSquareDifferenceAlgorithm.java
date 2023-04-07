@@ -53,15 +53,15 @@ public class SumSquareDifferenceAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String description() {
-        return "Сумма квадратов первых десяти натуральных чисел " +
-                "1^2 + 2^2 + ... + 10^2 = 385. " +
-                "А квадрат суммы - " +
-                "(1 + 2 + ... + 10)^2 = 55^2 = 3025. " +
-                "Потому разность между суммой квадратов и " +
-                "квадратом суммы первых десяти натуральных " +
-                "чисел равна 3025 − 385 = 2640. " +
-                "Создай метод, вычисляющий разность между суммой " +
-                "квадратов и квадратом суммы для натурального числа i.";
+        return "The sum of the squares of the first ten positive integers \n" +
+                "1^2 + 2^2 + ... + 10^2 = 385. \n" +
+                "And the square of the sum is \n" +
+                "(1 + 2 + ... + 10)^2 = 55^2 = 3025. \n" +
+                "Therefore, the difference between the sum of the squares and \n" +
+                "the square of the sum of the first ten natural \n" +
+                "numbers is equal to 3025 - 385 = 2640. \n" +
+                "Create a method that calculates the difference between the sum\n" +
+                "squares and the square of the sum for the natural number i.";
     }
 
     @Override
