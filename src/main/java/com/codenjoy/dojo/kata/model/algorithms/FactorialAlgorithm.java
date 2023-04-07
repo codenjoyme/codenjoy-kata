@@ -27,11 +27,11 @@ import com.codenjoy.dojo.services.questionanswer.levels.AlgorithmLevelImpl;
 
 import java.math.BigInteger;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class FactorialAlgorithm extends AlgorithmLevelImpl {
 
-    // TODO подумать над проблемами многопоточности
-    private static Map<Integer, BigInteger> cache = new java.util.HashMap<>();
+    private static Map<Integer, BigInteger> cache = new ConcurrentHashMap<>();
 
     @Override
     public String get(int number) {
@@ -45,6 +45,30 @@ public class FactorialAlgorithm extends AlgorithmLevelImpl {
         result = BigInteger.valueOf(number).multiply(new BigInteger(get(String.valueOf(number - 1))));
         cache.put(number, result);
         return result.toString();
+    }
+
+    @Override
+    public String winCode() {
+        return "function program(number) {\n" +
+                "    const cache = {};\n" +
+                "\n" +
+                "    function calculate(number) {\n" +
+                "        if (number == 0) {\n" +
+                "            return 1n;\n" +
+                "        }\n" +
+                "\n" +
+                "        if (number in cache) {\n" +
+                "            return cache[number];\n" +
+                "        }\n" +
+                "\n" +
+                "        const result = BigInt(number) * calculate(number - 1);\n" +
+                "        cache[number] = result;\n" +
+                "\n" +
+                "        return result;\n" +
+                "    }\n" +
+                "\n" +
+                "    return calculate(number).toString();\n" +
+                "}\n";
     }
 
     @Override
