@@ -30,15 +30,28 @@ public class Sequence2Algorithm extends AlgorithmLevelImpl {
 
     @Override
     public String get(int number) {
-        Integer res = 971;
+        Integer result = 971;
 
         for(int i = 1; i < number; i++) {
-            String s = res.toString();
-            String s2 = StringUtils.leftPad(s, 3, '0');
-            res = res - Integer.parseInt(s2.substring(0, 2));
+            String string = StringUtils.leftPad(result.toString(), 3, '0');
+            result -= Integer.parseInt(string.substring(0, 2));
         }
 
-        return res.toString();
+        return result.toString();
+    }
+
+    @Override
+    public String winCode() {
+        return "function program(number) {\n" +
+                "    let result = 971;\n" +
+                "\n" +
+                "    for (let i = 1; i < number; i++) {\n" +
+                "        let string = result.toString().padStart(3, '0');\n" +
+                "        result -= parseInt(string.substring(0, 2));\n" +
+                "    }\n" +
+                "\n" +
+                "    return result.toString();\n" +
+                "}";
     }
 
     @Override
