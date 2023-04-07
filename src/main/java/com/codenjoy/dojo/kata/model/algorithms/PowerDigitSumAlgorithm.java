@@ -33,13 +33,25 @@ import java.math.BigInteger;
 public class PowerDigitSumAlgorithm extends AlgorithmLevelImpl {
 
     @Override
-    public String get(int pow) {
-        String temp = BigInteger.ONE.shiftLeft(pow).toString();
+    public String get(int power) {
+        String temp = BigInteger.ONE.shiftLeft(power).toString();
         int sum = 0;
         for (int i = 0; i < temp.length(); i++) {
             sum += temp.charAt(i) - '0';
         }
         return Integer.toString(sum);
+    }
+
+    @Override
+    public String winCode() {
+        return "function program(power) {\n" +
+                "    const temp = (BigInt(1) << BigInt(power));\n" +
+                "    let sum = 0;\n" +
+                "    for (let i = 0; i < temp.length; i++) {\n" +
+                "        sum += parseInt(temp[i]);\n" +
+                "    }\n" +
+                "    return sum.toString();\n" +
+                "}";
     }
 
     @Override
