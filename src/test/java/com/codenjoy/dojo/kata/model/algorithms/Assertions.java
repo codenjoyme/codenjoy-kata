@@ -25,9 +25,21 @@ package com.codenjoy.dojo.kata.model.algorithms;
 
 import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 
+import java.util.Arrays;
+
+import static java.util.stream.Collectors.joining;
 import static org.junit.Assert.assertEquals;
 
 public class Assertions {
+
+    public static void assertAlgorithm(Algorithm algorithm, String expected) {
+        assertEquals(expected,
+                Arrays.stream(expected.split("\n"))
+                        .map(line -> line.split("=>")[0])
+                        .map(arg -> arg + "=>" + algorithm.get(arg))
+                        .collect(joining("\n")));
+    }
+
     public static void assertAlgorithm(String[] expected, Algorithm algorithm) {
         for (int index = 0; index < expected.length; index++) {
             assertEquals("At index " + index,

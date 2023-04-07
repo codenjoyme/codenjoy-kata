@@ -31,8 +31,8 @@ public class Sequence1Algorithm extends AlgorithmLevelImpl {
     public String get(int n) {
         StringBuilder b = new StringBuilder();
 
-        for(int i = 0; i < 1000; i++) {
-            b.append(String.valueOf(10 + i));
+        for(int i = 0; i < 10000; i++) {
+            b.append(10 + i);
         }
 
         String result = b.toString();
