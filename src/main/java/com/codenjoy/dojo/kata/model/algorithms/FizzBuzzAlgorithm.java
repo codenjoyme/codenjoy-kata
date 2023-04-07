@@ -43,6 +43,17 @@ public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
+    public String winCode() {
+        return "function program(question) {\n" +
+                "    var number = parseInt(question);\n" +
+                "    return (number % 3 === 0 && number % 5 === 0) ? 'FizzBuzz' \n" +
+                "        : (number % 3 === 0) ? 'Fizz' \n" +
+                "        : (number % 5 === 0) ? 'Buzz' \n" +
+                "        : number;\n" +
+                "}";
+    }
+
+    @Override
     public String description() {
         return "Напиши метод, принимающий один int аргумент и " +
                 "возвращающий String. Для тех чисел, которые делятся " +

@@ -42,6 +42,16 @@ public class SumSquareDifferenceAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
+    public String winCode() {
+        return "function program(question) {\n" +
+                "    var number = parseInt(question);\n" +
+                "    var sumOfSquares = (number * (number + 1) * (2 * number + 1)) / 6;\n" +
+                "    var squareOfSum = Math.pow((number * (number + 1)) / 2, 2);\n" +
+                "    return squareOfSum - sumOfSquares;\n" +
+                "}";
+    }
+
+    @Override
     public String description() {
         return "Сумма квадратов первых десяти натуральных чисел " +
                 "1^2 + 2^2 + ... + 10^2 = 385. " +

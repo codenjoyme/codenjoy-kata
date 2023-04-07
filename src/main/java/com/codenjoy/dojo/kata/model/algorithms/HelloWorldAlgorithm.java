@@ -47,6 +47,19 @@ public class HelloWorldAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
+    public String winCode() {
+        return "function program(question) {\n" +
+                "    if (question == 'hello'){\n" +
+                "        return 'world';\n" +
+                "    }\n" +
+                "    if (question == 'world'){\n" +
+                "        return 'hello';\n" +
+                "    }\n" +
+                "    return question;\n" +
+                "}";
+    }
+
+    @Override
     public String description() {
         return "Напиши метод, принимающий один String аргумент " +
                 "и возвращающий строку 'world' если на вход пришло 'hello'," +
