@@ -43,6 +43,22 @@ public class Sequence1Algorithm extends AlgorithmLevelImpl {
     }
 
     @Override
+    public String winCode() {
+        return "function program(number) {\n" +
+                "    const START_WITH = 10;\n" +
+                "    const GROUP = 3;\n" +
+                "    const MAX = number * GROUP;\n" +
+                "    let i = 0;\n" +
+                "    let buffer = \"\";\n" +
+                "    while (buffer.length < MAX) {\n" +
+                "        buffer += START_WITH + i;\n" +
+                "        i++;\n" +
+                "    }\n" +
+                "    return buffer.substring(MAX - GROUP, MAX);\n" +
+                "}";
+    }
+
+    @Override
     public String description() {
         return "Continue the sequence 101, 112, 131, 415, 161, 718... \n" +
                 "i.e f(1) = 101, f(2) = 112, ...\n" +

@@ -44,9 +44,9 @@ public class SumSquareDifferenceAlgorithm extends AlgorithmLevelImpl {
     @Override
     public String winCode() {
         return "function program(question) {\n" +
-                "    var number = parseInt(question);\n" +
-                "    var sumOfSquares = (number * (number + 1) * (2 * number + 1)) / 6;\n" +
-                "    var squareOfSum = Math.pow((number * (number + 1)) / 2, 2);\n" +
+                "    let number = parseInt(question);\n" +
+                "    let sumOfSquares = (number * (number + 1) * (2 * number + 1)) / 6;\n" +
+                "    let squareOfSum = Math.pow((number * (number + 1)) / 2, 2);\n" +
                 "    return squareOfSum - sumOfSquares;\n" +
                 "}";
     }
