@@ -35,20 +35,38 @@ public class ReverseAddPalindromeAlgorithm extends AlgorithmLevelImpl {
     public String get(int number) {
         BigInteger result = BigInteger.valueOf(number);
         do {
-            String reverseString = ReverseString(String.valueOf(result));
-            BigInteger rev = new BigInteger(reverseString);
-            result = result.add(rev);
-        } while (!isPolyndrom(result));
+            result = result.add(new BigInteger(reverse(String.valueOf(result))));
+        } while (!isPolyndrome(result));
         return result.toString();
     }
 
-    private boolean isPolyndrom(BigInteger n) {
-        String number = String.valueOf(n);
-        return number.equals(ReverseString(number));
+    private boolean isPolyndrome(BigInteger input) {
+        String number = String.valueOf(input);
+        return number.equals(reverse(number));
     }
 
-    private String ReverseString(String number) {
-        return new StringBuilder(number).reverse().toString();
+    private String reverse(String input) {
+        return new StringBuilder(input).reverse().toString();
+    }
+
+    @Override
+    public String winCode() {
+        return "function program(number) {\n" +
+                "    let result = BigInt(number);\n" +
+                "    do {\n" +
+                "        result += BigInt(reverse(String(result))); \n" +
+                "    } while (!isPolyndrome(result));\n" +
+                "    return String(result);\n" +
+                "}\n" +
+                "\n" +
+                "function isPolyndrome(input) {\n" +
+                "    let number = String(input);\n" +
+                "    return number === reverse(number);\n" +
+                "}\n" +
+                "\n" +
+                "function reverse(string) {\n" +
+                "    return string.split('').reverse().join('');\n" +
+                "}";
     }
 
     @Override
