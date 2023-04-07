@@ -32,8 +32,8 @@ import java.util.List;
 public class ReverseAddPalindromeAlgorithm extends AlgorithmLevelImpl {
 
     @Override
-    public String get(int n) {
-        BigInteger result = BigInteger.valueOf(n);
+    public String get(int number) {
+        BigInteger result = BigInteger.valueOf(number);
         do {
             String reverseString = ReverseString(String.valueOf(result));
             BigInteger rev = new BigInteger(reverseString);

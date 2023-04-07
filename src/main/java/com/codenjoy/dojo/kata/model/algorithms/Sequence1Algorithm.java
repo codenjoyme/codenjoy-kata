@@ -27,17 +27,19 @@ import com.codenjoy.dojo.services.questionanswer.levels.AlgorithmLevelImpl;
 
 public class Sequence1Algorithm extends AlgorithmLevelImpl {
 
+
     @Override
-    public String get(int n) {
-        StringBuilder b = new StringBuilder();
-
-        for(int i = 0; i < 10000; i++) {
-            b.append(10 + i);
+    public String get(int number) {
+        final int START_WITH = 10;
+        final int GROUP = 3;
+        final int MAX = number * GROUP;
+        int i = 0;
+        StringBuilder buffer = new StringBuilder();
+        while(buffer.length() < MAX) {
+            buffer.append(START_WITH + i);
+            i++;
         }
-
-        String result = b.toString();
-
-        return result.substring((n - 1)*3, n*3);
+        return buffer.substring(MAX - GROUP, MAX);
     }
 
     @Override

@@ -28,16 +28,16 @@ import com.codenjoy.dojo.services.questionanswer.levels.AlgorithmLevelImpl;
 public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
 
     @Override
-    public String get(int i) {
+    public String get(int number) {
         String result = "";
-        if (i % 3 == 0) {
+        if (number % 3 == 0) {
             result += "Fizz";
         }
-        if (i % 5 == 0) {
+        if (number % 5 == 0) {
             result += "Buzz";
         }
         if (result.length() == 0) {
-            result = String.valueOf(i);
+            result = String.valueOf(number);
         }
         return result;
     }

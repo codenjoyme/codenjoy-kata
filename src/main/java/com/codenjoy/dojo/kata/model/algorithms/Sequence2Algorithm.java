@@ -29,10 +29,10 @@ import org.apache.commons.lang3.StringUtils;
 public class Sequence2Algorithm extends AlgorithmLevelImpl {
 
     @Override
-    public String get(int n) {
+    public String get(int number) {
         Integer res = 971;
 
-        for(int i = 1; i < n; i++) {
+        for(int i = 1; i < number; i++) {
             String s = res.toString();
             String s2 = StringUtils.leftPad(s, 3, '0');
             res = res - Integer.parseInt(s2.substring(0, 2));

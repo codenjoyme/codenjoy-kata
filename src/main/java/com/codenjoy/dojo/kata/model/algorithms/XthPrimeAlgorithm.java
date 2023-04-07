@@ -36,12 +36,12 @@ public class XthPrimeAlgorithm extends AlgorithmLevelImpl {
     public static LinkedList<Integer> primes = new LinkedList<Integer>();
 
     @Override
-    public String get(int i) {
-        if (i == 0) {
+    public String get(int number) {
+        if (number == 0) {
             return "1";
         }
-        if (i <= primes.size()) {
-            return String.valueOf(primes.get(i - 1));
+        if (number <= primes.size()) {
+            return String.valueOf(primes.get(number - 1));
         }
         int index = 1;
         int num = 1;
@@ -66,7 +66,7 @@ public class XthPrimeAlgorithm extends AlgorithmLevelImpl {
                 if (primes.size() < index) {
                     primes.add(num);
                 }
-                if (i == index) {
+                if (number == index) {
                     return String.valueOf(num);
                 }
                 index++;

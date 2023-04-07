@@ -36,11 +36,11 @@ public class PrimeFactoryAlgorithm extends AlgorithmLevelImpl {
         for (int i = 2; i < number / (i - 1); i++) {
             while (number % i == 0) {
                 number /= i;
-                result += String.valueOf(i) + ",";
+                result += i + ",";
             }
         }
         if (number > 1) {
-            result += String.valueOf(number) + ",";
+            result += number + ",";
         }
         result = result.substring(0, result.length() - 1);
         return "[" + result + "]";

@@ -31,10 +31,10 @@ import com.codenjoy.dojo.services.questionanswer.levels.AlgorithmLevelImpl;
 public class SumSquareDifferenceAlgorithm extends AlgorithmLevelImpl {
 
     @Override
-    public String get(int input) {
+    public String get(int number) {
         long sum = 0;
         long sum2 = 0;
-        for (int i = 1; i <= input; i++) {
+        for (int i = 1; i <= number; i++) {
             sum += i;
             sum2 += i * i;
         }

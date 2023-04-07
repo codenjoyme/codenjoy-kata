@@ -34,16 +34,16 @@ public class FactorialAlgorithm extends AlgorithmLevelImpl {
     private static Map<Integer, BigInteger> cache = new java.util.HashMap<>();
 
     @Override
-    public String get(int n) {
+    public String get(int number) {
         BigInteger result;
-        if (n == 0) {
+        if (number == 0) {
             return "1";
         }
-        if (null != (result = cache.get(n))) {
+        if (null != (result = cache.get(number))) {
             return result.toString();
         }
-        result = BigInteger.valueOf(n).multiply(new BigInteger(get(String.valueOf(n - 1))));
-        cache.put(n, result);
+        result = BigInteger.valueOf(number).multiply(new BigInteger(get(String.valueOf(number - 1))));
+        cache.put(number, result);
         return result.toString();
     }
 
