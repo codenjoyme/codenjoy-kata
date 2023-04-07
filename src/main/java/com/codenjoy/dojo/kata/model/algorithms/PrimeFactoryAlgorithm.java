@@ -33,7 +33,7 @@ public class PrimeFactoryAlgorithm extends AlgorithmLevelImpl {
         if (number == 1) {
             return "[1]";
         }
-        for (int i = 2; i < number / (i - 1); i++) {
+        for (int i = 2; i <= Math.sqrt(number); i++) {
             while (number % i == 0) {
                 number /= i;
                 result += i + ",";
@@ -44,6 +44,26 @@ public class PrimeFactoryAlgorithm extends AlgorithmLevelImpl {
         }
         result = result.substring(0, result.length() - 1);
         return "[" + result + "]";
+    }
+
+    @Override
+    public String winCode() {
+        return "function program(number) {\n" +
+                "    if (number == 1) {\n" +
+                "        return '[1]';\n" +
+                "    }\n" +
+                "    const result = [];\n" +
+                "    for (let i = 2; i <= Math.sqrt(number); i++) {\n" +
+                "        while (number % i === 0) {\n" +
+                "             result.push(i);\n" +
+                "             number /= i;\n" +
+                "        }\n" +
+                "    }\n" +
+                "    if (number > 1) {\n" +
+                "        result.push(number);\n" +
+                "    }\n" +
+                "    return '[' + result.join(',') + ']';\n" +
+                "}";
     }
 
     @Override
