@@ -110,6 +110,92 @@ public class LongDivisionAlgorithm extends AlgorithmLevelImpl {
         return ((isMinus) ? "-" : "") + result;
     }
 
+    // TODO эта функция не работает на f(111, 11) = 10.0(90) но она возвращает 10.09(0)
+    @Override
+    public String winCode() {
+        return "function program(input) {\n" +
+                "    let a = Number(input.split(',')[0]);\n" +
+                "    let b = Number(input.split(',')[1]);\n" +
+                "\n" +
+                "    if (b === 0) {\n" +
+                "        return 'Div by zero error!';\n" +
+                "    }\n" +
+                "    if (a === 0) {\n" +
+                "        return '0';\n" +
+                "    }\n" +
+                "    const isMinus = (a < 0 && b > 0 || a > 0 && b < 0);\n" +
+                "    a = Math.abs(a);\n" +
+                "    b = Math.abs(b);\n" +
+                "\n" +
+                "    const length = 100;\n" +
+                "    const DOT = -1;\n" +
+                "    const TEN = 10;\n" +
+                "    const NOT_FOUND = -1;\n" +
+                "\n" +
+                "    const result = [];\n" +
+                "\n" +
+                "    const aa = new Array(length * 2).fill(0);\n" +
+                "    let ia = 0;\n" +
+                "    let ceilpos = 0;\n" +
+                "\n" +
+                "    let isCalcCeil = a >= b;\n" +
+                "    if (!isCalcCeil) {\n" +
+                "        result.push('0', '.');\n" +
+                "        aa[ia++] = 0;\n" +
+                "        aa[ia++] = DOT;\n" +
+                "        ceilpos = ia - 1;\n" +
+                "    }\n" +
+                "\n" +
+                "    while (a != 0 && (result.length - ceilpos) <= length) {\n" +
+                "        if (a < b) {\n" +
+                "            if (isCalcCeil) {\n" +
+                "                result.push('.');\n" +
+                "                aa[ia++] = DOT;\n" +
+                "                ceilpos = ia - 1;\n" +
+                "                isCalcCeil = false;\n" +
+                "            }\n" +
+                "            a *= TEN;\n" +
+                "        }\n" +
+                "        while (a < b) {\n" +
+                "            result.push('0');\n" +
+                "            aa[ia++] = 0;\n" +
+                "            a *= TEN;\n" +
+                "        }\n" +
+                "\n" +
+                "        let found = NOT_FOUND;\n" +
+                "        for (let ja = 0; ja < ia; ja++) {\n" +
+                "            if (aa[ja] === a) {\n" +
+                "                found = ja;\n" +
+                "                break;\n" +
+                "            }\n" +
+                "        }\n" +
+                "        if (found !== NOT_FOUND) {\n" +
+                "            result.splice(found, 0, '(');\n" +
+                "            result.push(')');\n" +
+                "            break;\n" +
+                "        }\n" +
+                "\n" +
+                "        const c = Math.floor(a / b);\n" +
+                "        if (isCalcCeil) {\n" +
+                "            let c1 = c;\n" +
+                "            while (c1 / TEN >= 1) {\n" +
+                "                aa[ia++] = c1 % TEN;\n" +
+                "                c1 = Math.floor(c1 / TEN);\n" +
+                "            }\n" +
+                "            aa[ia++] = c1;\n" +
+                "        } else {\n" +
+                "            aa[ia++] = a;\n" +
+                "        }\n" +
+                "        const d = a % b;\n" +
+                "        result.push(c);\n" +
+                "        a = d;\n" +
+                "\n" +
+                "    }\n" +
+                "\n" +
+                "    return ((isMinus) ? '-' : '') + result.join('');\n" +
+                "}";
+    }
+
     @Override
     public List<String> getQuestions() {
         return Arrays.asList(

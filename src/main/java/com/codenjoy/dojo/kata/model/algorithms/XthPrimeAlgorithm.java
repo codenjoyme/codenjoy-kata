@@ -73,6 +73,14 @@ public class XthPrimeAlgorithm extends AlgorithmLevelImpl {
         }
     }
 
+    // TODO закончить и тут
+    @Override
+    public String winCode() {
+        return "function program(number) {\n" +
+                "    return '';\n" +
+                "}";
+    }
+
     @Override
     public String description() {
         return "The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \n" +
