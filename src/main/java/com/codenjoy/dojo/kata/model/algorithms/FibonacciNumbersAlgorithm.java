@@ -29,7 +29,7 @@ public class FibonacciNumbersAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String get(int number) {
-        int previous = 0;
+        int previous;
         int current = 0;
         int next = 1;
         for (int index = 0; index < number; index++) {
@@ -38,6 +38,17 @@ public class FibonacciNumbersAlgorithm extends AlgorithmLevelImpl {
             next = previous + current;
         }
         return String.valueOf(current);
+    }
+
+    @Override
+    public String winCode() {
+        return "function program(number) {\n" +
+                "    let previous = 0, current = 1;\n" +
+                "    for (let i = 0; i < number; i++) {\n" +
+                "         [previous, current] = [current, previous + current];\n" +
+                "    }\n" +
+                "    return String(previous);\n" +
+                "}";
     }
 
     @Override
