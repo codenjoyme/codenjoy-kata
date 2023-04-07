@@ -42,6 +42,15 @@ public class MakeBricksAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
+    public String winCode() {
+        return "function program(input) {\n" +
+                "    const [small, big, goal] = input.split(', ').map(number => parseInt(number));\n" +
+                "    const result = (small >= (goal % 5) && small >= goal - big * 5);\n" +
+                "    return String(result);\n" +
+                "}";
+    }
+
+    @Override
     public List<String> getQuestions() {
         return Arrays.asList(
                 "0, 1, 5",
