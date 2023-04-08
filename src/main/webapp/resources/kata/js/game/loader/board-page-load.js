@@ -161,21 +161,11 @@ var boardPageLoad = function() {
         controller.reset();
     }
     var onHelpClick = function() {
-        // var level = levelProgress.getCurrentLevel();
-        // var multiple = levelProgress.isCurrentLevelMultiple();
-
         if (!!description) {
-            var help = description.replace(/\\n/g, "\n");
+            var help = description.replace(/\\n/g, "<br>");
             $('#ide-help-window').html(help);
             $("#modal").removeClass("close");
         }
-        
-        // if (!multiple) {
-        //     var help = levelInfo.getLevel(level).help;
-        // } else {
-        //     window.open(setup.contextPath + '/resources/kata/landing-training.html', '_blank');
-        //     window.focus();
-        // }
     };
     var buttons = initButtons(onCommitClick, onResetClick, onHelpClick);
 
