@@ -25,7 +25,10 @@
 function compileProgram(code) {
     try {
         eval(code);
-        return program;
+        eval(`function get() {
+            return ${getMainFunctionName(code)};
+        }`);
+        return get();
     } catch (e) {
         throw e;
     }
@@ -37,6 +40,22 @@ function runProgram(program, question, robot) {
     } catch (e) {
         throw e;
     }
+}
+
+function getMainFunctionName(code) {
+    const regex = /function\s+([a-zA-Z$_][a-zA-Z0-9$_]*)\s*\(/g;
+    var result = [];
+    var match;
+    while ((match = regex.exec(code))) {
+        result.push(match[1]);
+    }
+    if (result.length == 0) {
+        return null;
+    }
+    if (result.includes('program')) {
+        return 'program';
+    }
+    return result[0];
 }
 
 // ========================== leaderboard page ==========================
