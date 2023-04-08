@@ -72,3 +72,68 @@ setup.setupSprites = function() {
         throw new Error("Unknown Kata mode: " + setup.gameMode);
     }
 }
+
+// ========================== draw board ==========================
+
+var description = null;
+var setDescription = function(text) {
+    description = text;
+}
+
+setup.drawBoard = function(drawer) {
+    var getQuestionCoordinate = function(x, y) {
+        return {x:(setup.onlyBoard ? x : 7), y:y + 1};
+    }
+
+    var getQuestionFormatted = function(value) {
+        var equals = (value.last) ? '=' : (value.valid) ? '==' : '!=';
+        var answer = (!!value.answer) ? value.answer : '?';
+        var result = 'f(' + value.question + ') '
+            + equals + ' ' + answer;
+        return result;
+    }
+
+    function unescapeUnicode(unicode) {
+        var r = /\\u([\d\w]{4})/gi;
+        var temp = unicode.replace(r, function (match, grp) {
+            return String.fromCharCode(parseInt(grp, 16));
+        });
+        return decodeURIComponent(temp).split("\\\"").join("\"");
+    }
+
+    drawer.clear();
+    var centerX = (drawer.canvas.width() / drawer.canvas.plotSize())/2;
+
+    var data = drawer.playerData.board;
+    if (typeof setDescription != 'undefined') {
+        setDescription(unescapeUnicode(data.description));
+    }
+
+    var isWaitNext = (data.questions.length == 0);
+    if (isWaitNext) {
+        drawer.drawText('Algorithm done! Wait next...',
+            getQuestionCoordinate(centerX, 0), '#099');
+        return;
+    }
+
+    var index = -1;
+    var isNewLevel = (data.questions.length < data.history.length);
+    if (!isNewLevel) {
+        for (var key in data.history) {
+            var value = data.history[key];
+            if (value.question == data.nextQuestion) continue;
+
+            drawer.drawText(getQuestionFormatted(value),
+                getQuestionCoordinate(centerX, ++index),
+                (value.valid)?'#090':'#900');
+        }
+    }
+
+    var current = {
+        last : true,
+        question : data.nextQuestion,
+        answer : data.expectedAnswer
+    };
+    drawer.drawText(getQuestionFormatted(current),
+        getQuestionCoordinate(centerX, ++index), '#990');
+}
