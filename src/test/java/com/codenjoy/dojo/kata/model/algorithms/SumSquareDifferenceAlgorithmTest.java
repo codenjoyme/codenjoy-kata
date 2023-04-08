@@ -25,18 +25,48 @@ package com.codenjoy.dojo.kata.model.algorithms;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
 
 public class SumSquareDifferenceAlgorithmTest {
 
     @Test
     public void shouldWork() {
-        int[] primes = new int[]{0, 0, 4, 22, 70, 170, 350, 644, 1092, 1740, 2640, 3850, 5434, 7462, 10010, 13160, 17000, 21624};
-        SumSquareDifferenceAlgorithm algorithm = new SumSquareDifferenceAlgorithm();
-        Assertions.assertAlgorithm(primes, algorithm);
-
-        assertEquals("25164150", algorithm.get("100"));
-        assertEquals("250166416500", algorithm.get("1000"));
-        assertEquals("2500166641665000", algorithm.get("10000"));
+        assertAlgorithm(new PowerDigitSumAlgorithm(),
+                "0=>1\n" +
+                "1=>2\n" +
+                "2=>4\n" +
+                "3=>8\n" +
+                "4=>7\n" +
+                "5=>5\n" +
+                "6=>10\n" +
+                "7=>11\n" +
+                "8=>13\n" +
+                "9=>8\n" +
+                "10=>7\n" +
+                "11=>14\n" +
+                "12=>19\n" +
+                "13=>20\n" +
+                "14=>22\n" +
+                "15=>26\n" +
+                "16=>25\n" +
+                "17=>14\n" +
+                "18=>19\n" +
+                "19=>29\n" +
+                "20=>31\n" +
+                "21=>26\n" +
+                "22=>25\n" +
+                "23=>41\n" +
+                "24=>37\n" +
+                "25=>29\n" +
+                "26=>40\n" +
+                "27=>35\n" +
+                "28=>43\n" +
+                "29=>41\n" +
+                "30=>37\n" +
+                "31=>47\n" +
+                "32=>58\n" +
+                "100=>115\n" +
+                "1000=>1366\n" +
+                "10000=>13561");
     }
 }

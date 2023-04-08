@@ -22,45 +22,44 @@ package com.codenjoy.dojo.kata.model.algorithms;
  * #L%
  */
 
-import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
 
 public class ReverseAddPalindromeAlgorithmTest {
 
     @Test
     public void shouldWork() {
-        Algorithm algorithm = new ReverseAddPalindromeAlgorithm();
-        assertEquals("2", algorithm.get("1"));
-        assertEquals("4", algorithm.get("2"));
-        assertEquals("6", algorithm.get("3"));
-        assertEquals("8", algorithm.get("4"));
-        assertEquals("11", algorithm.get("5"));
-        assertEquals("33", algorithm.get("6"));
-        assertEquals("55", algorithm.get("7"));
-        assertEquals("77", algorithm.get("8"));
-        assertEquals("99", algorithm.get("9"));
-        assertEquals("11", algorithm.get("10"));
-        assertEquals("22", algorithm.get("11"));
-        assertEquals("33", algorithm.get("12"));
-        assertEquals("44", algorithm.get("13"));
-        assertEquals("55", algorithm.get("14"));
-        assertEquals("66", algorithm.get("15"));
-        assertEquals("77", algorithm.get("16"));
-        assertEquals("88", algorithm.get("17"));
-        assertEquals("99", algorithm.get("18"));
-        assertEquals("22", algorithm.get("20"));
-        assertEquals("33", algorithm.get("21"));
-        assertEquals("44", algorithm.get("22"));
-        assertEquals("55", algorithm.get("23"));
-        assertEquals("66", algorithm.get("24"));
-        assertEquals("77", algorithm.get("25"));
-        assertEquals("4444", algorithm.get("254"));
-        assertEquals("8813200023188", algorithm.get("89"));
-        assertEquals("444", algorithm.get("123"));
-        assertEquals("848", algorithm.get("127"));
-        assertEquals("4664", algorithm.get("3421"));
-        assertEquals("99999999", algorithm.get("12345678"));
+        assertAlgorithm(new ReverseAddPalindromeAlgorithm(),
+                "1=>2\n" +
+                "2=>4\n" +
+                "3=>6\n" +
+                "4=>8\n" +
+                "5=>11\n" +
+                "6=>33\n" +
+                "7=>55\n" +
+                "8=>77\n" +
+                "9=>99\n" +
+                "10=>11\n" +
+                "11=>22\n" +
+                "12=>33\n" +
+                "13=>44\n" +
+                "14=>55\n" +
+                "15=>66\n" +
+                "16=>77\n" +
+                "17=>88\n" +
+                "18=>99\n" +
+                "20=>22\n" +
+                "21=>33\n" +
+                "22=>44\n" +
+                "23=>55\n" +
+                "24=>66\n" +
+                "25=>77\n" +
+                "89=>8813200023188\n" +
+                "123=>444\n" +
+                "127=>848\n" +
+                "254=>4444\n" +
+                "3421=>4664\n" +
+                "12345678=>99999999");
     }
 }

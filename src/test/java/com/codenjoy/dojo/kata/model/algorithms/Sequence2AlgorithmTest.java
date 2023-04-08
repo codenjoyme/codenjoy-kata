@@ -25,64 +25,64 @@ package com.codenjoy.dojo.kata.model.algorithms;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
 
 public class Sequence2AlgorithmTest {
 
     @Test
     public void shouldWork() {
-        Sequence2Algorithm algorithm = new Sequence2Algorithm();
-        assertEquals("971", algorithm.get("1"));
-        assertEquals("874", algorithm.get("2"));
-        assertEquals("787", algorithm.get("3"));
-        assertEquals("709", algorithm.get("4"));
-        assertEquals("639", algorithm.get("5"));
-        assertEquals("576", algorithm.get("6"));
-        assertEquals("519", algorithm.get("7"));
-        assertEquals("468", algorithm.get("8"));
-        assertEquals("422", algorithm.get("9"));
-        assertEquals("380", algorithm.get("10"));
-        assertEquals("342", algorithm.get("11"));
-        assertEquals("308", algorithm.get("12"));
-        assertEquals("278", algorithm.get("13"));
-        assertEquals("251", algorithm.get("14"));
-        assertEquals("226", algorithm.get("15"));
-        assertEquals("204", algorithm.get("16"));
-        assertEquals("184", algorithm.get("17"));
-        assertEquals("166", algorithm.get("18"));
-        assertEquals("150", algorithm.get("19"));
-        assertEquals("135", algorithm.get("20"));
-        assertEquals("122", algorithm.get("21"));
-        assertEquals("110", algorithm.get("22"));
-        assertEquals("99", algorithm.get("23"));
-        assertEquals("90", algorithm.get("24"));
-        assertEquals("81", algorithm.get("25"));
-        assertEquals("73", algorithm.get("26"));
-        assertEquals("66", algorithm.get("27"));
-        assertEquals("60", algorithm.get("28"));
-        assertEquals("54", algorithm.get("29"));
-        assertEquals("49", algorithm.get("30"));
-        assertEquals("45", algorithm.get("31"));
-        assertEquals("41", algorithm.get("32"));
-        assertEquals("37", algorithm.get("33"));
-        assertEquals("34", algorithm.get("34"));
-        assertEquals("31", algorithm.get("35"));
-        assertEquals("28", algorithm.get("36"));
-        assertEquals("26", algorithm.get("37"));
-        assertEquals("24", algorithm.get("38"));
-        assertEquals("22", algorithm.get("39"));
-        assertEquals("20", algorithm.get("40"));
-        assertEquals("18", algorithm.get("41"));
-        assertEquals("17", algorithm.get("42"));
-        assertEquals("16", algorithm.get("43"));
-        assertEquals("15", algorithm.get("44"));
-        assertEquals("14", algorithm.get("45"));
-        assertEquals("13", algorithm.get("46"));
-        assertEquals("12", algorithm.get("47"));
-        assertEquals("11", algorithm.get("48"));
-        assertEquals("10", algorithm.get("49"));
-        assertEquals("9", algorithm.get("50"));
-        assertEquals("9", algorithm.get("51"));
-        assertEquals("9", algorithm.get("52"));
+        assertAlgorithm(new Sequence2Algorithm(),
+                "1=>971\n" +
+                "2=>874\n" +
+                "3=>787\n" +
+                "4=>709\n" +
+                "5=>639\n" +
+                "6=>576\n" +
+                "7=>519\n" +
+                "8=>468\n" +
+                "9=>422\n" +
+                "10=>380\n" +
+                "11=>342\n" +
+                "12=>308\n" +
+                "13=>278\n" +
+                "14=>251\n" +
+                "15=>226\n" +
+                "16=>204\n" +
+                "17=>184\n" +
+                "18=>166\n" +
+                "19=>150\n" +
+                "20=>135\n" +
+                "21=>122\n" +
+                "22=>110\n" +
+                "23=>99\n" +
+                "24=>90\n" +
+                "25=>81\n" +
+                "26=>73\n" +
+                "27=>66\n" +
+                "28=>60\n" +
+                "29=>54\n" +
+                "30=>49\n" +
+                "31=>45\n" +
+                "32=>41\n" +
+                "33=>37\n" +
+                "34=>34\n" +
+                "35=>31\n" +
+                "36=>28\n" +
+                "37=>26\n" +
+                "38=>24\n" +
+                "39=>22\n" +
+                "40=>20\n" +
+                "41=>18\n" +
+                "42=>17\n" +
+                "43=>16\n" +
+                "44=>15\n" +
+                "45=>14\n" +
+                "46=>13\n" +
+                "47=>12\n" +
+                "48=>11\n" +
+                "49=>10\n" +
+                "50=>9\n" +
+                "51=>9\n" +
+                "52=>9");
     }
 }

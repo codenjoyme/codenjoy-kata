@@ -25,38 +25,38 @@ package com.codenjoy.dojo.kata.model.algorithms;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
 
 public class FizzBuzzAlgorithmTest {
 
     @Test
     public void shouldWork() {
-        FizzBuzzAlgorithm algorithm = new FizzBuzzAlgorithm();
-        assertEquals("1", algorithm.get("1"));
-        assertEquals("2", algorithm.get("2"));
-        assertEquals("Fizz", algorithm.get("3"));
-        assertEquals("4", algorithm.get("4"));
-        assertEquals("Buzz", algorithm.get("5"));
-        assertEquals("Fizz", algorithm.get("6"));
-        assertEquals("7", algorithm.get("7"));
-        assertEquals("8", algorithm.get("8"));
-        assertEquals("Fizz", algorithm.get("9"));
-        assertEquals("Buzz", algorithm.get("10"));
-        assertEquals("11", algorithm.get("11"));
-        assertEquals("Fizz", algorithm.get("12"));
-        assertEquals("13", algorithm.get("13"));
-        assertEquals("14", algorithm.get("14"));
-        assertEquals("FizzBuzz", algorithm.get("15"));
-        assertEquals("16", algorithm.get("16"));
-        assertEquals("17", algorithm.get("17"));
-        assertEquals("Fizz", algorithm.get("18"));
-        assertEquals("19", algorithm.get("19"));
-        assertEquals("Buzz", algorithm.get("20"));
-        assertEquals("Fizz", algorithm.get("21"));
-        assertEquals("22", algorithm.get("22"));
-        assertEquals("23", algorithm.get("23"));
-        assertEquals("Fizz", algorithm.get("24"));
-        assertEquals("Buzz", algorithm.get("25"));
-        assertEquals("26", algorithm.get("26"));
+        assertAlgorithm(new FizzBuzzAlgorithm(),
+                "1=>1\n" +
+                "2=>2\n" +
+                "3=>Fizz\n" +
+                "4=>4\n" +
+                "5=>Buzz\n" +
+                "6=>Fizz\n" +
+                "7=>7\n" +
+                "8=>8\n" +
+                "9=>Fizz\n" +
+                "10=>Buzz\n" +
+                "11=>11\n" +
+                "12=>Fizz\n" +
+                "13=>13\n" +
+                "14=>14\n" +
+                "15=>FizzBuzz\n" +
+                "16=>16\n" +
+                "17=>17\n" +
+                "18=>Fizz\n" +
+                "19=>19\n" +
+                "20=>Buzz\n" +
+                "21=>Fizz\n" +
+                "22=>22\n" +
+                "23=>23\n" +
+                "24=>Fizz\n" +
+                "25=>Buzz\n" +
+                "26=>26");
     }
 }

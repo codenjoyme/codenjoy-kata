@@ -39,20 +39,4 @@ public class Assertions {
                         .map(arg -> arg + "=>" + algorithm.get(arg))
                         .collect(joining("\n")));
     }
-
-    public static void assertAlgorithm(String[] expected, Algorithm algorithm) {
-        for (int index = 0; index < expected.length; index++) {
-            assertEquals("At index " + index,
-                    expected[index],
-                    algorithm.get(String.valueOf(index)));
-        }
-    }
-
-    public static void assertAlgorithm(int[] expected, Algorithm algorithm) {
-        for (int index = 0; index < expected.length; index++) {
-            assertEquals("At index " + index,
-                    String.valueOf(expected[index]),
-                    algorithm.get(String.valueOf(index)));
-        }
-    }
 }

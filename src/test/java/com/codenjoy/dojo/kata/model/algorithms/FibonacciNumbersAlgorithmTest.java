@@ -25,12 +25,37 @@ package com.codenjoy.dojo.kata.model.algorithms;
 
 import org.junit.Test;
 
+import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
+
 public class FibonacciNumbersAlgorithmTest {
 
     @Test
     public void shouldWork() {
-        int[] expected = new int[]{0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,
-                233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711};
-        Assertions.assertAlgorithm(expected, new FibonacciNumbersAlgorithm());
+        assertAlgorithm(new FibonacciNumbersAlgorithm(),
+                "0=>0\n" +
+                "1=>1\n" +
+                "2=>1\n" +
+                "3=>2\n" +
+                "4=>3\n" +
+                "5=>5\n" +
+                "6=>8\n" +
+                "7=>13\n" +
+                "8=>21\n" +
+                "9=>34\n" +
+                "10=>55\n" +
+                "11=>89\n" +
+                "12=>144\n" +
+                "13=>233\n" +
+                "14=>377\n" +
+                "15=>610\n" +
+                "16=>987\n" +
+                "17=>1597\n" +
+                "18=>2584\n" +
+                "19=>4181\n" +
+                "20=>6765\n" +
+                "21=>10946\n" +
+                "23=>28657\n" +
+                "24=>46368\n" +
+                "25=>75025");
     }
 }

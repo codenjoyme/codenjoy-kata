@@ -25,38 +25,38 @@ package com.codenjoy.dojo.kata.model.algorithms;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
 
 public class PrimeFactoryAlgorithmTest {
 
     @Test
     public void shouldWork() {
-        PrimeFactoryAlgorithm algorithm = new PrimeFactoryAlgorithm();
-        assertEquals("[1]", algorithm.get("1"));
-        assertEquals("[2]", algorithm.get("2"));
-        assertEquals("[3]", algorithm.get("3"));
-        assertEquals("[2,2]", algorithm.get("4"));
-        assertEquals("[5]", algorithm.get("5"));
-        assertEquals("[2,3]", algorithm.get("6"));
-        assertEquals("[7]", algorithm.get("7"));
-        assertEquals("[2,2,2]", algorithm.get("8"));
-        assertEquals("[3,3]", algorithm.get("9"));
-        assertEquals("[2,5]", algorithm.get("10"));
-        assertEquals("[11]", algorithm.get("11"));
-        assertEquals("[2,2,3]", algorithm.get("12"));
-        assertEquals("[13]", algorithm.get("13"));
-        assertEquals("[2,7]", algorithm.get("14"));
-        assertEquals("[3,5]", algorithm.get("15"));
-        assertEquals("[2,2,2,2]", algorithm.get("16"));
-        assertEquals("[17]", algorithm.get("17"));
-        assertEquals("[2,3,3]", algorithm.get("18"));
-        assertEquals("[19]", algorithm.get("19"));
-        assertEquals("[2,2,5]", algorithm.get("20"));
-        assertEquals("[3,7]", algorithm.get("21"));
-        assertEquals("[2,11]", algorithm.get("22"));
-        assertEquals("[23]", algorithm.get("23"));
-        assertEquals("[2,2,2,3]", algorithm.get("24"));
-        assertEquals("[5,5]", algorithm.get("25"));
-        assertEquals("[2,13]", algorithm.get("26"));
+        assertAlgorithm(new PrimeFactoryAlgorithm(),
+                "1=>[1]\n" +
+                "2=>[2]\n" +
+                "3=>[3]\n" +
+                "4=>[2,2]\n" +
+                "5=>[5]\n" +
+                "6=>[2,3]\n" +
+                "7=>[7]\n" +
+                "8=>[2,2,2]\n" +
+                "9=>[3,3]\n" +
+                "10=>[2,5]\n" +
+                "11=>[11]\n" +
+                "12=>[2,2,3]\n" +
+                "13=>[13]\n" +
+                "14=>[2,7]\n" +
+                "15=>[3,5]\n" +
+                "16=>[2,2,2,2]\n" +
+                "17=>[17]\n" +
+                "18=>[2,3,3]\n" +
+                "19=>[19]\n" +
+                "20=>[2,2,5]\n" +
+                "21=>[3,7]\n" +
+                "22=>[2,11]\n" +
+                "23=>[23]\n" +
+                "24=>[2,2,2,3]\n" +
+                "25=>[5,5]\n" +
+                "26=>[2,13]");
     }
 }

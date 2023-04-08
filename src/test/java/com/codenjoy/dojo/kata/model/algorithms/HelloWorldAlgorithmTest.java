@@ -25,16 +25,16 @@ package com.codenjoy.dojo.kata.model.algorithms;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
 
 public class HelloWorldAlgorithmTest {
 
     @Test
     public void shouldWork() {
-        HelloWorldAlgorithm algorithm = new HelloWorldAlgorithm();
-        assertEquals("hello", algorithm.get("world"));
-        assertEquals("world", algorithm.get("hello"));
-        assertEquals("qwe", algorithm.get("qwe"));
-        assertEquals("asd", algorithm.get("asd"));
+        assertAlgorithm(new HelloWorldAlgorithm(),
+                "hello=>world\n" +
+                "world=>hello\n" +
+                "qwe=>qwe\n" +
+                "asd=>asd");
     }
 }
