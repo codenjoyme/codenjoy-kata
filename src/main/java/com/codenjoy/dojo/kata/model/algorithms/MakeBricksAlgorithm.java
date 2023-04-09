@@ -105,10 +105,10 @@ public class MakeBricksAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String description() {
-        return "You have bricks of size 5 (bigCount) and 1 (smallCount).\n" +
-                "Write a method that can determine if a given\n" +
-                "set of bricks can be used to build a wall of a given length.\n" +
-                "a given set of bricks to build a wall of a given length (length).\n" +
+        return "You have bricks of size 5 (bigCount) and 1 (smallCount). " +
+                "Write a method that can determine if a given " +
+                "set of bricks can be used to build a wall of a given length. " +
+                "a given set of bricks to build a wall of a given length (length). " +
                 "For example: \n" +
                 "method(3, 1, 8) → true\n" +
                 "method(3, 1, 9) → false\n" +

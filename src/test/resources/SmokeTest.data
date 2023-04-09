@@ -1,5 +1,5 @@
 1: 1:BoardData {
-1: 1:  'description': 'Write a method that takes a single String argument \nand return the string 'world' if 'hello' came in,\nand 'hello' if 'world', otherwise the algorithm \nshould return the same string that came in.\nThis is the first and simplest algorithm -\nits purpose is to check if everything works\nwell and how you understand the problem.',
+1: 1:  'description': 'Write a method that takes a single String argument and return the string 'world' if 'hello' came in, and 'hello' if 'world', otherwise the algorithm should return the same string that came in.\nThis is the first and simplest algorithm - its purpose is to check if everything works well and how you understand the problem.',
 1: 1:  'expectedAnswer': 'world',
 1: 1:  'history': [],
 1: 1:  'level': 0,
@@ -11,7 +11,7 @@
 1: 1:Fire Event: PassTest{complexity=0, testCount=5}
 ------------------------------------------
 2: 1:BoardData {
-2: 1:  'description': 'Write a method that takes a single String argument \nand return the string 'world' if 'hello' came in,\nand 'hello' if 'world', otherwise the algorithm \nshould return the same string that came in.\nThis is the first and simplest algorithm -\nits purpose is to check if everything works\nwell and how you understand the problem.',
+2: 1:  'description': 'Write a method that takes a single String argument and return the string 'world' if 'hello' came in, and 'hello' if 'world', otherwise the algorithm should return the same string that came in.\nThis is the first and simplest algorithm - its purpose is to check if everything works well and how you understand the problem.',
 2: 1:  'expectedAnswer': 'hello',
 2: 1:  'history': [{
 2: 1:    'answer': 'world',
@@ -30,7 +30,7 @@
 2: 1:Fire Event: PassTest{complexity=0, testCount=5}
 ------------------------------------------
 3: 1:BoardData {
-3: 1:  'description': 'Write a method that takes a single String argument \nand return the string 'world' if 'hello' came in,\nand 'hello' if 'world', otherwise the algorithm \nshould return the same string that came in.\nThis is the first and simplest algorithm -\nits purpose is to check if everything works\nwell and how you understand the problem.',
+3: 1:  'description': 'Write a method that takes a single String argument and return the string 'world' if 'hello' came in, and 'hello' if 'world', otherwise the algorithm should return the same string that came in.\nThis is the first and simplest algorithm - its purpose is to check if everything works well and how you understand the problem.',
 3: 1:  'expectedAnswer': 'qwe',
 3: 1:  'history': [
 3: 1:    {
@@ -57,7 +57,7 @@
 3: 1:Fire Event: PassTest{complexity=0, testCount=5}
 ------------------------------------------
 4: 1:BoardData {
-4: 1:  'description': 'Write a method that takes a single String argument \nand return the string 'world' if 'hello' came in,\nand 'hello' if 'world', otherwise the algorithm \nshould return the same string that came in.\nThis is the first and simplest algorithm -\nits purpose is to check if everything works\nwell and how you understand the problem.',
+4: 1:  'description': 'Write a method that takes a single String argument and return the string 'world' if 'hello' came in, and 'hello' if 'world', otherwise the algorithm should return the same string that came in.\nThis is the first and simplest algorithm - its purpose is to check if everything works well and how you understand the problem.',
 4: 1:  'expectedAnswer': 'asd',
 4: 1:  'history': [
 4: 1:    {
@@ -90,7 +90,7 @@
 4: 1:Fire Event: PassTest{complexity=0, testCount=5}
 ------------------------------------------
 5: 1:BoardData {
-5: 1:  'description': 'Write a method that takes a single String argument \nand return the string 'world' if 'hello' came in,\nand 'hello' if 'world', otherwise the algorithm \nshould return the same string that came in.\nThis is the first and simplest algorithm -\nits purpose is to check if everything works\nwell and how you understand the problem.',
+5: 1:  'description': 'Write a method that takes a single String argument and return the string 'world' if 'hello' came in, and 'hello' if 'world', otherwise the algorithm should return the same string that came in.\nThis is the first and simplest algorithm - its purpose is to check if everything works well and how you understand the problem.',
 5: 1:  'expectedAnswer': 'zxc',
 5: 1:  'history': [
 5: 1:    {
@@ -166,7 +166,7 @@
 6: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 7: 1:BoardData {
-7: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+7: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 7: 1:  'expectedAnswer': '1',
 7: 1:  'history': [],
 7: 1:  'level': 1,
@@ -178,7 +178,7 @@
 7: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 8: 1:BoardData {
-8: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+8: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 8: 1:  'expectedAnswer': '2',
 8: 1:  'history': [{
 8: 1:    'answer': '1',
@@ -197,7 +197,7 @@
 8: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 9: 1:BoardData {
-9: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+9: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 9: 1:  'expectedAnswer': 'Fizz',
 9: 1:  'history': [
 9: 1:    {
@@ -224,7 +224,7 @@
 9: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 10: 1:BoardData {
-10: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+10: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 10: 1:  'expectedAnswer': '4',
 10: 1:  'history': [
 10: 1:    {
@@ -257,7 +257,7 @@
 10: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 11: 1:BoardData {
-11: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+11: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 11: 1:  'expectedAnswer': 'Buzz',
 11: 1:  'history': [
 11: 1:    {
@@ -296,7 +296,7 @@
 11: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 12: 1:BoardData {
-12: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+12: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 12: 1:  'expectedAnswer': 'Fizz',
 12: 1:  'history': [
 12: 1:    {
@@ -341,7 +341,7 @@
 12: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 13: 1:BoardData {
-13: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+13: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 13: 1:  'expectedAnswer': '7',
 13: 1:  'history': [
 13: 1:    {
@@ -392,7 +392,7 @@
 13: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 14: 1:BoardData {
-14: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+14: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 14: 1:  'expectedAnswer': '8',
 14: 1:  'history': [
 14: 1:    {
@@ -449,7 +449,7 @@
 14: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 15: 1:BoardData {
-15: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+15: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 15: 1:  'expectedAnswer': 'Fizz',
 15: 1:  'history': [
 15: 1:    {
@@ -512,7 +512,7 @@
 15: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 16: 1:BoardData {
-16: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+16: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 16: 1:  'expectedAnswer': 'Buzz',
 16: 1:  'history': [
 16: 1:    {
@@ -581,7 +581,7 @@
 16: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 17: 1:BoardData {
-17: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+17: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 17: 1:  'expectedAnswer': '11',
 17: 1:  'history': [
 17: 1:    {
@@ -656,7 +656,7 @@
 17: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 18: 1:BoardData {
-18: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+18: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 18: 1:  'expectedAnswer': 'Fizz',
 18: 1:  'history': [
 18: 1:    {
@@ -737,7 +737,7 @@
 18: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 19: 1:BoardData {
-19: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+19: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 19: 1:  'expectedAnswer': '13',
 19: 1:  'history': [
 19: 1:    {
@@ -824,7 +824,7 @@
 19: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 20: 1:BoardData {
-20: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+20: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 20: 1:  'expectedAnswer': '14',
 20: 1:  'history': [
 20: 1:    {
@@ -917,7 +917,7 @@
 20: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 21: 1:BoardData {
-21: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+21: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 21: 1:  'expectedAnswer': 'FizzBuzz',
 21: 1:  'history': [
 21: 1:    {
@@ -1016,7 +1016,7 @@
 21: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 22: 1:BoardData {
-22: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+22: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 22: 1:  'expectedAnswer': '16',
 22: 1:  'history': [
 22: 1:    {
@@ -1121,7 +1121,7 @@
 22: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 23: 1:BoardData {
-23: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+23: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 23: 1:  'expectedAnswer': '17',
 23: 1:  'history': [
 23: 1:    {
@@ -1232,7 +1232,7 @@
 23: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 24: 1:BoardData {
-24: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+24: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 24: 1:  'expectedAnswer': 'Fizz',
 24: 1:  'history': [
 24: 1:    {
@@ -1349,7 +1349,7 @@
 24: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 25: 1:BoardData {
-25: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+25: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 25: 1:  'expectedAnswer': '19',
 25: 1:  'history': [
 25: 1:    {
@@ -1472,7 +1472,7 @@
 25: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 26: 1:BoardData {
-26: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+26: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 26: 1:  'expectedAnswer': 'Buzz',
 26: 1:  'history': [
 26: 1:    {
@@ -1601,7 +1601,7 @@
 26: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 27: 1:BoardData {
-27: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+27: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 27: 1:  'expectedAnswer': 'Fizz',
 27: 1:  'history': [
 27: 1:    {
@@ -1736,7 +1736,7 @@
 27: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 28: 1:BoardData {
-28: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+28: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 28: 1:  'expectedAnswer': '22',
 28: 1:  'history': [
 28: 1:    {
@@ -1877,7 +1877,7 @@
 28: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 29: 1:BoardData {
-29: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+29: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 29: 1:  'expectedAnswer': '23',
 29: 1:  'history': [
 29: 1:    {
@@ -2024,7 +2024,7 @@
 29: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 30: 1:BoardData {
-30: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+30: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 30: 1:  'expectedAnswer': 'Fizz',
 30: 1:  'history': [
 30: 1:    {
@@ -2177,7 +2177,7 @@
 30: 1:Fire Event: PassTest{complexity=5, testCount=25}
 ------------------------------------------
 31: 1:BoardData {
-31: 1:  'description': 'Write a method that takes one int argument and \nthat returns a String. For those numbers that are divisible by 3,\nthe method should return 'Fizz', for those numbers divisible by 5\nit should return 'Buzz', for those numbers divisible\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
+31: 1:  'description': 'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',
 31: 1:  'expectedAnswer': 'Buzz',
 31: 1:  'history': [
 31: 1:    {
@@ -2473,7 +2473,7 @@
 32: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 33: 1:BoardData {
-33: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+33: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 33: 1:  'expectedAnswer': '0',
 33: 1:  'history': [],
 33: 1:  'level': 2,
@@ -2485,7 +2485,7 @@
 33: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 34: 1:BoardData {
-34: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+34: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 34: 1:  'expectedAnswer': '4',
 34: 1:  'history': [{
 34: 1:    'answer': '0',
@@ -2504,7 +2504,7 @@
 34: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 35: 1:BoardData {
-35: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+35: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 35: 1:  'expectedAnswer': '22',
 35: 1:  'history': [
 35: 1:    {
@@ -2531,7 +2531,7 @@
 35: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 36: 1:BoardData {
-36: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+36: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 36: 1:  'expectedAnswer': '70',
 36: 1:  'history': [
 36: 1:    {
@@ -2564,7 +2564,7 @@
 36: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 37: 1:BoardData {
-37: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+37: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 37: 1:  'expectedAnswer': '170',
 37: 1:  'history': [
 37: 1:    {
@@ -2603,7 +2603,7 @@
 37: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 38: 1:BoardData {
-38: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+38: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 38: 1:  'expectedAnswer': '350',
 38: 1:  'history': [
 38: 1:    {
@@ -2648,7 +2648,7 @@
 38: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 39: 1:BoardData {
-39: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+39: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 39: 1:  'expectedAnswer': '644',
 39: 1:  'history': [
 39: 1:    {
@@ -2699,7 +2699,7 @@
 39: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 40: 1:BoardData {
-40: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+40: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 40: 1:  'expectedAnswer': '1092',
 40: 1:  'history': [
 40: 1:    {
@@ -2756,7 +2756,7 @@
 40: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 41: 1:BoardData {
-41: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+41: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 41: 1:  'expectedAnswer': '1740',
 41: 1:  'history': [
 41: 1:    {
@@ -2819,7 +2819,7 @@
 41: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 42: 1:BoardData {
-42: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+42: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 42: 1:  'expectedAnswer': '2640',
 42: 1:  'history': [
 42: 1:    {
@@ -2888,7 +2888,7 @@
 42: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 43: 1:BoardData {
-43: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+43: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 43: 1:  'expectedAnswer': '3850',
 43: 1:  'history': [
 43: 1:    {
@@ -2963,7 +2963,7 @@
 43: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 44: 1:BoardData {
-44: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+44: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 44: 1:  'expectedAnswer': '5434',
 44: 1:  'history': [
 44: 1:    {
@@ -3044,7 +3044,7 @@
 44: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 45: 1:BoardData {
-45: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+45: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 45: 1:  'expectedAnswer': '7462',
 45: 1:  'history': [
 45: 1:    {
@@ -3131,7 +3131,7 @@
 45: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 46: 1:BoardData {
-46: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+46: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 46: 1:  'expectedAnswer': '10010',
 46: 1:  'history': [
 46: 1:    {
@@ -3224,7 +3224,7 @@
 46: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 47: 1:BoardData {
-47: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+47: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 47: 1:  'expectedAnswer': '13160',
 47: 1:  'history': [
 47: 1:    {
@@ -3323,7 +3323,7 @@
 47: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 48: 1:BoardData {
-48: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+48: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 48: 1:  'expectedAnswer': '17000',
 48: 1:  'history': [
 48: 1:    {
@@ -3428,7 +3428,7 @@
 48: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 49: 1:BoardData {
-49: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+49: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 49: 1:  'expectedAnswer': '21624',
 49: 1:  'history': [
 49: 1:    {
@@ -3539,7 +3539,7 @@
 49: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 50: 1:BoardData {
-50: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+50: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 50: 1:  'expectedAnswer': '27132',
 50: 1:  'history': [
 50: 1:    {
@@ -3656,7 +3656,7 @@
 50: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 51: 1:BoardData {
-51: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+51: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 51: 1:  'expectedAnswer': '33630',
 51: 1:  'history': [
 51: 1:    {
@@ -3779,7 +3779,7 @@
 51: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 52: 1:BoardData {
-52: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+52: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 52: 1:  'expectedAnswer': '41230',
 52: 1:  'history': [
 52: 1:    {
@@ -3908,7 +3908,7 @@
 52: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 53: 1:BoardData {
-53: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+53: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 53: 1:  'expectedAnswer': '50050',
 53: 1:  'history': [
 53: 1:    {
@@ -4043,7 +4043,7 @@
 53: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 54: 1:BoardData {
-54: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+54: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 54: 1:  'expectedAnswer': '60214',
 54: 1:  'history': [
 54: 1:    {
@@ -4184,7 +4184,7 @@
 54: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 55: 1:BoardData {
-55: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+55: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 55: 1:  'expectedAnswer': '71852',
 55: 1:  'history': [
 55: 1:    {
@@ -4331,7 +4331,7 @@
 55: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 56: 1:BoardData {
-56: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+56: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 56: 1:  'expectedAnswer': '85100',
 56: 1:  'history': [
 56: 1:    {
@@ -4484,7 +4484,7 @@
 56: 1:Fire Event: PassTest{complexity=10, testCount=25}
 ------------------------------------------
 57: 1:BoardData {
-57: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and \nthe square of the sum of the first ten natural \nnumbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum\nsquares and the square of the sum for the natural number i.',
+57: 1:  'description': 'The sum of the squares of the first ten positive integers \n1^2 + 2^2 + ... + 10^2 = 385. \nAnd the square of the sum is \n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',
 57: 1:  'expectedAnswer': '100100',
 57: 1:  'history': [
 57: 1:    {
@@ -11701,7 +11701,7 @@
 136: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 137: 1:BoardData {
-137: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+137: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 137: 1:  'expectedAnswer': '2',
 137: 1:  'history': [],
 137: 1:  'level': 6,
@@ -11713,7 +11713,7 @@
 137: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 138: 1:BoardData {
-138: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+138: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 138: 1:  'expectedAnswer': '4',
 138: 1:  'history': [{
 138: 1:    'answer': '2',
@@ -11732,7 +11732,7 @@
 138: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 139: 1:BoardData {
-139: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+139: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 139: 1:  'expectedAnswer': '8',
 139: 1:  'history': [
 139: 1:    {
@@ -11759,7 +11759,7 @@
 139: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 140: 1:BoardData {
-140: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+140: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 140: 1:  'expectedAnswer': '7',
 140: 1:  'history': [
 140: 1:    {
@@ -11792,7 +11792,7 @@
 140: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 141: 1:BoardData {
-141: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+141: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 141: 1:  'expectedAnswer': '5',
 141: 1:  'history': [
 141: 1:    {
@@ -11831,7 +11831,7 @@
 141: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 142: 1:BoardData {
-142: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+142: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 142: 1:  'expectedAnswer': '10',
 142: 1:  'history': [
 142: 1:    {
@@ -11876,7 +11876,7 @@
 142: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 143: 1:BoardData {
-143: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+143: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 143: 1:  'expectedAnswer': '11',
 143: 1:  'history': [
 143: 1:    {
@@ -11927,7 +11927,7 @@
 143: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 144: 1:BoardData {
-144: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+144: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 144: 1:  'expectedAnswer': '13',
 144: 1:  'history': [
 144: 1:    {
@@ -11984,7 +11984,7 @@
 144: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 145: 1:BoardData {
-145: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+145: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 145: 1:  'expectedAnswer': '8',
 145: 1:  'history': [
 145: 1:    {
@@ -12047,7 +12047,7 @@
 145: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 146: 1:BoardData {
-146: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+146: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 146: 1:  'expectedAnswer': '7',
 146: 1:  'history': [
 146: 1:    {
@@ -12116,7 +12116,7 @@
 146: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 147: 1:BoardData {
-147: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+147: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 147: 1:  'expectedAnswer': '14',
 147: 1:  'history': [
 147: 1:    {
@@ -12191,7 +12191,7 @@
 147: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 148: 1:BoardData {
-148: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+148: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 148: 1:  'expectedAnswer': '19',
 148: 1:  'history': [
 148: 1:    {
@@ -12272,7 +12272,7 @@
 148: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 149: 1:BoardData {
-149: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+149: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 149: 1:  'expectedAnswer': '20',
 149: 1:  'history': [
 149: 1:    {
@@ -12359,7 +12359,7 @@
 149: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 150: 1:BoardData {
-150: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+150: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 150: 1:  'expectedAnswer': '22',
 150: 1:  'history': [
 150: 1:    {
@@ -12452,7 +12452,7 @@
 150: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 151: 1:BoardData {
-151: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+151: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 151: 1:  'expectedAnswer': '26',
 151: 1:  'history': [
 151: 1:    {
@@ -12551,7 +12551,7 @@
 151: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 152: 1:BoardData {
-152: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+152: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 152: 1:  'expectedAnswer': '25',
 152: 1:  'history': [
 152: 1:    {
@@ -12656,7 +12656,7 @@
 152: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 153: 1:BoardData {
-153: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+153: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 153: 1:  'expectedAnswer': '14',
 153: 1:  'history': [
 153: 1:    {
@@ -12767,7 +12767,7 @@
 153: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 154: 1:BoardData {
-154: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+154: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 154: 1:  'expectedAnswer': '19',
 154: 1:  'history': [
 154: 1:    {
@@ -12884,7 +12884,7 @@
 154: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 155: 1:BoardData {
-155: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+155: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 155: 1:  'expectedAnswer': '29',
 155: 1:  'history': [
 155: 1:    {
@@ -13007,7 +13007,7 @@
 155: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 156: 1:BoardData {
-156: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+156: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 156: 1:  'expectedAnswer': '31',
 156: 1:  'history': [
 156: 1:    {
@@ -13136,7 +13136,7 @@
 156: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 157: 1:BoardData {
-157: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+157: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 157: 1:  'expectedAnswer': '26',
 157: 1:  'history': [
 157: 1:    {
@@ -13271,7 +13271,7 @@
 157: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 158: 1:BoardData {
-158: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+158: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 158: 1:  'expectedAnswer': '25',
 158: 1:  'history': [
 158: 1:    {
@@ -13412,7 +13412,7 @@
 158: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 159: 1:BoardData {
-159: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+159: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 159: 1:  'expectedAnswer': '41',
 159: 1:  'history': [
 159: 1:    {
@@ -13559,7 +13559,7 @@
 159: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 160: 1:BoardData {
-160: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+160: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 160: 1:  'expectedAnswer': '37',
 160: 1:  'history': [
 160: 1:    {
@@ -13712,7 +13712,7 @@
 160: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 161: 1:BoardData {
-161: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \nWhat is the sum of the digits of 2 to the power of i? \nWrite a method for calculation that takes int \nand returns the result as a String',
+161: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
 161: 1:  'expectedAnswer': '29',
 161: 1:  'history': [
 161: 1:    {
@@ -14008,7 +14008,7 @@
 162: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 163: 1:BoardData {
-163: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+163: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 163: 1:  'expectedAnswer': 'true',
 163: 1:  'history': [],
 163: 1:  'level': 7,
@@ -14020,7 +14020,7 @@
 163: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 164: 1:BoardData {
-164: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+164: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 164: 1:  'expectedAnswer': 'true',
 164: 1:  'history': [{
 164: 1:    'answer': 'true',
@@ -14039,7 +14039,7 @@
 164: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 165: 1:BoardData {
-165: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+165: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 165: 1:  'expectedAnswer': 'false',
 165: 1:  'history': [
 165: 1:    {
@@ -14066,7 +14066,7 @@
 165: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 166: 1:BoardData {
-166: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+166: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 166: 1:  'expectedAnswer': 'true',
 166: 1:  'history': [
 166: 1:    {
@@ -14099,7 +14099,7 @@
 166: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 167: 1:BoardData {
-167: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+167: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 167: 1:  'expectedAnswer': 'true',
 167: 1:  'history': [
 167: 1:    {
@@ -14138,7 +14138,7 @@
 167: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 168: 1:BoardData {
-168: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+168: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 168: 1:  'expectedAnswer': 'false',
 168: 1:  'history': [
 168: 1:    {
@@ -14183,7 +14183,7 @@
 168: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 169: 1:BoardData {
-169: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+169: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 169: 1:  'expectedAnswer': 'true',
 169: 1:  'history': [
 169: 1:    {
@@ -14234,7 +14234,7 @@
 169: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 170: 1:BoardData {
-170: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+170: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 170: 1:  'expectedAnswer': 'true',
 170: 1:  'history': [
 170: 1:    {
@@ -14291,7 +14291,7 @@
 170: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 171: 1:BoardData {
-171: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+171: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 171: 1:  'expectedAnswer': 'false',
 171: 1:  'history': [
 171: 1:    {
@@ -14354,7 +14354,7 @@
 171: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 172: 1:BoardData {
-172: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+172: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 172: 1:  'expectedAnswer': 'false',
 172: 1:  'history': [
 172: 1:    {
@@ -14423,7 +14423,7 @@
 172: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 173: 1:BoardData {
-173: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+173: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 173: 1:  'expectedAnswer': 'true',
 173: 1:  'history': [
 173: 1:    {
@@ -14498,7 +14498,7 @@
 173: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 174: 1:BoardData {
-174: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+174: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 174: 1:  'expectedAnswer': 'false',
 174: 1:  'history': [
 174: 1:    {
@@ -14579,7 +14579,7 @@
 174: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 175: 1:BoardData {
-175: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+175: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 175: 1:  'expectedAnswer': 'false',
 175: 1:  'history': [
 175: 1:    {
@@ -14666,7 +14666,7 @@
 175: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 176: 1:BoardData {
-176: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+176: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 176: 1:  'expectedAnswer': 'false',
 176: 1:  'history': [
 176: 1:    {
@@ -14759,7 +14759,7 @@
 176: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 177: 1:BoardData {
-177: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+177: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 177: 1:  'expectedAnswer': 'true',
 177: 1:  'history': [
 177: 1:    {
@@ -14858,7 +14858,7 @@
 177: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 178: 1:BoardData {
-178: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+178: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 178: 1:  'expectedAnswer': 'false',
 178: 1:  'history': [
 178: 1:    {
@@ -14963,7 +14963,7 @@
 178: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 179: 1:BoardData {
-179: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+179: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 179: 1:  'expectedAnswer': 'false',
 179: 1:  'history': [
 179: 1:    {
@@ -15074,7 +15074,7 @@
 179: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 180: 1:BoardData {
-180: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+180: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 180: 1:  'expectedAnswer': 'false',
 180: 1:  'history': [
 180: 1:    {
@@ -15191,7 +15191,7 @@
 180: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 181: 1:BoardData {
-181: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+181: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 181: 1:  'expectedAnswer': 'false',
 181: 1:  'history': [
 181: 1:    {
@@ -15314,7 +15314,7 @@
 181: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 182: 1:BoardData {
-182: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+182: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 182: 1:  'expectedAnswer': 'true',
 182: 1:  'history': [
 182: 1:    {
@@ -15443,7 +15443,7 @@
 182: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 183: 1:BoardData {
-183: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+183: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 183: 1:  'expectedAnswer': 'true',
 183: 1:  'history': [
 183: 1:    {
@@ -15578,7 +15578,7 @@
 183: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 184: 1:BoardData {
-184: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+184: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 184: 1:  'expectedAnswer': 'true',
 184: 1:  'history': [
 184: 1:    {
@@ -15719,7 +15719,7 @@
 184: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 185: 1:BoardData {
-185: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+185: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 185: 1:  'expectedAnswer': 'true',
 185: 1:  'history': [
 185: 1:    {
@@ -15866,7 +15866,7 @@
 185: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 186: 1:BoardData {
-186: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+186: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 186: 1:  'expectedAnswer': 'true',
 186: 1:  'history': [
 186: 1:    {
@@ -16019,7 +16019,7 @@
 186: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 187: 1:BoardData {
-187: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+187: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 187: 1:  'expectedAnswer': 'true',
 187: 1:  'history': [
 187: 1:    {
@@ -16178,7 +16178,7 @@
 187: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 188: 1:BoardData {
-188: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+188: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 188: 1:  'expectedAnswer': 'true',
 188: 1:  'history': [
 188: 1:    {
@@ -16343,7 +16343,7 @@
 188: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 189: 1:BoardData {
-189: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+189: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 189: 1:  'expectedAnswer': 'false',
 189: 1:  'history': [
 189: 1:    {
@@ -16514,7 +16514,7 @@
 189: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 190: 1:BoardData {
-190: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+190: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 190: 1:  'expectedAnswer': 'true',
 190: 1:  'history': [
 190: 1:    {
@@ -16691,7 +16691,7 @@
 190: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 191: 1:BoardData {
-191: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+191: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 191: 1:  'expectedAnswer': 'true',
 191: 1:  'history': [
 191: 1:    {
@@ -16874,7 +16874,7 @@
 191: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 192: 1:BoardData {
-192: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+192: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 192: 1:  'expectedAnswer': 'false',
 192: 1:  'history': [
 192: 1:    {
@@ -17063,7 +17063,7 @@
 192: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 193: 1:BoardData {
-193: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+193: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 193: 1:  'expectedAnswer': 'false',
 193: 1:  'history': [
 193: 1:    {
@@ -17258,7 +17258,7 @@
 193: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 194: 1:BoardData {
-194: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+194: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 194: 1:  'expectedAnswer': 'true',
 194: 1:  'history': [
 194: 1:    {
@@ -17459,7 +17459,7 @@
 194: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 195: 1:BoardData {
-195: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+195: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 195: 1:  'expectedAnswer': 'true',
 195: 1:  'history': [
 195: 1:    {
@@ -17666,7 +17666,7 @@
 195: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 196: 1:BoardData {
-196: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+196: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 196: 1:  'expectedAnswer': 'true',
 196: 1:  'history': [
 196: 1:    {
@@ -17879,7 +17879,7 @@
 196: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 197: 1:BoardData {
-197: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+197: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 197: 1:  'expectedAnswer': 'false',
 197: 1:  'history': [
 197: 1:    {
@@ -18098,7 +18098,7 @@
 197: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 198: 1:BoardData {
-198: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+198: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 198: 1:  'expectedAnswer': 'true',
 198: 1:  'history': [
 198: 1:    {
@@ -18323,7 +18323,7 @@
 198: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 199: 1:BoardData {
-199: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+199: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 199: 1:  'expectedAnswer': 'false',
 199: 1:  'history': [
 199: 1:    {
@@ -18554,7 +18554,7 @@
 199: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 200: 1:BoardData {
-200: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+200: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 200: 1:  'expectedAnswer': 'true',
 200: 1:  'history': [
 200: 1:    {
@@ -18791,7 +18791,7 @@
 200: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 201: 1:BoardData {
-201: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+201: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 201: 1:  'expectedAnswer': 'true',
 201: 1:  'history': [
 201: 1:    {
@@ -19034,7 +19034,7 @@
 201: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 202: 1:BoardData {
-202: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+202: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 202: 1:  'expectedAnswer': 'false',
 202: 1:  'history': [
 202: 1:    {
@@ -19283,7 +19283,7 @@
 202: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 203: 1:BoardData {
-203: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+203: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 203: 1:  'expectedAnswer': 'false',
 203: 1:  'history': [
 203: 1:    {
@@ -19538,7 +19538,7 @@
 203: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 204: 1:BoardData {
-204: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+204: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 204: 1:  'expectedAnswer': 'true',
 204: 1:  'history': [
 204: 1:    {
@@ -19799,7 +19799,7 @@
 204: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 205: 1:BoardData {
-205: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+205: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 205: 1:  'expectedAnswer': 'true',
 205: 1:  'history': [
 205: 1:    {
@@ -20066,7 +20066,7 @@
 205: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 206: 1:BoardData {
-206: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+206: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 206: 1:  'expectedAnswer': 'false',
 206: 1:  'history': [
 206: 1:    {
@@ -20339,7 +20339,7 @@
 206: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 207: 1:BoardData {
-207: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+207: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 207: 1:  'expectedAnswer': 'true',
 207: 1:  'history': [
 207: 1:    {
@@ -20618,7 +20618,7 @@
 207: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 208: 1:BoardData {
-208: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+208: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 208: 1:  'expectedAnswer': 'false',
 208: 1:  'history': [
 208: 1:    {
@@ -20903,7 +20903,7 @@
 208: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 209: 1:BoardData {
-209: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+209: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 209: 1:  'expectedAnswer': 'false',
 209: 1:  'history': [
 209: 1:    {
@@ -21194,7 +21194,7 @@
 209: 1:Fire Event: PassTest{complexity=35, testCount=48}
 ------------------------------------------
 210: 1:BoardData {
-210: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount).\nWrite a method that can determine if a given\nset of bricks can be used to build a wall of a given length.\na given set of bricks to build a wall of a given length (length).\nFor example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
+210: 1:  'description': 'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \nmethod(3, 1, 8) → true\nmethod(3, 1, 9) → false\nmethod(3, 2, 10) → true',
 210: 1:  'expectedAnswer': 'true',
 210: 1:  'history': [
 210: 1:    {
@@ -21743,7 +21743,7 @@
 211: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 212: 1:BoardData {
-212: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+212: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 212: 1:  'expectedAnswer': '1',
 212: 1:  'history': [],
 212: 1:  'level': 8,
@@ -21755,7 +21755,7 @@
 212: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 213: 1:BoardData {
-213: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+213: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 213: 1:  'expectedAnswer': '2',
 213: 1:  'history': [{
 213: 1:    'answer': '1',
@@ -21774,7 +21774,7 @@
 213: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 214: 1:BoardData {
-214: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+214: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 214: 1:  'expectedAnswer': '6',
 214: 1:  'history': [
 214: 1:    {
@@ -21801,7 +21801,7 @@
 214: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 215: 1:BoardData {
-215: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+215: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 215: 1:  'expectedAnswer': '24',
 215: 1:  'history': [
 215: 1:    {
@@ -21834,7 +21834,7 @@
 215: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 216: 1:BoardData {
-216: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+216: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 216: 1:  'expectedAnswer': '120',
 216: 1:  'history': [
 216: 1:    {
@@ -21873,7 +21873,7 @@
 216: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 217: 1:BoardData {
-217: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+217: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 217: 1:  'expectedAnswer': '720',
 217: 1:  'history': [
 217: 1:    {
@@ -21918,7 +21918,7 @@
 217: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 218: 1:BoardData {
-218: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+218: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 218: 1:  'expectedAnswer': '5040',
 218: 1:  'history': [
 218: 1:    {
@@ -21969,7 +21969,7 @@
 218: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 219: 1:BoardData {
-219: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+219: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 219: 1:  'expectedAnswer': '40320',
 219: 1:  'history': [
 219: 1:    {
@@ -22026,7 +22026,7 @@
 219: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 220: 1:BoardData {
-220: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+220: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 220: 1:  'expectedAnswer': '362880',
 220: 1:  'history': [
 220: 1:    {
@@ -22089,7 +22089,7 @@
 220: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 221: 1:BoardData {
-221: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+221: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 221: 1:  'expectedAnswer': '3628800',
 221: 1:  'history': [
 221: 1:    {
@@ -22158,7 +22158,7 @@
 221: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 222: 1:BoardData {
-222: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+222: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 222: 1:  'expectedAnswer': '39916800',
 222: 1:  'history': [
 222: 1:    {
@@ -22233,7 +22233,7 @@
 222: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 223: 1:BoardData {
-223: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+223: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 223: 1:  'expectedAnswer': '479001600',
 223: 1:  'history': [
 223: 1:    {
@@ -22314,7 +22314,7 @@
 223: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 224: 1:BoardData {
-224: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+224: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 224: 1:  'expectedAnswer': '6227020800',
 224: 1:  'history': [
 224: 1:    {
@@ -22401,7 +22401,7 @@
 224: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 225: 1:BoardData {
-225: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+225: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 225: 1:  'expectedAnswer': '87178291200',
 225: 1:  'history': [
 225: 1:    {
@@ -22494,7 +22494,7 @@
 225: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 226: 1:BoardData {
-226: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+226: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 226: 1:  'expectedAnswer': '1307674368000',
 226: 1:  'history': [
 226: 1:    {
@@ -22593,7 +22593,7 @@
 226: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 227: 1:BoardData {
-227: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+227: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 227: 1:  'expectedAnswer': '20922789888000',
 227: 1:  'history': [
 227: 1:    {
@@ -22698,7 +22698,7 @@
 227: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 228: 1:BoardData {
-228: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+228: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 228: 1:  'expectedAnswer': '355687428096000',
 228: 1:  'history': [
 228: 1:    {
@@ -22809,7 +22809,7 @@
 228: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 229: 1:BoardData {
-229: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+229: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 229: 1:  'expectedAnswer': '6402373705728000',
 229: 1:  'history': [
 229: 1:    {
@@ -22926,7 +22926,7 @@
 229: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 230: 1:BoardData {
-230: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+230: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 230: 1:  'expectedAnswer': '121645100408832000',
 230: 1:  'history': [
 230: 1:    {
@@ -23049,7 +23049,7 @@
 230: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 231: 1:BoardData {
-231: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+231: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 231: 1:  'expectedAnswer': '2432902008176640000',
 231: 1:  'history': [
 231: 1:    {
@@ -23178,7 +23178,7 @@
 231: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 232: 1:BoardData {
-232: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+232: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 232: 1:  'expectedAnswer': '51090942171709440000',
 232: 1:  'history': [
 232: 1:    {
@@ -23313,7 +23313,7 @@
 232: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 233: 1:BoardData {
-233: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+233: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 233: 1:  'expectedAnswer': '1124000727777607680000',
 233: 1:  'history': [
 233: 1:    {
@@ -23454,7 +23454,7 @@
 233: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 234: 1:BoardData {
-234: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+234: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 234: 1:  'expectedAnswer': '25852016738884976640000',
 234: 1:  'history': [
 234: 1:    {
@@ -23601,7 +23601,7 @@
 234: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 235: 1:BoardData {
-235: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+235: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 235: 1:  'expectedAnswer': '620448401733239439360000',
 235: 1:  'history': [
 235: 1:    {
@@ -23754,7 +23754,7 @@
 235: 1:Fire Event: PassTest{complexity=40, testCount=25}
 ------------------------------------------
 236: 1:BoardData {
-236: 1:  'description': 'Write a method that takes one int argument and \nthat returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
+236: 1:  'description': 'Write a method that takes one int argument and that returns the factorial of that number as a String.\nWarning: Int/long overflow is possible.',
 236: 1:  'expectedAnswer': '15511210043330985984000000',
 236: 1:  'history': [
 236: 1:    {
@@ -29774,7 +29774,7 @@
 295: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 296: 1:BoardData {
-296: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+296: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 296: 1:  'expectedAnswer': '2',
 296: 1:  'history': [],
 296: 1:  'level': 11,
@@ -29786,7 +29786,7 @@
 296: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 297: 1:BoardData {
-297: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+297: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 297: 1:  'expectedAnswer': '3',
 297: 1:  'history': [{
 297: 1:    'answer': '2',
@@ -29805,7 +29805,7 @@
 297: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 298: 1:BoardData {
-298: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+298: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 298: 1:  'expectedAnswer': '5',
 298: 1:  'history': [
 298: 1:    {
@@ -29832,7 +29832,7 @@
 298: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 299: 1:BoardData {
-299: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+299: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 299: 1:  'expectedAnswer': '7',
 299: 1:  'history': [
 299: 1:    {
@@ -29865,7 +29865,7 @@
 299: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 300: 1:BoardData {
-300: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+300: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 300: 1:  'expectedAnswer': '11',
 300: 1:  'history': [
 300: 1:    {
@@ -29904,7 +29904,7 @@
 300: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 301: 1:BoardData {
-301: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+301: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 301: 1:  'expectedAnswer': '13',
 301: 1:  'history': [
 301: 1:    {
@@ -29949,7 +29949,7 @@
 301: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 302: 1:BoardData {
-302: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+302: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 302: 1:  'expectedAnswer': '17',
 302: 1:  'history': [
 302: 1:    {
@@ -30000,7 +30000,7 @@
 302: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 303: 1:BoardData {
-303: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+303: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 303: 1:  'expectedAnswer': '19',
 303: 1:  'history': [
 303: 1:    {
@@ -30057,7 +30057,7 @@
 303: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 304: 1:BoardData {
-304: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+304: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 304: 1:  'expectedAnswer': '23',
 304: 1:  'history': [
 304: 1:    {
@@ -30120,7 +30120,7 @@
 304: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 305: 1:BoardData {
-305: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+305: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 305: 1:  'expectedAnswer': '29',
 305: 1:  'history': [
 305: 1:    {
@@ -30189,7 +30189,7 @@
 305: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 306: 1:BoardData {
-306: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+306: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 306: 1:  'expectedAnswer': '31',
 306: 1:  'history': [
 306: 1:    {
@@ -30264,7 +30264,7 @@
 306: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 307: 1:BoardData {
-307: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+307: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 307: 1:  'expectedAnswer': '37',
 307: 1:  'history': [
 307: 1:    {
@@ -30345,7 +30345,7 @@
 307: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 308: 1:BoardData {
-308: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+308: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 308: 1:  'expectedAnswer': '41',
 308: 1:  'history': [
 308: 1:    {
@@ -30432,7 +30432,7 @@
 308: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 309: 1:BoardData {
-309: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+309: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 309: 1:  'expectedAnswer': '43',
 309: 1:  'history': [
 309: 1:    {
@@ -30525,7 +30525,7 @@
 309: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 310: 1:BoardData {
-310: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+310: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 310: 1:  'expectedAnswer': '47',
 310: 1:  'history': [
 310: 1:    {
@@ -30624,7 +30624,7 @@
 310: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 311: 1:BoardData {
-311: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+311: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 311: 1:  'expectedAnswer': '53',
 311: 1:  'history': [
 311: 1:    {
@@ -30729,7 +30729,7 @@
 311: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 312: 1:BoardData {
-312: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+312: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 312: 1:  'expectedAnswer': '59',
 312: 1:  'history': [
 312: 1:    {
@@ -30840,7 +30840,7 @@
 312: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 313: 1:BoardData {
-313: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+313: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 313: 1:  'expectedAnswer': '61',
 313: 1:  'history': [
 313: 1:    {
@@ -30957,7 +30957,7 @@
 313: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 314: 1:BoardData {
-314: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+314: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 314: 1:  'expectedAnswer': '67',
 314: 1:  'history': [
 314: 1:    {
@@ -31080,7 +31080,7 @@
 314: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 315: 1:BoardData {
-315: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+315: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 315: 1:  'expectedAnswer': '71',
 315: 1:  'history': [
 315: 1:    {
@@ -31209,7 +31209,7 @@
 315: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 316: 1:BoardData {
-316: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+316: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 316: 1:  'expectedAnswer': '73',
 316: 1:  'history': [
 316: 1:    {
@@ -31344,7 +31344,7 @@
 316: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 317: 1:BoardData {
-317: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+317: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 317: 1:  'expectedAnswer': '79',
 317: 1:  'history': [
 317: 1:    {
@@ -31485,7 +31485,7 @@
 317: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 318: 1:BoardData {
-318: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+318: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 318: 1:  'expectedAnswer': '83',
 318: 1:  'history': [
 318: 1:    {
@@ -31632,7 +31632,7 @@
 318: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 319: 1:BoardData {
-319: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+319: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 319: 1:  'expectedAnswer': '89',
 319: 1:  'history': [
 319: 1:    {
@@ -31785,7 +31785,7 @@
 319: 1:Fire Event: PassTest{complexity=55, testCount=25}
 ------------------------------------------
 320: 1:BoardData {
-320: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \nWrite a method that returns the i-th prime number.',
+320: 1:  'description': 'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',
 320: 1:  'expectedAnswer': '97',
 320: 1:  'history': [
 320: 1:    {
@@ -32081,7 +32081,7 @@
 321: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 322: 1:BoardData {
-322: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+322: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 322: 1:  'expectedAnswer': '0.5',
 322: 1:  'history': [],
 322: 1:  'level': 12,
@@ -32093,7 +32093,7 @@
 322: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 323: 1:BoardData {
-323: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+323: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 323: 1:  'expectedAnswer': '1',
 323: 1:  'history': [{
 323: 1:    'answer': '0.5',
@@ -32112,7 +32112,7 @@
 323: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 324: 1:BoardData {
-324: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+324: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 324: 1:  'expectedAnswer': '1',
 324: 1:  'history': [
 324: 1:    {
@@ -32139,7 +32139,7 @@
 324: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 325: 1:BoardData {
-325: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+325: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 325: 1:  'expectedAnswer': '11',
 325: 1:  'history': [
 325: 1:    {
@@ -32172,7 +32172,7 @@
 325: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 326: 1:BoardData {
-326: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+326: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 326: 1:  'expectedAnswer': '1.25',
 326: 1:  'history': [
 326: 1:    {
@@ -32211,7 +32211,7 @@
 326: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 327: 1:BoardData {
-327: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+327: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 327: 1:  'expectedAnswer': '0',
 327: 1:  'history': [
 327: 1:    {
@@ -32256,7 +32256,7 @@
 327: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 328: 1:BoardData {
-328: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+328: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 328: 1:  'expectedAnswer': '56',
 328: 1:  'history': [
 328: 1:    {
@@ -32307,7 +32307,7 @@
 328: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 329: 1:BoardData {
-329: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+329: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 329: 1:  'expectedAnswer': '-0.5',
 329: 1:  'history': [
 329: 1:    {
@@ -32364,7 +32364,7 @@
 329: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 330: 1:BoardData {
-330: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+330: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 330: 1:  'expectedAnswer': '-0.5',
 330: 1:  'history': [
 330: 1:    {
@@ -32427,7 +32427,7 @@
 330: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 331: 1:BoardData {
-331: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+331: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 331: 1:  'expectedAnswer': '0.5',
 331: 1:  'history': [
 331: 1:    {
@@ -32496,7 +32496,7 @@
 331: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 332: 1:BoardData {
-332: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+332: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 332: 1:  'expectedAnswer': '0.001',
 332: 1:  'history': [
 332: 1:    {
@@ -32571,7 +32571,7 @@
 332: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 333: 1:BoardData {
-333: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+333: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 333: 1:  'expectedAnswer': '1.2(4)',
 333: 1:  'history': [
 333: 1:    {
@@ -32652,7 +32652,7 @@
 333: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 334: 1:BoardData {
-334: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+334: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 334: 1:  'expectedAnswer': '1.00(90)',
 334: 1:  'history': [
 334: 1:    {
@@ -32739,7 +32739,7 @@
 334: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 335: 1:BoardData {
-335: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+335: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 335: 1:  'expectedAnswer': '10.0(90)',
 335: 1:  'history': [
 335: 1:    {
@@ -32832,7 +32832,7 @@
 335: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 336: 1:BoardData {
-336: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+336: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 336: 1:  'expectedAnswer': '1010.0(90)',
 336: 1:  'history': [
 336: 1:    {
@@ -32931,7 +32931,7 @@
 336: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 337: 1:BoardData {
-337: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+337: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 337: 1:  'expectedAnswer': '0.0(495)',
 337: 1:  'history': [
 337: 1:    {
@@ -33036,7 +33036,7 @@
 337: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 338: 1:BoardData {
-338: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+338: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 338: 1:  'expectedAnswer': '-5.0(45)',
 338: 1:  'history': [
 338: 1:    {
@@ -33147,7 +33147,7 @@
 338: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 339: 1:BoardData {
-339: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+339: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 339: 1:  'expectedAnswer': '0.000(3)',
 339: 1:  'history': [
 339: 1:    {
@@ -33264,7 +33264,7 @@
 339: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 340: 1:BoardData {
-340: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+340: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 340: 1:  'expectedAnswer': '1.1(153846)',
 340: 1:  'history': [
 340: 1:    {
@@ -33387,7 +33387,7 @@
 340: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 341: 1:BoardData {
-341: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+341: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 341: 1:  'expectedAnswer': '0.803(571428)',
 341: 1:  'history': [
 341: 1:    {
@@ -33516,7 +33516,7 @@
 341: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 342: 1:BoardData {
-342: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+342: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 342: 1:  'expectedAnswer': '1.(593984962406015037)',
 342: 1:  'history': [
 342: 1:    {
@@ -33651,7 +33651,7 @@
 342: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 343: 1:BoardData {
-343: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+343: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 343: 1:  'expectedAnswer': '96.6(1739130434782608695652)',
 343: 1:  'history': [
 343: 1:    {
@@ -33792,7 +33792,7 @@
 343: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 344: 1:BoardData {
-344: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+344: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 344: 1:  'expectedAnswer': '0.3(5652173913043478260869)',
 344: 1:  'history': [
 344: 1:    {
@@ -33939,7 +33939,7 @@
 344: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 345: 1:BoardData {
-345: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+345: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 345: 1:  'expectedAnswer': '0.8576942320118070532237143486041032667124906968586017840186012266888836921194851616559161340739231484',
 345: 1:  'history': [
 345: 1:    {
@@ -34092,7 +34092,7 @@
 345: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 346: 1:BoardData {
-346: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+346: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 346: 1:  'expectedAnswer': '8.5769423201180705322371434860410326671249069685860178401860122668888369211948516165591613407392314847',
 346: 1:  'history': [
 346: 1:    {
@@ -34251,7 +34251,7 @@
 346: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 347: 1:BoardData {
-347: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+347: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 347: 1:  'expectedAnswer': '85.7694309253951322673994120762759564567464112247141529983428059238030371899258141588263756955847311713',
 347: 1:  'history': [
 347: 1:    {
@@ -34416,7 +34416,7 @@
 347: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 348: 1:BoardData {
-348: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+348: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 348: 1:  'expectedAnswer': '1.0(309278350515463917525773195876288659793814432989690721649484536082474226804123711340206185567010)',
 348: 1:  'history': [
 348: 1:    {
@@ -34587,7 +34587,7 @@
 348: 1:Fire Event: PassTest{complexity=60, testCount=28}
 ------------------------------------------
 349: 1:BoardData {
-349: 1:  'description': 'Write a method that divides two numbers\nin a column to within 100 digits.\nIf there is a period in the result,\nit should be written as follows: \n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
+349: 1:  'description': 'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\n212/133 = 1.(593984962406015037)\n87/78 = 1.1(153846)',
 349: 1:  'expectedAnswer': 'Div by zero error!',
 349: 1:  'history': [
 349: 1:    {

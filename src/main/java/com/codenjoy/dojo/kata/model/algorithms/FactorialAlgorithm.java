@@ -73,7 +73,7 @@ public class FactorialAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String description() {
-        return "Write a method that takes one int argument and \n" +
+        return "Write a method that takes one int argument and " +
                 "that returns the factorial of that number as a String.\n" +
                 "Warning: Int/long overflow is possible.";
     }

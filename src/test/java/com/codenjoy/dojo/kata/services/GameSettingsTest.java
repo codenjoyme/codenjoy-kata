@@ -79,7 +79,7 @@ public class GameSettingsTest {
         assertEquals("[\n" +
                         "  {\n" +
                         "    'complexity':0,\n" +
-                        "    'description':'Write a method that takes a single String argument \\nand return the string 'world' if 'hello' came in,\\nand 'hello' if 'world', otherwise the algorithm \\nshould return the same string that came in.\\nThis is the first and simplest algorithm -\\nits purpose is to check if everything works\\nwell and how you understand the problem.',\n" +
+                        "    'description':'Write a method that takes a single String argument and return the string 'world' if 'hello' came in, and 'hello' if 'world', otherwise the algorithm should return the same string that came in.\\nThis is the first and simplest algorithm - its purpose is to check if everything works well and how you understand the problem.',\n" +
                         "    'name':'HelloWorldAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      'hello=world',\n" +
@@ -92,7 +92,7 @@ public class GameSettingsTest {
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':5,\n" +
-                        "    'description':'Write a method that takes one int argument and \\nthat returns a String. For those numbers that are divisible by 3,\\nthe method should return 'Fizz', for those numbers divisible by 5\\nit should return 'Buzz', for those numbers divisible\\nby both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',\n" +
+                        "    'description':'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.',\n" +
                         "    'name':'FizzBuzzAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      '1=1',\n" +
@@ -125,7 +125,7 @@ public class GameSettingsTest {
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':10,\n" +
-                        "    'description':'The sum of the squares of the first ten positive integers \\n1^2 + 2^2 + ... + 10^2 = 385. \\nAnd the square of the sum is \\n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \\nTherefore, the difference between the sum of the squares and \\nthe square of the sum of the first ten natural \\nnumbers is equal to 3025 - 385 = 2640. \\nCreate a method that calculates the difference between the sum\\nsquares and the square of the sum for the natural number i.',\n" +
+                        "    'description':'The sum of the squares of the first ten positive integers \\n1^2 + 2^2 + ... + 10^2 = 385. \\nAnd the square of the sum is \\n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \\nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \\nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.',\n" +
                         "    'name':'SumSquareDifferenceAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      '1=0',\n" +
@@ -257,7 +257,7 @@ public class GameSettingsTest {
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':30,\n" +
-                        "    'description':'2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \\nWhat is the sum of the digits of 2 to the power of i? \\nWrite a method for calculation that takes int \\nand returns the result as a String',\n" +
+                        "    'description':'2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',\n" +
                         "    'name':'PowerDigitSumAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      '1=2',\n" +
@@ -290,7 +290,7 @@ public class GameSettingsTest {
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':35,\n" +
-                        "    'description':'You have bricks of size 5 (bigCount) and 1 (smallCount).\\nWrite a method that can determine if a given\\nset of bricks can be used to build a wall of a given length.\\na given set of bricks to build a wall of a given length (length).\\nFor example: \\nmethod(3, 1, 8) → true\\nmethod(3, 1, 9) → false\\nmethod(3, 2, 10) → true',\n" +
+                        "    'description':'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \\nmethod(3, 1, 8) → true\\nmethod(3, 1, 9) → false\\nmethod(3, 2, 10) → true',\n" +
                         "    'name':'MakeBricksAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      '0, 1, 5=true',\n" +
@@ -346,7 +346,7 @@ public class GameSettingsTest {
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':40,\n" +
-                        "    'description':'Write a method that takes one int argument and \\nthat returns the factorial of that number as a String.\\nWarning: Int/long overflow is possible.',\n" +
+                        "    'description':'Write a method that takes one int argument and that returns the factorial of that number as a String.\\nWarning: Int/long overflow is possible.',\n" +
                         "    'name':'FactorialAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      '1=1',\n" +
@@ -451,7 +451,7 @@ public class GameSettingsTest {
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':55,\n" +
-                        "    'description':'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. \\nWrite a method that returns the i-th prime number.',\n" +
+                        "    'description':'The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Write a method that returns the i-th prime number.',\n" +
                         "    'name':'XthPrimeAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      '1=2',\n" +
@@ -484,7 +484,7 @@ public class GameSettingsTest {
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':60,\n" +
-                        "    'description':'Write a method that divides two numbers\\nin a column to within 100 digits.\\nIf there is a period in the result,\\nit should be written as follows: \\n212/133 = 1.(593984962406015037)\\n87/78 = 1.1(153846)',\n" +
+                        "    'description':'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\\n212/133 = 1.(593984962406015037)\\n87/78 = 1.1(153846)',\n" +
                         "    'name':'LongDivisionAlgorithm',\n" +
                         "    'qa':[\n" +
                         "      '1, 2=0.5',\n" +

@@ -231,10 +231,10 @@ public class LongDivisionAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String description() {
-        return "Write a method that divides two numbers\n" +
-                "in a column to within 100 digits.\n" +
-                "If there is a period in the result,\n" +
-                "it should be written as follows: \n" +
+        return "Write a method that divides two numbers " +
+                "in a column to within 100 digits. " +
+                "If there is a period in the result, " +
+                "it should be written as follows:\n" +
                 "212/133 = 1.(593984962406015037)\n" +
                 "87/78 = 1.1(153846)";
     }

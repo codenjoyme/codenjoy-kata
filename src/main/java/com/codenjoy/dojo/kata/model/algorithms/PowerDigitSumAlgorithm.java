@@ -56,9 +56,9 @@ public class PowerDigitSumAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String description() {
-        return "2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. \n" +
-                "What is the sum of the digits of 2 to the power of i? \n" +
-                "Write a method for calculation that takes int \n" +
+        return "2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. " +
+                "What is the sum of the digits of 2 to the power of i? " +
+                "Write a method for calculation that takes int " +
                 "and returns the result as a String";
     }
 

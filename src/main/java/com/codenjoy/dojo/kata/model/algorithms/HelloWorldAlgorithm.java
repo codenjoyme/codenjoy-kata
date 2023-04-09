@@ -61,12 +61,12 @@ public class HelloWorldAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String description() {
-        return "Write a method that takes a single String argument \n" +
-                "and return the string 'world' if 'hello' came in,\n" +
-                "and 'hello' if 'world', otherwise the algorithm \n" +
+        return "Write a method that takes a single String argument " +
+                "and return the string 'world' if 'hello' came in, " +
+                "and 'hello' if 'world', otherwise the algorithm " +
                 "should return the same string that came in.\n" +
-                "This is the first and simplest algorithm -\n" +
-                "its purpose is to check if everything works\n" +
+                "This is the first and simplest algorithm - " +
+                "its purpose is to check if everything works " +
                 "well and how you understand the problem.";
     }
 
