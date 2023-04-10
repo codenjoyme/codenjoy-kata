@@ -29,6 +29,7 @@ function initController(socket, runner, logger, buttons, levelProgress, getRobot
     var commands = [];
     var command = null;
     board = null;
+    lastQaInfo = null;
 
     var finish = function() {
         controlling = false;
@@ -56,6 +57,14 @@ function initController(socket, runner, logger, buttons, levelProgress, getRobot
         if (board) {
             var b = new Board(board);
             var levelFinished = b.isLevelFinished();
+
+            var qaInfo = b.getQuestionAnswers();
+            if (!!qaInfo) {
+                if (!lastQaInfo || lastQaInfo != qaInfo) {
+                    logger.print(qaInfo);
+                }
+                lastQaInfo = qaInfo;
+            }
         }
 
         var finished = !!b && levelFinished && !levelProgress.isCurrentLevelMultiple();
@@ -91,6 +100,8 @@ function initController(socket, runner, logger, buttons, levelProgress, getRobot
                     }
                     if (answers.length > 0) {
                         addCommand(JSON.stringify(answers));
+                        // logger.print(questions[questions.length - 1] +
+                        //     '=>' + answers[answers.length - 1]);
                     }
                 } catch (e) {
                     logger.error(e, false);
@@ -100,7 +111,7 @@ function initController(socket, runner, logger, buttons, levelProgress, getRobot
                 }
             } else {
                 logger.print('function \'program(question)\' not implemented!');
-                logger.print('Info: if you clean your code you will get info about commands')
+                logger.print('Info: if you clean your code editor you can see the example again.');
             }
         }
         if (commands.length == 0) {
@@ -122,7 +133,7 @@ function initController(socket, runner, logger, buttons, levelProgress, getRobot
     }
 
     var compileCommands = function(onSuccess) {
-        logger.print('Uploading program...');
+        // logger.print('Uploading program...');
         try {
             var robot = getRobot();
             runner.compileProgram(robot);
@@ -221,6 +232,7 @@ function initController(socket, runner, logger, buttons, levelProgress, getRobot
 
     var commit = function() {
         logger.clean();
+        lastQaInfo = null;
         logger.printHello();
         cleanCommand();
         compileCommands(function() {
@@ -259,7 +271,7 @@ function initController(socket, runner, logger, buttons, levelProgress, getRobot
 
         var command = popLastCommand();
         if (!!command && command != 'WAIT') {
-            logger.print('Your answer is ' + command);
+            // logger.print('Your answer is ' + command);
             if (setup.demo) {
                 if (command == 'RESET') {
                     runner.cleanProgram();

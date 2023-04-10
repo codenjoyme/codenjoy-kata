@@ -49,6 +49,18 @@ var Board = function (boardString) {
         },
         getWholeBoard: function() {
             return board;
+        },
+        getQuestionAnswers : function () {
+            if (board.history.length == 0) {
+                return null;
+            }
+            var separator = '<br>&nbsp;&nbsp;'
+            return separator +
+                board.history.map(item => {
+                    var equality = item.valid ? '==' : '!=';
+                    var status = item.valid ? '✅' : '❌';
+                    return `f(${item.question}) ${equality} ${item.answer} ${status}`;
+                }).join(separator);
         }
     };
 };

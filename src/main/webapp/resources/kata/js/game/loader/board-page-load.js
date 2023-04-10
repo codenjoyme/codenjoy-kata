@@ -63,7 +63,7 @@ var boardPageLoad = function() {
     }
 
     logger.printHello = function() {
-        logger.print('Hello ' + setup.readableName + ', I am Hero! Waiting for your command...');
+        logger.print('Hello ' + setup.readableName + '. Waiting for your program...');
     }
 
     // ----------------------- init slider -------------------
