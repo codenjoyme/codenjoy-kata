@@ -25,19 +25,17 @@ function initAdmin(contextPath) {
 
     // ----------------------- init ace editors -------------------
 
-    var mapEditor = initEditor(libs, 'map');
-    mapEditor.setShowInvisibles(true);
+    var nameEditor = initEditor(libs, 'name');
+    nameEditor.setShowInvisibles(true);
     var helpEditor = initEditor(libs, 'help');
     var defaultEditor = initEditor(libs, 'default');
     var winEditor = initEditor(libs, 'win');
-    var refactoredEditor = initEditor(libs, 'refactored');
 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-        mapEditor.resize(true);
+        nameEditor.resize(true);
         helpEditor.resize(true);
         defaultEditor.resize(true);
         winEditor.resize(true);
-        refactoredEditor.resize(true);
     })
 
     // ----------------------- init scrollbar ----------------------
@@ -77,12 +75,10 @@ function initAdmin(contextPath) {
         var index = progressBar.selected;
         var current = levelInfo.getLevel(index);
         var updated = {
-            map :             mapEditor.getValue(),
+            name :            nameEditor.getValue(),
             help :            helpEditor.getValue(),
             defaultCode :     defaultEditor.getValue(),
-            winCode :         winEditor.getValue(),
-            refactoringCode : refactoredEditor.getValue(),
-            autocomplete :    current.autocomplete // TODO научиться редактировать
+            winCode :         winEditor.getValue()
         };
         levelInfo.save(index, updated);
     }
@@ -95,12 +91,10 @@ function initAdmin(contextPath) {
     var loadLevel = function() {
         var level = levelInfo.getLevel(progressBar.selected);
 
-        setEditorValue(mapEditor, level.map);
+        setEditorValue(nameEditor, level.name);
         setEditorValue(helpEditor, level.help);
         setEditorValue(defaultEditor, level.defaultCode);
         setEditorValue(winEditor, level.winCode);
-        setEditorValue(refactoredEditor, level.refactoringCode);
-        // autocomplete.setValue(level.autocomplete); // TODO научиться редактировать
     }
 
     var saveButton = $('#levels-save-button');

@@ -22,10 +22,12 @@ package com.codenjoy.dojo.kata.services;
  * #L%
  */
 
-
+import com.codenjoy.dojo.client.Utils;
 import com.codenjoy.dojo.services.multiplayer.LevelProgress;
 import com.codenjoy.dojo.services.questionanswer.levels.Level;
 import com.codenjoy.dojo.services.questionanswer.levels.LevelsLoader;
+import com.codenjoy.dojo.utils.JsonUtils;
+import org.json.JSONObject;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -46,13 +48,31 @@ public final class Levels {
 
     public static void setup(GameSettings settings) {
         AtomicInteger index = new AtomicInteger();
-        all().forEach(level -> settings.setLevelMap(index.incrementAndGet(), level.name()));
+        all().forEach(level -> settings.setLevelMap(index.incrementAndGet(), json(level)));
+    }
+
+    private static String json(Level level) {
+        return escape2(new JSONObject(){{
+            put("name", escape(level.name()));
+            put("winCode", escape(level.winCode()));
+            put("defaultCode", escape(level.defaultCode()));
+            put("description", escape(level.description()));
+        }}.toString());
+    }
+
+    private static String escape(String input) {
+        return Utils.escapeApostrophe(input);
+    }
+
+    private static String escape2(String input) {
+        return Utils.replaceNewLine(JsonUtils.asString(input));
     }
 
     public static List<Level> sorted(GameSettings settings) {
         List<String> sorted = IntStream.range(0, settings.getLevelsCount())
                 .map(index -> index + LevelProgress.levelsStartsFrom1)
                 .mapToObj(settings::getLevelMap)
+                .map(json -> new JSONObject(json).getString("name"))
                 .collect(toList());
 
         return all().stream()

@@ -25,7 +25,7 @@ var initLevelInfo = function(contextPath) {
     var count = 0;
 
     var decode = function(value) {
-        return value;
+        return value.split("\\\\'").join("'").split('\\\\"').join('"');
     }
 
     var encode = function(value) {
@@ -33,9 +33,7 @@ var initLevelInfo = function(contextPath) {
     }
 
     var filterKeys = function(settings, prefix) {
-        return Object.keys(settings).filter(function(key) {
-            return key.startsWith(prefix);
-        });
+        return settings.map(obj => obj['name'].startsWith(prefix) ? [obj] : []).flat();
     };
 
     var load = function(onLoad, onError) {
@@ -43,7 +41,7 @@ var initLevelInfo = function(contextPath) {
         ajax.load(function(data) {
             settings = data.parameters;
             var keys = filterKeys(settings, '[Level] Map');
-            var count = keys.length;
+            count = keys.length;
             if (!!onLoad) {
                 onLoad(count);
             }
@@ -59,11 +57,18 @@ var initLevelInfo = function(contextPath) {
     }
 
     var save = function(level, data) {
-        var prefix = 'Level' + level + ' ';
-        saveParameter(prefix + 'name', encode(data.name));
-        saveParameter(prefix + 'help', encode(data.help));
-        saveParameter(prefix + 'default code', encode(data.defaultCode));
-        saveParameter(prefix + 'win code', encode(data.winCode));
+        var key = 'Level Map[' + level + ']';
+        var json = {
+            name : data.name,
+            help : data.help,
+            defaultCode : data.defaultCode,
+            winCode : data.winCode
+        };
+        saveParameter(key, encode(json));
+    }
+
+    var get = function(key) {
+        return filterKeys(settings, key)[0].value;
     }
 
     var getLevel = function(level) {
@@ -80,13 +85,8 @@ var initLevelInfo = function(contextPath) {
             };
         }
 
-        var prefix = 'Level' + level + ' ';
-        return {
-            name :             decode(get(prefix + 'name').value)
-            // help :            decode(get(prefix + 'help').value),
-            // defaultCode :     decode(get(prefix + 'default code').value),
-            // winCode :         decode(get(prefix + 'win code').value)
-        };
+        var key = '[Level] Map[' + level + ']';
+        return JSON.parse(decode(get(key)));
     }
 
     return {

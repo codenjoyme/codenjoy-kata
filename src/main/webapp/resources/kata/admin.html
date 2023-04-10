@@ -80,8 +80,8 @@
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation">
-                        <a href="#map" aria-controls="map" role="tab"
-                           data-toggle="tab">Level Map</a></li>
+                        <a href="#name" aria-controls="name" role="tab"
+                           data-toggle="tab">Level Name</a></li>
                     <li role="presentation">
                         <a href="#help" aria-controls="help" role="tab"
                            data-toggle="tab">Help code</a></li>
@@ -91,120 +91,14 @@
                     <li role="presentation">
                         <a href="#win" aria-controls="win" role="tab"
                            data-toggle="tab">Win code</a></li>
-                    <li role="presentation">
-                        <a href="#refactored" aria-controls="refactored" role="tab"
-                           data-toggle="tab">Refactored code</a></li>
-                    <li role="presentation">
-                        <a href="#methods" aria-controls="methods" role="tab"
-                           data-toggle="tab">Methods</a>
-                    </li>
                 </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="map" placeholder="// Enter level map"></div>
+                    <div role="tabpanel" class="tab-pane active" id="name" placeholder="// Enter level name"></div>
                     <div role="tabpanel" class="tab-pane" id="help" placeholder="// Enter help code"></div>
                     <div role="tabpanel" class="tab-pane" id="default" placeholder="// Enter default code"></div>
                     <div role="tabpanel" class="tab-pane" id="win" placeholder="// Enter win code"></div>
-                    <div role="tabpanel" class="tab-pane" id="refactored" placeholder="// Enter refactored code"></div>
-                    <div role="tabpanel" class="tab-pane mCustomScrollbar" id="methods">
-                        <p class="message">Select enabled methods for this level</p>
-                        <div class="method">
-                            <input id="method1" type="checkbox">
-                            <label class="check-label" for="method1"></label>
-                            <span>robot.log();</span>
-                        </div>
-                        <div class="method">
-                            <input id="method2" type="checkbox">
-                            <label class="check-label" for="method2"></label>
-                            <span>robot.getScanner()</span>
-                        </div>
-                        <div class="method">
-                            <input id="method3" type="checkbox">
-                            <label class="check-label" for="method3"></label>
-                            <span>robot.goUp();</span>
-                        </div>
-                        <div class="method">
-                            <input id="method4" type="checkbox">
-                            <label class="check-label" for="method4"></label>
-                            <span>robot.goDown();</span>
-                        </div>
-                        <div class="method">
-                            <input id="method5" type="checkbox">
-                            <label class="check-label" for="method5"></label>
-                            <span>robot.goLeft();</span>
-                        </div>
-                        <div class="method">
-                            <input id="method6" type="checkbox">
-                            <label class="check-label" for="method6"></label>
-                            <span>robot.goRight();</span>
-                        </div>
-                        <div class="method">
-                            <input id="method7" type="checkbox">
-                            <label class="check-label" for="method7"></label>
-                            <span>scanner.atUp();</span>
-                        </div>
-                        <div class="method">
-                            <input id="method8" type="checkbox">
-                            <label class="check-label" for="method8"></label>
-                            <span>scanner.atDown();</span>
-                        </div>
-                        <div class="method">
-                            <input id="method9" type="checkbox">
-                            <label class="check-label" for="method9"></label>
-                            <span>scanner.atLeft();</span>
-                        </div>
-                        <div class="method">
-                            <input id="method10" type="checkbox">
-                            <label class="check-label" for="method10"></label>
-                            <span>scanner.atRight();</span>
-                        </div>
-                        <div class="method">
-                            <input id="method11" type="checkbox">
-                            <label class="check-label" for="method11"></label>
-                            <span>robot.cameFrom();</span>
-                        </div>
-                        <div class="method">
-                            <input id="method12" type="checkbox">
-                            <label class="check-label" for="method12"></label>
-                            <span>robot.previousDirection();</span>
-                        </div>
-                        <div class="method">
-                            <input id="method13" type="checkbox">
-                            <label class="check-label" for="method13"></label>
-                            <span>robot.at();</span>
-                        </div>
-                        <div class="method">
-                            <input id="method14" type="checkbox">
-                            <label class="check-label" for="method14"></label>
-                            <span>scanner.go();</span>
-                        </div>
-                        <div class="method">
-                            <input id="method15" type="checkbox">
-                            <label class="check-label" for="method15"></label>
-                            <span>scanner.jumpUp();</span>
-                        </div>
-                        <div class="method">
-                            <input id="method16" type="checkbox">
-                            <label class="check-label" for="method16"></label>
-                            <span>scanner.jumpDown();</span>
-                        </div>
-                        <div class="method">
-                            <input id="method17" type="checkbox">
-                            <label class="check-label" for="method17"></label>
-                            <span>scanner.jumpLeft();</span>
-                        </div>
-                        <div class="method">
-                            <input id="method18" type="checkbox">
-                            <label class="check-label" for="method18"></label>
-                            <span>scanner.jumpRight();</span>
-                        </div>
-                        <div class="method">
-                            <input id="method19" type="checkbox">
-                            <label class="check-label" for="method19"></label>
-                            <span>scanner.jump();</span>
-                        </div>
-                    </div>
                 </div>
                 <div class="tab-bottom-panel">
                     <button id="levels-save-button" class="button save">Save levels</button>
