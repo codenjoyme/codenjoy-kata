@@ -164,7 +164,7 @@ var boardPageLoad = function() {
         var levelNumber = levelProgress.getCurrentLevel();
         var level = levelInfo.getLevel(levelNumber);
         if (!!level) {
-            help = level.description;
+            help = level.help;
         } else if (!!description) {
             help = description;
         } else {

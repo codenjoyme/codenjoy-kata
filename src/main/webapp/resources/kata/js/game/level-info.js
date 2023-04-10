@@ -57,7 +57,7 @@ var initLevelInfo = function(contextPath) {
     }
 
     var save = function(level, data) {
-        var key = 'Level Map[' + level + ']';
+        var key = '[Level] Map[' + level + ']';
         var json = {
             name : data.name,
             help : data.help,

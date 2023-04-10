@@ -56,7 +56,7 @@ public final class Levels {
             put("name", escape(level.name()));
             put("winCode", escape(level.winCode()));
             put("defaultCode", escape(level.defaultCode()));
-            put("description", escape(level.description()));
+            put("help", escape(level.description()));
         }}.toString());
     }
 
