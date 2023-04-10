@@ -59,7 +59,7 @@ var boardPageLoad = function() {
     // ----------------------- init logger -------------------
     var logger = initLogger();
     logger.printCongrats = function() {
-        logger.print('Congrats ' + setup.readableName + '! You have passed the puzzle!!!');
+        logger.print('Congrats ' + setup.readableName + '! You have passed the puzzle!!! Please press RESET and go to next level.');
     }
 
     logger.printHello = function() {
@@ -230,6 +230,8 @@ var boardPageLoad = function() {
         var onChangeLevel = function(level, multiple, lastPassed, isLevelIncreased, isWin) {
             if (isWin) {
                 win.show();
+                logger.clean();
+                logger.printHello();
             }
             if (isLevelIncreased) {
                 runner.levelUpdate(level, multiple, lastPassed);

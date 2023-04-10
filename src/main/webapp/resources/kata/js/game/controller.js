@@ -73,7 +73,6 @@ function initController(socket, runner, logger, buttons, levelProgress, getRobot
             finish();
             buttons.enableAll();
             if (finished) {
-                logger.clean();
                 logger.printCongrats();
             } else if (stopped) {
                 // do nothing

@@ -63,11 +63,11 @@ function initSocket(setup, buttons, logger, onSocketMessage, onSocketClose) {
         var port = window.location.port;
         var server = getWSProtocol() + '://' + hostIp + ':' + port + '/codenjoy-contest/ws';
 
-        logger.print('Connecting to Server...');
+        // logger.print('Connecting to Server...');
         socket = createSocket(server + '?user=' + setup.playerId + "&code=" + setup.code);
 
         socket.onopen = function() {
-            logger.print('...connected successfully!');
+            // logger.print('...connected successfully!');
             logger.printHello();
             if (!!onSuccess) {
                 onSuccess();
