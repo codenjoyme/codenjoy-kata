@@ -161,11 +161,25 @@ var boardPageLoad = function() {
         controller.reset();
     }
     var onHelpClick = function() {
-        if (!!description) {
-            var help = description.replace(/\\n/g, "<br>");
-            $('#ide-help-window').html(help);
-            $("#modal").removeClass("close");
+        var levelNumber = levelProgress.getCurrentLevel();
+        var level = levelInfo.getLevel(levelNumber);
+        if (!!level) {
+            help = level.description;
+        } else if (!!description) {
+            help = description;
+        } else {
+            help = "No help for this level";
         }
+
+        if (help.includes("Wait for next level")) {
+            help = help = "Wait for next level. Please click RESET button.";
+        }
+
+        help = help.replace(/\n/g, "<br>")
+                   .replace(/\\n/g, "<br>");
+
+        $('#ide-help-window').html(help);
+        $("#modal").removeClass("close");
     };
     var buttons = initButtons(onCommitClick, onResetClick, onHelpClick);
 
