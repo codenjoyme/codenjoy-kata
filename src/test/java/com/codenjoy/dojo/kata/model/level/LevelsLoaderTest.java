@@ -49,12 +49,13 @@ public class LevelsLoaderTest {
         }
 
         assertEquals("HelloWorldAlgorithm, FizzBuzzAlgorithm, " +
-                        "SumSquareDifferenceAlgorithm, Sequence1Algorithm, " +
-                        "FibonacciNumbersAlgorithm, PrimeFactoryAlgorithm, " +
-                        "PowerDigitSumAlgorithm, MakeBricksAlgorithm, " +
-                        "FactorialAlgorithm, ReverseAddPalindromeAlgorithm, " +
-                        "Sequence2Algorithm, XthPrimeAlgorithm, " +
-                        "LongDivisionAlgorithm, NullLevel",
+                        "SumSquareDifferenceAlgorithm, SimpleMathAlgorithm, " +
+                        "CharOrderAlgorithm, NumberOrderAlgorithm, " +
+                        "Sequence1Algorithm, FibonacciNumbersAlgorithm, " +
+                        "PrimeFactoryAlgorithm, PowerDigitSumAlgorithm, " +
+                        "MakeBricksAlgorithm, FactorialAlgorithm, " +
+                        "ReverseAddPalindromeAlgorithm, Sequence2Algorithm, " +
+                        "XthPrimeAlgorithm, LongDivisionAlgorithm, NullLevel",
                 levels.stream()
                         .sorted(Comparator.comparingInt(Level::complexity))
                         .map(it -> it.getClass().getSimpleName())
