@@ -23,19 +23,18 @@ package com.codenjoy.dojo.kata.model.algorithms;
  */
 
 
-//import org.approvaltests.legacycode.LegacyApprovals;
-//import org.approvaltests.legacycode.Range;
+import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 
-import org.junit.Test;
+public class MakeBricksAlgorithmTest extends AlgorithmTest {
 
-import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
+    @Override
+    public Algorithm algorithm() {
+        return new MakeBricksAlgorithm();
+    }
 
-public class MakeBricksAlgorithmTest {
-
-    @Test
-    public void shouldWorkd() {
-        assertAlgorithm(new MakeBricksAlgorithm(),
-                "0, 1, 5=>true\n" +
+    @Override
+    public String answers() {
+        return "0, 1, 5=>true\n" +
                 "1, 0, 1=>true\n" +
                 "1, 0, 2=>false\n" +
                 "3, 1, 7=>true\n" +
@@ -45,17 +44,48 @@ public class MakeBricksAlgorithmTest {
                 "3, 1, 6=>true\n" +
                 "3, 1, 9=>false\n" +
                 "3, 2, 9=>false\n" +
+                "10, 10, 0=>true\n" +
+                "0, 0, 1=>false\n" +
                 "0, 1, 1=>false\n" +
-                "0, 1, 1=>false\n" +
+                "0, 0, 2=>false\n" +
+                "2, 0, 2=>true\n" +
+                "0, 1, 2=>false\n" +
                 "1, 1, 2=>false\n" +
                 "2, 1, 3=>false\n" +
                 "3, 1, 4=>false\n" +
                 "2, 1, 1=>true\n" +
                 "2, 2, 6=>true\n" +
                 "6, 1, 11=>true\n" +
-                "5, 0, 1=>true");
+                "5, 0, 1=>true\n" +
+                "3, 1, 8=>true\n" +
+                "3, 2, 10=>true\n" +
+                "3, 2, 8=>true\n" +
+                "6, 0, 11=>false\n" +
+                "1, 4, 11=>true\n" +
+                "0, 3, 10=>true\n" +
+                "1, 4, 12=>false\n" +
+                "1, 1, 7=>false\n" +
+                "2, 1, 7=>true\n" +
+                "7, 1, 11=>true\n" +
+                "7, 1, 8=>true\n" +
+                "7, 1, 13=>false\n" +
+                "43, 1, 46=>true\n" +
+                "40, 1, 46=>false\n" +
+                "40, 2, 47=>true\n" +
+                "40, 2, 50=>true\n" +
+                "40, 2, 52=>false\n" +
+                "22, 2, 33=>false\n" +
+                "0, 2, 10=>true\n" +
+                "1000000, 1000, 1000100=>true\n" +
+                "2, 1000000, 100003=>false\n" +
+                "20, 0, 19=>true\n" +
+                "20, 0, 21=>false\n" +
+                "20, 4, 51=>false\n" +
+                "20, 4, 39=>true";
+    }
 
-        // TODO вернуть тест без approvals
-        // LegacyApprovals.LockDown(this, "method", Range.get(0, 10), Range.get(0, 10), Range.get(0, 100));
+    @Override
+    public String cornerCases() {
+        return "FILE:MakeBricksAlgorithmTest.cornerCases.txt";
     }
 }
