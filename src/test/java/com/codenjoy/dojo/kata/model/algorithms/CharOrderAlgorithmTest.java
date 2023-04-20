@@ -22,16 +22,24 @@ package com.codenjoy.dojo.kata.model.algorithms;
  * #L%
  */
 
-import org.apache.commons.lang3.StringUtils;
+import org.junit.Before;
 import org.junit.Test;
 
 import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
-import static org.junit.Assert.assertEquals;
+import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertQuestions;
 
 public class CharOrderAlgorithmTest {
+
+    private CharOrderAlgorithm algorithm;
+
+    @Before
+    public void setUp() {
+        algorithm = new CharOrderAlgorithm();
+    }
+
     @Test
     public void shouldWork() {
-        assertAlgorithm(new CharOrderAlgorithm(),
+        assertAlgorithm(algorithm,
                 "abc=>cab\n" +
                 "cad=>dca\n" +
                 "asd=>das\n" +
@@ -58,28 +66,27 @@ public class CharOrderAlgorithmTest {
 
     @Test
     public void questionTest(){
-        assertEquals(
-                "abc\n" +
-                "cad\n" +
-                "asd\n" +
-                "xyz\n" +
-                "aaa\n" +
-                "123\n" +
-                "dEf\n" +
-                "zxc\n" +
-                "qwe\n" +
-                "rty\n" +
-                "mnb\n" +
-                "vbn\n" +
-                "fgh\n" +
-                "ijk\n" +
-                "lmn\n" +
-                "pqr\n" +
-                "stu\n" +
-                "wxy\n" +
-                "222\n" +
-                "789\n" +
-                "090",
-                StringUtils.join(new CharOrderAlgorithm().getQuestions(),"\n"));
+        assertQuestions(algorithm,
+                "abc=>\n" +
+                "cad=>\n" +
+                "asd=>\n" +
+                "xyz=>\n" +
+                "aaa=>\n" +
+                "123=>\n" +
+                "dEf=>\n" +
+                "zxc=>\n" +
+                "qwe=>\n" +
+                "rty=>\n" +
+                "mnb=>\n" +
+                "vbn=>\n" +
+                "fgh=>\n" +
+                "ijk=>\n" +
+                "lmn=>\n" +
+                "pqr=>\n" +
+                "stu=>\n" +
+                "wxy=>\n" +
+                "222=>\n" +
+                "789=>\n" +
+                "090=>");
     }
 }

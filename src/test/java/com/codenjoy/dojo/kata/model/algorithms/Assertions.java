@@ -24,6 +24,8 @@ package com.codenjoy.dojo.kata.model.algorithms;
 
 
 import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
+import com.codenjoy.dojo.services.questionanswer.levels.QuestionAnswerLevelImpl;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Arrays;
 
@@ -32,11 +34,18 @@ import static org.junit.Assert.assertEquals;
 
 public class Assertions {
 
+    public static final String QA_SEPARATOR = "=>";
+
     public static void assertAlgorithm(Algorithm algorithm, String expected) {
         assertEquals(expected,
                 Arrays.stream(expected.split("\n"))
-                        .map(line -> line.split("=>")[0])
-                        .map(arg -> arg + "=>" + algorithm.get(arg))
+                        .map(line -> line.split(QA_SEPARATOR)[0])
+                        .map(arg -> arg + QA_SEPARATOR + algorithm.get(arg))
                         .collect(joining("\n")));
+    }
+
+    public static void assertQuestions(QuestionAnswerLevelImpl algorithm, String expected) {
+        assertEquals(expected,
+                StringUtils.join(algorithm.getQuestions(), QA_SEPARATOR + "\n") + QA_SEPARATOR);
     }
 }
