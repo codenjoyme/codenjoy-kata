@@ -38,8 +38,9 @@ function initEditor(libs, container, completer) {
     var containerId = '#' + container;
     $(containerId).append(copyToClipboardButton());
     copyToClipboardButtonHandler(containerId, function() {
-        return 'JavaScript program:\n' +
-            editor.getValue();
+        return 'JavaScript program:\n    ' +
+            editor.getValue()
+                .replace(/\n/g, '\n    ');
     });
 
     return editor;

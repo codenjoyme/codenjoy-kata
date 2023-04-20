@@ -84,9 +84,11 @@ var copyToClipboardMessageContainer = function(message) {
 
 var copyToClipboardButtonHandler = function(parent, getText) {
     $(parent).on('click', '.copy-text', function() {
-        var data = $(this).parent().children().first().html()
-                        .replace(/<br>/g, '\n')
+        var data = '    ' +
+                    $(this).parent().children().first().html()
+                        .replace(/<br>/g, '\n    ')
                         .replace(/&nbsp;/g, ' ')
+                        .replace(/\n      /g, '\n    ');
         var text = getText(data);
         copyToClipboard(text);
         sendParentMessage('send-content', text);
