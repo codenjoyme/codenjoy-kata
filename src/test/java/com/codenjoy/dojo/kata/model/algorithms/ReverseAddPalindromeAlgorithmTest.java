@@ -22,28 +22,53 @@ package com.codenjoy.dojo.kata.model.algorithms;
  * #L%
  */
 
-import org.junit.Test;
+import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 
-import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
+public class ReverseAddPalindromeAlgorithmTest extends AlgorithmTest {
 
-public class ReverseAddPalindromeAlgorithmTest {
+    @Override
+    public Algorithm algorithm() {
+        return new ReverseAddPalindromeAlgorithm();
+    }
 
-    @Test
-    public void shouldWork() {
-        assertAlgorithm(new ReverseAddPalindromeAlgorithm(),
-                "1=>2\n" +
+    @Override
+    public String answers() {
+        return "1=>2\n" +
                 "2=>4\n" +
                 "3=>6\n" +
                 "4=>8\n" +
                 "5=>11\n" +
                 "6=>33\n" +
                 "7=>55\n" +
-                "8=>77\n" +
                 "9=>99\n" +
                 "10=>11\n" +
                 "11=>22\n" +
                 "12=>33\n" +
-                "13=>44\n" +
+                "123=>444\n" +
+                "234=>666\n" +
+                "345=>888\n" +
+                "456=>1221\n" +
+                "567=>3663\n" +
+                "678=>23232\n" +
+                "789=>66066\n" +
+                "1234=>5555\n" +
+                "2345=>7777\n" +
+                "3456=>9999\n" +
+                "4567=>12221\n" +
+                "5678=>48884\n" +
+                "6789=>993399\n" +
+                "7890=>993399\n" +
+                "12345=>66666\n" +
+                "123456=>777777\n" +
+                "1234567=>8888888\n" +
+                "12345678=>99999999\n" +
+                "123456789=>1222222221\n" +
+                "1234567890=>3344444433";
+    }
+
+    @Override
+    public String cornerCases() {
+        return "13=>44\n" +
                 "14=>55\n" +
                 "15=>66\n" +
                 "16=>77\n" +
@@ -56,10 +81,8 @@ public class ReverseAddPalindromeAlgorithmTest {
                 "24=>66\n" +
                 "25=>77\n" +
                 "89=>8813200023188\n" +
-                "123=>444\n" +
                 "127=>848\n" +
                 "254=>4444\n" +
-                "3421=>4664\n" +
-                "12345678=>99999999");
+                "3421=>4664";
     }
 }
