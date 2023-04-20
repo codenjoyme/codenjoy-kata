@@ -23,17 +23,18 @@ package com.codenjoy.dojo.kata.model.algorithms;
  */
 
 
-import org.junit.Test;
+import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 
-import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
+public class PowerDigitSumAlgorithmTest extends AlgorithmTest {
 
-public class PowerDigitSumAlgorithmTest {
+    @Override
+    public Algorithm algorithm() {
+        return new PowerDigitSumAlgorithm();
+    }
 
-    @Test
-    public void shouldWork() {
-        assertAlgorithm(new PowerDigitSumAlgorithm(),
-                "0=>1\n" +
-                "1=>2\n" +
+    @Override
+    public String answers() {
+        return "1=>2\n" +
                 "2=>4\n" +
                 "3=>8\n" +
                 "4=>7\n" +
@@ -57,7 +58,12 @@ public class PowerDigitSumAlgorithmTest {
                 "22=>25\n" +
                 "23=>41\n" +
                 "24=>37\n" +
-                "25=>29\n" +
+                "25=>29";
+    }
+
+    @Override
+    public String cornerCases() {
+        return "0=>1\n" +
                 "26=>40\n" +
                 "27=>35\n" +
                 "28=>43\n" +
@@ -67,6 +73,6 @@ public class PowerDigitSumAlgorithmTest {
                 "32=>58\n" +
                 "33=>62\n" +
                 "34=>61\n" +
-                "35=>59");
+                "35=>59";
     }
 }
