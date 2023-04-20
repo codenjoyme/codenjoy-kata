@@ -37,7 +37,7 @@ public class PowerDigitSumAlgorithm extends AlgorithmLevelImpl {
         String temp = BigInteger.ONE.shiftLeft(power).toString();
         int sum = 0;
         for (int i = 0; i < temp.length(); i++) {
-            sum += temp.charAt(i) - '0';
+            sum += temp.charAt(i) - '0'; // '0' is 48 in ASCII
         }
         return Integer.toString(sum);
     }
@@ -45,7 +45,7 @@ public class PowerDigitSumAlgorithm extends AlgorithmLevelImpl {
     @Override
     public String winCode() {
         return "function program(power) {\n" +
-                "    const temp = (BigInt(1) << BigInt(power));\n" +
+                "    const temp = (BigInt(1) << BigInt(power)).toString();\n" +
                 "    let sum = 0;\n" +
                 "    for (let i = 0; i < temp.length; i++) {\n" +
                 "        sum += parseInt(temp[i]);\n" +
@@ -56,8 +56,9 @@ public class PowerDigitSumAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String description() {
-        return "2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. " +
-                "What is the sum of the digits of 2 to the power of i? " +
+        return "2 to the power of 15 = 32768, the sum of digits " +
+                "of the result 3 + 2 + 7 + 6 + 8 = 26. " +
+                "What is the sum of the digits of 2 to the power of i?\n" +
                 "Write a method for calculation that takes int " +
                 "and returns the result as a String";
     }

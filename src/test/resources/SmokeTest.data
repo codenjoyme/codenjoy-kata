@@ -16508,7 +16508,7 @@
 198: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 199: 1:BoardData {
-199: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+199: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 199: 1:  'expectedAnswer': '2',
 199: 1:  'history': [],
 199: 1:  'level': 9,
@@ -16520,7 +16520,7 @@
 199: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 200: 1:BoardData {
-200: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+200: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 200: 1:  'expectedAnswer': '4',
 200: 1:  'history': [{
 200: 1:    'answer': '2',
@@ -16539,7 +16539,7 @@
 200: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 201: 1:BoardData {
-201: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+201: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 201: 1:  'expectedAnswer': '8',
 201: 1:  'history': [
 201: 1:    {
@@ -16566,7 +16566,7 @@
 201: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 202: 1:BoardData {
-202: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+202: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 202: 1:  'expectedAnswer': '7',
 202: 1:  'history': [
 202: 1:    {
@@ -16599,7 +16599,7 @@
 202: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 203: 1:BoardData {
-203: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+203: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 203: 1:  'expectedAnswer': '5',
 203: 1:  'history': [
 203: 1:    {
@@ -16638,7 +16638,7 @@
 203: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 204: 1:BoardData {
-204: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+204: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 204: 1:  'expectedAnswer': '10',
 204: 1:  'history': [
 204: 1:    {
@@ -16683,7 +16683,7 @@
 204: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 205: 1:BoardData {
-205: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+205: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 205: 1:  'expectedAnswer': '11',
 205: 1:  'history': [
 205: 1:    {
@@ -16734,7 +16734,7 @@
 205: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 206: 1:BoardData {
-206: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+206: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 206: 1:  'expectedAnswer': '13',
 206: 1:  'history': [
 206: 1:    {
@@ -16791,7 +16791,7 @@
 206: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 207: 1:BoardData {
-207: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+207: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 207: 1:  'expectedAnswer': '8',
 207: 1:  'history': [
 207: 1:    {
@@ -16854,7 +16854,7 @@
 207: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 208: 1:BoardData {
-208: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+208: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 208: 1:  'expectedAnswer': '7',
 208: 1:  'history': [
 208: 1:    {
@@ -16923,7 +16923,7 @@
 208: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 209: 1:BoardData {
-209: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+209: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 209: 1:  'expectedAnswer': '14',
 209: 1:  'history': [
 209: 1:    {
@@ -16998,7 +16998,7 @@
 209: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 210: 1:BoardData {
-210: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+210: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 210: 1:  'expectedAnswer': '19',
 210: 1:  'history': [
 210: 1:    {
@@ -17079,7 +17079,7 @@
 210: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 211: 1:BoardData {
-211: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+211: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 211: 1:  'expectedAnswer': '20',
 211: 1:  'history': [
 211: 1:    {
@@ -17166,7 +17166,7 @@
 211: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 212: 1:BoardData {
-212: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+212: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 212: 1:  'expectedAnswer': '22',
 212: 1:  'history': [
 212: 1:    {
@@ -17259,7 +17259,7 @@
 212: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 213: 1:BoardData {
-213: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+213: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 213: 1:  'expectedAnswer': '26',
 213: 1:  'history': [
 213: 1:    {
@@ -17358,7 +17358,7 @@
 213: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 214: 1:BoardData {
-214: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+214: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 214: 1:  'expectedAnswer': '25',
 214: 1:  'history': [
 214: 1:    {
@@ -17463,7 +17463,7 @@
 214: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 215: 1:BoardData {
-215: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+215: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 215: 1:  'expectedAnswer': '14',
 215: 1:  'history': [
 215: 1:    {
@@ -17574,7 +17574,7 @@
 215: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 216: 1:BoardData {
-216: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+216: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 216: 1:  'expectedAnswer': '19',
 216: 1:  'history': [
 216: 1:    {
@@ -17691,7 +17691,7 @@
 216: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 217: 1:BoardData {
-217: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+217: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 217: 1:  'expectedAnswer': '29',
 217: 1:  'history': [
 217: 1:    {
@@ -17814,7 +17814,7 @@
 217: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 218: 1:BoardData {
-218: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+218: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 218: 1:  'expectedAnswer': '31',
 218: 1:  'history': [
 218: 1:    {
@@ -17943,7 +17943,7 @@
 218: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 219: 1:BoardData {
-219: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+219: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 219: 1:  'expectedAnswer': '26',
 219: 1:  'history': [
 219: 1:    {
@@ -18078,7 +18078,7 @@
 219: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 220: 1:BoardData {
-220: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+220: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 220: 1:  'expectedAnswer': '25',
 220: 1:  'history': [
 220: 1:    {
@@ -18219,7 +18219,7 @@
 220: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 221: 1:BoardData {
-221: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+221: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 221: 1:  'expectedAnswer': '41',
 221: 1:  'history': [
 221: 1:    {
@@ -18366,7 +18366,7 @@
 221: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 222: 1:BoardData {
-222: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+222: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 222: 1:  'expectedAnswer': '37',
 222: 1:  'history': [
 222: 1:    {
@@ -18519,7 +18519,7 @@
 222: 1:Fire Event: PassTest{complexity=30, testCount=25}
 ------------------------------------------
 223: 1:BoardData {
-223: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String',
+223: 1:  'description': '2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\nWrite a method for calculation that takes int and returns the result as a String',
 223: 1:  'expectedAnswer': '29',
 223: 1:  'history': [
 223: 1:    {

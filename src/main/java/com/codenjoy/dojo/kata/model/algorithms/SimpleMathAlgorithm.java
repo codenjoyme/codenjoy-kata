@@ -37,9 +37,11 @@ public class SimpleMathAlgorithm extends AlgorithmLevelImpl {
     @Override
     public String winCode() {
         return "function get(input) {\n" +
-                "  return (input % 2 == 0 ? input + 1 : input - 1).toString();\n" +
-                "}"
-                ;
+                "    let number = parseInt(input);\n" +
+                "    return (number % 2 == 0)\n" +
+                "        ? number + 1\n" +
+                "        : number - 1;\n" +
+                "}";
     }
 
     @Override

@@ -35,8 +35,9 @@ public class CharOrderAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String winCode() {
-        return "function get(input) {\n" +
-                "  return input.substring(2) + input.substring(0, 2);\n" +
+        return "function program(input) {\n" +
+                "    return input.substring(2)\n" +
+                "        + input.substring(0, 2);\n" +
                 "}";
     }
 
@@ -46,8 +47,7 @@ public class CharOrderAlgorithm extends AlgorithmLevelImpl {
                 "Everything is quite simple. \n" +
                 "In a string of three characters, the last character becomes the first one,\n " +
                 "and the first two characters shift one position to the right. \n" +
-                "For example: abc=>cab..."
-                ;
+                "For example: abc=>cab...";
     }
 
     @Override
