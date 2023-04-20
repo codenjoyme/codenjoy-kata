@@ -58,6 +58,38 @@ function getMainFunctionName(code) {
     return result[0];
 }
 
+// ===================== copy text to clipboard ======================
+
+var copyToClipboard = function(text) {
+    $("body").append("<textarea id='copyArea' style='position:absolute;left:-100%'>" + text + "</textarea>");
+    $("#copyArea").select();
+    try {
+        document.execCommand("copy");
+    } catch (e) {
+        console.log('Oops, unable to copy');
+    }
+    $("#copyArea").remove();
+}
+
+var copyToClipboardButton = function() {
+    return '<span class="copy-text">[copy]</span>';
+}
+
+var copyToClipboardButtonHandler = function(parent, getText) {
+    $(parent).on('click', '.copy-text', function() {
+        var text = getText($(this));
+        copyToClipboard(text);
+        sendParentMessage('send-content', text);
+        $('<span class="copied-info">').text('copied')
+            .appendTo($(this))
+            .fadeIn('slow', function() {
+                $(this).fadeOut('slow', function() {
+                    $(this).remove();
+                });
+            });
+    });
+}
+
 // ================== communication with parent window ======================
 
 var addParentListener = function(messageType, onEvent) {

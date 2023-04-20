@@ -34,5 +34,13 @@ function initEditor(libs, container, completer) {
         enableSnippets: false,
         enableLiveAutocompletion: true
     });
+
+    var containerId = '#' + container;
+    $(containerId).append(copyToClipboardButton());
+    copyToClipboardButtonHandler(containerId, function() {
+        return 'JavaScript program:\n' +
+            editor.getValue();
+    });
+
     return editor;
 }

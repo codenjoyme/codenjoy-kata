@@ -970,6 +970,18 @@ canvas {
   font-style: italic;
 }
 
+.copied-info {
+  position: absolute;
+  margin-top: -8px;
+  margin-left: -37px;
+}
+
+.editor .copy-text {
+  position: relative;
+  margin-left: calc(100% - 40px);
+  z-index: 1000;
+}
+
 @media screen and (max-width: 1330px) {
   .button {
     width: auto;

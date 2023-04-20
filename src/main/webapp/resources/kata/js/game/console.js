@@ -25,35 +25,17 @@ function initLogger() {
     var wrapper = $('.console-wrapper');
     container.empty();
 
-    $('#ide-console').on('click', '.copy-text', function() {
-        var text = 'Console output:' +
-            $(this).nextAll('.test-result').first().html()
+    copyToClipboardButtonHandler('#ide-console', function(button) {
+        return 'Console output:' +
+            button.nextAll('.test-result').first().html()
                 .replace(/<br>/g, '\n')
                 .replace(/&nbsp;/g, ' ');
-        copyToClipboard(text);
-        sendParentMessage('send-content', text);
-        $('<span>').text(' copied').insertAfter($(this)).fadeIn('slow', function() {
-            $(this).fadeOut('slow', function() {
-                $(this).remove();
-            });
-        });
     });
-
-    var copyToClipboard = function(text) {
-        $("body").append("<textarea id='copyArea' style='position:absolute;left:-100%'>" + text + "</textarea>");
-        $("#copyArea").select();
-        try {
-            document.execCommand("copy");
-        } catch (e) {
-            console.log('Oops, unable to copy');
-        }
-        $("#copyArea").remove();
-    }
 
     var print = function(message) {
         var autoScroll = Math.abs(wrapper.scrollTop() + wrapper.height() - wrapper[0].scrollHeight) < 20;
 
-        container.append('<span class="copy-text">[copy]</span> &gt;'
+        container.append(copyToClipboardButton() + ' &gt;'
             + '<span class="test-result"> ' + message + '</span></br>');
 
         if (autoScroll) {
