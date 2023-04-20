@@ -25,10 +25,10 @@
 function compileProgram(code) {
     try {
         eval(code);
-        eval(`function get() {
+        eval(`function getMainFunctionNameSupplier() {
             return ${getMainFunctionName(code)};
         }`);
-        return get();
+        return getMainFunctionNameSupplier();
     } catch (e) {
         throw e;
     }
