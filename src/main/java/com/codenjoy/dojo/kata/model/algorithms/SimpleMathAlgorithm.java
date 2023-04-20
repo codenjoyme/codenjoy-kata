@@ -52,7 +52,7 @@ public class SimpleMathAlgorithm extends AlgorithmLevelImpl {
     @Override
     public List<String> getQuestions() {
         List<String> result = new ArrayList<>();
-        for (int i = 0; i <= 40; i++) {
+        for (int i = 0; i <= 25; i++) {
             result.add(Integer.toString(i * i / 10 + i));
         }
         return result;

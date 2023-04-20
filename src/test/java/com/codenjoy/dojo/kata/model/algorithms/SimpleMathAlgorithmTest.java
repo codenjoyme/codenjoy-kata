@@ -23,18 +23,48 @@ package com.codenjoy.dojo.kata.model.algorithms;
  */
 
 
-import org.apache.commons.lang3.StringUtils;
-import org.junit.Test;
+import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 
-import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
-import static org.junit.Assert.assertEquals;
+public class SimpleMathAlgorithmTest extends AlgorithmTest {
 
-public class SimpleMathAlgorithmTest {
+    @Override
+    public Algorithm algorithm() {
+        return new SimpleMathAlgorithm();
+    }
 
-    @Test
-    public void shouldWork() {
-        assertAlgorithm(new SimpleMathAlgorithm(),
-                "0=>1\n" +
+    @Override
+    public String answers() {
+        return "0=>1\n" +
+                "1=>0\n" +
+                "2=>3\n" +
+                "3=>2\n" +
+                "5=>4\n" +
+                "7=>6\n" +
+                "9=>8\n" +
+                "11=>10\n" +
+                "14=>15\n" +
+                "17=>16\n" +
+                "20=>21\n" +
+                "23=>22\n" +
+                "26=>27\n" +
+                "29=>28\n" +
+                "33=>32\n" +
+                "37=>36\n" +
+                "41=>40\n" +
+                "45=>44\n" +
+                "50=>51\n" +
+                "55=>54\n" +
+                "60=>61\n" +
+                "65=>64\n" +
+                "70=>71\n" +
+                "75=>74\n" +
+                "81=>80\n" +
+                "87=>86";
+    }
+
+    @Override
+    public String cornerCases() {
+        return "0=>1\n" +
                 "1=>0\n" +
                 "2=>3\n" +
                 "3=>2\n" +
@@ -69,53 +99,6 @@ public class SimpleMathAlgorithmTest {
                 "32=>33\n" +
                 "33=>32\n" +
                 "34=>35\n" +
-                "35=>34");
-    }
-
-    @Test
-    public void questionTest(){
-        assertEquals(
-                "0\n" +
-                "1\n" +
-                "2\n" +
-                "3\n" +
-                "5\n" +
-                "7\n" +
-                "9\n" +
-                "11\n" +
-                "14\n" +
-                "17\n" +
-                "20\n" +
-                "23\n" +
-                "26\n" +
-                "29\n" +
-                "33\n" +
-                "37\n" +
-                "41\n" +
-                "45\n" +
-                "50\n" +
-                "55\n" +
-                "60\n" +
-                "65\n" +
-                "70\n" +
-                "75\n" +
-                "81\n" +
-                "87\n" +
-                "93\n" +
-                "99\n" +
-                "106\n" +
-                "113\n" +
-                "120\n" +
-                "127\n" +
-                "134\n" +
-                "141\n" +
-                "149\n" +
-                "157\n" +
-                "165\n" +
-                "173\n" +
-                "182\n" +
-                "191\n" +
-                "200",
-                StringUtils.join(new SimpleMathAlgorithm().getQuestions(),"\n"));
+                "35=>34";
     }
 }
