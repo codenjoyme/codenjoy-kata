@@ -58,6 +58,27 @@ function getMainFunctionName(code) {
     return result[0];
 }
 
+// ================== communication with parent window ======================
+
+var addParentListener = function(messageType, onEvent) {
+    window.addEventListener('message', function(event) {
+        if (event.data.type !== messageType) {
+            return;
+        }
+
+        if (!!onEvent) {
+            onEvent(event.data);
+        }
+    });
+}
+
+var sendParentMessage = function(messageType, data) {
+    if (!window.parent) {
+        return;
+    }
+    window.parent.postMessage({ 'type' : messageType, 'value' : data}, "*");
+}
+
 // ========================== leaderboard page ==========================
 
 var initLeaderboardLink = function() {

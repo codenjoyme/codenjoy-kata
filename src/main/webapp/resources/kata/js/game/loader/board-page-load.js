@@ -237,6 +237,8 @@ var boardPageLoad = function() {
                 runner.levelUpdate(level, multiple, lastPassed);
             }
             initAutocomplete(level, levelInfo);
+
+            sendParentMessage('change-level', 1);
         }
         levelProgress = initLevelProgress(setup, onChangeLevel);
 
