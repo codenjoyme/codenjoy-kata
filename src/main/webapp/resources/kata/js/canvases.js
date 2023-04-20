@@ -125,7 +125,7 @@ setup.drawBoard = function(drawer) {
 
             drawer.drawText(getQuestionFormatted(value),
                 getQuestionCoordinate(centerX, ++index),
-                (value.valid)?'#090':'#900');
+                (value.valid)?'#4fee4f':'#ff6e6e');
         }
     }
 
@@ -135,5 +135,5 @@ setup.drawBoard = function(drawer) {
         answer : data.expectedAnswer
     };
     drawer.drawText(getQuestionFormatted(current),
-        getQuestionCoordinate(centerX, ++index), '#990');
+        getQuestionCoordinate(centerX, ++index), '#eaea5c');
 }
