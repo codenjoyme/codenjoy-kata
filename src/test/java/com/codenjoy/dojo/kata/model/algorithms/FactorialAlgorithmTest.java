@@ -23,16 +23,18 @@ package com.codenjoy.dojo.kata.model.algorithms;
  */
 
 
-import org.junit.Test;
+import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 
-import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
+public class FactorialAlgorithmTest extends AlgorithmTest {
 
-public class FactorialAlgorithmTest {
+    @Override
+    public Algorithm algorithm() {
+        return new FactorialAlgorithm();
+    }
 
-    @Test
-    public void shouldWork() {
-        assertAlgorithm(new FactorialAlgorithm(),
-                "0=>1\n" +
+    @Override
+    public String answers() {
+        return "0=>1\n" +
                 "1=>1\n" +
                 "2=>2\n" +
                 "3=>6\n" +
@@ -67,6 +69,6 @@ public class FactorialAlgorithmTest {
                 "32=>263130836933693530167218012160000000\n" +
                 "33=>8683317618811886495518194401280000000\n" +
                 "34=>295232799039604140847618609643520000000\n" +
-                "35=>10333147966386144929666651337523200000000");
+                "35=>10333147966386144929666651337523200000000";
     }
 }
