@@ -50,12 +50,11 @@ public abstract class AlgorithmTest {
 
     @Test
     public void answersTest() {
-        String answers = answers();
-        String cornerCases = cornerCases();
-        if (!StringUtils.isEmpty(cornerCases)) {
-            answers += "\n" + cornerCases;
+        assertAlgorithm(algorithm(), answers());
+
+        if (!StringUtils.isEmpty(cornerCases())) {
+            assertAlgorithm(algorithm(), cornerCases());
         }
-        assertAlgorithm(algorithm(), answers);
     }
 
     @Test

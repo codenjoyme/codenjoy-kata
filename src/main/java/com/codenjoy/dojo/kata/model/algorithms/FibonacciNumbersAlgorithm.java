@@ -29,9 +29,9 @@ public class FibonacciNumbersAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String get(int number) {
-        int previous;
-        int current = 0;
-        int next = 1;
+        long previous;
+        long current = 0;
+        long next = 1;
         for (int index = 0; index < number; index++) {
             previous = current;
             current = next;
