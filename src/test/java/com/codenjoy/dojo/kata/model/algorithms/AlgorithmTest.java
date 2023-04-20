@@ -24,10 +24,13 @@ package com.codenjoy.dojo.kata.model.algorithms;
 
 import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 import com.codenjoy.dojo.services.questionanswer.levels.QuestionAnswerLevelImpl;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 
-import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
-import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertQuestions;
+import java.util.Arrays;
+
+import static com.codenjoy.dojo.kata.model.algorithms.Assertions.*;
+import static java.util.stream.Collectors.joining;
 
 public abstract class AlgorithmTest {
 
@@ -35,37 +38,24 @@ public abstract class AlgorithmTest {
 
     public abstract String answers();
 
+    public String cornerCases() {
+        return "";
+    }
+
     public String questions() {
-        return "1=>\n" +
-                "2=>\n" +
-                "3=>\n" +
-                "4=>\n" +
-                "5=>\n" +
-                "6=>\n" +
-                "7=>\n" +
-                "8=>\n" +
-                "9=>\n" +
-                "10=>\n" +
-                "11=>\n" +
-                "12=>\n" +
-                "13=>\n" +
-                "14=>\n" +
-                "15=>\n" +
-                "16=>\n" +
-                "17=>\n" +
-                "18=>\n" +
-                "19=>\n" +
-                "20=>\n" +
-                "21=>\n" +
-                "22=>\n" +
-                "23=>\n" +
-                "24=>\n" +
-                "25=>";
+        return Arrays.stream(answers().split("\n"))
+                .map(line -> line.split(QA_SEPARATOR)[0] + QA_SEPARATOR)
+                .collect(joining("\n"));
     }
 
     @Test
-    public void shouldWork() {
-        assertAlgorithm(algorithm(), answers());
+    public void answersTest() {
+        String answers = answers();
+        String cornerCases = cornerCases();
+        if (!StringUtils.isEmpty(cornerCases)) {
+            answers += "\n" + cornerCases;
+        }
+        assertAlgorithm(algorithm(), answers);
     }
 
     @Test

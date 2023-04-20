@@ -34,8 +34,7 @@ public class FactorialAlgorithmTest extends AlgorithmTest {
 
     @Override
     public String answers() {
-        return "0=>1\n" +
-                "1=>1\n" +
+        return "1=>1\n" +
                 "2=>2\n" +
                 "3=>6\n" +
                 "4=>24\n" +
@@ -59,7 +58,12 @@ public class FactorialAlgorithmTest extends AlgorithmTest {
                 "22=>1124000727777607680000\n" +
                 "23=>25852016738884976640000\n" +
                 "24=>620448401733239439360000\n" +
-                "25=>15511210043330985984000000\n" +
+                "25=>15511210043330985984000000";
+    }
+
+    @Override
+    public String cornerCases() {
+        return "0=>1\n" +
                 "26=>403291461126605635584000000\n" +
                 "27=>10888869450418352160768000000\n" +
                 "28=>304888344611713860501504000000\n" +

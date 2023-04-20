@@ -32,31 +32,6 @@ public class CharOrderAlgorithmTest extends AlgorithmTest {
     }
 
     @Override
-    public String questions(){
-        return "abc=>\n" +
-                "cad=>\n" +
-                "asd=>\n" +
-                "xyz=>\n" +
-                "aaa=>\n" +
-                "123=>\n" +
-                "dEf=>\n" +
-                "zxc=>\n" +
-                "qwe=>\n" +
-                "rty=>\n" +
-                "mnb=>\n" +
-                "vbn=>\n" +
-                "fgh=>\n" +
-                "ijk=>\n" +
-                "lmn=>\n" +
-                "pqr=>\n" +
-                "stu=>\n" +
-                "wxy=>\n" +
-                "222=>\n" +
-                "789=>\n" +
-                "090=>";
-    }
-
-    @Override
     public String answers() {
         return "abc=>cab\n" +
                 "cad=>dca\n" +
