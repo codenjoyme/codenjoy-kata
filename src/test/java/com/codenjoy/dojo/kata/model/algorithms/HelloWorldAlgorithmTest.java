@@ -23,18 +23,29 @@ package com.codenjoy.dojo.kata.model.algorithms;
  */
 
 
-import org.junit.Test;
+import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 
-import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
+public class HelloWorldAlgorithmTest extends AlgorithmTest {
 
-public class HelloWorldAlgorithmTest {
+    @Override
+    public Algorithm algorithm() {
+        return new HelloWorldAlgorithm();
+    }
 
-    @Test
-    public void shouldWork() {
-        assertAlgorithm(new HelloWorldAlgorithm(),
-                "hello=>world\n" +
+    @Override
+    public String questions() {
+        return "hello=>\n" +
+                "world=>\n" +
+                "qwe=>\n" +
+                "asd=>\n" +
+                "zxc=>";
+    }
+
+    @Override
+    public String answers() {
+        return "hello=>world\n" +
                 "world=>hello\n" +
                 "qwe=>qwe\n" +
-                "asd=>asd");
+                "asd=>asd";
     }
 }
