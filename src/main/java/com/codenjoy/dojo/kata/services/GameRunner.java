@@ -40,12 +40,14 @@ import com.codenjoy.dojo.services.multiplayer.MultiplayerType;
 import com.codenjoy.dojo.services.printer.BoardReader;
 import com.codenjoy.dojo.services.printer.CharElement;
 import com.codenjoy.dojo.services.printer.PrinterFactory;
+import com.codenjoy.dojo.services.questionanswer.QuestionAnswer;
 import com.codenjoy.dojo.services.settings.Parameter;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.json.JSONObject;
 
-import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_DESCRIPTION;
-import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_EXPECTED_ANSWER;
+import java.util.List;
+
+import static com.codenjoy.dojo.kata.services.GameSettings.Keys.*;
 import static com.codenjoy.dojo.services.settings.SimpleParameter.v;
 
 public class GameRunner extends AbstractGameType<GameSettings> {
@@ -117,7 +119,14 @@ public class GameRunner extends AbstractGameType<GameSettings> {
             result.put("level", player.levels().getLevelIndex());
             result.put("questions", player.levels().getQuestions());
             result.put("nextQuestion", player.levels().getNextQuestion());
-            result.put("history", player.examiner().getLastHistory());
+
+            List<QuestionAnswer> history = player.examiner().getLastHistory();
+            if (!getSettings().bool(SHOW_VALID_IN_HISTORY)) {
+                if (history != null) {
+                    history.forEach(it -> it.setExpectedAnswer(null));
+                }
+            }
+            result.put("history", history);
             return result;
         });
     }

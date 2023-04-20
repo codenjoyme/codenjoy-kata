@@ -49,7 +49,8 @@ public class GameSettings extends SettingsImpl
         C_CONSTANT,
         D_CONSTANT,
         SHOW_DESCRIPTION,
-        SHOW_EXPECTED_ANSWER;
+        SHOW_EXPECTED_ANSWER,
+        SHOW_VALID_IN_HISTORY;
 
         private String key;
 
@@ -81,6 +82,7 @@ public class GameSettings extends SettingsImpl
 
         bool(SHOW_DESCRIPTION, true);
         bool(SHOW_EXPECTED_ANSWER, true);
+        bool(SHOW_VALID_IN_HISTORY, true);
 
         Levels.setup(this);
     }

@@ -240,6 +240,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'answer2',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -256,6 +257,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'answer3',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -452,6 +454,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong2',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -468,6 +471,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong3',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -554,6 +558,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -570,6 +575,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -614,6 +620,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -630,6 +637,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -675,6 +683,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -691,6 +700,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -720,6 +730,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -736,6 +747,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -764,6 +776,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -780,6 +793,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -815,6 +829,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -831,6 +846,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -859,6 +875,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -875,6 +892,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -887,7 +905,7 @@ public class MultiplayerTest {
                 "}");
     }
 
-    // игрок дошел до конца и там факрится определенный ивент
+    // игрок дошел до конца и там файрится определенный ивент
     @Test
     public void shouldEvent_whenUserGoesToEnd() {
         givenUser1GoesToEnd();
@@ -927,6 +945,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
@@ -943,6 +962,7 @@ public class MultiplayerTest {
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
+                "      'expected':'answer1',\n" +
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +

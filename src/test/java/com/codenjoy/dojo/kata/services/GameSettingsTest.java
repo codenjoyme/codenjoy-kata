@@ -34,14 +34,15 @@ public class GameSettingsTest {
 
     @Test
     public void shouldGetAllParameters_withKeys() {
-        assertEquals("WIN_SCORE            =[Score] Win score\n" +
-                    "LOSE_PENALTY         =[Score] Lose penalty\n" +
-                    "A_CONSTANT           =[Score] A constant\n" +
-                    "B_CONSTANT           =[Score] B constant\n" +
-                    "C_CONSTANT           =[Score] C constant\n" +
-                    "D_CONSTANT           =[Score] D constant\n" +
-                    "SHOW_DESCRIPTION     =[Game] Show algorithm description in the request\n" +
-                    "SHOW_EXPECTED_ANSWER =[Game] Show expected answer for last question",
+        assertEquals("WIN_SCORE             =[Score] Win score\n" +
+                        "LOSE_PENALTY          =[Score] Lose penalty\n" +
+                        "A_CONSTANT            =[Score] A constant\n" +
+                        "B_CONSTANT            =[Score] B constant\n" +
+                        "C_CONSTANT            =[Score] C constant\n" +
+                        "D_CONSTANT            =[Score] D constant\n" +
+                        "SHOW_DESCRIPTION      =[Game] Show algorithm description in the request\n" +
+                        "SHOW_EXPECTED_ANSWER  =[Game] Show expected answer for last question\n" +
+                        "SHOW_VALID_IN_HISTORY =[Game] Show expected answer for all history questions",
                 TestUtils.toString(new GameSettings().allKeys()));
     }
 
@@ -49,6 +50,7 @@ public class GameSettingsTest {
     public void shouldGetAllParameters_alsoWithoutKeys() {
         assertEquals("{\n" +
                         "  '[Game] Show algorithm description in the request':true,\n" +
+                        "  '[Game] Show expected answer for all history questions':true,\n" +
                         "  '[Game] Show expected answer for last question':true,\n" +
                         "  '[Level] Map[10]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':\\'2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i? Write a method for calculation that takes int and returns the result as a String\\',\\n  \\'name\\':\\'PowerDigitSumAlgorithm\\',\\n  \\'winCode\\':\\'function program(power) {\\\\n    const temp = (BigInt(1) << BigInt(power));\\\\n    let sum = 0;\\\\n    for (let i = 0; i < temp.length; i++) {\\\\n        sum += parseInt(temp[i]);\\\\n    }\\\\n    return sum.toString();\\\\n}\\'\\n}',\n" +
                         "  '[Level] Map[11]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':\\'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \\\\nmethod(3, 1, 8) → true\\\\nmethod(3, 1, 9) → false\\\\nmethod(3, 2, 10) → true\\',\\n  \\'name\\':\\'MakeBricksAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n    const [small, big, goal] = input.split(\\\\\\\\', \\\\\\\\').map(number => parseInt(number));\\\\n    const result = (small >= (goal % 5) && small >= goal - big * 5);\\\\n    return String(result);\\\\n}\\'\\n}',\n" +
@@ -189,24 +191,9 @@ public class GameSettingsTest {
                         "      '70=71',\n" +
                         "      '75=74',\n" +
                         "      '81=80',\n" +
-                        "      '87=86',\n" +
-                        "      '93=92',\n" +
-                        "      '99=98',\n" +
-                        "      '106=107',\n" +
-                        "      '113=112',\n" +
-                        "      '120=121',\n" +
-                        "      '127=126',\n" +
-                        "      '134=135',\n" +
-                        "      '141=140',\n" +
-                        "      '149=148',\n" +
-                        "      '157=156',\n" +
-                        "      '165=164',\n" +
-                        "      '173=172',\n" +
-                        "      '182=183',\n" +
-                        "      '191=190',\n" +
-                        "      '200=201'\n" +
+                        "      '87=86'\n" +
                         "    ],\n" +
-                        "    'size':41\n" +
+                        "    'size':26\n" +
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':12,\n" +

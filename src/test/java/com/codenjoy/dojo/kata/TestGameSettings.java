@@ -25,6 +25,7 @@ package com.codenjoy.dojo.kata;
 import com.codenjoy.dojo.kata.services.GameSettings;
 
 import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_EXPECTED_ANSWER;
+import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_VALID_IN_HISTORY;
 
 public class TestGameSettings extends GameSettings {
 
@@ -33,5 +34,6 @@ public class TestGameSettings extends GameSettings {
      */
     public TestGameSettings() {
         bool(SHOW_EXPECTED_ANSWER, false);
+        bool(SHOW_VALID_IN_HISTORY, true);
     }
 }
