@@ -86,10 +86,10 @@ setup.drawBoard = function(drawer) {
     }
 
     var getQuestionFormatted = function(item) {
-        var equality = (item.last) ? '=' : (item.valid) ? '=' : '!=';
+        var equality = (item.last) ? '=' : (item.valid) ? '=' : '=';
         var answer = (!!item.answer) ? item.answer : '?';
-        var expected = (!!item.expected) ? ' = ' + item.expected : '';
-        var result = `f(${item.question})${expected} ${equality} ${answer}`;
+        var expected = (!!item.expected) ? ' != ' + item.expected : '';
+        var result = `f(${item.question}) ${equality} ${answer}${expected}`;
         return result;
     }
 
