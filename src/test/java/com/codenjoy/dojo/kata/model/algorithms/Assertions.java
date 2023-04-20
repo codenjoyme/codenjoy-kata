@@ -25,9 +25,12 @@ package com.codenjoy.dojo.kata.model.algorithms;
 
 import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 import com.codenjoy.dojo.services.questionanswer.levels.QuestionAnswerLevelImpl;
+import com.codenjoy.dojo.utils.SmokeUtils;
 import org.apache.commons.lang3.StringUtils;
 
+import java.io.File;
 import java.util.Arrays;
+import java.util.List;
 
 import static java.util.stream.Collectors.joining;
 import static org.junit.Assert.assertEquals;
@@ -38,10 +41,28 @@ public class Assertions {
 
     public static void assertAlgorithm(Algorithm algorithm, String expected) {
         assertEquals(expected,
-                Arrays.stream(expected.split("\n"))
-                        .map(line -> line.split(QA_SEPARATOR)[0])
-                        .map(arg -> arg + QA_SEPARATOR + algorithm.get(arg))
-                        .collect(joining("\n")));
+                answers(algorithm, expected));
+    }
+
+    private static String answers(Algorithm algorithm, String expected) {
+        return Arrays.stream(expected.split("\n"))
+                .map(line -> line.split(QA_SEPARATOR)[0])
+                .map(arg -> arg + QA_SEPARATOR + algorithm.get(arg))
+                .collect(joining("\n"));
+    }
+
+    public static void assertSmokeAlgorithm(Algorithm algorithm, String fileName) {
+        File expectedFile = new File("src/test/java/"
+                + Assertions.class.getPackageName().replace('.', '/')
+                + '/' + fileName);
+
+        String expected = "";
+        if (expectedFile.exists()) {
+            expected = SmokeUtils.load(expectedFile);
+        }
+
+        List<String> answers = Arrays.asList(answers(algorithm, expected).split("\n"));
+        SmokeUtils.assertSmokeFile(expectedFile.getPath(), answers);
     }
 
     public static void assertQuestions(QuestionAnswerLevelImpl algorithm, String expected) {

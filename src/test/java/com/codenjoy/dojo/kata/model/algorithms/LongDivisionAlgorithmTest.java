@@ -61,13 +61,10 @@ public class LongDivisionAlgorithmTest extends AlgorithmTest {
                 "666666660, 7772777=>85.7694309253951322673994120762759564567464112247141529983428059238030371899258141588263756955847311713\n" +
                 "100, 97=>1.0(309278350515463917525773195876288659793814432989690721649484536082474226804123711340206185567010)\n" +
                 "999, 0=>Div by zero error!";
-
     }
 
-// TODO вернуть тест без approvals
-// LegacyApprovals.LockDown(this, "get", Range.get(-100, 100), Range.get(-100, 100));
-//    public String get(Integer i1, Integer i2) {
-//        String input = String.format("%s, %s", i1, i2);
-//        return new LongDivisionAlgorithm().get(input);
-//    }
+    @Override
+    public String cornerCases() {
+        return "FILE:LongDivisionAlgorithmTest.cornerCases.txt";
+    }
 }

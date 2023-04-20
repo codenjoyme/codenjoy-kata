@@ -52,8 +52,19 @@ public abstract class AlgorithmTest {
     public void answersTest() {
         assertAlgorithm(algorithm(), answers());
 
-        if (!StringUtils.isEmpty(cornerCases())) {
-            assertAlgorithm(algorithm(), cornerCases());
+        cornerCasesAnswersTest();
+    }
+
+    private void cornerCasesAnswersTest() {
+        String cases = cornerCases();
+        if (StringUtils.isEmpty(cases)) {
+            return;
+        }
+        if (cases.startsWith("FILE:")) {
+            String fileName = cases.substring("FILE:".length());
+            assertSmokeAlgorithm(algorithm(), fileName);
+        } else {
+            assertAlgorithm(algorithm(), cases);
         }
     }
 
