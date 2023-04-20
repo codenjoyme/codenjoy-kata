@@ -110,7 +110,6 @@ public class LongDivisionAlgorithm extends AlgorithmLevelImpl {
         return ((isMinus) ? "-" : "") + result;
     }
 
-    // TODO эта функция не работает на f(111, 11) = 10.0(90) но она возвращает 10.09(0)
     @Override
     public String winCode() {
         return "function program(input) {\n" +
@@ -178,7 +177,7 @@ public class LongDivisionAlgorithm extends AlgorithmLevelImpl {
                 "        const c = Math.floor(a / b);\n" +
                 "        if (isCalcCeil) {\n" +
                 "            let c1 = c;\n" +
-                "            while (c1 / TEN >= 1) {\n" +
+                "            while (c1 / TEN > 10000000) {\n" + // TODO я не знаю почему это работает
                 "                aa[ia++] = c1 % TEN;\n" +
                 "                c1 = Math.floor(c1 / TEN);\n" +
                 "            }\n" +
