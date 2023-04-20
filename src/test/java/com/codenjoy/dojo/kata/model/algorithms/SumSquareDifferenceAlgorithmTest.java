@@ -23,50 +23,56 @@ package com.codenjoy.dojo.kata.model.algorithms;
  */
 
 
-import org.junit.Test;
+import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 
-import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
+public class SumSquareDifferenceAlgorithmTest extends AlgorithmTest {
 
-public class SumSquareDifferenceAlgorithmTest {
+    @Override
+    public Algorithm algorithm() {
+        return new SumSquareDifferenceAlgorithm();
+    }
 
-    @Test
-    public void shouldWork() {
-        assertAlgorithm(new PowerDigitSumAlgorithm(),
-                "0=>1\n" +
-                "1=>2\n" +
+    @Override
+    public String answers() {
+        return "1=>0\n" +
                 "2=>4\n" +
-                "3=>8\n" +
-                "4=>7\n" +
-                "5=>5\n" +
-                "6=>10\n" +
-                "7=>11\n" +
-                "8=>13\n" +
-                "9=>8\n" +
-                "10=>7\n" +
-                "11=>14\n" +
-                "12=>19\n" +
-                "13=>20\n" +
-                "14=>22\n" +
-                "15=>26\n" +
-                "16=>25\n" +
-                "17=>14\n" +
-                "18=>19\n" +
-                "19=>29\n" +
-                "20=>31\n" +
-                "21=>26\n" +
-                "22=>25\n" +
-                "23=>41\n" +
-                "24=>37\n" +
-                "25=>29\n" +
-                "26=>40\n" +
-                "27=>35\n" +
-                "28=>43\n" +
-                "29=>41\n" +
-                "30=>37\n" +
-                "31=>47\n" +
-                "32=>58\n" +
-                "100=>115\n" +
-                "1000=>1366\n" +
-                "10000=>13561");
+                "3=>22\n" +
+                "4=>70\n" +
+                "5=>170\n" +
+                "6=>350\n" +
+                "7=>644\n" +
+                "8=>1092\n" +
+                "9=>1740\n" +
+                "10=>2640\n" +
+                "11=>3850\n" +
+                "12=>5434\n" +
+                "13=>7462\n" +
+                "14=>10010\n" +
+                "15=>13160\n" +
+                "16=>17000\n" +
+                "17=>21624\n" +
+                "18=>27132\n" +
+                "19=>33630\n" +
+                "20=>41230\n" +
+                "21=>50050\n" +
+                "22=>60214\n" +
+                "23=>71852\n" +
+                "24=>85100\n" +
+                "25=>100100";
+    }
+
+    @Override
+    public String cornerCases() {
+        return "0=>0\n" +
+                "26=>117000\n" +
+                "27=>135954\n" +
+                "28=>157122\n" +
+                "29=>180670\n" +
+                "30=>206770\n" +
+                "31=>235600\n" +
+                "32=>267344\n" +
+                "100=>25164150\n" +
+                "1000=>250166416500\n" +
+                "10000=>2500166641665000";
     }
 }
