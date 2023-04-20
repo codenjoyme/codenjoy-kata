@@ -85,11 +85,11 @@ setup.drawBoard = function(drawer) {
         return {x:(setup.onlyBoard ? x : 7), y:y + 1};
     }
 
-    var getQuestionFormatted = function(value) {
-        var equals = (value.last) ? '=' : (value.valid) ? '==' : '!=';
-        var answer = (!!value.answer) ? value.answer : '?';
-        var result = 'f(' + value.question + ') '
-            + equals + ' ' + answer;
+    var getQuestionFormatted = function(item) {
+        var equality = (item.last) ? '=' : (item.valid) ? '=' : '!=';
+        var answer = (!!item.answer) ? item.answer : '?';
+        var expected = (!!item.expected) ? ' = ' + item.expected : '';
+        var result = `f(${item.question})${expected} ${equality} ${answer}`;
         return result;
     }
 

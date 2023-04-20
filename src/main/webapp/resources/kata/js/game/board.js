@@ -54,12 +54,13 @@ var Board = function (boardString) {
             if (board.history.length == 0) {
                 return null;
             }
-            var separator = '<br>&nbsp;&nbsp;'
+            var separator = '<br>&nbsp;'
             return separator +
                 board.history.map(item => {
-                    var equality = item.valid ? '==' : '!=';
+                    var equality = item.valid ? '=' : '!=';
                     var status = item.valid ? '✅' : '❌';
-                    return `f(${item.question}) ${equality} ${item.answer} ${status}`;
+                    var expected = (!!item.expected) ? ' = ' + item.expected : '';
+                    return `${status}f(${item.question})${expected} ${equality} ${item.answer}`;
                 }).join(separator);
         }
     };
