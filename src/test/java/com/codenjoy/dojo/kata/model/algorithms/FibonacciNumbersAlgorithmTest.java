@@ -23,16 +23,18 @@ package com.codenjoy.dojo.kata.model.algorithms;
  */
 
 
-import org.junit.Test;
+import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 
-import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
+public class FibonacciNumbersAlgorithmTest extends AlgorithmTest {
 
-public class FibonacciNumbersAlgorithmTest {
+    @Override
+    public Algorithm algorithm() {
+        return new FibonacciNumbersAlgorithm();
+    }
 
-    @Test
-    public void shouldWork() {
-        assertAlgorithm(new FibonacciNumbersAlgorithm(),
-                "0=>0\n" +
+    @Override
+    public String answers() {
+        return "0=>0\n" +
                 "1=>1\n" +
                 "2=>1\n" +
                 "3=>2\n" +
@@ -56,6 +58,6 @@ public class FibonacciNumbersAlgorithmTest {
                 "21=>10946\n" +
                 "23=>28657\n" +
                 "24=>46368\n" +
-                "25=>75025");
+                "25=>75025";
     }
 }
