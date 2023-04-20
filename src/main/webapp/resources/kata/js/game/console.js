@@ -25,10 +25,31 @@ function initLogger() {
     var wrapper = $('.console-wrapper');
     container.empty();
 
+    $('#ide-console').on('click', '.copy-text', function() {
+        var text = 'Console output:' +
+            $(this).nextAll('.test-result').first().html()
+                .replace(/<br>/g, '\n')
+                .replace(/&nbsp;/g, ' ');
+        copyToClipboard(text);
+        sendParentMessage('send-content', text);
+    });
+
+    var copyToClipboard = function(text) {
+        $("body").append("<textarea id='copyArea' style='position:absolute;left:-100%'>" + text + "</textarea>");
+        $("#copyArea").select();
+        try {
+            document.execCommand("copy");
+        } catch (e) {
+            console.log('Oops, unable to copy');
+        }
+        $("#copyArea").remove();
+    }
+
     var print = function(message) {
         var autoScroll = Math.abs(wrapper.scrollTop() + wrapper.height() - wrapper[0].scrollHeight) < 20;
 
-        container.append('> ' + message + '<br>');
+        container.append('<span class="copy-text">[copy]</span> &gt;'
+            + '<span class="test-result"> ' + message + '</span></br>');
 
         if (autoScroll) {
             wrapper.scrollTop(wrapper[0].scrollHeight);

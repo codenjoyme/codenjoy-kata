@@ -964,6 +964,12 @@ canvas {
   word-wrap: break-word;
 }
 
+.copy-text {
+  cursor: pointer;
+  font-size: 11px;
+  font-style: italic;
+}
+
 @media screen and (max-width: 1330px) {
   .button {
     width: auto;
