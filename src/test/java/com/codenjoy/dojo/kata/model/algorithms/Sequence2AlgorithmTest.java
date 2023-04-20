@@ -23,16 +23,18 @@ package com.codenjoy.dojo.kata.model.algorithms;
  */
 
 
-import org.junit.Test;
+import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 
-import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
+public class Sequence2AlgorithmTest extends AlgorithmTest {
 
-public class Sequence2AlgorithmTest {
+    @Override
+    public Algorithm algorithm() {
+        return new Sequence2Algorithm();
+    }
 
-    @Test
-    public void shouldWork() {
-        assertAlgorithm(new Sequence2Algorithm(),
-                "1=>971\n" +
+    @Override
+    public String answers() {
+        return "1=>971\n" +
                 "2=>874\n" +
                 "3=>787\n" +
                 "4=>709\n" +
@@ -56,8 +58,12 @@ public class Sequence2AlgorithmTest {
                 "22=>110\n" +
                 "23=>99\n" +
                 "24=>90\n" +
-                "25=>81\n" +
-                "26=>73\n" +
+                "25=>81";
+    }
+
+    @Override
+    public String cornerCases() {
+        return "26=>73\n" +
                 "27=>66\n" +
                 "28=>60\n" +
                 "29=>54\n" +
@@ -83,6 +89,6 @@ public class Sequence2AlgorithmTest {
                 "49=>10\n" +
                 "50=>9\n" +
                 "51=>9\n" +
-                "52=>9");
+                "52=>9";
     }
 }
