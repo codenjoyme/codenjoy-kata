@@ -177,7 +177,18 @@ var boardPageLoad = function() {
         help = help.replace(/\n/g, "<br>")
                    .replace(/\\n/g, "<br>");
 
-        $('#ide-help-window').html(help);
+
+        var containerId = '#ide-help-window';
+        var container = $(containerId);
+        container.html(help);
+
+        if (!container.find('.copy-text').length) {
+            container.append(copyToClipboardButton());
+            copyToClipboardButtonHandler(containerId, function () {
+                return 'Info:\n' + help;
+            });
+        }
+
         $("#modal").removeClass("close");
     };
     var buttons = initButtons(onCommitClick, onResetClick, onHelpClick);

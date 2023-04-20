@@ -976,6 +976,17 @@ canvas {
   margin-left: -37px;
 }
 
+.help-description .copied-info {
+  margin-left: -32px;
+}
+
+.help-description .copy-text {
+  position: relative;
+  margin-left: calc(100% - 40px);
+  z-index: 1001;
+  font-size: 12px;
+}
+
 .editor .copy-text {
   position: relative;
   margin-left: calc(100% - 40px);
