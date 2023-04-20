@@ -105,7 +105,7 @@ setup.drawBoard = function(drawer) {
     var centerX = (drawer.canvas.width() / drawer.canvas.plotSize())/2;
 
     var data = drawer.playerData.board;
-    if (typeof setDescription != 'undefined') {
+    if (typeof setDescription != 'undefined' && !!data.description) {
         setDescription(unescapeUnicode(data.description));
     }
 
