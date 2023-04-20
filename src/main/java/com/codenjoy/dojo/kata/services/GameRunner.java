@@ -110,23 +110,30 @@ public class GameRunner extends AbstractGameType<GameSettings> {
     public PrinterFactory getPrinterFactory() {
         return PrinterFactory.get((BoardReader boardReader, Player player) -> {
             JSONObject result = new JSONObject();
-            if (getSettings().bool(SHOW_DESCRIPTION)) {
+            GameSettings settings = player.settings();
+
+            if (settings.bool(SHOW_DESCRIPTION)) {
                 result.put("description", StringEscapeUtils.escapeJava(player.levels().getDescription()));
             }
-            if (getSettings().bool(SHOW_EXPECTED_ANSWER)) {
+
+            if (settings.bool(SHOW_EXPECTED_ANSWER)) {
                 result.put("expectedAnswer", player.levels().getExpectedAnswer());
             }
+
             result.put("level", player.levels().getLevelIndex());
+
             result.put("questions", player.levels().getQuestions());
+
             result.put("nextQuestion", player.levels().getNextQuestion());
 
             List<QuestionAnswer> history = player.examiner().getLastHistory();
-            if (!getSettings().bool(SHOW_VALID_IN_HISTORY)) {
+            if (!settings.bool(SHOW_VALID_IN_HISTORY)) {
                 if (history != null) {
                     history.forEach(it -> it.setExpectedAnswer(null));
                 }
             }
             result.put("history", history);
+
             return result;
         });
     }

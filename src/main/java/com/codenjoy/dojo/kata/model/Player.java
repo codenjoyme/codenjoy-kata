@@ -74,6 +74,10 @@ public class Player extends GamePlayer<Hero, Field> {
         return new Hero();
     }
 
+    public GameSettings settings() {
+        return (GameSettings) settings;
+    }
+
     public void checkAnswer() {
         hero.tick();
 
