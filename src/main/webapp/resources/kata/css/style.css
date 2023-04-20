@@ -968,29 +968,45 @@ canvas {
   cursor: pointer;
   font-size: 11px;
   font-style: italic;
+  z-index: 2000;
 }
 
 .copied-info {
   position: absolute;
-  margin-top: -8px;
+  margin-top: -9px;
   margin-left: -37px;
 }
 
-.help-description .copied-info {
-  margin-left: -32px;
+#ide-console .copy-text {
+  position: absolute;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+#ide-console .copied-info {
+  margin-left: -39px;
 }
 
 .help-description .copy-text {
-  position: relative;
-  margin-left: calc(100% - 40px);
-  z-index: 1001;
+  position: absolute;
+  margin-left: 10px;
   font-size: 12px;
+  margin-top: 3px;
+}
+
+.help-description .copied-info {
+  margin-top: -10px;
+  margin-left: -32px;
 }
 
 .editor .copy-text {
   position: relative;
   margin-left: calc(100% - 40px);
-  z-index: 1000;
+  top: -6px;
+}
+
+.editor .copied-info {
+  margin-top: -7px;
 }
 
 @media screen and (max-width: 1330px) {

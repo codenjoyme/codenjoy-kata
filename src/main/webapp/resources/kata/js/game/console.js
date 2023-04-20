@@ -25,18 +25,16 @@ function initLogger() {
     var wrapper = $('.console-wrapper');
     container.empty();
 
-    copyToClipboardButtonHandler('#ide-console', function(button) {
-        return 'Console output:' +
-            button.nextAll('.test-result').first().html()
-                .replace(/<br>/g, '\n')
-                .replace(/&nbsp;/g, ' ');
+    copyToClipboardButtonHandler('#ide-console', function(data) {
+        return 'Console output:' + data;
     });
 
     var print = function(message) {
         var autoScroll = Math.abs(wrapper.scrollTop() + wrapper.height() - wrapper[0].scrollHeight) < 20;
 
-        container.append(copyToClipboardButton() + ' &gt;'
-            + '<span class="test-result"> ' + message + '</span></br>');
+        container.append('&gt; '
+            + copyToClipboardMessageContainer(message)
+            + '</br>');
 
         if (autoScroll) {
             wrapper.scrollTop(wrapper[0].scrollHeight);

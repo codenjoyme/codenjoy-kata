@@ -180,14 +180,10 @@ var boardPageLoad = function() {
 
         var containerId = '#ide-help-window';
         var container = $(containerId);
-        container.html(help);
-
-        if (!container.find('.copy-text').length) {
-            container.append(copyToClipboardButton());
-            copyToClipboardButtonHandler(containerId, function () {
-                return 'Info:\n' + help;
-            });
-        }
+        container.html(copyToClipboardMessageContainer(help));
+        copyToClipboardButtonHandler(containerId, function(data) {
+            return 'Info:\n' + data;
+        });
 
         $("#modal").removeClass("close");
     };

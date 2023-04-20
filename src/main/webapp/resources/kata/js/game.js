@@ -75,9 +75,19 @@ var copyToClipboardButton = function() {
     return '<span class="copy-text">[copy]</span>';
 }
 
+var copyToClipboardMessageContainer = function(message) {
+    return '<span class="test-result">'
+            + '<span>' + message + '</span>'
+            + copyToClipboardButton()
+            + '</span>';
+}
+
 var copyToClipboardButtonHandler = function(parent, getText) {
     $(parent).on('click', '.copy-text', function() {
-        var text = getText($(this));
+        var data = $(this).parent().children().first().html()
+                        .replace(/<br>/g, '\n')
+                        .replace(/&nbsp;/g, ' ')
+        var text = getText(data);
         copyToClipboard(text);
         sendParentMessage('send-content', text);
         $('<span class="copied-info">').text('copied')
