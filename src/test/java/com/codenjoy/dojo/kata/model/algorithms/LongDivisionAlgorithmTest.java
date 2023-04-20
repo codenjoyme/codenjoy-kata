@@ -22,20 +22,50 @@ package com.codenjoy.dojo.kata.model.algorithms;
  * #L%
  */
 
+import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 
-//import org.approvaltests.legacycode.LegacyApprovals;
-//import org.approvaltests.legacycode.Range;
+public class LongDivisionAlgorithmTest extends AlgorithmTest {
 
-import org.junit.Test;
+    @Override
+    public Algorithm algorithm() {
+        return new LongDivisionAlgorithm();
+    }
 
-import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
+    @Override
+    public String questions() {
+        return "1, 2=>\n" +
+                "1, 1=>\n" +
+                "5, 5=>\n" +
+                "55, 5=>\n" +
+                "55, 44=>\n" +
+                "0, 56=>\n" +
+                "56, 1=>\n" +
+                "1, -2=>\n" +
+                "-1, 2=>\n" +
+                "-1, -2=>\n" +
+                "1, 1000=>\n" +
+                "56, 45=>\n" +
+                "111, 110=>\n" +
+                "111, 11=>\n" +
+                "11111, 11=>\n" +
+                "-11, -222=>\n" +
+                "111, -22=>\n" +
+                "1, 3000=>\n" +
+                "87, 78=>\n" +
+                "45, 56=>\n" +
+                "212, 133=>\n" +
+                "11111, 115=>\n" +
+                "123, 345=>\n" +
+                "66666666, 77727777=>\n" +
+                "666666660, 77727777=>\n" +
+                "666666660, 7772777=>\n" +
+                "100, 97=>\n" +
+                "999, 0=>";
+    }
 
-public class LongDivisionAlgorithmTest {
-
-    @Test
-    public void shouldWork() throws Exception {
-        assertAlgorithm(new LongDivisionAlgorithm(),
-                "1, 2=>0.5\n" +
+    @Override
+    public String answers() {
+        return "1, 2=>0.5\n" +
                 "1, 1=>1\n" +
                 "5, 5=>1\n" +
                 "55, 5=>11\n" +
@@ -63,14 +93,14 @@ public class LongDivisionAlgorithmTest {
                 "666666660, 7772777=>85.7694309253951322673994120762759564567464112247141529983428059238030371899258141588263756955847311713\n" +
                 "100, 97=>1.0(309278350515463917525773195876288659793814432989690721649484536082474226804123711340206185567010)\n" +
                 "66666666, 77727777=>0.8576942320118070532237143486041032667124906968586017840186012266888836921194851616559161340739231484\n" +
-                "999, 0=>Div by zero error!");
+                "999, 0=>Div by zero error!";
 
         // TODO вернуть тест без approvals
         // LegacyApprovals.LockDown(this, "get", Range.get(-100, 100), Range.get(-100, 100));
     }
 
-    public String get(Integer i1, Integer i2) {
-        String input = String.format("%s, %s", i1, i2);
-        return new LongDivisionAlgorithm().get(input);
-    }
+//    public String get(Integer i1, Integer i2) {
+//        String input = String.format("%s, %s", i1, i2);
+//        return new LongDivisionAlgorithm().get(input);
+//    }
 }

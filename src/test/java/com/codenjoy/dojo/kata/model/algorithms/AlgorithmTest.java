@@ -65,14 +65,11 @@ public abstract class AlgorithmTest {
 
     @Test
     public void shouldWork() {
-        assertAlgorithm(algorithm(),
-                answers()
-        );
+        assertAlgorithm(algorithm(), answers());
     }
 
     @Test
     public void questionTest(){
-        assertQuestions((QuestionAnswerLevelImpl) algorithm(),
-                questions());
+        assertQuestions((QuestionAnswerLevelImpl) algorithm(), questions());
     }
 }
