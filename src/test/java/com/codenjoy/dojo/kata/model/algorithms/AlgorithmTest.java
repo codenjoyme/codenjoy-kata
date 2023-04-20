@@ -25,6 +25,7 @@ package com.codenjoy.dojo.kata.model.algorithms;
 import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 import com.codenjoy.dojo.services.questionanswer.levels.QuestionAnswerLevelImpl;
 import org.apache.commons.lang3.StringUtils;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -33,6 +34,8 @@ import static com.codenjoy.dojo.kata.model.algorithms.Assertions.*;
 import static java.util.stream.Collectors.joining;
 
 public abstract class AlgorithmTest {
+
+    protected Algorithm algorithm;
 
     public abstract Algorithm algorithm();
 
@@ -48,9 +51,14 @@ public abstract class AlgorithmTest {
                 .collect(joining("\n"));
     }
 
+    @Before
+    public void setup() {
+        algorithm = algorithm();
+    }
+
     @Test
     public void answersTest() {
-        assertAlgorithm(algorithm(), answers());
+        assertAlgorithm(algorithm, answers());
 
         cornerCasesAnswersTest();
     }
@@ -62,14 +70,14 @@ public abstract class AlgorithmTest {
         }
         if (cases.startsWith("FILE:")) {
             String fileName = cases.substring("FILE:".length());
-            assertSmokeAlgorithm(algorithm(), fileName);
+            assertSmokeAlgorithm(algorithm, fileName);
         } else {
-            assertAlgorithm(algorithm(), cases);
+            assertAlgorithm(algorithm, cases);
         }
     }
 
     @Test
     public void questionTest(){
-        assertQuestions((QuestionAnswerLevelImpl) algorithm(), questions());
+        assertQuestions((QuestionAnswerLevelImpl) algorithm, questions());
     }
 }

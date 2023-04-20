@@ -23,20 +23,21 @@ package com.codenjoy.dojo.kata.model.algorithms;
  */
 
 
+import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 import org.junit.Test;
 
-import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
 import static org.junit.Assert.assertEquals;
 
-public class XthPrimeAlgorithmTest {
+public class XthPrimeAlgorithmTest extends AlgorithmTest {
 
-    private XthPrimeAlgorithm algorithm = new XthPrimeAlgorithm();
+    @Override
+    public Algorithm algorithm() {
+        return new XthPrimeAlgorithm();
+    }
 
-    @Test
-    public void shouldWork() {
-        assertAlgorithm(algorithm,
-                "0=>1\n" +
-                "1=>2\n" +
+    @Override
+    public String answers() {
+        return "1=>2\n" +
                 "2=>3\n" +
                 "3=>5\n" +
                 "4=>7\n" +
@@ -60,14 +61,28 @@ public class XthPrimeAlgorithmTest {
                 "22=>79\n" +
                 "23=>83\n" +
                 "24=>89\n" +
-                "25=>97\n" +
+                "25=>97";
+    }
+
+    @Override
+    public String cornerCases() {
+        return "0=>1\n" +
                 "100=>541\n" +
-                "500=>3571");
+                "500=>3571";
     }
 
     @Test
-    public void shouldWorkWithCache() {
+    public void workWithCache() {
+        // given
         assertEquals("17", algorithm.get("7"));
-        shouldWork();
+
+        // when then
+        answersTest();
+        answersTest();
+        answersTest();
+        answersTest();
+        answersTest();
+        answersTest();
+        answersTest();
     }
 }
