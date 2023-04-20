@@ -32,6 +32,11 @@ function initLogger() {
                 .replace(/&nbsp;/g, ' ');
         copyToClipboard(text);
         sendParentMessage('send-content', text);
+        $('<span>').text(' copied').insertAfter($(this)).fadeIn('slow', function() {
+            $(this).fadeOut('slow', function() {
+                $(this).remove();
+            });
+        });
     });
 
     var copyToClipboard = function(text) {
