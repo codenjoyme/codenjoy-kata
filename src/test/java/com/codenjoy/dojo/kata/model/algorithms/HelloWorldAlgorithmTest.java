@@ -33,19 +33,11 @@ public class HelloWorldAlgorithmTest extends AlgorithmTest {
     }
 
     @Override
-    public String questions() {
-        return "hello=>\n" +
-                "world=>\n" +
-                "qwe=>\n" +
-                "asd=>\n" +
-                "zxc=>";
-    }
-
-    @Override
     public String answers() {
         return "hello=>world\n" +
                 "world=>hello\n" +
                 "qwe=>qwe\n" +
-                "asd=>asd";
+                "asd=>asd\n" +
+                "zxc=>zxc";
     }
 }

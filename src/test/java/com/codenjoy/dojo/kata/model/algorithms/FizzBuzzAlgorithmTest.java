@@ -58,7 +58,6 @@ public class FizzBuzzAlgorithmTest extends AlgorithmTest {
                 "22=>22\n" +
                 "23=>23\n" +
                 "24=>Fizz\n" +
-                "25=>Buzz\n" +
-                "26=>26";
+                "25=>Buzz";
     }
 }
