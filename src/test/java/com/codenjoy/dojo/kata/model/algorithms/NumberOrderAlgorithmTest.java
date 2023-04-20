@@ -23,43 +23,28 @@ package com.codenjoy.dojo.kata.model.algorithms;
  */
 
 
-import org.apache.commons.lang3.StringUtils;
-import org.junit.Test;
+import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 
-import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
-import static org.junit.Assert.assertEquals;
+public class NumberOrderAlgorithmTest extends AlgorithmTest {
 
-public class NumberOrderAlgorithmTest {
-
-    @Test
-    public void shouldWork() {
-        assertAlgorithm(new NumberOrderAlgorithm(),
-                "111=>222\n" +
-                "123=>423\n" +
-                "679=>078\n" +
-                "999=>000\n" +
-                "012=>312\n" +
-                "090=>110\n" +
-                "444=>555\n" +
-                "090=>110\n" +
-                "916=>702"
-        );
+    @Override
+    public Algorithm algorithm() {
+        return new NumberOrderAlgorithm();
     }
 
-    @Test
-    public void questionTest(){
-        assertEquals("111\n" +
-                "222\n" +
-                "333\n" +
-                "444\n" +
-                "555\n" +
-                "100\n" +
-                "123\n" +
-                "999\n" +
-                "789\n" +
-                "000\n" +
-                "909\n" +
-                "090",
-                StringUtils.join(new NumberOrderAlgorithm().getQuestions(),"\n"));
+    @Override
+    public String answers() {
+        return "111=>222\n" +
+                "222=>333\n" +
+                "333=>444\n" +
+                "444=>555\n" +
+                "555=>666\n" +
+                "100=>121\n" +
+                "123=>423\n" +
+                "999=>000\n" +
+                "789=>089\n" +
+                "000=>111\n" +
+                "909=>001\n" +
+                "090=>110";
     }
 }
