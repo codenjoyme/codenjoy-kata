@@ -122,7 +122,6 @@ var boardPageLoad = function() {
 
         previous.click(function(){
             hide();
-            // levelProgress.selectLevel(levelsStartsFrom1);
         });
 
         $("body").keydown(function(event){
@@ -238,7 +237,7 @@ var boardPageLoad = function() {
             }
             initAutocomplete(level, levelInfo);
 
-            sendParentMessage('change-level', 1);
+            sendParentMessage('change-level', level);
         }
         levelProgress = initLevelProgress(setup, onChangeLevel);
 
