@@ -962,13 +962,17 @@ canvas {
 
 #ide-console {
   word-wrap: break-word;
+  font-size: 11px;
+  line-height: initial;
 }
 
 .copy-text {
   cursor: pointer;
   font-size: 11px;
   font-style: italic;
-  z-index: 2000;
+  z-index: 1;
+  position: relative;
+  color: #ffe389;
 }
 
 .copied-info {
@@ -978,7 +982,6 @@ canvas {
 }
 
 #ide-console .copy-text {
-  position: absolute;
   margin-left: 10px;
   font-size: 12px;
 }
@@ -988,19 +991,17 @@ canvas {
 }
 
 .help-description .copy-text {
-  position: absolute;
   margin-left: 10px;
   font-size: 12px;
   margin-top: 3px;
 }
 
 .help-description .copied-info {
-  margin-top: -10px;
+  margin-top: -7px;
   margin-left: -32px;
 }
 
 .editor .copy-text {
-  position: relative;
   margin-left: calc(100% - 40px);
   top: -6px;
 }
