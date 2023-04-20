@@ -73,11 +73,29 @@ public class XthPrimeAlgorithm extends AlgorithmLevelImpl {
         }
     }
 
-    // TODO закончить и тут
     @Override
     public String winCode() {
-        return "function program(number) {\n" +
-                "    return '';\n" +
+        return "function program(input) {\n" +
+                "    let index = parseInt(input);\n" +
+                "    let count = 0;\n" +
+                "    let result = 2;\n" +
+                "\n" +
+                "    while (count < index) {\n" +
+                "        let isPrime = true;\n" +
+                "        for (let j = 2; j <= Math.sqrt(result); j++) {\n" +
+                "            if (result % j === 0) {\n" +
+                "                isPrime = false;\n" +
+                "                break;\n" +
+                "            }\n" +
+                "        }\n" +
+                "        if (isPrime) {\n" +
+                "            count++;\n" +
+                "            if (count === index) {\n" +
+                "                return result;\n" +
+                "            }\n" +
+                "        }\n" +
+                "        result++;\n" +
+                "    }\n" +
                 "}";
     }
 
