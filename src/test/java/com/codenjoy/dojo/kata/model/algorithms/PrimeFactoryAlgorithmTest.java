@@ -23,16 +23,18 @@ package com.codenjoy.dojo.kata.model.algorithms;
  */
 
 
-import org.junit.Test;
+import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 
-import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
+public class PrimeFactoryAlgorithmTest extends AlgorithmTest {
 
-public class PrimeFactoryAlgorithmTest {
+    @Override
+    public Algorithm algorithm() {
+        return new PrimeFactoryAlgorithm();
+    }
 
-    @Test
-    public void shouldWork() {
-        assertAlgorithm(new PrimeFactoryAlgorithm(),
-                "1=>[1]\n" +
+    @Override
+    public String answers() {
+        return "1=>[1]\n" +
                 "2=>[2]\n" +
                 "3=>[3]\n" +
                 "4=>[2,2]\n" +
@@ -56,7 +58,6 @@ public class PrimeFactoryAlgorithmTest {
                 "22=>[2,11]\n" +
                 "23=>[23]\n" +
                 "24=>[2,2,2,3]\n" +
-                "25=>[5,5]\n" +
-                "26=>[2,13]");
+                "25=>[5,5]";
     }
 }
