@@ -22,52 +22,18 @@ package com.codenjoy.dojo.kata.model.algorithms;
  * #L%
  */
 
-import org.junit.Before;
-import org.junit.Test;
+import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 
-import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
-import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertQuestions;
+public class CharOrderAlgorithmTest extends AlgorithmTest {
 
-public class CharOrderAlgorithmTest {
-
-    private CharOrderAlgorithm algorithm;
-
-    @Before
-    public void setUp() {
-        algorithm = new CharOrderAlgorithm();
+    @Override
+    public Algorithm algorithm() {
+        return new CharOrderAlgorithm();
     }
 
-    @Test
-    public void shouldWork() {
-        assertAlgorithm(algorithm,
-                "abc=>cab\n" +
-                "cad=>dca\n" +
-                "asd=>das\n" +
-                "xyz=>zxy\n" +
-                "aaa=>aaa\n" +
-                "123=>312\n" +
-                "dEf=>fdE\n" +
-                "zxc=>czx\n" +
-                "qwe=>eqw\n" +
-                "rty=>yrt\n" +
-                "mnb=>bmn\n" +
-                "vbn=>nvb\n" +
-                "fgh=>hfg\n" +
-                "ijk=>kij\n" +
-                "lmn=>nlm\n" +
-                "pqr=>rpq\n" +
-                "stu=>ust\n" +
-                "wxy=>ywx\n" +
-                "222=>222\n" +
-                "789=>978\n" +
-                "090=>009"
-        );
-    }
-
-    @Test
-    public void questionTest(){
-        assertQuestions(algorithm,
-                "abc=>\n" +
+    @Override
+    public String questions(){
+        return "abc=>\n" +
                 "cad=>\n" +
                 "asd=>\n" +
                 "xyz=>\n" +
@@ -87,6 +53,31 @@ public class CharOrderAlgorithmTest {
                 "wxy=>\n" +
                 "222=>\n" +
                 "789=>\n" +
-                "090=>");
+                "090=>";
+    }
+
+    @Override
+    public String answers() {
+        return "abc=>cab\n" +
+                "cad=>dca\n" +
+                "asd=>das\n" +
+                "xyz=>zxy\n" +
+                "aaa=>aaa\n" +
+                "123=>312\n" +
+                "dEf=>fdE\n" +
+                "zxc=>czx\n" +
+                "qwe=>eqw\n" +
+                "rty=>yrt\n" +
+                "mnb=>bmn\n" +
+                "vbn=>nvb\n" +
+                "fgh=>hfg\n" +
+                "ijk=>kij\n" +
+                "lmn=>nlm\n" +
+                "pqr=>rpq\n" +
+                "stu=>ust\n" +
+                "wxy=>ywx\n" +
+                "222=>222\n" +
+                "789=>978\n" +
+                "090=>009";
     }
 }
