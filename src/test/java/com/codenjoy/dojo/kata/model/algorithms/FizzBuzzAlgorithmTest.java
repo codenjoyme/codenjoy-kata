@@ -23,16 +23,18 @@ package com.codenjoy.dojo.kata.model.algorithms;
  */
 
 
-import org.junit.Test;
+import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 
-import static com.codenjoy.dojo.kata.model.algorithms.Assertions.assertAlgorithm;
+public class FizzBuzzAlgorithmTest extends AlgorithmTest {
 
-public class FizzBuzzAlgorithmTest {
+    @Override
+    public Algorithm algorithm() {
+        return new FizzBuzzAlgorithm();
+    }
 
-    @Test
-    public void shouldWork() {
-        assertAlgorithm(new FizzBuzzAlgorithm(),
-                "1=>1\n" +
+    @Override
+    public String answers() {
+        return "1=>1\n" +
                 "2=>2\n" +
                 "3=>Fizz\n" +
                 "4=>4\n" +
@@ -57,6 +59,6 @@ public class FizzBuzzAlgorithmTest {
                 "23=>23\n" +
                 "24=>Fizz\n" +
                 "25=>Buzz\n" +
-                "26=>26");
+                "26=>26";
     }
 }
