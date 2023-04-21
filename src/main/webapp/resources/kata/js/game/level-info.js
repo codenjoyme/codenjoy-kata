@@ -72,7 +72,7 @@ var initLevelInfo = function(contextPath) {
     }
 
     var getLevel = function(level) {
-        if (level > count) {
+        if (level < 0 || level > count) {
             return {
                 name:'',
                 help:'<pre>// under construction</pre>',
