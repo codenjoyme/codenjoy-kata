@@ -104,9 +104,9 @@ setup.drawBoard = function(drawer) {
     drawer.clear();
     var centerX = (drawer.canvas.width() / drawer.canvas.plotSize())/2;
 
-    var data = drawer.playerData.board;
-    if (typeof setDescription != 'undefined' && !!data.description) {
-        setDescription(data.description.map(string => unescapeUnicode(string)));
+    var board = drawer.playerData.board;
+    if (typeof setDescription != 'undefined' && !!board.description) {
+        setDescription(board.description.map(string => unescapeUnicode(string)));
     }
 
     if (setup.unauthorized) {
@@ -115,7 +115,7 @@ setup.drawBoard = function(drawer) {
         return;
     }
 
-    var isWaitNext = (data.questions.length == 0);
+    var isWaitNext = (board.questions.length == 0);
     if (isWaitNext) {
         drawer.drawText('Algorithm done! Wait next...',
             getQuestionCoordinate(centerX, 0), '#03cece');
@@ -123,23 +123,24 @@ setup.drawBoard = function(drawer) {
     }
 
     var index = -1;
-    var isNewLevel = (data.questions.length < data.history.length);
+    var isNewLevel = (board.questions.length < board.history.length);
     if (!isNewLevel) {
-        for (var key in data.history) {
-            var value = data.history[key];
-            if (value.question == data.nextQuestion) continue;
+        for (var key in board.history) {
+            var item = board.history[key];
+            if (item.question == board.nextQuestion) {
+                var valid = board.expectedAnswer == item.answer;
+                item = {
+                    last : true,
+                    valid : valid,
+                    question : board.nextQuestion,
+                    answer : item.answer,
+                    expected : (!valid) ? board.expectedAnswer : null
+                };
+            }
 
-            drawer.drawText(getQuestionFormatted(value),
+            drawer.drawText(getQuestionFormatted(item),
                 getQuestionCoordinate(centerX, ++index),
-                (value.valid)?'#4fee4f':'#ff6e6e');
+                (item.valid) ? '#4fee4f' : '#ff6e6e');
         }
     }
-
-    var current = {
-        last : true,
-        question : data.nextQuestion,
-        answer : data.expectedAnswer
-    };
-    drawer.drawText(getQuestionFormatted(current),
-        getQuestionCoordinate(centerX, ++index), '#eaea5c');
 }

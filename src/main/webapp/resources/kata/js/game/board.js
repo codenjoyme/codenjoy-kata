@@ -58,10 +58,13 @@ var Board = function (boardString) {
             return separator +
                 board.history.map(item => {
                     if (item.question == board.nextQuestion) {
-                        var item = {
-                            valid : board.expectedAnswer != null,
+                        var valid = board.expectedAnswer == item.answer;
+                        item = {
+                            last : true,
+                            valid : valid,
                             question : board.nextQuestion,
-                            answer : board.expectedAnswer
+                            answer : item.answer,
+                            expected : (!valid) ? board.expectedAnswer : null
                         };
                     }
                     var equality = (item.last) ? '=' : (item.valid) ? '=' : '=';
