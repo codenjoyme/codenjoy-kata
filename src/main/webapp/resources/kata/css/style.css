@@ -376,10 +376,12 @@ button:focus {
 
 .modal-help .modal-button {
   margin-top: 0px;
+  margin-bottom: 11px;
 }
 
 .modal-help .modal-footer {
-  height: 48px;
+  height: 0px;
+  margin-bottom: 11px;
 }
 
 .help-description {
