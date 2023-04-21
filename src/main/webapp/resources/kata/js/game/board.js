@@ -57,10 +57,18 @@ var Board = function (boardString) {
             var separator = '<br>&nbsp;'
             return separator +
                 board.history.map(item => {
-                    var equality = item.valid ? '=' : '=';
+                    if (item.question == board.nextQuestion) {
+                        var item = {
+                            valid : board.expectedAnswer != null,
+                            question : board.nextQuestion,
+                            answer : board.expectedAnswer
+                        };
+                    }
+                    var equality = (item.last) ? '=' : (item.valid) ? '=' : '=';
                     var status = item.valid ? '✅' : '❌';
+                    var answer = (!!item.answer) ? item.answer : '?';
                     var expected = (!!item.expected) ? ' != ' + item.expected : '';
-                    return `${status}f(${item.question}) ${equality} ${item.answer}${expected}`;
+                    return `${status}f(${item.question}) ${equality} ${answer}${expected}`;
                 }).join(separator);
         }
     };
