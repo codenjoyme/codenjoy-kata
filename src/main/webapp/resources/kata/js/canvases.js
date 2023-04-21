@@ -81,10 +81,21 @@ var setDescription = function(text) {
 }
 
 var getQuestionFormatted = function(item) {
-    var equality = (item.last) ? '=' : (item.valid) ? '=' : '=';
-    var answer = (!!item.answer) ? item.answer : item.expected;
-    var expected = (!item.answer) ? '' : (!!item.expected) ? ' != ' + item.expected : '';
-    return `f(${item.question}) ${equality} ${answer}${expected}`;
+    var expected =
+        (item.valid)
+            ? ' = ' + item.answer
+            : (!!item.expected)
+                ? ' = ' + item.expected
+                : '';
+
+    var answer =
+        (item.valid)
+            ? ''
+            : (!!item.answer)
+                ? ' != ' + item.answer
+                : '';
+
+    return `f(${item.question})${expected}${answer}`;
 }
 
 var getQuestionsFormatted = function(board) {
