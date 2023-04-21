@@ -143,7 +143,7 @@ var initAdditionalLink = function() {
 }
 
 var initLoginLogoutLink = function() {
-    if (!!setup.code) {
+    if (!setup.unauthorized) {
         var link = setup.contextPath + '/process_logout';
         $('#login-logout-link').attr('href', link);
         $('#login-logout-link').html('Logout');

@@ -109,10 +109,16 @@ setup.drawBoard = function(drawer) {
         setDescription(unescapeUnicode(data.description));
     }
 
+    if (setup.unauthorized) {
+        drawer.drawText('Please login...',
+            getQuestionCoordinate(centerX, 0), '#03cece');
+        return;
+    }
+
     var isWaitNext = (data.questions.length == 0);
     if (isWaitNext) {
         drawer.drawText('Algorithm done! Wait next...',
-            getQuestionCoordinate(centerX, 0), '#099');
+            getQuestionCoordinate(centerX, 0), '#03cece');
         return;
     }
 

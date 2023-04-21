@@ -267,19 +267,22 @@ var boardPageLoad = function() {
         buttons.disableAll();
         $(document.body).show();
 
-        if (!!setup.code) {
-            runner.loadSettings();
-
-            socket.connect(function() {
-                buttons.enableAll();
-            });
-        } else {
+        if (setup.unauthorized) {
             buttons.disableHelp();
 
-            var link = $('#login-logout-link').attr('href');
+            var loginLink = $('#login-logout-link');
+            var link = loginLink.attr('href');
+            loginLink.text('Login');
             logger.print('<a href="' + link + '">Please login</a>');
 
             runner.setStubValue();
+            return;
         }
+
+        runner.loadSettings();
+
+        socket.connect(function() {
+            buttons.enableAll();
+        });
     }
 };

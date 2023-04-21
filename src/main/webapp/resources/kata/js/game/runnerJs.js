@@ -48,7 +48,7 @@ function initRunnerJs(setup, libs, getLevelInfo, storage) {
     var typeCounter = 0;
     var clean = null;
     editor.on('change', function() {
-        if (!setup.code) {
+        if (setup.unauthorized) {
             return;
         }
 
@@ -68,7 +68,7 @@ function initRunnerJs(setup, libs, getLevelInfo, storage) {
     });
 
     $('body').bind("tick", function() {
-        if (!setup.code) {
+        if (setup.unauthorized) {
             return;
         }
 

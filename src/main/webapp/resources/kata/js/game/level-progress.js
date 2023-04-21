@@ -49,7 +49,7 @@ function initLevelProgress(setup, onChangeLevel) {
         this.active(current);
     }
     progressBar.click(function (event) {
-        if (!setup.code) {
+        if (setup.unauthorized) {
             return;
         }
 
@@ -107,6 +107,11 @@ function initLevelProgress(setup, onChangeLevel) {
         if (firstRun || progressBar.levelProgress.total != countLevels) {
             progressBar.countLevels(countLevels);
         }
+        if (setup.unauthorized) {
+            progressBar.setProgress(-1, -1);
+            return;
+        }
+
         progressBar.setProgress(currentLevel, lastPassed);
 
         scrollProgress();
