@@ -81,21 +81,21 @@ var setDescription = function(text) {
 }
 
 var getQuestionFormatted = function(item) {
-    var expected =
-        (item.valid)
+    var answer =
+        (!!item.answer)
             ? ' = ' + item.answer
             : (!!item.expected)
                 ? ' = ' + item.expected
                 : '';
 
-    var answer =
+    var expected =
         (item.valid)
             ? ''
-            : (!!item.answer)
-                ? ' != ' + item.answer
+            : (!!item.expected)
+                ? ' != ' + item.expected
                 : '';
 
-    return `f(${item.question})${expected}${answer}`;
+    return `f(${item.question})${answer}${expected}`;
 }
 
 var getQuestionsFormatted = function(board) {
