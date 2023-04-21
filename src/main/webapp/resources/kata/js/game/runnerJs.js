@@ -29,9 +29,7 @@ function initRunnerJs(setup, libs, getLevelInfo, storage) {
 
     var container = $('#ide-content');
     container.empty();
-    container.append('<pre id="ide-block" class="editor">function program(question) {\n' +
-                      '    return \'answer\';\n' +
-                      '}</pre>');
+    container.append('<pre id="ide-block" class="editor"></pre>');
 
     var editor = initEditor(libs, 'ide-block', autocomplete);
 
@@ -107,7 +105,7 @@ function initRunnerJs(setup, libs, getLevelInfo, storage) {
     var loadSettings = function() {
         try {
             var data = storage.load('editor');
-            if (!!data) {
+            if (!!data && data.code != stubValue) {
                 editor.setValue(data.code);
                 editor.focus();
                 editor.selection.moveTo(data.position.row, data.position.column);
@@ -124,6 +122,9 @@ function initRunnerJs(setup, libs, getLevelInfo, storage) {
     $(window).on('unload', saveSettings);
 
     var functionToRun = null;
+    var stubValue = 'function program(question) {\n' +
+        '    // PLEASE LOGIN\n' +
+        '}';
 
     return {
         loadSettings : loadSettings,
@@ -131,13 +132,11 @@ function initRunnerJs(setup, libs, getLevelInfo, storage) {
             return editor.getValue();
         },
         setStubValue : function() {
-            editor.setValue('function program(question) {\n' +
-                    '    // PLEASE LOGIN\n' +
-                    '}');
+            editor.setValue(stubValue);
         },
         compileProgram : function(robot) {
             var code = editor.getValue();
-            functionToRun = compileProgram(code);
+            functionToRun = compileProgram(code); // TODO add robot here?
         },
         cleanProgram : function() {
             functionToRun = null;

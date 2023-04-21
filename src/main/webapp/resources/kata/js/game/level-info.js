@@ -77,7 +77,8 @@ var initLevelInfo = function(contextPath) {
                 name:'',
                 help:'<pre>// under construction</pre>',
                 defaultCode:'function program(question) {\n'  +
-                '    // TODO write your code here\n' +
+                '    // TODO implement your logic here\n' +
+                '    return \'answer\';\n' +
                 '}',
                 winCode:'function program(question) {\n'  +
                 '    robot.nextLevel();\n' +
