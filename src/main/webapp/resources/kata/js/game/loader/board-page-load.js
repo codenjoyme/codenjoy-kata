@@ -167,20 +167,23 @@ var boardPageLoad = function() {
         } else if (!!description) {
             help = description;
         } else {
-            help = "No help for this level";
+            help = ["No help for this level"];
         }
 
-        if (help.includes("Wait for next level")) {
-            help = help = "Wait for next level. Please click RESET button.";
+        if (help.toString().includes("Wait for next level")) {
+            help = ["Wait for next level. Please click RESET button."];
         }
 
-        help = help.replace(/\n/g, "<br>")
-                   .replace(/\\n/g, "<br>");
+        var unescape = function(string) {
+            return string.replace(/\n/g, "<br>")
+                        .replace(/\\n/g, "<br>");
+        }
 
+        help = help.map(string => unescape(string));
 
         var containerId = '#ide-help-window';
         var container = $(containerId);
-        container.html(copyToClipboardMessageContainer(help));
+        container.html(copyToClipboardMessageContainer(help[0]));
         copyToClipboardButtonHandler(containerId, function(data) {
             return 'Info:\n' + data;
         });

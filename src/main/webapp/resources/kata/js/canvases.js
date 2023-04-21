@@ -106,7 +106,7 @@ setup.drawBoard = function(drawer) {
 
     var data = drawer.playerData.board;
     if (typeof setDescription != 'undefined' && !!data.description) {
-        setDescription(unescapeUnicode(data.description));
+        setDescription(data.description.map(string => unescapeUnicode(string)));
     }
 
     if (setup.unauthorized) {
