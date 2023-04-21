@@ -80,46 +80,45 @@ var setDescription = function(text) {
     description = text;
 }
 
+var getQuestionFormatted = function(item) {
+    var equality = (item.last) ? '=' : (item.valid) ? '=' : '=';
+    var answer = (!!item.answer) ? item.answer : item.expected;
+    var expected = (!item.answer) ? '' : (!!item.expected) ? ' != ' + item.expected : '';
+    return `f(${item.question}) ${equality} ${answer}${expected}`;
+}
+
+var getQuestionsFormatted = function(board) {
+    var questions = board.history;
+    if (questions.length == 0) {
+        questions = [{
+            last: true,
+            valid: false,
+            question: board.nextQuestion,
+            answer: null,
+            expected: board.expectedAnswer
+        }];
+    }
+    return questions.map(item => {
+        if (item.question == board.nextQuestion) {
+            var valid = board.expectedAnswer == item.answer;
+            item = {
+                last: true,
+                valid: valid,
+                question: board.nextQuestion,
+                answer: item.answer,
+                expected: (!valid) ? board.expectedAnswer : null
+            };
+        }
+        return {
+            text : getQuestionFormatted(item),
+            valid : item.valid
+        };
+    });
+}
+
 setup.drawBoard = function(drawer) {
     var getQuestionCoordinate = function(x, y) {
         return {x:(setup.onlyBoard ? x : 7), y:y + 1};
-    }
-
-    var getQuestionFormatted = function(item, withStatus) {
-        var equality = (item.last) ? '=' : (item.valid) ? '=' : '=';
-        var status = (!withStatus) ? '' : item.valid ? '✅' : '❌';
-        var answer = (!!item.answer) ? item.answer : item.expected;
-        var expected = (!item.answer) ? '' : (!!item.expected) ? ' != ' + item.expected : '';
-        return `${status}f(${item.question}) ${equality} ${answer}${expected}`;
-    }
-
-    var getQuestionsFormatted = function(board) {
-        var questions = board.history;
-        if (questions.length == 0) {
-            questions = [{
-                last: true,
-                valid: false,
-                question: board.nextQuestion,
-                answer: null,
-                expected: board.expectedAnswer
-            }];
-        }
-        return questions.map(item => {
-            if (item.question == board.nextQuestion) {
-                var valid = board.expectedAnswer == item.answer;
-                item = {
-                    last: true,
-                    valid: valid,
-                    question: board.nextQuestion,
-                    answer: item.answer,
-                    expected: (!valid) ? board.expectedAnswer : null
-                };
-            }
-            return {
-                text : getQuestionFormatted(item, false),
-                valid : item.valid
-            };
-        });
     }
 
     function unescapeUnicode(unicode) {

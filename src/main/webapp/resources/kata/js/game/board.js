@@ -56,23 +56,9 @@ var Board = function (boardString) {
             }
             var separator = '<br>&nbsp;'
             return separator +
-                board.history.map(item => {
-                    if (item.question == board.nextQuestion) {
-                        var valid = board.expectedAnswer == item.answer;
-                        item = {
-                            last : true,
-                            valid : valid,
-                            question : board.nextQuestion,
-                            answer : item.answer,
-                            expected : (!valid) ? board.expectedAnswer : null
-                        };
-                    }
-                    var equality = (item.last) ? '=' : (item.valid) ? '=' : '=';
-                    var status = item.valid ? '✅' : '❌';
-                    var answer = (!!item.answer) ? item.answer : '?';
-                    var expected = (!!item.expected) ? ' != ' + item.expected : '';
-                    return `${status}f(${item.question}) ${equality} ${answer}${expected}`;
-                }).join(separator);
+                getQuestionsFormatted(board)
+                    .map(item => `${item.valid ? '✅' : '❌'}${item.text}`)
+                    .join(separator);
         }
     };
 };
