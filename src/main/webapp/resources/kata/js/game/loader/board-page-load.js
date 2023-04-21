@@ -159,6 +159,7 @@ var boardPageLoad = function() {
         buttons.disableAll();
         controller.reset();
     }
+    var helpOpened = 1;
     var onHelpClick = function() {
         var levelNumber = levelProgress.getCurrentLevel();
         var level = levelInfo.getLevel(levelNumber);
@@ -184,7 +185,27 @@ var boardPageLoad = function() {
         var containerId = '#ide-help-window';
         var container = $(containerId);
         container.empty();
-        help.map(text => container.append(copyToClipboardMessageContainer(text)));
+
+        var moreHelp = $("#more-help");
+        moreHelp.off();
+        moreHelp.click(function(){
+            var next = container.find('.text-line').length;
+
+            container.append(copyToClipboardMessageContainer(help[next]));
+            next++;
+
+            if (next >= help.length) {
+                moreHelp.hide();
+            }
+
+            if (helpOpened < next) {
+                helpOpened++;
+            }
+        });
+        for (var i = 0; i < helpOpened; i++) {
+            moreHelp.click();
+        }
+
         copyToClipboardButtonHandler(containerId, function(data) {
             return 'Info:\n' + data;
         });
