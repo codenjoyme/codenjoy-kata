@@ -159,7 +159,13 @@ var boardPageLoad = function() {
         buttons.disableAll();
         controller.reset();
     }
-    var helpOpened = 1;
+
+    var helpOpened;
+    var resetHelpOpened = function() {
+        helpOpened = 1;
+    }
+    resetHelpOpened();
+
     var onHelpClick = function() {
         var levelNumber = levelProgress.getCurrentLevel();
         var level = levelInfo.getLevel(levelNumber);
@@ -188,6 +194,7 @@ var boardPageLoad = function() {
 
         var moreHelp = $("#more-help");
         moreHelp.off();
+        moreHelp.show();
         moreHelp.click(function(){
             var next = container.find('.text-line').length;
 
@@ -259,6 +266,7 @@ var boardPageLoad = function() {
 
         // ----------------------- init progressbar -------------------
         var onChangeLevel = function(level, multiple, lastPassed, isLevelIncreased, isWin) {
+            resetHelpOpened();
             if (isWin) {
                 win.show();
                 logger.clean();
