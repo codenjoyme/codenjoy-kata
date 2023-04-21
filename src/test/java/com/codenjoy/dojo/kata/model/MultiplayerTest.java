@@ -36,6 +36,8 @@ import com.codenjoy.dojo.services.questionanswer.event.NextAlgorithmEvent;
 import com.codenjoy.dojo.services.questionanswer.event.PassTestEvent;
 import com.codenjoy.dojo.services.questionanswer.levels.Level;
 import com.codenjoy.dojo.utils.JsonUtils;
+import com.codenjoy.dojo.utils.smart.SmartAssert;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
@@ -46,7 +48,7 @@ import java.util.List;
 import static com.codenjoy.dojo.client.Command.START_NEXT_LEVEL;
 import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_DESCRIPTION;
 import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_EXPECTED_ANSWER;
-import static org.junit.Assert.assertEquals;
+import static com.codenjoy.dojo.utils.smart.SmartAssert.assertEquals;
 import static org.mockito.Mockito.*;
 
 // TODO А точно Kata это мультиплеерная игра?
@@ -111,6 +113,11 @@ public class MultiplayerTest {
         game3.newGame();
     }
 
+    @After
+    public void after() {
+        SmartAssert.checkResult();
+    }
+
     private void dice(Integer... next) {
         dice.then(next);
     }
@@ -135,7 +142,9 @@ public class MultiplayerTest {
     @Test
     public void shouldPrint() {
         asrtFl1("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -145,7 +154,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -155,7 +166,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -219,7 +232,9 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'answer1',\n" +
@@ -236,7 +251,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'answer2',\n" +
@@ -253,7 +270,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'answer3',\n" +
@@ -278,7 +297,9 @@ public class MultiplayerTest {
         field.tick();
 
         asrtFl1("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -288,7 +309,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -299,7 +322,9 @@ public class MultiplayerTest {
 
         try {
             asrtFl3("{\n" +
-                    "  'description':'description',\n" +
+                    "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                     "  'history':[],\n" +
                     "  'level':0,\n" +
                     "  'nextQuestion':'question1',\n" +
@@ -323,7 +348,9 @@ public class MultiplayerTest {
         field.tick();
 
         asrtFl1("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'answer1',\n" +
@@ -340,7 +367,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'answer1',\n" +
@@ -357,7 +386,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'answer1',\n" +
@@ -378,7 +409,9 @@ public class MultiplayerTest {
         field.tick();
 
         asrtFl1("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -388,7 +421,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'answer1',\n" +
@@ -405,7 +440,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'answer1',\n" +
@@ -433,7 +470,9 @@ public class MultiplayerTest {
         field.tick();
 
         asrtFl1("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'answer1',\n" +
@@ -450,7 +489,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong2',\n" +
@@ -467,7 +508,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong3',\n" +
@@ -537,7 +580,9 @@ public class MultiplayerTest {
         field.tick();
 
         asrtFl1("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'answer1',\n" +
@@ -554,7 +599,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
@@ -571,7 +618,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
@@ -593,7 +642,9 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'answer1',\n" +
@@ -616,7 +667,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
@@ -633,7 +686,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
@@ -656,7 +711,9 @@ public class MultiplayerTest {
         // then
         // wait level
         asrtFl1("{\n" +
-                "  'description':'Wait for next level. Please send 'message('StartNextLevel')' command.',\n" +
+                "  'description':[\n" +
+                "    'Wait for next level. Please send 'message('StartNextLevel')' command.'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'answer1',\n" +
@@ -679,7 +736,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
@@ -696,7 +755,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
@@ -719,14 +780,18 @@ public class MultiplayerTest {
         // then
         // win level with clean history
         asrtFl1("{\n" +
-                "  'description':'No more Levels. You win!',\n" +
+                "  'description':[\n" +
+                "    'No more Levels. You win!'\n" +
+                "  ],\n" +
                 "  'history':[],\n" +
                 "  'level':1,\n" +
                 "  'questions':[]\n" +
                 "}");
 
         asrtFl2("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
@@ -743,7 +808,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
@@ -765,14 +832,18 @@ public class MultiplayerTest {
         // then 
         // still clear history
         asrtFl1("{\n" +
-                "  'description':'No more Levels. You win!',\n" +
+                "  'description':[\n" +
+                "    'No more Levels. You win!'\n" +
+                "  ],\n" +
                 "  'history':[],\n" +
                 "  'level':1,\n" +
                 "  'questions':[]\n" +
                 "}");
 
         asrtFl2("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
@@ -789,7 +860,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
@@ -818,14 +891,18 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'description':'No more Levels. You win!',\n" +
+                "  'description':[\n" +
+                "    'No more Levels. You win!'\n" +
+                "  ],\n" +
                 "  'history':[],\n" +
                 "  'level':1,\n" +
                 "  'questions':[]\n" +
                 "}");
 
         asrtFl2("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
@@ -842,7 +919,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
@@ -864,14 +943,18 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'description':'No more Levels. You win!',\n" +
+                "  'description':[\n" +
+                "    'No more Levels. You win!'\n" +
+                "  ],\n" +
                 "  'history':[],\n" +
                 "  'level':1,\n" +
                 "  'questions':[]\n" +
                 "}");
 
         asrtFl2("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
@@ -888,7 +971,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
@@ -924,7 +1009,9 @@ public class MultiplayerTest {
         field.tick();
 
         asrtFl1("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'answer1',\n" +
@@ -941,7 +1028,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +
@@ -958,7 +1047,9 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'description':'description',\n" +
+                "  'description':[\n" +
+                "    'description'\n" +
+                "  ],\n" +
                 "  'history':[\n" +
                 "    {\n" +
                 "      'answer':'wrong',\n" +

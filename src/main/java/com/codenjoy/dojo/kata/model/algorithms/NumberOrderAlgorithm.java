@@ -24,6 +24,7 @@ package com.codenjoy.dojo.kata.model.algorithms;
 
 import com.codenjoy.dojo.services.questionanswer.levels.AlgorithmLevelImpl;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class NumberOrderAlgorithm extends AlgorithmLevelImpl {
@@ -53,11 +54,12 @@ public class NumberOrderAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public String description() {
-        return "Order matters...\n" +
+    public List<String> description() {
+        return Arrays.asList(
+                "Order matters...\n" +
                 "You need to work with three-digit numbers. \n" +
                 "Solve the algorithm for changing the number according to the given examples: \n" +
-                "Examples: 111=>222, 123=>423, 679=>078, 999=>000, 012=>312, 090=>110, 444=>555, 090=>110, 916=>702";
+                "Examples: 111=>222, 123=>423, 679=>078, 999=>000, 012=>312, 090=>110, 444=>555, 090=>110, 916=>702");
     }
 
     @Override

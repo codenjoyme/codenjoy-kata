@@ -49,6 +49,7 @@ import java.util.List;
 
 import static com.codenjoy.dojo.kata.services.GameSettings.Keys.*;
 import static com.codenjoy.dojo.services.settings.SimpleParameter.v;
+import static java.util.stream.Collectors.toList;
 
 public class GameRunner extends AbstractGameType<GameSettings> {
 
@@ -113,7 +114,10 @@ public class GameRunner extends AbstractGameType<GameSettings> {
             GameSettings settings = player.settings();
 
             if (settings.bool(SHOW_DESCRIPTION)) {
-                result.put("description", StringEscapeUtils.escapeJava(player.levels().getDescription()));
+                result.put("description",
+                        player.levels().getDescription().stream()
+                                .map(StringEscapeUtils::escapeJava)
+                                .collect(toList()));
             }
 
             if (settings.bool(SHOW_EXPECTED_ANSWER)) {

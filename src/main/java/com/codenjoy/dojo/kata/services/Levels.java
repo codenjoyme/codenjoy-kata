@@ -56,7 +56,9 @@ public final class Levels {
             put("name", escape(level.name()));
             put("winCode", escape(level.winCode()));
             put("defaultCode", escape(level.defaultCode()));
-            put("help", escape(level.description()));
+            put("help", level.description().stream()
+                            .map(Levels::escape)
+                            .collect(toList()));
         }}.toString());
     }
 

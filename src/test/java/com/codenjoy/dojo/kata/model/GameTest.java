@@ -31,6 +31,7 @@ import com.codenjoy.dojo.services.questionanswer.levels.Level;
 import com.codenjoy.dojo.services.questionanswer.levels.LevelsPool;
 import com.codenjoy.dojo.services.questionanswer.levels.QuestionAnswerLevelImpl;
 import com.codenjoy.dojo.utils.JsonUtils;
+import com.codenjoy.dojo.utils.smart.SmartAssert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -60,6 +61,11 @@ public class GameTest {
         dice = new MockDice();
     }
 
+    @Test
+    public void after() {
+        SmartAssert.checkResult();
+    }
+
     private void dice(Integer... next) {
         dice.then(next);
     }
@@ -77,8 +83,8 @@ public class GameTest {
             }
 
             @Override
-            public String description() {
-                return "description";
+            public List<String> description() {
+                return Arrays.asList("description");
             }
         };
     }

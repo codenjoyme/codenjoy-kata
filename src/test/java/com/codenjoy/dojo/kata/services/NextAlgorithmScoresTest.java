@@ -24,14 +24,21 @@ package com.codenjoy.dojo.kata.services;
 
 
 import com.codenjoy.dojo.kata.TestGameSettings;
+import com.codenjoy.dojo.utils.smart.SmartAssert;
+import org.junit.After;
 import org.junit.Test;
 
 import static com.codenjoy.dojo.kata.services.GameSettings.Keys.*;
-import static org.junit.Assert.assertEquals;
+import static com.codenjoy.dojo.utils.smart.SmartAssert.assertEquals;
 
 public class NextAlgorithmScoresTest {
 
     private TestGameSettings settings = new TestGameSettings();
+
+    @After
+    public void after() {
+        SmartAssert.checkResult();
+    }
 
     @Test
     public void shouldWork_whenComplexityIs0() {

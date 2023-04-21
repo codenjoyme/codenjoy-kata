@@ -26,6 +26,9 @@ package com.codenjoy.dojo.kata.model.algorithms;
 import com.codenjoy.dojo.services.questionanswer.levels.AlgorithmLevelImpl;
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Sequence2Algorithm extends AlgorithmLevelImpl {
 
     @Override
@@ -55,10 +58,11 @@ public class Sequence2Algorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public String description() {
-        return "Continue the sequence 971, 874, 787, 709, 639...\n" +
+    public List<String> description() {
+        return Arrays.asList(
+                "Continue the sequence 971, 874, 787, 709, 639...\n" +
                 "i.e f(1) = 971, f(2) = 874, ...\n" +
-                "Hint: Use subtraction";
+                "Hint: Use subtraction");
     }
 
     @Override

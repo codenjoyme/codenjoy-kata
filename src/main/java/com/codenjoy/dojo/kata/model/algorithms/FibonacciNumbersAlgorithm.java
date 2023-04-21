@@ -25,6 +25,9 @@ package com.codenjoy.dojo.kata.model.algorithms;
 
 import com.codenjoy.dojo.services.questionanswer.levels.AlgorithmLevelImpl;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class FibonacciNumbersAlgorithm extends AlgorithmLevelImpl {
 
     @Override
@@ -52,8 +55,9 @@ public class FibonacciNumbersAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public String description() {
-        return "Make a method that returns a Fibonacci number from the series by its number:\n" +
+    public List<String> description() {
+        return Arrays.asList(
+                "Make a method that returns a Fibonacci number from the series by its number:\n" +
                 "f(0) = 0\n" +
                 "f(1) = 1\n" +
                 "f(2) = 0 + 1 = 1\n" +
@@ -64,7 +68,7 @@ public class FibonacciNumbersAlgorithm extends AlgorithmLevelImpl {
                 "f(7) = 5 + 8 = 13\n" +
                 "f(8) = 8 + 13 = 21\n" +
                 "f(9) = 13 + 21 = 34\n" +
-                "etc...";
+                "etc...");
     }
 
     @Override

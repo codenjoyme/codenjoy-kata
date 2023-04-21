@@ -25,6 +25,9 @@ package com.codenjoy.dojo.kata.model.algorithms;
 
 import com.codenjoy.dojo.services.questionanswer.levels.AlgorithmLevelImpl;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class PrimeFactoryAlgorithm extends AlgorithmLevelImpl {
 
     @Override
@@ -67,8 +70,9 @@ public class PrimeFactoryAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public String description() {
-        return "Divide an integer into multiples of prime numbers:\n" +
+    public List<String> description() {
+        return Arrays.asList(
+                "Divide an integer into multiples of prime numbers:\n" +
                 "1 -> [1]\n" +
                 "2 -> [2]\n" +
                 "3 -> [3]\n" +
@@ -77,7 +81,7 @@ public class PrimeFactoryAlgorithm extends AlgorithmLevelImpl {
                 "9 -> [3,3]\n" +
                 "12 -> [2,2,3]\n" +
                 "15 -> [3,5]\n" +
-                "etc...";
+                "etc...");
     }
 
     @Override

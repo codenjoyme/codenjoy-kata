@@ -25,6 +25,7 @@ package com.codenjoy.dojo.kata.model.algorithms;
 import com.codenjoy.dojo.services.questionanswer.levels.AlgorithmLevelImpl;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class SimpleMathAlgorithm extends AlgorithmLevelImpl {
@@ -45,10 +46,11 @@ public class SimpleMathAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public String description() {
-        return "Given the sequence: 1, 0, 3, 2, 5, 4, 7, 6, 9, 8, 11, 10, 13, 12, 15, 14...\n" +
+    public List<String> description() {
+        return Arrays.asList(
+                "Given the sequence: 1, 0, 3, 2, 5, 4, 7, 6, 9, 8, 11, 10, 13, 12, 15, 14...\n" +
                 "The sequence starts with element number 0: f(0)=1.\n" +
-                "Your task is to write a function that returns the element at index n: f(n)=?";
+                "Your task is to write a function that returns the element at index n: f(n)=?");
     }
 
     @Override

@@ -24,6 +24,7 @@ package com.codenjoy.dojo.kata.model.algorithms;
 
 import com.codenjoy.dojo.services.questionanswer.levels.AlgorithmLevelImpl;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class CharOrderAlgorithm extends AlgorithmLevelImpl {
@@ -42,12 +43,13 @@ public class CharOrderAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public String description() {
-        return "The order matters...\n " +
+    public List<String> description() {
+        return Arrays.asList(
+                "The order matters...\n " +
                 "Everything is quite simple. \n" +
                 "In a string of three characters, the last character becomes the first one,\n " +
                 "and the first two characters shift one position to the right. \n" +
-                "For example: abc=>cab...";
+                "For example: abc=>cab...");
     }
 
     @Override

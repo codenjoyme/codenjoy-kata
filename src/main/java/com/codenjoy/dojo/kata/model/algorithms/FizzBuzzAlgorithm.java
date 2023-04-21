@@ -25,6 +25,9 @@ package com.codenjoy.dojo.kata.model.algorithms;
 
 import com.codenjoy.dojo.services.questionanswer.levels.AlgorithmLevelImpl;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
 
     @Override
@@ -53,13 +56,15 @@ public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
                 "}";
     }
 
+
     @Override
-    public String description() {
-        return "Write a method that takes one int argument and " +
+    public List<String> description() {
+        return Arrays.asList(
+                "Write a method that takes one int argument and " +
                 "that returns a String. For those numbers that are divisible by 3, " +
                 "the method should return 'Fizz', for those numbers divisible by 5 " +
                 "it should return 'Buzz', for those numbers divisible " +
-                "by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.";
+                "by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.");
     }
 
     @Override

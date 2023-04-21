@@ -26,6 +26,8 @@ package com.codenjoy.dojo.kata.model.algorithms;
 import com.codenjoy.dojo.services.questionanswer.levels.AlgorithmLevelImpl;
 
 import java.math.BigInteger;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author http://projecteuler.net/problem=16
@@ -55,12 +57,13 @@ public class PowerDigitSumAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public String description() {
-        return "2 to the power of 15 = 32768, the sum of digits " +
+    public List<String> description() {
+        return Arrays.asList(
+                "2 to the power of 15 = 32768, the sum of digits " +
                 "of the result 3 + 2 + 7 + 6 + 8 = 26. " +
                 "What is the sum of the digits of 2 to the power of i?\n" +
                 "Write a method for calculation that takes int " +
-                "and returns the result as a String";
+                "and returns the result as a String");
     }
 
     @Override

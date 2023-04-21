@@ -25,6 +25,8 @@ package com.codenjoy.dojo.kata.model.algorithms;
 
 import com.codenjoy.dojo.services.questionanswer.levels.AlgorithmLevelImpl;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
@@ -100,9 +102,10 @@ public class XthPrimeAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public String description() {
-        return "The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. " +
-                "Write a method that returns the i-th prime number.";
+    public List<String> description() {
+        return Arrays.asList(
+                "The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. " +
+                "Write a method that returns the i-th prime number.");
     }
 
     @Override

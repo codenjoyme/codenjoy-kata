@@ -26,6 +26,8 @@ package com.codenjoy.dojo.kata.model.algorithms;
 import com.codenjoy.dojo.services.questionanswer.levels.AlgorithmLevelImpl;
 
 import java.math.BigInteger;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -72,10 +74,11 @@ public class FactorialAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public String description() {
-        return "Write a method that takes one int argument and " +
+    public List<String> description() {
+        return Arrays.asList(
+                "Write a method that takes one int argument and " +
                 "that returns the factorial of that number as a String.\n" +
-                "Warning: Int/long overflow is possible.";
+                "Warning: Int/long overflow is possible.");
     }
 
     @Override

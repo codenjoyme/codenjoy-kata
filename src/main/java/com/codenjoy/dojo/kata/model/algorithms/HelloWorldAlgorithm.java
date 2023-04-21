@@ -60,14 +60,18 @@ public class HelloWorldAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public String description() {
-        return "Write a method that takes a single String argument " +
-                "and return the string 'world' if 'hello' came in, " +
-                "and 'hello' if 'world', otherwise the algorithm " +
-                "should return the same string that came in.\n" +
-                "This is the first and simplest algorithm - " +
-                "its purpose is to check if everything works " +
-                "well and how you understand the problem.";
+    public List<String> description() {
+        return Arrays.asList(
+                "Write a method that takes a single string argument " +
+                "and return the string 'world' if 'hello' came in.",
+
+                "Please write js method.",
+
+                "Now please improve the algorithm so that it returns" +
+                "'hello' if 'world' came in. Previous logic should work also",
+
+                "One more improvement: in other cases the algorithm " +
+                "should return the same string that came in.");
     }
 
     @Override

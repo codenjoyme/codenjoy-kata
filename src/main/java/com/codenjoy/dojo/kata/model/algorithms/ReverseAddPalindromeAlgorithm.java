@@ -70,13 +70,14 @@ public class ReverseAddPalindromeAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public String description() {
-        return "For the most of numbers iterative 'reverse and add' " +
+    public List<String> description() {
+        return Arrays.asList(
+                "For the most of numbers iterative 'reverse and add' " +
                 "actions lead to palindrome number. For example: \n" +
                 "Number 23: 23 + 32 = 55; \n" +
                 "Number 254: 254 + 452 = 706; 706 + 607 = 1313; 1313 + 3131 = 4444;\n" +
                 "Write a method which calculates 'ReverseAndAdd' palindrome " +
-                "for a number. i.e f(23) = 55; f(254) = 4444";
+                "for a number. i.e f(23) = 55; f(254) = 4444");
     }
 
     @Override

@@ -25,6 +25,9 @@ package com.codenjoy.dojo.kata.model;
 
 import com.codenjoy.dojo.services.questionanswer.levels.QuestionAnswerLevelImpl;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class SimpleQATestLevel extends QuestionAnswerLevelImpl {
 
     public SimpleQATestLevel(String... qa) {
@@ -37,7 +40,7 @@ public class SimpleQATestLevel extends QuestionAnswerLevelImpl {
     }
 
     @Override
-    public String description() {
-        return "description";
+    public List<String> description() {
+        return Arrays.asList("description");
     }
 }
