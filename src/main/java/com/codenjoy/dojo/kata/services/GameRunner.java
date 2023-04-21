@@ -108,7 +108,7 @@ public class GameRunner extends AbstractGameType<GameSettings> {
 
     @Override
     public PrinterFactory getPrinterFactory() {
-        return PrinterFactory.get((BoardReader boardReader, Player player) -> {
+        return PrinterFactory.get((BoardReader boardReader, Player player, Object... parameters) -> {
             JSONObject result = new JSONObject();
             GameSettings settings = player.settings();
 
