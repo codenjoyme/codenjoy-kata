@@ -75,7 +75,7 @@ var initLevelInfo = function(contextPath) {
         if (level < 0 || level > count) {
             return {
                 name:'',
-                help:'<pre>// under construction</pre>',
+                help:'Help is coming soon...',
                 defaultCode:'function program(question) {\n'  +
                 '    // TODO implement your logic here\n' +
                 '    return \'answer\';\n' +

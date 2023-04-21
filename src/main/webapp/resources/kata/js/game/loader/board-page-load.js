@@ -141,7 +141,7 @@ var boardPageLoad = function() {
 
     // ----------------------- init help modal -------------------
     $("#close").click(function(){
-        $("#modal").addClass("close");
+        $("#modal-help").addClass("close");
     });
     $("body").keydown(function(event){
         if (event.which == 27){
@@ -189,7 +189,7 @@ var boardPageLoad = function() {
             return 'Info:\n' + data;
         });
 
-        $("#modal").removeClass("close");
+        $("#modal-help").removeClass("close");
     };
     var buttons = initButtons(onCommitClick, onResetClick, onHelpClick);
 

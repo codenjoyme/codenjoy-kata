@@ -374,8 +374,16 @@ button:focus {
   font: 14px/normal "Monaco", "Menlo", "Ubuntu Mono", "Consolas", "source-code-pro", monospace;
 }
 
+.modal-help .modal-button {
+  margin-top: 0px;
+}
+
+.modal-help .modal-footer {
+  height: 48px;
+}
+
 .help-description {
-  margin: 10px;
+  margin: 10px 10px -10px 10px;
   max-height: 400px;
   overflow-y: auto;
 }
