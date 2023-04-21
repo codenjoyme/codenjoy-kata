@@ -183,7 +183,8 @@ var boardPageLoad = function() {
 
         var containerId = '#ide-help-window';
         var container = $(containerId);
-        container.html(copyToClipboardMessageContainer(help[0]));
+        container.empty();
+        help.map(text => container.append(copyToClipboardMessageContainer(text)));
         copyToClipboardButtonHandler(containerId, function(data) {
             return 'Info:\n' + data;
         });

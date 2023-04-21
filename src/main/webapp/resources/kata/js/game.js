@@ -76,7 +76,7 @@ var copyToClipboardButton = function() {
 }
 
 var copyToClipboardMessageContainer = function(message) {
-    return '<span class="test-result">'
+    return '<span class="text-line">'
             + '<span>' + message + '</span>'
             + copyToClipboardButton()
             + '</span>';

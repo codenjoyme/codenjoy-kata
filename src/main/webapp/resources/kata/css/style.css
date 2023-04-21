@@ -380,6 +380,11 @@ button:focus {
   overflow-y: auto;
 }
 
+.help-description>span {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
 a.modalCloseImg {
   background:url(../img/close.png) no-repeat;
   width: 25px;
