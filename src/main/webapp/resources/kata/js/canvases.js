@@ -85,12 +85,12 @@ setup.drawBoard = function(drawer) {
         return {x:(setup.onlyBoard ? x : 7), y:y + 1};
     }
 
-    var getQuestionFormatted = function(item) {
+    var getQuestionFormatted = function(item, withStatus) {
         var equality = (item.last) ? '=' : (item.valid) ? '=' : '=';
-        var status = item.valid ? '✅' : '❌';
+        var status = (!withStatus) ? '' : item.valid ? '✅' : '❌';
         var answer = (!!item.answer) ? item.answer : '?';
         var expected = (!!item.expected) ? ' != ' + item.expected : '';
-        return `f(${item.question}) ${equality} ${answer}${expected}`;
+        return `${status}f(${item.question}) ${equality} ${answer}${expected}`;
     }
 
     function unescapeUnicode(unicode) {
@@ -125,22 +125,25 @@ setup.drawBoard = function(drawer) {
     var index = -1;
     var isNewLevel = (board.questions.length < board.history.length);
     if (!isNewLevel) {
-        for (var key in board.history) {
-            var item = board.history[key];
+        board.history.map(item => {
             if (item.question == board.nextQuestion) {
                 var valid = board.expectedAnswer == item.answer;
                 item = {
-                    last : true,
-                    valid : valid,
-                    question : board.nextQuestion,
-                    answer : item.answer,
-                    expected : (!valid) ? board.expectedAnswer : null
+                    last: true,
+                    valid: valid,
+                    question: board.nextQuestion,
+                    answer: item.answer,
+                    expected: (!valid) ? board.expectedAnswer : null
                 };
             }
-
-            drawer.drawText(getQuestionFormatted(item),
+            return {
+                text : getQuestionFormatted(item, false),
+                valid : item.valid
+            };
+        }).forEach(item => {
+            drawer.drawText(item.text,
                 getQuestionCoordinate(centerX, ++index),
                 (item.valid) ? '#4fee4f' : '#ff6e6e');
-        }
+        });
     }
 }
