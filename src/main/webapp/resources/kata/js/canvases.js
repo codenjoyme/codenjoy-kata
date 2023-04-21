@@ -88,9 +88,38 @@ setup.drawBoard = function(drawer) {
     var getQuestionFormatted = function(item, withStatus) {
         var equality = (item.last) ? '=' : (item.valid) ? '=' : '=';
         var status = (!withStatus) ? '' : item.valid ? '✅' : '❌';
-        var answer = (!!item.answer) ? item.answer : '?';
-        var expected = (!!item.expected) ? ' != ' + item.expected : '';
+        var answer = (!!item.answer) ? item.answer : item.expected;
+        var expected = (!item.answer) ? '' : (!!item.expected) ? ' != ' + item.expected : '';
         return `${status}f(${item.question}) ${equality} ${answer}${expected}`;
+    }
+
+    var getQuestionsFormatted = function(board) {
+        var questions = board.history;
+        if (questions.length == 0) {
+            questions = [{
+                last: true,
+                valid: false,
+                question: board.nextQuestion,
+                answer: null,
+                expected: board.expectedAnswer
+            }];
+        }
+        return questions.map(item => {
+            if (item.question == board.nextQuestion) {
+                var valid = board.expectedAnswer == item.answer;
+                item = {
+                    last: true,
+                    valid: valid,
+                    question: board.nextQuestion,
+                    answer: item.answer,
+                    expected: (!valid) ? board.expectedAnswer : null
+                };
+            }
+            return {
+                text : getQuestionFormatted(item, false),
+                valid : item.valid
+            };
+        });
     }
 
     function unescapeUnicode(unicode) {
@@ -125,25 +154,11 @@ setup.drawBoard = function(drawer) {
     var index = -1;
     var isNewLevel = (board.questions.length < board.history.length);
     if (!isNewLevel) {
-        board.history.map(item => {
-            if (item.question == board.nextQuestion) {
-                var valid = board.expectedAnswer == item.answer;
-                item = {
-                    last: true,
-                    valid: valid,
-                    question: board.nextQuestion,
-                    answer: item.answer,
-                    expected: (!valid) ? board.expectedAnswer : null
-                };
-            }
-            return {
-                text : getQuestionFormatted(item, false),
-                valid : item.valid
-            };
-        }).forEach(item => {
-            drawer.drawText(item.text,
-                getQuestionCoordinate(centerX, ++index),
-                (item.valid) ? '#4fee4f' : '#ff6e6e');
-        });
+        getQuestionsFormatted(board)
+            .forEach(item => {
+                drawer.drawText(item.text,
+                    getQuestionCoordinate(centerX, ++index),
+                    (item.valid) ? '#4fee4f' : '#ff6e6e');
+            });
     }
 }
