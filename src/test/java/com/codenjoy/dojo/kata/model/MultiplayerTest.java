@@ -46,8 +46,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static com.codenjoy.dojo.client.Command.START_NEXT_LEVEL;
-import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_DESCRIPTION;
-import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_EXPECTED_ANSWER;
+import static com.codenjoy.dojo.kata.services.GameSettings.Keys.*;
 import static com.codenjoy.dojo.utils.smart.SmartAssert.assertEquals;
 import static org.mockito.Mockito.*;
 
@@ -63,6 +62,7 @@ public class MultiplayerTest {
     private MockDice dice;
     private Kata field;
     private TestGameSettings settings;
+    private boolean screenOrClient;
 
     // появляется другие игроки, игра становится мультипользовательской
     @Before
@@ -72,6 +72,7 @@ public class MultiplayerTest {
                 "question2=answer2",
                 "question3=answer3");
 
+        printForClient();
         dice = new MockDice();
         settings = new TestGameSettings(){
             @Override
@@ -127,7 +128,7 @@ public class MultiplayerTest {
     }
 
     private void assertField(String expected, Game game1) {
-        assertEquals(expected, JsonUtils.prettyPrint(game1.getBoardAsString().toString()).replace('\"', '\'').replaceAll("\\r", ""));
+        assertEquals(expected, JsonUtils.prettyPrint(game1.getBoardAsString(screenOrClient).toString()).replace('\"', '\'').replaceAll("\\r", ""));
     }
 
     private void asrtFl2(String expected) {
@@ -138,9 +139,9 @@ public class MultiplayerTest {
         assertField(expected, game3);
     }
 
-    // рисуем несколько игроков
     @Test
-    public void shouldPrint() {
+    public void shouldPrint_whenInitialStep_forClient() {
+        // when then
         asrtFl1("{\n" +
                 "  'description':[\n" +
                 "    'description'\n" +
@@ -179,7 +180,43 @@ public class MultiplayerTest {
     }
 
     @Test
-    public void shouldPrint_whenDescriptionIsDisabled() {
+    public void shouldPrint_whenInitialStep_forScreen() {
+        // given
+        printForScreen();
+
+        // when then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != ???'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != ???'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != ???'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+    }
+
+    private void printForScreen() {
+        screenOrClient = true;
+    }
+
+    private void printForClient() {
+        screenOrClient = false;
+    }
+
+    @Test
+    public void shouldPrint_whenDescriptionIsDisabled_forClient() {
         // given
         settings.bool(SHOW_DESCRIPTION, false)
                 .bool(SHOW_EXPECTED_ANSWER, true);
@@ -216,10 +253,41 @@ public class MultiplayerTest {
                 "}");
     }
 
+    @Test
+    public void shouldPrint_whenDescriptionIsDisabled_forScreen() {
+        // given
+        printForScreen();
+
+        settings.bool(SHOW_DESCRIPTION, false)
+                .bool(SHOW_EXPECTED_ANSWER, true);
+
+        // when then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) = ??? != answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) = ??? != answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) = ??? != answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+    }
+
     // Каждый игрок может управляться за тик игры независимо,
     // все их последние ходы применяются после тика любой борды
     @Test
-    public void shouldJoystick() {
+    public void shouldJoystick_forClient() {
         // when
         game1.getJoystick().message("['wrong-message']");
         game1.getJoystick().message("['answer1']");
@@ -289,13 +357,843 @@ public class MultiplayerTest {
                 "}");
     }
 
+    @Test
+    public void shouldPrintHistory_withDescription_withExpectedAnswer_withValid_forScreen() {
+        // given
+        printForScreen();
+
+        settings.bool(SHOW_DESCRIPTION, true)
+                .bool(SHOW_EXPECTED_ANSWER, true)
+                .bool(SHOW_VALID_IN_HISTORY, true);
+
+        // when
+        game1.getJoystick().message("['wrong-answer1']");
+        game2.getJoystick().message("['answer1']");
+        game3.getJoystick().message("['answer1']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) = wrong-answer1 != answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['answer1']");
+        game2.getJoystick().message("['answer1', 'wrong-answer2']");
+        game3.getJoystick().message("['answer1', 'answer2']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) = wrong-answer2 != answer2'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['answer1', 'answer2']");
+        game2.getJoystick().message("['answer1', 'wrong-answer22']");
+        game3.getJoystick().message("['answer1', 'answer2', 'wrong-answer3']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) = wrong-answer22 != answer2'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) = wrong-answer3 != answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['wrong-answer1', 'answer2', 'answer3']");
+        game2.getJoystick().message("['answer1', 'answer2']");
+        game3.getJoystick().message("['answer1', 'answer2']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) = wrong-answer1 != answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '✅f(question3) = answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) = ??? != answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['wrong-answer1', 'wrong-answer2', 'wrong-answer3']");
+        game2.getJoystick().message("['wrong-answer1', 'wrong-answer2']");
+        game3.getJoystick().message("['wrong-answer1']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) = wrong-answer1 != answer1',\n" +
+                "    '❌f(question2) = wrong-answer2 != answer2',\n" +
+                "    '❌f(question3) = wrong-answer3 != answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) = wrong-answer1 != answer1',\n" +
+                "    '❌f(question2) = wrong-answer2 != answer2',\n" +
+                "    '❌f(question3) = ??? != answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) = wrong-answer1 != answer1',\n" +
+                "    '❌f(question2) = ??? != answer2',\n" +
+                "    '❌f(question3) = ??? != answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['answer1', 'answer2', 'answer3']");
+        game2.getJoystick().message("['answer1', 'answer2']");
+        game3.getJoystick().message("['answer1']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '✅f(question3) = answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) = ??? != answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) = ??? != answer2',\n" +
+                "    '❌f(question3) = ??? != answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+    }
+
+    @Test
+    public void shouldPrintHistory_withDescription_withExpectedAnswer_withoutValid_forScreen() {
+        // given
+        printForScreen();
+
+        settings.bool(SHOW_DESCRIPTION, true)
+                .bool(SHOW_EXPECTED_ANSWER, true)
+                .bool(SHOW_VALID_IN_HISTORY, false);
+
+        // when
+        game1.getJoystick().message("['wrong-answer1']");
+        game2.getJoystick().message("['answer1']");
+        game3.getJoystick().message("['answer1']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) = wrong-answer1 != answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['answer1']");
+        game2.getJoystick().message("['answer1', 'wrong-answer2']");
+        game3.getJoystick().message("['answer1', 'answer2']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) = wrong-answer2 != answer2'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['answer1', 'answer2']");
+        game2.getJoystick().message("['answer1', 'wrong-answer22']");
+        game3.getJoystick().message("['answer1', 'answer2', 'wrong-answer3']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) = wrong-answer22 != answer2'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) = wrong-answer3 != answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['wrong-answer1', 'answer2', 'answer3']");
+        game2.getJoystick().message("['answer1', 'answer2']");
+        game3.getJoystick().message("['answer1', 'answer2']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong-answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '✅f(question3) = answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) = ??? != answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['wrong-answer1', 'wrong-answer2', 'wrong-answer3']");
+        game2.getJoystick().message("['wrong-answer1', 'wrong-answer2']");
+        game3.getJoystick().message("['wrong-answer1']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong-answer1',\n" +
+                "    '❌f(question2) != wrong-answer2',\n" +
+                "    '❌f(question3) = wrong-answer3 != answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong-answer1',\n" +
+                "    '❌f(question2) != wrong-answer2',\n" +
+                "    '❌f(question3) = ??? != answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong-answer1',\n" +
+                "    '❌f(question2) != ???',\n" +
+                "    '❌f(question3) = ??? != answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['answer1', 'answer2', 'answer3']");
+        game2.getJoystick().message("['answer1', 'answer2']");
+        game3.getJoystick().message("['answer1']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '✅f(question3) = answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) = ??? != answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != ???',\n" +
+                "    '❌f(question3) = ??? != answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+    }
+
+    @Test
+    public void shouldPrintHistory_withDescription_withoutExpectedAnswer_withValid_forScreen() {
+        // given
+        printForScreen();
+
+        settings.bool(SHOW_DESCRIPTION, true)
+                .bool(SHOW_EXPECTED_ANSWER, false)
+                .bool(SHOW_VALID_IN_HISTORY, true);
+
+        // when
+        game1.getJoystick().message("['wrong-answer1']");
+        game2.getJoystick().message("['answer1']");
+        game3.getJoystick().message("['answer1']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong-answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['answer1']");
+        game2.getJoystick().message("['answer1', 'wrong-answer2']");
+        game3.getJoystick().message("['answer1', 'answer2']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != wrong-answer2'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['answer1', 'answer2']");
+        game2.getJoystick().message("['answer1', 'wrong-answer22']");
+        game3.getJoystick().message("['answer1', 'answer2', 'wrong-answer3']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != wrong-answer22'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) != wrong-answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['wrong-answer1', 'answer2', 'answer3']");
+        game2.getJoystick().message("['answer1', 'answer2']");
+        game3.getJoystick().message("['answer1', 'answer2']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) = wrong-answer1 != answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '✅f(question3) = answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) != ???'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['wrong-answer1', 'wrong-answer2', 'wrong-answer3']");
+        game2.getJoystick().message("['wrong-answer1', 'wrong-answer2']");
+        game3.getJoystick().message("['wrong-answer1']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) = wrong-answer1 != answer1',\n" +
+                "    '❌f(question2) = wrong-answer2 != answer2',\n" +
+                "    '❌f(question3) != wrong-answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) = wrong-answer1 != answer1',\n" +
+                "    '❌f(question2) = wrong-answer2 != answer2',\n" +
+                "    '❌f(question3) != ???'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) = wrong-answer1 != answer1',\n" +
+                "    '❌f(question2) = ??? != answer2',\n" +
+                "    '❌f(question3) != ???'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['answer1', 'answer2', 'answer3']");
+        game2.getJoystick().message("['answer1', 'answer2']");
+        game3.getJoystick().message("['answer1']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '✅f(question3) = answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) != ???'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) = ??? != answer2',\n" +
+                "    '❌f(question3) != ???'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+    }
+
+    @Test
+    public void shouldPrintHistory_withDescription_withoutExpectedAnswer_withoutValid_forScreen() {
+        // given
+        printForScreen();
+
+        settings.bool(SHOW_DESCRIPTION, true)
+                .bool(SHOW_EXPECTED_ANSWER, false)
+                .bool(SHOW_VALID_IN_HISTORY, false);
+
+        // when
+        game1.getJoystick().message("['wrong-answer1']");
+        game2.getJoystick().message("['answer1']");
+        game3.getJoystick().message("['answer1']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong-answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['answer1']");
+        game2.getJoystick().message("['answer1', 'wrong-answer2']");
+        game3.getJoystick().message("['answer1', 'answer2']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != wrong-answer2'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['answer1', 'answer2']");
+        game2.getJoystick().message("['answer1', 'wrong-answer22']");
+        game3.getJoystick().message("['answer1', 'answer2', 'wrong-answer3']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != wrong-answer22'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) != wrong-answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['wrong-answer1', 'answer2', 'answer3']");
+        game2.getJoystick().message("['answer1', 'answer2']");
+        game3.getJoystick().message("['answer1', 'answer2']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong-answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '✅f(question3) = answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) != ???'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['wrong-answer1', 'wrong-answer2', 'wrong-answer3']");
+        game2.getJoystick().message("['wrong-answer1', 'wrong-answer2']");
+        game3.getJoystick().message("['wrong-answer1']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong-answer1',\n" +
+                "    '❌f(question2) != wrong-answer2',\n" +
+                "    '❌f(question3) != wrong-answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong-answer1',\n" +
+                "    '❌f(question2) != wrong-answer2',\n" +
+                "    '❌f(question3) != ???'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong-answer1',\n" +
+                "    '❌f(question2) != ???',\n" +
+                "    '❌f(question3) != ???'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        // when
+        game1.getJoystick().message("['answer1', 'answer2', 'answer3']");
+        game2.getJoystick().message("['answer1', 'answer2']");
+        game3.getJoystick().message("['answer1']");
+
+        field.tick();
+
+        // then
+        asrtFl1("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '✅f(question3) = answer3'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl2("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) != ???'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+
+        asrtFl3("{\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != ???',\n" +
+                "    '❌f(question3) != ???'\n" +
+                "  ],\n" +
+                "  'level':0\n" +
+                "}");
+    }
+
     // игроков можно удалять из игры
     @Test
     public void shouldRemove() {
+        // when
         game3.close();
 
         field.tick();
 
+        // then
         asrtFl1("{\n" +
                 "  'description':[\n" +
                 "    'description'\n" +
@@ -462,7 +1360,7 @@ public class MultiplayerTest {
     // игрок может ответить правильно и неправильно
     @Test
     public void shouldEvents() {
-        // given
+        // when
         game1.getJoystick().message("['answer1']");
         game2.getJoystick().message("['wrong2']");
         game3.getJoystick().message("['wrong3']");
@@ -1006,8 +1904,10 @@ public class MultiplayerTest {
         game2.getJoystick().message("['wrong']");
         game3.getJoystick().message("['wrong']");
 
+        // when
         field.tick();
 
+        // then
         asrtFl1("{\n" +
                 "  'description':[\n" +
                 "    'description'\n" +

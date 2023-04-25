@@ -23,18 +23,24 @@ package com.codenjoy.dojo.kata;
  */
 
 
+import com.codenjoy.dojo.client.QuestionsJsonParser;
+import com.codenjoy.dojo.client.Utils;
 import com.codenjoy.dojo.games.kata.Board;
 import com.codenjoy.dojo.kata.services.GameRunner;
 import com.codenjoy.dojo.kata.services.GameSettings;
 import com.codenjoy.dojo.kata.services.ai.AISolver;
 import com.codenjoy.dojo.services.Dice;
+import com.codenjoy.dojo.services.printer.PrinterFactory;
 import com.codenjoy.dojo.utils.Smoke;
+import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.List;
 
 import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_EXPECTED_ANSWER;
+import static java.util.stream.Collectors.toList;
 
 public class SmokeTest {
 
@@ -48,7 +54,7 @@ public class SmokeTest {
     }
 
     @Test
-    public void test() {
+    public void testPrintForClient() {
         // about 5.0 sec
         int ticks = 1000;
 
@@ -57,7 +63,7 @@ public class SmokeTest {
         smoke.settings().reloadPlayersWhenGameOverAll(true);
         smoke.settings().increaseLevelAfterReload(true);
 
-        smoke.play(ticks, "SmokeTest.data",
+        smoke.play(ticks, "SmokeTest_forClient.data",
                 new GameRunner() {
                     @Override
                     public Dice getDice() {
@@ -71,6 +77,58 @@ public class SmokeTest {
                     }
                 },
                 Arrays.asList(new AISolver(dice)),
+                Arrays.asList(new Board()));
+    }
+
+    @Test
+    public void testPrintForScreen() {
+        // about 5.0 sec
+        int ticks = 1000;
+
+        smoke.settings().removeWhenWin(true);
+        smoke.settings().removeWhenGameOver(true);
+        smoke.settings().reloadPlayersWhenGameOverAll(true);
+        smoke.settings().increaseLevelAfterReload(true);
+
+        smoke.play(ticks, "SmokeTest_forScreen.data",
+                new GameRunner() {
+                    @Override
+                    public Dice getDice() {
+                        return dice;
+                    }
+
+                    @Override
+                    public GameSettings getSettings() {
+                        return new TestGameSettings().
+                                bool(SHOW_EXPECTED_ANSWER, true);
+                    }
+
+                    @Override
+                    public PrinterFactory getPrinterFactory() {
+                        return (reader, player)
+                                -> parameters
+                                -> super.getPrinterFactory()
+                                    .getPrinter(reader, player)
+                                    .print(true); // print only for screen
+                    }
+                },
+                Arrays.asList(new AISolver(dice){{
+                    parser = new QuestionsJsonParser() {
+                        @Override
+                        public int level(JSONObject data) {
+                            return data.getInt("level");
+                        }
+
+                        @Override
+                        public List<String> questions(JSONObject data) {
+                            List<String> info = Utils.getStrings(data.getJSONArray("info"));
+                            info = info.stream()
+                                    .map(it -> it.substring(it.indexOf("f(") + 2, it.indexOf(") ")))
+                                    .collect(toList());
+                            return info;
+                        }
+                    };
+                }}),
                 Arrays.asList(new Board()));
     }
 }

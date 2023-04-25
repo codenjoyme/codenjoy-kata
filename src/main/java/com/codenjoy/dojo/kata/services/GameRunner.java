@@ -39,15 +39,19 @@ import com.codenjoy.dojo.services.multiplayer.LevelProgress;
 import com.codenjoy.dojo.services.multiplayer.MultiplayerType;
 import com.codenjoy.dojo.services.printer.BoardReader;
 import com.codenjoy.dojo.services.printer.CharElement;
+import com.codenjoy.dojo.services.printer.Printer;
 import com.codenjoy.dojo.services.printer.PrinterFactory;
 import com.codenjoy.dojo.services.questionanswer.QuestionAnswer;
 import com.codenjoy.dojo.services.settings.Parameter;
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.json.JSONObject;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import static com.codenjoy.dojo.kata.services.GameSettings.Keys.*;
+import static com.codenjoy.dojo.services.questionanswer.Examiner.UNANSWERED;
 import static com.codenjoy.dojo.services.settings.SimpleParameter.v;
 import static java.util.stream.Collectors.toList;
 
@@ -110,35 +114,88 @@ public class GameRunner extends AbstractGameType<GameSettings> {
     @Override
     public PrinterFactory getPrinterFactory() {
         return PrinterFactory.get((BoardReader boardReader, Player player, Object... parameters) -> {
+            boolean screenOrClient = Printer.isScreenOrClient(parameters);
             JSONObject result = new JSONObject();
             GameSettings settings = player.settings();
 
-            if (settings.bool(SHOW_DESCRIPTION)) {
-                result.put("description",
-                        player.levels().getDescription().stream()
-                                .map(StringEscapeUtils::escapeJava)
-                                .collect(toList()));
-            }
-
-            if (settings.bool(SHOW_EXPECTED_ANSWER)) {
-                result.put("expectedAnswer", player.levels().getExpectedAnswer());
-            }
-
             result.put("level", player.levels().getLevelIndex());
 
-            result.put("questions", player.levels().getQuestions());
-
-            result.put("nextQuestion", player.levels().getNextQuestion());
-
-            List<QuestionAnswer> history = player.examiner().getLastHistory();
-            if (!settings.bool(SHOW_VALID_IN_HISTORY)) {
-                if (history != null) {
-                    history.forEach(it -> it.setExpectedAnswer(null));
+            if (screenOrClient) {
+                List<QuestionAnswer> lastHistory = player.examiner().getLastHistory();
+                if (lastHistory == null) {
+                    lastHistory = new LinkedList<>();
+                    QuestionAnswer qa = new QuestionAnswer(
+                            player.levels().getNextQuestion(), null);
+                    qa.setExpectedAnswer(player.levels().getExpectedAnswer());
+                    lastHistory.add(qa);
                 }
-            }
-            result.put("history", history);
+                List<QuestionAnswer> history = new LinkedList<>(lastHistory);
+                result.put("info", history.stream()
+                        .map(qa -> format(settings, qa, player.levels().getNextQuestion()))
+                        .collect(toList()));
+            } else {
+                if (settings.bool(SHOW_DESCRIPTION)) {
+                    result.put("description",
+                            player.levels().getDescription().stream()
+                                    .map(StringEscapeUtils::escapeJava)
+                                    .collect(toList()));
+                }
 
+                if (settings.bool(SHOW_EXPECTED_ANSWER)) {
+                    result.put("expectedAnswer", player.levels().getExpectedAnswer());
+                }
+
+                result.put("questions", player.levels().getQuestions());
+
+                result.put("nextQuestion", player.levels().getNextQuestion());
+
+                List<QuestionAnswer> history = player.examiner().getLastHistory();
+                if (!settings.bool(SHOW_VALID_IN_HISTORY)) {
+                    if (history != null) {
+                        history.forEach(it -> it.setExpectedAnswer(null));
+                    }
+                }
+                result.put("history", history);
+
+            }
             return result;
         });
+    }
+
+    private String format(GameSettings settings, QuestionAnswer qa, String nextQuestion) {
+        boolean last = StringUtils.equals(qa.getQuestion(), nextQuestion);
+        String answer = qa.getAnswer();
+        if (answer == null) {
+            answer = UNANSWERED;
+        }
+        if (last) {
+            if (settings.bool(SHOW_EXPECTED_ANSWER)) {
+                if (qa.isValid()) {
+                    return String.format("✅f(%s) = %s", qa.getQuestion(), answer);
+                } else {
+                    return String.format("❌f(%s) = %s != %s", qa.getQuestion(), answer, qa.getExpected());
+                }
+            } else {
+                if (qa.isValid()) {
+                    return String.format("✅f(%s) = %s", qa.getQuestion(), answer);
+                } else {
+                    return String.format("❌f(%s) != %s", qa.getQuestion(), answer);
+                }
+            }
+        } else {
+            if (settings.bool(SHOW_VALID_IN_HISTORY)) {
+                if (qa.isValid()) {
+                    return String.format("✅f(%s) = %s", qa.getQuestion(), answer);
+                } else {
+                    return String.format("❌f(%s) = %s != %s", qa.getQuestion(), answer, qa.getExpected());
+                }
+            } else {
+                if (qa.isValid()) {
+                    return String.format("✅f(%s) = %s", qa.getQuestion(), answer);
+                } else {
+                    return String.format("❌f(%s) != %s", qa.getQuestion(), answer);
+                }
+            }
+        }
     }
 }

@@ -46,6 +46,11 @@ public class Kata implements Field {
     }
 
     @Override
+    public boolean sameBoard() {
+        return false;
+    }
+
+    @Override
     public void tick() {
         for (Player player : players) {
             player.checkAnswer();
