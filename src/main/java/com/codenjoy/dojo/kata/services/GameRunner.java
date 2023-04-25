@@ -47,6 +47,7 @@ import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.json.JSONObject;
 
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -120,18 +121,22 @@ public class GameRunner extends AbstractGameType<GameSettings> {
 
             result.put("level", player.levels().getLevelIndex());
 
+            String next = player.levels().getNextQuestion();
+
             if (screenOrClient) {
+                QuestionAnswer last = new QuestionAnswer(next, null);
+                last.setExpectedAnswer(player.levels().getExpectedAnswer());
+
                 List<QuestionAnswer> lastHistory = player.examiner().getLastHistory();
                 if (lastHistory == null) {
                     lastHistory = new LinkedList<>();
-                    QuestionAnswer qa = new QuestionAnswer(
-                            player.levels().getNextQuestion(), null);
-                    qa.setExpectedAnswer(player.levels().getExpectedAnswer());
-                    lastHistory.add(qa);
                 }
-                List<QuestionAnswer> history = new LinkedList<>(lastHistory);
+                Deque<QuestionAnswer> history = new LinkedList<>(lastHistory);
+                if (next != null && (history.isEmpty() || !StringUtils.equals(next, history.getLast().getQuestion()))) {
+                    history.add(last);
+                }
                 result.put("info", history.stream()
-                        .map(qa -> format(settings, qa, player.levels().getNextQuestion()))
+                        .map(qa -> format(settings, qa, next))
                         .collect(toList()));
             } else {
                 if (settings.bool(SHOW_DESCRIPTION)) {
@@ -147,7 +152,7 @@ public class GameRunner extends AbstractGameType<GameSettings> {
 
                 result.put("questions", player.levels().getQuestions());
 
-                result.put("nextQuestion", player.levels().getNextQuestion());
+                result.put("nextQuestion", next);
 
                 List<QuestionAnswer> history = player.examiner().getLastHistory();
                 if (!settings.bool(SHOW_VALID_IN_HISTORY)) {

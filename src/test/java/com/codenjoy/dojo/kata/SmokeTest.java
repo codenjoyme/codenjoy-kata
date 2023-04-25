@@ -40,6 +40,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_EXPECTED_ANSWER;
+import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_VALID_IN_HISTORY;
 import static java.util.stream.Collectors.toList;
 
 public class SmokeTest {
@@ -72,8 +73,9 @@ public class SmokeTest {
 
                     @Override
                     public GameSettings getSettings() {
-                        return new TestGameSettings().
-                                bool(SHOW_EXPECTED_ANSWER, true);
+                        return new TestGameSettings()
+                                .bool(SHOW_EXPECTED_ANSWER, true)
+                                .bool(SHOW_VALID_IN_HISTORY, true);
                     }
                 },
                 Arrays.asList(new AISolver(dice)),
@@ -99,8 +101,9 @@ public class SmokeTest {
 
                     @Override
                     public GameSettings getSettings() {
-                        return new TestGameSettings().
-                                bool(SHOW_EXPECTED_ANSWER, true);
+                        return new TestGameSettings()
+                                .bool(SHOW_EXPECTED_ANSWER, true)
+                                .bool(SHOW_VALID_IN_HISTORY, true);
                     }
 
                     @Override
