@@ -75,11 +75,6 @@ setup.setupSprites = function() {
 
 // ========================== draw board ==========================
 
-var description = null;
-var setDescription = function(text) {
-    description = text;
-}
-
 var getQuestionsFormatted = function(board) {
     return board.info.map(item => {
         return {
@@ -95,21 +90,8 @@ setup.drawBoard = function(drawer) {
         return {x:(setup.onlyBoard ? x : 7), y:y + 1};
     }
 
-    function unescapeUnicode(unicode) {
-        var r = /\\u([\d\w]{4})/gi;
-        var temp = unicode.replace(r, function (match, grp) {
-            return String.fromCharCode(parseInt(grp, 16));
-        });
-        return decodeURIComponent(temp).split("\\\"").join("\"");
-    }
-
     drawer.clear();
     var centerX = (drawer.canvas.width() / drawer.canvas.plotSize())/2;
-
-    var board = drawer.playerData.board;
-    if (typeof setDescription != 'undefined' && !!board.description) {
-        setDescription(board.description.map(string => unescapeUnicode(string)));
-    }
 
     if (setup.unauthorized) {
         drawer.drawText('Please login...',

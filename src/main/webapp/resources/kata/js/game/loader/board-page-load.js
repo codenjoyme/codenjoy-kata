@@ -171,8 +171,6 @@ var boardPageLoad = function() {
         var level = levelInfo.getLevel(levelNumber);
         if (!!level) {
             help = level.help;
-        } else if (!!description) {
-            help = description;
         } else {
             help = ["No help for this level"];
         }
