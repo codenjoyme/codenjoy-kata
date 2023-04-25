@@ -80,48 +80,11 @@ var setDescription = function(text) {
     description = text;
 }
 
-var getQuestionFormatted = function(item) {
-    var answer =
-        (!!item.answer)
-            ? ' = ' + item.answer
-            : (!!item.expected)
-                ? ' = ' + item.expected
-                : '';
-
-    var expected =
-        (item.valid || (item.last && !item.answer))
-            ? ''
-            : (!!item.expected)
-                ? ' != ' + item.expected
-                : '';
-
-    return `f(${item.question})${answer}${expected}`;
-}
-
 var getQuestionsFormatted = function(board) {
-    var questions = board.history;
-    if (questions.length == 0) {
-        questions = [{
-            last: true,
-            valid: false,
-            question: board.nextQuestion,
-            answer: null,
-            expected: board.expectedAnswer
-        }];
-    }
-    return questions.map(item => {
-        if (item.question == board.nextQuestion) {
-            item = {
-                last: true,
-                valid: item.valid,
-                question: board.nextQuestion,
-                answer: item.answer,
-                expected: (!item.valid) ? board.expectedAnswer : null
-            };
-        }
+    return board.info.map(item => {
         return {
-            text : getQuestionFormatted(item),
-            valid : item.valid
+            text : item.substring(1),
+            valid : item.question.indexOf('✅') != -1
         };
     });
 }
