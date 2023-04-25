@@ -83,7 +83,8 @@ var setDescription = function(text) {
 var getQuestionsFormatted = function(board) {
     return board.info.map(item => {
         return {
-            text : item.substring(1),
+            test : item,
+            description : item.substring(1),
             valid : item.question.indexOf('✅') != -1
         };
     });
@@ -128,7 +129,7 @@ setup.drawBoard = function(drawer) {
     if (!isNewLevel) {
         getQuestionsFormatted(board)
             .forEach(item => {
-                drawer.drawText(item.text,
+                drawer.drawText(item.description,
                     getQuestionCoordinate(centerX, ++index),
                     (item.valid) ? '#4fee4f' : '#ff6e6e');
             });
