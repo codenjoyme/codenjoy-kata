@@ -168,20 +168,16 @@ public class GameRunner extends AbstractGameType<GameSettings> {
         if (answer == null) {
             answer = UNANSWERED;
         }
-        if (last && settings.bool(SHOW_EXPECTED_ANSWER)
-           || !last && settings.bool(SHOW_VALID_IN_HISTORY))
-        {
-            if (qa.isValid()) {
-                return String.format("✅f(%s) = %s", qa.getQuestion(), answer);
-            } else {
-                return String.format("❌f(%s) = %s != %s", qa.getQuestion(), answer, qa.getExpected());
-            }
+        if (qa.isValid()) {
+            return String.format("✅f(%s) = %s", qa.getQuestion(), answer);
+        }
+        boolean showExpected =
+                (last && settings.bool(SHOW_EXPECTED_ANSWER))
+                || (!last && settings.bool(SHOW_VALID_IN_HISTORY));
+        if (showExpected){
+            return String.format("❌f(%s) = %s != %s", qa.getQuestion(), answer, qa.getExpected());
         } else {
-            if (qa.isValid()) {
-                return String.format("✅f(%s) = %s", qa.getQuestion(), answer);
-            } else {
-                return String.format("❌f(%s) != %s", qa.getQuestion(), answer);
-            }
+            return String.format("❌f(%s) != %s", qa.getQuestion(), answer);
         }
     }
 }
