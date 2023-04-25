@@ -89,7 +89,7 @@ var getQuestionFormatted = function(item) {
                 : '';
 
     var expected =
-        (item.valid)
+        (item.valid || (item.last && !item.answer))
             ? ''
             : (!!item.expected)
                 ? ' != ' + item.expected
@@ -111,13 +111,12 @@ var getQuestionsFormatted = function(board) {
     }
     return questions.map(item => {
         if (item.question == board.nextQuestion) {
-            var valid = board.expectedAnswer == item.answer;
             item = {
                 last: true,
-                valid: valid,
+                valid: item.valid,
                 question: board.nextQuestion,
                 answer: item.answer,
-                expected: (!valid) ? board.expectedAnswer : null
+                expected: (!item.valid) ? board.expectedAnswer : null
             };
         }
         return {
