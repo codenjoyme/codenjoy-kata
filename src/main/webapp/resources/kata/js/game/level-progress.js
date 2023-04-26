@@ -35,6 +35,7 @@ function initLevelProgress(setup, onChangeLevel) {
     }
 
     var currentLevel = -1;
+    var oldLevel = -1;
     var currentLevelIsContest = false;
 
     var progressBar = initProgressbar('progress-bar');
@@ -101,6 +102,7 @@ function initLevelProgress(setup, onChangeLevel) {
             return;
         }
         progressBar.levelProgress = board.levelProgress;
+        oldLevel = currentLevel;
         currentLevel = level;
         currentLevelIsContest = contest;
 
@@ -120,12 +122,8 @@ function initLevelProgress(setup, onChangeLevel) {
     });
 
     var oldLastPassed = -1;
-    var oldLevel = -1;
     var fireOnChangeLevel = function(level, multiple, lastPassed) {
         var levelIncreased = oldLevel < level;
-        if (levelIncreased) {
-            oldLevel = level;
-        }
         var lastPassedIncreased = oldLastPassed < lastPassed;
         var win = false;
         if (lastPassedIncreased) {
@@ -134,7 +132,7 @@ function initLevelProgress(setup, onChangeLevel) {
             oldLastPassed = lastPassed;
         }
         if (!!onChangeLevel) {
-            onChangeLevel(level, multiple, lastPassed, levelIncreased, win);
+            onChangeLevel(oldLevel, level, multiple, lastPassed, levelIncreased, win);
         }
     }
 

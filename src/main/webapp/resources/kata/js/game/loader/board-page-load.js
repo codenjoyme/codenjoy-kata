@@ -160,12 +160,7 @@ var boardPageLoad = function() {
         controller.reset();
     }
 
-    var helpOpened;
-    var resetHelpOpened = function() {
-        helpOpened = 1;
-    }
-    resetHelpOpened();
-
+    var helpOpened = 1;
     var containerId = '#ide-help-window';
     var onHelpClick = function() {
         var levelNumber = levelProgress.getCurrentLevel();
@@ -220,8 +215,12 @@ var boardPageLoad = function() {
 
     // ----------------------- init storage -------------------
     var storage = {
+        level : -1,
+        forLevel : function(level) {
+            this.level = level;
+        },
         getKey : function(property) {
-            return property + '[' + setup.playerId + ']';
+            return property + '[' + setup.playerId + ',' + this.level + ']';
         },
         load : function(property) {
             return JSON.parse(localStorage.getItem(this.getKey(property)));
@@ -261,20 +260,41 @@ var boardPageLoad = function() {
         }
         var socket = initSocket(setup, buttons, logger, onSocketMessage, onSocketClose);
 
+        // ----------------------- level state -------------------
+        var saveLevelState = function(level) {
+            storage.forLevel(level);
+            storage.save('helpOpened', helpOpened);
+            storage.save('loggerData', logger.content());
+            runner.saveSettings();
+        }
+
+        var loadLevelState = function(level) {
+            storage.forLevel(level);
+            helpOpened = storage.load('helpOpened') || 1;
+            var loggerData = storage.load('loggerData');
+            logger.clean();
+            if (!!loggerData) {
+                loggerData.forEach(line => logger.print(line));
+            } else {
+                logger.printHello();
+            }
+            runner.loadSettings();
+        }
         // ----------------------- init progressbar -------------------
-        var onChangeLevel = function(level, multiple, lastPassed, isLevelIncreased, isWin) {
-            resetHelpOpened();
+        var onChangeLevel = function(oldLevel, level, multiple, lastPassed, isLevelIncreased, isWin) {
+            if (oldLevel != -1 && oldLevel != level) {
+                saveLevelState(oldLevel);
+            }
             if (isWin) {
                 win.show();
             }
-            logger.clean();
-            logger.printHello();
-            runner.setDefaultValue();
+            if (oldLevel != level) {
+                loadLevelState(level);
+            }
             if (isLevelIncreased) {
                 runner.levelUpdate(level, multiple, lastPassed);
             }
             initAutocomplete(level, levelInfo);
-
             sendParentMessage('change-level', level);
         }
         levelProgress = initLevelProgress(setup, onChangeLevel);

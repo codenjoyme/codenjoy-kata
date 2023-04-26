@@ -59,9 +59,16 @@ function initLogger() {
         container.empty();
     }
 
+    var content = function() {
+        return container.find(".text-line span:first-child").map(function() {
+            return $(this).html();
+        }).get();
+    }
+
     return {
         print : print,
         error : error,
-        clean : clean
+        clean : clean,
+        content : content
     };
 };

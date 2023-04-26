@@ -185,6 +185,7 @@ function initRunnerJs(setup, libs, getLevelInfo, storage) {
 
     return {
         loadSettings : loadSettings,
+        saveSettings : saveSettings,
         getValue : function() {
             return editor.getValue();
         },
