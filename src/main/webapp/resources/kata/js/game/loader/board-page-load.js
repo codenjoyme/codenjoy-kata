@@ -269,6 +269,7 @@ var boardPageLoad = function() {
             }
             logger.clean();
             logger.printHello();
+            runner.setDefaultValue();
             if (isLevelIncreased) {
                 runner.levelUpdate(level, multiple, lastPassed);
             }

@@ -191,6 +191,9 @@ function initRunnerJs(setup, libs, getLevelInfo, storage) {
         setStubValue : function() {
             editor.setValue(stubValue);
         },
+        setDefaultValue : function() {
+            editor.setValue(getDefaultEditorValue());
+        },
         compileProgram : function(robot) {
             var code = editor.getValue();
             functionToRun = compileProgram(code); // TODO add robot here?
