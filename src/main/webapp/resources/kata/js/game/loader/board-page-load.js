@@ -166,6 +166,7 @@ var boardPageLoad = function() {
     }
     resetHelpOpened();
 
+    var containerId = '#ide-help-window';
     var onHelpClick = function() {
         var levelNumber = levelProgress.getCurrentLevel();
         var level = levelInfo.getLevel(levelNumber);
@@ -186,14 +187,13 @@ var boardPageLoad = function() {
 
         help = help.map(string => unescape(string));
 
-        var containerId = '#ide-help-window';
         var container = $(containerId);
         container.empty();
 
         var moreHelp = $("#more-help");
         moreHelp.off();
         moreHelp.show();
-        moreHelp.click(function(){
+        moreHelp.click(function() {
             var next = container.find('.text-line').length;
 
             container.append(copyToClipboardMessageContainer(help[next]));
@@ -211,12 +211,11 @@ var boardPageLoad = function() {
             moreHelp.click();
         }
 
-        copyToClipboardButtonHandler(containerId, function(data) {
-            return 'Info:\n' + data;
-        });
-
         $("#modal-help").removeClass("close");
     };
+    copyToClipboardButtonHandler(containerId, function(data) {
+        return 'Info:\n' + data;
+    });
     var buttons = initButtons(onCommitClick, onResetClick, onHelpClick);
 
     // ----------------------- init storage -------------------
