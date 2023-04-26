@@ -26,7 +26,6 @@ function initController(socket, runner, logger, buttons, levelProgress, getRobot
     }
     
     var controlling = false;
-    var skipFirst = true;
     var commands = [];
     var command = null;
     board = null;
@@ -34,7 +33,6 @@ function initController(socket, runner, logger, buttons, levelProgress, getRobot
 
     var finish = function() {
         controlling = false;
-        skipFirst = true;
         commands = [];
         command = null;
         board = null;
@@ -62,14 +60,10 @@ function initController(socket, runner, logger, buttons, levelProgress, getRobot
 
             var qaInfo = b.getQuestionAnswers();
             if (!!qaInfo && controlling) {
-                if (skipFirst) {
-                    skipFirst = false;
-                } else {
-                    if (!lastQaInfo || lastQaInfo != qaInfo) {
-                        logger.print(qaInfo);
-                    }
-                    lastQaInfo = qaInfo;
+                if (!lastQaInfo || lastQaInfo != qaInfo) {
+                    logger.print(qaInfo);
                 }
+                lastQaInfo = qaInfo;
             }
         }
 
@@ -231,7 +225,6 @@ function initController(socket, runner, logger, buttons, levelProgress, getRobot
         stopCommand();
         if (!controlling) {
             controlling = true;
-            skipFirst = true;
             processCommands();
         }
     }
@@ -244,7 +237,6 @@ function initController(socket, runner, logger, buttons, levelProgress, getRobot
         compileCommands(function() {
             resetCommand();
             controlling = true;
-            skipFirst = true;
             processCommands();
 
             buttons.enableReset();
@@ -264,7 +256,6 @@ function initController(socket, runner, logger, buttons, levelProgress, getRobot
             socket.connect(function() {
                 if (controlling) {
                     controlling = true;
-                    skipFirst = true;
                     processCommands();
                 }
             });

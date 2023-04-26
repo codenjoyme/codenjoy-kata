@@ -104,21 +104,17 @@ setup.drawBoard = function(drawer) {
     }
 
     var board = drawer.playerData.board;
-    var isWaitNext = (board.history.length == 0);
+    var isWaitNext = (board.history.length == 0); // TODO это условие никогда не сработает
     if (isWaitNext) {
         drawer.drawText('Algorithm done! Wait next...',
             getQuestionCoordinate(centerX, 0), '#03cece');
-        return;
     }
 
     var index = -1;
-    // var isNewLevel = (board.questions.length < board.history.length);
-    // if (!isNewLevel) {
-        getQuestionsFormatted(board)
-            .forEach(item => {
-                drawer.drawText(item.description,
-                    getQuestionCoordinate(centerX, ++index),
-                    (item.valid) ? '#4fee4f' : '#ff6e6e');
-            });
-    // }
+    getQuestionsFormatted(board)
+        .forEach(item => {
+            drawer.drawText(item.description,
+                getQuestionCoordinate(centerX, ++index),
+                (item.valid) ? '#4fee4f' : '#ff6e6e');
+        });
 }
