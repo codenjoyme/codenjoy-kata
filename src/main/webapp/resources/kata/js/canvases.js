@@ -87,7 +87,10 @@ var getQuestionsFormatted = function(board) {
 
 setup.drawBoard = function(drawer) {
     var getQuestionCoordinate = function(x, y) {
-        return {x:(setup.onlyBoard ? x : 7), y:y + 1};
+        return {
+            x : (setup.onlyBoard ? x : 7),
+            y : y + 1
+        };
     }
 
     drawer.clear();
