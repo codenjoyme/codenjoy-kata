@@ -149,6 +149,86 @@ var boardPageLoad = function() {
         }
     });
 
+    // ----------------------- help window -------------------
+    var initHelpWindow = function() {
+        var helpOpened = 1;
+        var containerId = '#ide-help-window';
+        var container = $(containerId);
+        var moreHelp = $("#more-help");
+        var modal = $("#modal-help");
+
+        copyToClipboardButtonHandler(containerId, function(data) {
+            return 'Info:\n' + data;
+        });
+
+        var unescape = function(string) {
+            return string.replace(/\n/g, "<br>")
+                .replace(/\\n/g, "<br>");
+        }
+
+        var loadHelpData = function() {
+            var levelNumber = levelProgress.getCurrentLevel();
+            var level = levelInfo.getLevel(levelNumber);
+
+            var result = ["No help for this level"];
+            if (!!level) {
+                result = level.help;
+            }
+
+            if (result.toString().includes("Wait for next level")) {
+                result = ["Wait for next level. Please click RESET button."];
+            }
+
+            result = result.map(string => unescape(string));
+            return result;
+        }
+
+        var moreHelpClick = function(help) {
+            var next = container.find('.text-line').length;
+
+            container.append(copyToClipboardMessageContainer(help[next]));
+            next++;
+
+            if (next >= help.length) {
+                moreHelp.hide();
+            }
+
+            if (helpOpened < next) {
+                helpOpened++;
+            }
+        }
+
+        var show = function() {
+            var help = loadHelpData();
+            container.empty();
+            moreHelp.off();
+            moreHelp.show();
+            moreHelp.click(function() {
+                moreHelpClick(help);
+            });
+            for (var i = 0; i < helpOpened; i++) {
+                moreHelp.click();
+            }
+            modal.removeClass("close");
+        }
+
+        var saveSettings = function() {
+            storage.save('helpOpened', helpOpened);
+        }
+
+        var loadSettings = function() {
+            helpOpened = storage.load('helpOpened') || 1;
+        }
+
+        return {
+            show : show,
+            saveSettings : saveSettings,
+            loadSettings : loadSettings
+        };
+    }
+
+    var helpWindow = initHelpWindow();
+
     // ----------------------- init buttons -------------------
     var onCommitClick = function() {
         buttons.disableAll();
@@ -159,66 +239,6 @@ var boardPageLoad = function() {
         buttons.disableAll();
         controller.reset();
     }
-
-    var initHelpWindow = function() {
-        var helpOpened = 1;
-        var containerId = '#ide-help-window';
-
-        copyToClipboardButtonHandler(containerId, function(data) {
-            return 'Info:\n' + data;
-        });
-
-        return {
-            show : function() {
-                var levelNumber = levelProgress.getCurrentLevel();
-                var level = levelInfo.getLevel(levelNumber);
-                if (!!level) {
-                    help = level.help;
-                } else {
-                    help = ["No help for this level"];
-                }
-
-                if (help.toString().includes("Wait for next level")) {
-                    help = ["Wait for next level. Please click RESET button."];
-                }
-
-                var unescape = function(string) {
-                    return string.replace(/\n/g, "<br>")
-                        .replace(/\\n/g, "<br>");
-                }
-
-                help = help.map(string => unescape(string));
-
-                var container = $(containerId);
-                container.empty();
-
-                var moreHelp = $("#more-help");
-                moreHelp.off();
-                moreHelp.show();
-                moreHelp.click(function() {
-                    var next = container.find('.text-line').length;
-
-                    container.append(copyToClipboardMessageContainer(help[next]));
-                    next++;
-
-                    if (next >= help.length) {
-                        moreHelp.hide();
-                    }
-
-                    if (helpOpened < next) {
-                        helpOpened++;
-                    }
-                });
-                for (var i = 0; i < helpOpened; i++) {
-                    moreHelp.click();
-                }
-
-                $("#modal-help").removeClass("close");
-            }
-        };
-    }
-
-    var helpWindow = initHelpWindow();
     var onHelpClick = function() {
         helpWindow.show();
     }
@@ -278,14 +298,14 @@ var boardPageLoad = function() {
         // ----------------------- level state -------------------
         var saveLevelState = function(level) {
             storage.forLevel(level);
-            storage.save('helpOpened', helpOpened);
+            helpWindow.saveSettings();
             storage.save('loggerData', logger.content());
             runner.saveSettings();
         }
 
         var loadLevelState = function(level) {
             storage.forLevel(level);
-            helpOpened = storage.load('helpOpened') || 1;
+            helpWindow.loadSettings();
             var loggerData = storage.load('loggerData');
             logger.clean();
             if (!!loggerData) {
