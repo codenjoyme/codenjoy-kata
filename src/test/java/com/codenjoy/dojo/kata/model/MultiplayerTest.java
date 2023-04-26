@@ -147,6 +147,9 @@ public class MultiplayerTest {
                 "    'description'\n" +
                 "  ],\n" +
                 "  'history':[],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != ???'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
                 "  'questions':[\n" +
@@ -159,6 +162,9 @@ public class MultiplayerTest {
                 "    'description'\n" +
                 "  ],\n" +
                 "  'history':[],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != ???'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
                 "  'questions':[\n" +
@@ -171,6 +177,9 @@ public class MultiplayerTest {
                 "    'description'\n" +
                 "  ],\n" +
                 "  'history':[],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != ???'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
                 "  'questions':[\n" +
@@ -225,6 +234,9 @@ public class MultiplayerTest {
         asrtFl1("{\n" +
                 "  'expectedAnswer':'answer1',\n" + // instead of description
                 "  'history':[],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) = ??? != answer1'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
                 "  'questions':[\n" +
@@ -235,6 +247,9 @@ public class MultiplayerTest {
         asrtFl2("{\n" +
                 "  'expectedAnswer':'answer1',\n" +
                 "  'history':[],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) = ??? != answer1'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
                 "  'questions':[\n" +
@@ -245,6 +260,9 @@ public class MultiplayerTest {
         asrtFl3("{\n" +
                 "  'expectedAnswer':'answer1',\n" +
                 "  'history':[],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) = ??? != answer1'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
                 "  'questions':[\n" +
@@ -310,6 +328,10 @@ public class MultiplayerTest {
                 "      'valid':true\n" +
                 "    }\n" +
                 "  ],\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != ???'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question2',\n" +
                 "  'questions':[\n" +
@@ -330,6 +352,9 @@ public class MultiplayerTest {
                 "      'valid':false\n" +
                 "    }\n" +
                 "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != answer2'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
                 "  'questions':[\n" +
@@ -348,6 +373,9 @@ public class MultiplayerTest {
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
+                "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != answer3'\n" +
                 "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -1223,6 +1251,9 @@ public class MultiplayerTest {
                 "    'description'\n" +
                 "  ],\n" +
                 "  'history':[],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != ???'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
                 "  'questions':[\n" +
@@ -1235,6 +1266,9 @@ public class MultiplayerTest {
                 "    'description'\n" +
                 "  ],\n" +
                 "  'history':[],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != ???'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
                 "  'questions':[\n" +
@@ -1280,6 +1314,10 @@ public class MultiplayerTest {
                 "      'valid':true\n" +
                 "    }\n" +
                 "  ],\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != ???'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question2',\n" +
                 "  'questions':[\n" +
@@ -1299,6 +1337,10 @@ public class MultiplayerTest {
                 "      'valid':true\n" +
                 "    }\n" +
                 "  ],\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != ???'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question2',\n" +
                 "  'questions':[\n" +
@@ -1317,6 +1359,10 @@ public class MultiplayerTest {
                 "      'question':'question1',\n" +
                 "      'valid':true\n" +
                 "    }\n" +
+                "  ],\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != ???'\n" +
                 "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question2',\n" +
@@ -1335,6 +1381,9 @@ public class MultiplayerTest {
                 "    'description'\n" +
                 "  ],\n" +
                 "  'history':[],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != ???'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
                 "  'questions':[\n" +
@@ -1352,6 +1401,10 @@ public class MultiplayerTest {
                 "      'question':'question1',\n" +
                 "      'valid':true\n" +
                 "    }\n" +
+                "  ],\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != ???'\n" +
                 "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question2',\n" +
@@ -1371,6 +1424,10 @@ public class MultiplayerTest {
                 "      'question':'question1',\n" +
                 "      'valid':true\n" +
                 "    }\n" +
+                "  ],\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != ???'\n" +
                 "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question2',\n" +
@@ -1402,6 +1459,10 @@ public class MultiplayerTest {
                 "      'valid':true\n" +
                 "    }\n" +
                 "  ],\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != ???'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question2',\n" +
                 "  'questions':[\n" +
@@ -1422,6 +1483,9 @@ public class MultiplayerTest {
                 "      'valid':false\n" +
                 "    }\n" +
                 "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong2'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
                 "  'questions':[\n" +
@@ -1440,6 +1504,9 @@ public class MultiplayerTest {
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
+                "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong3'\n" +
                 "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -1512,6 +1579,10 @@ public class MultiplayerTest {
                 "      'valid':true\n" +
                 "    }\n" +
                 "  ],\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != ???'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question2',\n" +
                 "  'questions':[\n" +
@@ -1532,6 +1603,9 @@ public class MultiplayerTest {
                 "      'valid':false\n" +
                 "    }\n" +
                 "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
                 "  'questions':[\n" +
@@ -1550,6 +1624,9 @@ public class MultiplayerTest {
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
+                "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong'\n" +
                 "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -1579,6 +1656,11 @@ public class MultiplayerTest {
                 "      'valid':true\n" +
                 "    }\n" +
                 "  ],\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) != ???'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question3',\n" +
                 "  'questions':[\n" +
@@ -1600,6 +1682,9 @@ public class MultiplayerTest {
                 "      'valid':false\n" +
                 "    }\n" +
                 "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
                 "  'questions':[\n" +
@@ -1618,6 +1703,9 @@ public class MultiplayerTest {
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
+                "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong'\n" +
                 "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -1653,6 +1741,11 @@ public class MultiplayerTest {
                 "      'valid':true\n" +
                 "    }\n" +
                 "  ],\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '✅f(question3) = answer3'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'questions':[]\n" +
                 "}");
@@ -1668,6 +1761,9 @@ public class MultiplayerTest {
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
+                "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong'\n" +
                 "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -1687,6 +1783,9 @@ public class MultiplayerTest {
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
+                "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong'\n" +
                 "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -1706,6 +1805,7 @@ public class MultiplayerTest {
                 "    'No more Levels. You win!'\n" +
                 "  ],\n" +
                 "  'history':[],\n" +
+                "  'info':[],\n" +
                 "  'level':1,\n" +
                 "  'questions':[]\n" +
                 "}");
@@ -1721,6 +1821,9 @@ public class MultiplayerTest {
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
+                "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong'\n" +
                 "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -1740,6 +1843,9 @@ public class MultiplayerTest {
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
+                "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong'\n" +
                 "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -1758,6 +1864,7 @@ public class MultiplayerTest {
                 "    'No more Levels. You win!'\n" +
                 "  ],\n" +
                 "  'history':[],\n" +
+                "  'info':[],\n" +
                 "  'level':1,\n" +
                 "  'questions':[]\n" +
                 "}");
@@ -1773,6 +1880,9 @@ public class MultiplayerTest {
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
+                "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong'\n" +
                 "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -1792,6 +1902,9 @@ public class MultiplayerTest {
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
+                "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong'\n" +
                 "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -1817,6 +1930,7 @@ public class MultiplayerTest {
                 "    'No more Levels. You win!'\n" +
                 "  ],\n" +
                 "  'history':[],\n" +
+                "  'info':[],\n" +
                 "  'level':1,\n" +
                 "  'questions':[]\n" +
                 "}");
@@ -1832,6 +1946,9 @@ public class MultiplayerTest {
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
+                "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong'\n" +
                 "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -1851,6 +1968,9 @@ public class MultiplayerTest {
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
+                "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong'\n" +
                 "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -1869,6 +1989,7 @@ public class MultiplayerTest {
                 "    'No more Levels. You win!'\n" +
                 "  ],\n" +
                 "  'history':[],\n" +
+                "  'info':[],\n" +
                 "  'level':1,\n" +
                 "  'questions':[]\n" +
                 "}");
@@ -1884,6 +2005,9 @@ public class MultiplayerTest {
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
+                "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong'\n" +
                 "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -1903,6 +2027,9 @@ public class MultiplayerTest {
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
+                "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong'\n" +
                 "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
@@ -1943,6 +2070,10 @@ public class MultiplayerTest {
                 "      'valid':true\n" +
                 "    }\n" +
                 "  ],\n" +
+                "  'info':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != ???'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question2',\n" +
                 "  'questions':[\n" +
@@ -1963,6 +2094,9 @@ public class MultiplayerTest {
                 "      'valid':false\n" +
                 "    }\n" +
                 "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong'\n" +
+                "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +
                 "  'questions':[\n" +
@@ -1981,6 +2115,9 @@ public class MultiplayerTest {
                 "      'question':'question1',\n" +
                 "      'valid':false\n" +
                 "    }\n" +
+                "  ],\n" +
+                "  'info':[\n" +
+                "    '❌f(question1) != wrong'\n" +
                 "  ],\n" +
                 "  'level':0,\n" +
                 "  'nextQuestion':'question1',\n" +

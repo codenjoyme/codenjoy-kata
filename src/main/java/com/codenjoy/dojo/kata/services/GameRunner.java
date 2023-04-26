@@ -61,6 +61,7 @@ public class GameRunner extends AbstractGameType<GameSettings> {
     public static final String GAME_NAME = "kata";
 
     public static final String KEY_HISTORY = "history";
+    public static final String KEY_INFO = "info";
     public static final String KEY_LEVEL = "level";
     public static final String KEY_DESCRIPTION = "description";
     public static final String KEY_EXPECTED_ANSWER = "expectedAnswer";
@@ -130,21 +131,9 @@ public class GameRunner extends AbstractGameType<GameSettings> {
 
             String next = player.levels().getNextQuestion();
 
+            List<String> info = getInfo(settings, player, next);
             if (screenOrClient) {
-                QuestionAnswer last = new QuestionAnswer(next, null);
-                last.setExpectedAnswer(player.levels().getExpectedAnswer());
-
-                List<QuestionAnswer> lastHistory = player.examiner().getLastHistory();
-                if (lastHistory == null) {
-                    lastHistory = new LinkedList<>();
-                }
-                Deque<QuestionAnswer> history = new LinkedList<>(lastHistory);
-                if (next != null && (history.isEmpty() || !StringUtils.equals(next, history.getLast().getQuestion()))) {
-                    history.add(last);
-                }
-                result.put(KEY_HISTORY, history.stream()
-                        .map(qa -> format(settings, qa, next))
-                        .collect(toList()));
+                result.put(KEY_HISTORY, info);
             } else {
                 if (settings.bool(SHOW_DESCRIPTION)) {
                     result.put(KEY_DESCRIPTION,
@@ -168,10 +157,29 @@ public class GameRunner extends AbstractGameType<GameSettings> {
                     }
                 }
                 result.put(KEY_HISTORY, history);
+                result.put(KEY_INFO, info); // TODO не очень хорошо тут дублировать инфу, но без єтого не будет работать kata UI
 
             }
             return result;
         });
+    }
+
+    private List<String> getInfo(GameSettings settings, Player player, String next) {
+        QuestionAnswer last = new QuestionAnswer(next, null);
+        last.setExpectedAnswer(player.levels().getExpectedAnswer());
+
+        List<QuestionAnswer> lastHistory = player.examiner().getLastHistory();
+        if (lastHistory == null) {
+            lastHistory = new LinkedList<>();
+        }
+        Deque<QuestionAnswer> history = new LinkedList<>(lastHistory);
+        if (next != null && (history.isEmpty() || !StringUtils.equals(next, history.getLast().getQuestion()))) {
+            history.add(last);
+        }
+        List<String> result = history.stream()
+                .map(qa -> format(settings, qa, next))
+                .collect(toList());
+        return result;
     }
 
     private String format(GameSettings settings, QuestionAnswer qa, String nextQuestion) {
