@@ -39,6 +39,8 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.codenjoy.dojo.kata.services.GameRunner.KEY_HISTORY;
+import static com.codenjoy.dojo.kata.services.GameRunner.KEY_LEVEL;
 import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_EXPECTED_ANSWER;
 import static com.codenjoy.dojo.kata.services.GameSettings.Keys.SHOW_VALID_IN_HISTORY;
 import static java.util.stream.Collectors.toList;
@@ -119,12 +121,12 @@ public class SmokeTest {
                     parser = new QuestionsJsonParser() {
                         @Override
                         public int level(JSONObject data) {
-                            return data.getInt("level");
+                            return data.getInt(KEY_LEVEL);
                         }
 
                         @Override
                         public List<String> questions(JSONObject data) {
-                            List<String> info = Utils.getStrings(data.getJSONArray("info"));
+                            List<String> info = Utils.getStrings(data.getJSONArray(KEY_HISTORY));
                             info = info.stream()
                                     .map(it -> it.substring(it.indexOf("f(") + 2, it.indexOf(") ")))
                                     .collect(toList());

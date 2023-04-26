@@ -186,21 +186,21 @@ public class MultiplayerTest {
 
         // when then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) != ???'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) != ???'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) != ???'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
@@ -263,21 +263,21 @@ public class MultiplayerTest {
 
         // when then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) = ??? != answer1'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) = ??? != answer1'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) = ??? != answer1'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
@@ -375,22 +375,24 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) = wrong-answer1 != answer1'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
-                "    '✅f(question1) = answer1'\n" +
+                "  'history':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) = ??? != answer2'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
-                "    '✅f(question1) = answer1'\n" +
+                "  'history':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) = ??? != answer2'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
@@ -404,14 +406,15 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
-                "    '✅f(question1) = answer1'\n" +
+                "  'history':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) = ??? != answer2'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '❌f(question2) = wrong-answer2 != answer2'\n" +
                 "  ],\n" +
@@ -419,9 +422,10 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
-                "    '✅f(question2) = answer2'\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) = ??? != answer3'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
@@ -435,15 +439,16 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
-                "    '✅f(question2) = answer2'\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) = ??? != answer3'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '❌f(question2) = wrong-answer22 != answer2'\n" +
                 "  ],\n" +
@@ -451,7 +456,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '❌f(question3) = wrong-answer3 != answer3'\n" +
@@ -468,7 +473,7 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) = wrong-answer1 != answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '✅f(question3) = answer3'\n" +
@@ -477,15 +482,16 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
-                "    '✅f(question2) = answer2'\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) = ??? != answer3'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '❌f(question3) = ??? != answer3'\n" +
@@ -502,7 +508,7 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) = wrong-answer1 != answer1',\n" +
                 "    '❌f(question2) = wrong-answer2 != answer2',\n" +
                 "    '❌f(question3) = wrong-answer3 != answer3'\n" +
@@ -511,7 +517,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) = wrong-answer1 != answer1',\n" +
                 "    '❌f(question2) = wrong-answer2 != answer2',\n" +
                 "    '❌f(question3) = ??? != answer3'\n" +
@@ -520,7 +526,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) = wrong-answer1 != answer1',\n" +
                 "    '❌f(question2) = ??? != answer2',\n" +
                 "    '❌f(question3) = ??? != answer3'\n" +
@@ -537,7 +543,7 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '✅f(question3) = answer3'\n" +
@@ -546,7 +552,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '❌f(question3) = ??? != answer3'\n" +
@@ -555,7 +561,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '❌f(question2) = ??? != answer2',\n" +
                 "    '❌f(question3) = ??? != answer3'\n" +
@@ -582,22 +588,24 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) = wrong-answer1 != answer1'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
-                "    '✅f(question1) = answer1'\n" +
+                "  'history':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) = ??? != answer2'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
-                "    '✅f(question1) = answer1'\n" +
+                "  'history':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) = ??? != answer2'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
@@ -611,14 +619,15 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
-                "    '✅f(question1) = answer1'\n" +
+                "  'history':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) = ??? != answer2'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '❌f(question2) = wrong-answer2 != answer2'\n" +
                 "  ],\n" +
@@ -626,9 +635,10 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
-                "    '✅f(question2) = answer2'\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) = ??? != answer3'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
@@ -642,15 +652,16 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
-                "    '✅f(question2) = answer2'\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) = ??? != answer3'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '❌f(question2) = wrong-answer22 != answer2'\n" +
                 "  ],\n" +
@@ -658,7 +669,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '❌f(question3) = wrong-answer3 != answer3'\n" +
@@ -675,7 +686,7 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) != wrong-answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '✅f(question3) = answer3'\n" +
@@ -684,15 +695,16 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
-                "    '✅f(question2) = answer2'\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) = ??? != answer3'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '❌f(question3) = ??? != answer3'\n" +
@@ -709,7 +721,7 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) != wrong-answer1',\n" +
                 "    '❌f(question2) != wrong-answer2',\n" +
                 "    '❌f(question3) = wrong-answer3 != answer3'\n" +
@@ -718,7 +730,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) != wrong-answer1',\n" +
                 "    '❌f(question2) != wrong-answer2',\n" +
                 "    '❌f(question3) = ??? != answer3'\n" +
@@ -727,7 +739,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) != wrong-answer1',\n" +
                 "    '❌f(question2) != ???',\n" +
                 "    '❌f(question3) = ??? != answer3'\n" +
@@ -744,7 +756,7 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '✅f(question3) = answer3'\n" +
@@ -753,7 +765,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '❌f(question3) = ??? != answer3'\n" +
@@ -762,7 +774,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '❌f(question2) != ???',\n" +
                 "    '❌f(question3) = ??? != answer3'\n" +
@@ -789,22 +801,24 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) != wrong-answer1'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
-                "    '✅f(question1) = answer1'\n" +
+                "  'history':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != ???'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
-                "    '✅f(question1) = answer1'\n" +
+                "  'history':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != ???'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
@@ -818,14 +832,15 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
-                "    '✅f(question1) = answer1'\n" +
+                "  'history':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != ???'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '❌f(question2) != wrong-answer2'\n" +
                 "  ],\n" +
@@ -833,9 +848,10 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
-                "    '✅f(question2) = answer2'\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) != ???'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
@@ -849,15 +865,16 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
-                "    '✅f(question2) = answer2'\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) != ???'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '❌f(question2) != wrong-answer22'\n" +
                 "  ],\n" +
@@ -865,7 +882,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '❌f(question3) != wrong-answer3'\n" +
@@ -882,7 +899,7 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) = wrong-answer1 != answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '✅f(question3) = answer3'\n" +
@@ -891,15 +908,16 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
-                "    '✅f(question2) = answer2'\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) != ???'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '❌f(question3) != ???'\n" +
@@ -916,7 +934,7 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) = wrong-answer1 != answer1',\n" +
                 "    '❌f(question2) = wrong-answer2 != answer2',\n" +
                 "    '❌f(question3) != wrong-answer3'\n" +
@@ -925,7 +943,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) = wrong-answer1 != answer1',\n" +
                 "    '❌f(question2) = wrong-answer2 != answer2',\n" +
                 "    '❌f(question3) != ???'\n" +
@@ -934,7 +952,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) = wrong-answer1 != answer1',\n" +
                 "    '❌f(question2) = ??? != answer2',\n" +
                 "    '❌f(question3) != ???'\n" +
@@ -951,7 +969,7 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '✅f(question3) = answer3'\n" +
@@ -960,7 +978,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '❌f(question3) != ???'\n" +
@@ -969,7 +987,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '❌f(question2) = ??? != answer2',\n" +
                 "    '❌f(question3) != ???'\n" +
@@ -996,22 +1014,24 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) != wrong-answer1'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
-                "    '✅f(question1) = answer1'\n" +
+                "  'history':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != ???'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
-                "    '✅f(question1) = answer1'\n" +
+                "  'history':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != ???'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
@@ -1025,14 +1045,15 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
-                "    '✅f(question1) = answer1'\n" +
+                "  'history':[\n" +
+                "    '✅f(question1) = answer1',\n" +
+                "    '❌f(question2) != ???'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '❌f(question2) != wrong-answer2'\n" +
                 "  ],\n" +
@@ -1040,9 +1061,10 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
-                "    '✅f(question2) = answer2'\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) != ???'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
@@ -1056,15 +1078,16 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
-                "    '✅f(question2) = answer2'\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) != ???'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '❌f(question2) != wrong-answer22'\n" +
                 "  ],\n" +
@@ -1072,7 +1095,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '❌f(question3) != wrong-answer3'\n" +
@@ -1089,7 +1112,7 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) != wrong-answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '✅f(question3) = answer3'\n" +
@@ -1098,15 +1121,16 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
-                "    '✅f(question2) = answer2'\n" +
+                "    '✅f(question2) = answer2',\n" +
+                "    '❌f(question3) != ???'\n" +
                 "  ],\n" +
                 "  'level':0\n" +
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '❌f(question3) != ???'\n" +
@@ -1123,7 +1147,7 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) != wrong-answer1',\n" +
                 "    '❌f(question2) != wrong-answer2',\n" +
                 "    '❌f(question3) != wrong-answer3'\n" +
@@ -1132,7 +1156,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) != wrong-answer1',\n" +
                 "    '❌f(question2) != wrong-answer2',\n" +
                 "    '❌f(question3) != ???'\n" +
@@ -1141,7 +1165,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '❌f(question1) != wrong-answer1',\n" +
                 "    '❌f(question2) != ???',\n" +
                 "    '❌f(question3) != ???'\n" +
@@ -1158,7 +1182,7 @@ public class MultiplayerTest {
 
         // then
         asrtFl1("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '✅f(question3) = answer3'\n" +
@@ -1167,7 +1191,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl2("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '✅f(question2) = answer2',\n" +
                 "    '❌f(question3) != ???'\n" +
@@ -1176,7 +1200,7 @@ public class MultiplayerTest {
                 "}");
 
         asrtFl3("{\n" +
-                "  'info':[\n" +
+                "  'history':[\n" +
                 "    '✅f(question1) = answer1',\n" +
                 "    '❌f(question2) != ???',\n" +
                 "    '❌f(question3) != ???'\n" +

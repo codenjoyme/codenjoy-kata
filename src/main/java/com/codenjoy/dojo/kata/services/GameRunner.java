@@ -60,6 +60,13 @@ public class GameRunner extends AbstractGameType<GameSettings> {
 
     public static final String GAME_NAME = "kata";
 
+    public static final String KEY_HISTORY = "history";
+    public static final String KEY_LEVEL = "level";
+    public static final String KEY_DESCRIPTION = "description";
+    public static final String KEY_EXPECTED_ANSWER = "expectedAnswer";
+    public static final String KEY_QUESTIONS = "questions";
+    public static final String KEY_NEXT_QUESTION = "nextQuestion";
+
     @Override
     public GameSettings getSettings() {
         return new GameSettings();
@@ -119,7 +126,7 @@ public class GameRunner extends AbstractGameType<GameSettings> {
             JSONObject result = new JSONObject();
             GameSettings settings = player.settings();
 
-            result.put("level", player.levels().getLevelIndex());
+            result.put(KEY_LEVEL, player.levels().getLevelIndex());
 
             String next = player.levels().getNextQuestion();
 
@@ -135,24 +142,24 @@ public class GameRunner extends AbstractGameType<GameSettings> {
                 if (next != null && (history.isEmpty() || !StringUtils.equals(next, history.getLast().getQuestion()))) {
                     history.add(last);
                 }
-                result.put("info", history.stream()
+                result.put(KEY_HISTORY, history.stream()
                         .map(qa -> format(settings, qa, next))
                         .collect(toList()));
             } else {
                 if (settings.bool(SHOW_DESCRIPTION)) {
-                    result.put("description",
+                    result.put(KEY_DESCRIPTION,
                             player.levels().getDescription().stream()
                                     .map(StringEscapeUtils::escapeJava)
                                     .collect(toList()));
                 }
 
                 if (settings.bool(SHOW_EXPECTED_ANSWER)) {
-                    result.put("expectedAnswer", player.levels().getExpectedAnswer());
+                    result.put(KEY_EXPECTED_ANSWER, player.levels().getExpectedAnswer());
                 }
 
-                result.put("questions", player.levels().getQuestions());
+                result.put(KEY_QUESTIONS, player.levels().getQuestions());
 
-                result.put("nextQuestion", next);
+                result.put(KEY_NEXT_QUESTION, next);
 
                 List<QuestionAnswer> history = player.examiner().getLastHistory();
                 if (!settings.bool(SHOW_VALID_IN_HISTORY)) {
@@ -160,7 +167,7 @@ public class GameRunner extends AbstractGameType<GameSettings> {
                         history.forEach(it -> it.setExpectedAnswer(null));
                     }
                 }
-                result.put("history", history);
+                result.put(KEY_HISTORY, history);
 
             }
             return result;

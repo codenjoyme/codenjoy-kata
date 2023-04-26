@@ -76,7 +76,7 @@ setup.setupSprites = function() {
 // ========================== draw board ==========================
 
 var getQuestionsFormatted = function(board) {
-    return board.info.map(item => {
+    return board.history.map(item => {
         return {
             test : item,
             description : item.substring(1),
