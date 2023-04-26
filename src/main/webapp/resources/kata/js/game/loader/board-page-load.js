@@ -220,12 +220,15 @@ var boardPageLoad = function() {
             this.level = level;
         },
         getKey : function(property) {
-            return property + '[' + setup.playerId + ',' + this.level + ']';
+            return `player['${setup.playerId}'].level[${this.level}].${property}`;
         },
         load : function(property) {
             return JSON.parse(localStorage.getItem(this.getKey(property)));
         },
         save : function(property, data) {
+            if (this.level == -1) {
+                return;
+            }
             localStorage.setItem(this.getKey(property), JSON.stringify(data));
         }
     };
