@@ -266,9 +266,9 @@ var boardPageLoad = function() {
             resetHelpOpened();
             if (isWin) {
                 win.show();
-                logger.clean();
-                logger.printHello();
             }
+            logger.clean();
+            logger.printHello();
             if (isLevelIncreased) {
                 runner.levelUpdate(level, multiple, lastPassed);
             }
