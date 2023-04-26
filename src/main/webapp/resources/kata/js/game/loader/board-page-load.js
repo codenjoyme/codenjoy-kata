@@ -56,15 +56,28 @@ var boardPageLoad = function() {
     // ----------------------- init tooltip -------------------
     $('[data-toggle="tooltip"]').tooltip();
 
-    // ----------------------- init logger -------------------
-    var logger = initLogger();
-    logger.printCongrats = function() {
-        logger.print('Congrats ' + setup.readableName + '! You have passed the puzzle!!! Please press RESET and go to next level.');
-    }
+    // ----------------------- init storage -------------------
+    var storage = {
+        level : -1,
+        forLevel : function(level) {
+            this.level = level;
+        },
+        getKey : function(property) {
+            return `player['${setup.playerId}'].level[${this.level}].${property}`;
+        },
+        load : function(property) {
+            return JSON.parse(localStorage.getItem(this.getKey(property)));
+        },
+        save : function(property, data) {
+            if (this.level == -1) {
+                return;
+            }
+            localStorage.setItem(this.getKey(property), JSON.stringify(data));
+        }
+    };
 
-    logger.printHello = function() {
-        logger.print('Hello ' + setup.readableName + '. Waiting for your program...');
-    }
+    // ----------------------- init logger -------------------
+    var logger = initLogger(storage);
 
     // ----------------------- init slider -------------------
     var setupSlider = function() {
@@ -245,25 +258,6 @@ var boardPageLoad = function() {
 
     var buttons = initButtons(onCommitClick, onResetClick, onHelpClick);
 
-    // ----------------------- init storage -------------------
-    var storage = {
-        level : -1,
-        forLevel : function(level) {
-            this.level = level;
-        },
-        getKey : function(property) {
-            return `player['${setup.playerId}'].level[${this.level}].${property}`;
-        },
-        load : function(property) {
-            return JSON.parse(localStorage.getItem(this.getKey(property)));
-        },
-        save : function(property, data) {
-            if (this.level == -1) {
-                return;
-            }
-            localStorage.setItem(this.getKey(property), JSON.stringify(data));
-        }
-    };
     // ----------------------- init level info -----------------------------
     var levelInfo = initLevelInfo(setup.contextPath);
     levelInfo.load(
@@ -299,20 +293,14 @@ var boardPageLoad = function() {
         var saveLevelState = function(level) {
             storage.forLevel(level);
             helpWindow.saveSettings();
-            storage.save('loggerData', logger.content());
+            logger.saveSettings();
             runner.saveSettings();
         }
 
         var loadLevelState = function(level) {
             storage.forLevel(level);
             helpWindow.loadSettings();
-            var loggerData = storage.load('loggerData');
-            logger.clean();
-            if (!!loggerData) {
-                loggerData.forEach(line => logger.print(line));
-            } else {
-                logger.printHello();
-            }
+            logger.loadSettings();
             runner.loadSettings();
         }
         // ----------------------- init progressbar -------------------
