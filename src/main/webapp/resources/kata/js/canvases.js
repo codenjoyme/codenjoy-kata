@@ -80,7 +80,7 @@ var getQuestionsFormatted = function(board) {
         return {
             test : item,
             description : item.substring(1),
-            valid : item.question.indexOf('✅') != -1
+            valid : item.indexOf('✅') != -1
         };
     });
 }
@@ -102,7 +102,8 @@ setup.drawBoard = function(drawer) {
         return;
     }
 
-    var isWaitNext = (board.questions.length == 0);
+    var board = drawer.playerData.board;
+    var isWaitNext = (board.history.length == 0);
     if (isWaitNext) {
         drawer.drawText('Algorithm done! Wait next...',
             getQuestionCoordinate(centerX, 0), '#03cece');
@@ -110,13 +111,13 @@ setup.drawBoard = function(drawer) {
     }
 
     var index = -1;
-    var isNewLevel = (board.questions.length < board.history.length);
-    if (!isNewLevel) {
+    // var isNewLevel = (board.questions.length < board.history.length);
+    // if (!isNewLevel) {
         getQuestionsFormatted(board)
             .forEach(item => {
                 drawer.drawText(item.description,
                     getQuestionCoordinate(centerX, ++index),
                     (item.valid) ? '#4fee4f' : '#ff6e6e');
             });
-    }
+    // }
 }
