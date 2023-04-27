@@ -221,3 +221,30 @@ x                    59 минут = 300 + 300*(30/100-1)*(59-1) / (60-1) = 93
 +   При переходе на новый уровень вставлять дефолтный код в js редактор
 +   Добавить в FizzBuzz логику для простых чисел: 7, 11, 13
 +   Разделить help подсказки на серию для FizzBuzz
+    Добавить новую задачку на основе алгоритма FizzBuzz, которая бы делала вывод:
+        1=>15:3*5:FizzBuzz
+        2=>21:3*7:FizzMuzz
+        3=>33:3*11:FizzDuzz
+        4=>35:5*7:BuzzMuzz
+        5=>39:3*13:FizzCazz
+        6=>55:5*11:BuzzDuzz
+        7=>65:5*13:BuzzCazz
+        8=>77:7*11:MuzzDuzz
+        9=>91:7*13:MuzzCazz
+        10=>105:3*5*7:FizzBuzzMuzz
+        11=>165:3*5*11:FizzBuzzDuzz
+        12=>195:3*5*13:FizzBuzzCazz
+        13=>231:3*7*11:FizzMuzzDuzz
+        14=>273:3*7*13:FizzMuzzCazz
+        15=>385:5*7*11:BuzzMuzzDuzz
+        16=>455:5*7*13:BuzzMuzzCazz
+        17=>715:5*11*13:BuzzDuzzCazz
+        18=>1001:7*11*13:MuzzDuzzCazz
+        19=>1155:3*5*7*11:FizzBuzzMuzzDuzz
+        20=>1365:3*5*7*13:FizzBuzzMuzzCazz
+        21=>1505:3*5*11*13:FizzBuzzDuzzCazz
+        22=>2145:3*7*11*13:FizzMuzzDuzzCazz
+        23=>3003:5*7*11*13:BuzzMuzzDuzzCazz
+        24=>45045:3*5*7*11*13:FizzBuzzMuzzDuzzCazz
+        25=>null
+

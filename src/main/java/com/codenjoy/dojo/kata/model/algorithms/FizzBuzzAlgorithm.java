@@ -135,7 +135,15 @@ public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
                 String.valueOf(3*5*13),
                 String.valueOf(3*7*11),
                 String.valueOf(3*7*13),
+                String.valueOf(5*7*11),
+                String.valueOf(5*7*13),
+                String.valueOf(5*11*13),
+                String.valueOf(7*11*13),
                 String.valueOf(3*5*7*11),
+                String.valueOf(3*5*7*13),
+                String.valueOf(3*5*11*13),
+                String.valueOf(3*7*11*13),
+                String.valueOf(5*7*11*13),
                 String.valueOf(3*5*7*11*13));
     }
 

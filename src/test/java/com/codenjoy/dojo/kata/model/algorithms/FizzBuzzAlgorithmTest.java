@@ -65,7 +65,15 @@ public class FizzBuzzAlgorithmTest extends AlgorithmTest {
                 "195=>FizzBuzzCazz\n" +
                 "231=>FizzMuzzDuzz\n" +
                 "273=>FizzMuzzCazz\n" +
+                "385=>BuzzMuzzDuzz\n" +
+                "455=>BuzzMuzzCazz\n" +
+                "715=>BuzzDuzzCazz\n" +
+                "1001=>MuzzDuzzCazz\n" +
                 "1155=>FizzBuzzMuzzDuzz\n" +
+                "1365=>FizzBuzzMuzzCazz\n" +
+                "2145=>FizzBuzzDuzzCazz\n" +
+                "3003=>FizzMuzzDuzzCazz\n" +
+                "5005=>BuzzMuzzDuzzCazz\n" +
                 "15015=>FizzBuzzMuzzDuzzCazz";
     }
 }
