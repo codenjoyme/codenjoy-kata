@@ -50,7 +50,6 @@ public class LevelsLoaderTest {
 
         assertEquals("HelloWorldAlgorithm,\n" +
                         "FizzBuzzAlgorithm,\n" +
-                        "FizzBuzzMultiplierAlgorithm,\n" +
                         "SumSquareDifferenceAlgorithm,\n" +
                         "SimpleMathAlgorithm,\n" +
                         "CharOrderAlgorithm,\n" +
@@ -64,6 +63,7 @@ public class LevelsLoaderTest {
                         "ReverseAddPalindromeAlgorithm,\n" +
                         "Sequence2Algorithm,\n" +
                         "XthPrimeAlgorithm,\n" +
+                        "FizzBuzzMultiplierAlgorithm,\n" +
                         "LongDivisionAlgorithm,\n" +
                         "NullLevel",
                 levels.stream()

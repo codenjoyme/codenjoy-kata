@@ -116,7 +116,7 @@ public class FizzBuzzMultiplierAlgorithm extends AlgorithmLevelImpl {
                 "    return `${number}:${divisorsStr}:${fizzBuzz(number)}`;\n" +
                 "}" +
                 "\n" +
-                "function program(number) {\n" +
+                "function fizzBuzz(number) {\n" +
                 "    const divisors = [3, 5, 7, 11, 13];\n" +
                 "    const strings = ['Fizz', 'Buzz', 'Muzz', 'Duzz', 'Cazz'];\n" +
                 "    let str = '';\n" +
@@ -143,6 +143,19 @@ public class FizzBuzzMultiplierAlgorithm extends AlgorithmLevelImpl {
                 "If the input index is less than or equal to 0 or greater " +
                 "than or equal to 25, return 'none'.",
 
+                "JavaScript program:\n" +
+                "function fizzBuzz(number) {\n" +
+                "    const divisors = [3, 5, 7, 11, 13];\n" +
+                "    const strings = ['Fizz', 'Buzz', 'Muzz', 'Duzz', 'Cazz'];\n" +
+                "    let str = '';\n" +
+                "    for (let i = 0; i < divisors.length; i++) {\n" +
+                "        if (number % divisors[i] === 0) {\n" +
+                "            str += strings[i];\n" +
+                "        }\n" +
+                "    }\n" +
+                "    return str || number.toString();\n" +
+                "}",
+
                 "For example:\n" +
                 "1=>15:3*5:FizzBuzz\n" +
                 "2=>21:3*7:FizzMuzz\n" +
@@ -158,7 +171,7 @@ public class FizzBuzzMultiplierAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        return 7;
+        return 55;
     }
 
     @Override
