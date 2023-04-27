@@ -159,6 +159,6 @@ public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
                 "from the Internet the author is Janet Rees " +
                 "(http://www.goodreads.com/book/show/1176717.Fizz_Buzz). " +
                 " The task was supplemented with new conditions for " +
-                "other prime numbers.";
+                "other prime numbers. Updated by Oleksandr Baglai (apofig@gmail.com).";
     }
 }
