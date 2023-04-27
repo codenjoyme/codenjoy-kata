@@ -32,48 +32,29 @@ public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String get(int number) {
-        String result = "";
-        if (number % 3 == 0) {
-            result += "Fizz";
+        int[] divisors = {3, 5, 7, 11, 13};
+        String[] strings = {"Fizz", "Buzz", "Muzz", "Duzz", "Cazz"};
+        String str = "";
+        for (int i = 0; i < divisors.length; i++) {
+            if (number % divisors[i] == 0) {
+                str += strings[i];
+            }
         }
-        if (number % 5 == 0) {
-            result += "Buzz";
-        }
-        if (number % 7 == 0) {
-            result += "Muzz";
-        }
-        if (number % 11 == 0) {
-            result += "Duzz";
-        }
-        if (number % 13 == 0) {
-            result += "Cazz";
-        }
-        if (result.length() == 0) {
-            result = String.valueOf(number);
-        }
-        return result;
+        return str.isEmpty() ? Integer.toString(number) : str;
     }
 
     @Override
     public String winCode() {
         return "function program(number) {\n" +
-                "  let result = \"\";\n" +
-                "  if (number % 3 === 0) {\n" +
-                "    result += \"Fizz\";\n" +
-                "  }\n" +
-                "  if (number % 5 === 0) {\n" +
-                "    result += \"Buzz\";\n" +
-                "  }\n" +
-                "  if (number % 7 === 0) {\n" +
-                "    result += \"Muzz\";\n" +
-                "  }\n" +
-                "  if (number % 11 === 0) {\n" +
-                "    result += \"Duzz\";\n" +
-                "  }\n" +
-                "  if (number % 13 === 0) {\n" +
-                "    result += \"Cazz\";\n" +
-                "  }\n" +
-                "  return result || number.toString();\n" +
+                "    const divisors = [3, 5, 7, 11, 13];\n" +
+                "    const strings = ['Fizz', 'Buzz', 'Muzz', 'Duzz', 'Cazz'];\n" +
+                "    let str = '';\n" +
+                "    for (let i = 0; i < divisors.length; i++) {\n" +
+                "        if (number % divisors[i] === 0) {\n" +
+                "            str += strings[i];\n" +
+                "        }\n" +
+                "    }\n" +
+                "    return str || number.toString();\n" +
                 "}";
     }
 
