@@ -37,7 +37,7 @@ public class FizzBuzzMultiplierAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String get(int index) {
-        if (index <= 0 || index >= 25) {
+        if (index < 1 || index > 26) {
             return "none";
         }
 
@@ -74,9 +74,14 @@ public class FizzBuzzMultiplierAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
+    public List<String> getQuestions() {
+        return prepareQuestions(27);
+    }
+
+    @Override
     public String winCode() {
         return "function program(index) {\n" +
-                "    if (index <= 0 || index >= 25) {\n" +
+                "    if (index < 1 || index > 26) {\n" +
                 "        return 'none';\n" +
                 "    }\n" +
                 "    \n" +
@@ -111,24 +116,16 @@ public class FizzBuzzMultiplierAlgorithm extends AlgorithmLevelImpl {
                 "    return `${number}:${divisorsStr}:${fizzBuzz(number)}`;\n" +
                 "}" +
                 "\n" +
-                "function fizzBuzz(number) {\n" +
-                "  let result = \"\";\n" +
-                "  if (number % 3 === 0) {\n" +
-                "    result += \"Fizz\";\n" +
-                "  }\n" +
-                "  if (number % 5 === 0) {\n" +
-                "    result += \"Buzz\";\n" +
-                "  }\n" +
-                "  if (number % 7 === 0) {\n" +
-                "    result += \"Muzz\";\n" +
-                "  }\n" +
-                "  if (number % 11 === 0) {\n" +
-                "    result += \"Duzz\";\n" +
-                "  }\n" +
-                "  if (number % 13 === 0) {\n" +
-                "    result += \"Cazz\";\n" +
-                "  }\n" +
-                "  return result || number.toString();\n" +
+                "function program(number) {\n" +
+                "    const divisors = [3, 5, 7, 11, 13];\n" +
+                "    const strings = ['Fizz', 'Buzz', 'Muzz', 'Duzz', 'Cazz'];\n" +
+                "    let str = '';\n" +
+                "    for (let i = 0; i < divisors.length; i++) {\n" +
+                "        if (number % divisors[i] === 0) {\n" +
+                "            str += strings[i];\n" +
+                "        }\n" +
+                "    }\n" +
+                "    return str || number.toString();\n" +
                 "}";
     }
 
@@ -136,13 +133,27 @@ public class FizzBuzzMultiplierAlgorithm extends AlgorithmLevelImpl {
     @Override
     public List<String> description() {
         return Arrays.asList(
-                "Write a javascript method that takes one int argument " +
-                "and returns a string based on fizzBuzz algorithm:\n" +
+                "Write a js function that takes an integer index as input " +
+                "and returns a string in the format 'number:divisors:fizzBuzz', " +
+                "where 'number' is the nth positive integer that has at " +
+                "least two distinct dividers [3, 5, 7, 9, 13] and is " +
+                "divisible by them without a rest, 'divisors' is a separated " +
+                "by '*' list of the distinct prime factors of 'number', " +
+                "and 'fizzBuzz' is the result of calling a function 'fizzBuzz(number)'. " +
+                "If the input index is less than or equal to 0 or greater " +
+                "than or equal to 25, return 'none'.",
+
+                "For example:\n" +
                 "1=>15:3*5:FizzBuzz\n" +
                 "2=>21:3*7:FizzMuzz\n" +
                 "3=>33:3*11:FizzDuzz\n" +
-                "4=>35:5*7:BuzzMuzz\n" +
-                "25=>none");
+                "10=>105:3*5*7:FizzBuzzMuzz\n" +
+                "12=>165:3*5*11:FizzBuzzDuzz\n" +
+                "13=>195:3*5*13:FizzBuzzCazz\n" +
+                "21=>1155:3*5*7*11:FizzBuzzMuzzDuzz\n" +
+                "23=>2145:3*5*11*13:FizzBuzzDuzzCazz\n" +
+                "24=>3003:3*7*11*13:FizzMuzzDuzzCazz\n" +
+                "26=>15015:3*5*7*11*13:FizzBuzzMuzzDuzzCazz");
     }
 
     @Override

@@ -58,6 +58,8 @@ public class FizzBuzzMultiplierAlgorithmTest extends AlgorithmTest {
                 "22=>1365:3*5*7*13:FizzBuzzMuzzCazz\n" +
                 "23=>2145:3*5*11*13:FizzBuzzDuzzCazz\n" +
                 "24=>3003:3*7*11*13:FizzMuzzDuzzCazz\n" +
-                "25=>none";
+                "25=>5005:5*7*11*13:BuzzMuzzDuzzCazz\n" +
+                "26=>15015:3*5*7*11*13:FizzBuzzMuzzDuzzCazz\n" +
+                "27=>none";
     }
 }
