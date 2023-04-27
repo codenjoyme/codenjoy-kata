@@ -222,12 +222,14 @@
 ------------------------------------------
 7: 1:BoardData {
 7: 1:  'description': [
-7: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+7: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 7: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 7: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 7: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-7: 1:    'For all others - method should return the number itself.',
-7: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+7: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+7: 1:    'Please write optimized code without any duplication.',
+7: 1:    'For divider 11 - the word must be 'Duzz'.',
+7: 1:    'For divider 13 - the word must be 'Cazz'.'
 7: 1:  ],
 7: 1:  'expectedAnswer': '1',
 7: 1:  'history': [],
@@ -242,12 +244,14 @@
 ------------------------------------------
 8: 1:BoardData {
 8: 1:  'description': [
-8: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+8: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 8: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 8: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 8: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-8: 1:    'For all others - method should return the number itself.',
-8: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+8: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+8: 1:    'Please write optimized code without any duplication.',
+8: 1:    'For divider 11 - the word must be 'Duzz'.',
+8: 1:    'For divider 13 - the word must be 'Cazz'.'
 8: 1:  ],
 8: 1:  'expectedAnswer': '2',
 8: 1:  'history': [{
@@ -272,12 +276,14 @@
 ------------------------------------------
 9: 1:BoardData {
 9: 1:  'description': [
-9: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+9: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 9: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 9: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 9: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-9: 1:    'For all others - method should return the number itself.',
-9: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+9: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+9: 1:    'Please write optimized code without any duplication.',
+9: 1:    'For divider 11 - the word must be 'Duzz'.',
+9: 1:    'For divider 13 - the word must be 'Cazz'.'
 9: 1:  ],
 9: 1:  'expectedAnswer': 'Fizz',
 9: 1:  'history': [
@@ -311,12 +317,14 @@
 ------------------------------------------
 10: 1:BoardData {
 10: 1:  'description': [
-10: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+10: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 10: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 10: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 10: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-10: 1:    'For all others - method should return the number itself.',
-10: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+10: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+10: 1:    'Please write optimized code without any duplication.',
+10: 1:    'For divider 11 - the word must be 'Duzz'.',
+10: 1:    'For divider 13 - the word must be 'Cazz'.'
 10: 1:  ],
 10: 1:  'expectedAnswer': '4',
 10: 1:  'history': [
@@ -357,12 +365,14 @@
 ------------------------------------------
 11: 1:BoardData {
 11: 1:  'description': [
-11: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+11: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 11: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 11: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 11: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-11: 1:    'For all others - method should return the number itself.',
-11: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+11: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+11: 1:    'Please write optimized code without any duplication.',
+11: 1:    'For divider 11 - the word must be 'Duzz'.',
+11: 1:    'For divider 13 - the word must be 'Cazz'.'
 11: 1:  ],
 11: 1:  'expectedAnswer': 'Buzz',
 11: 1:  'history': [
@@ -410,12 +420,14 @@
 ------------------------------------------
 12: 1:BoardData {
 12: 1:  'description': [
-12: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+12: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 12: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 12: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 12: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-12: 1:    'For all others - method should return the number itself.',
-12: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+12: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+12: 1:    'Please write optimized code without any duplication.',
+12: 1:    'For divider 11 - the word must be 'Duzz'.',
+12: 1:    'For divider 13 - the word must be 'Cazz'.'
 12: 1:  ],
 12: 1:  'expectedAnswer': 'Fizz',
 12: 1:  'history': [
@@ -470,12 +482,14 @@
 ------------------------------------------
 13: 1:BoardData {
 13: 1:  'description': [
-13: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+13: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 13: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 13: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 13: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-13: 1:    'For all others - method should return the number itself.',
-13: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+13: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+13: 1:    'Please write optimized code without any duplication.',
+13: 1:    'For divider 11 - the word must be 'Duzz'.',
+13: 1:    'For divider 13 - the word must be 'Cazz'.'
 13: 1:  ],
 13: 1:  'expectedAnswer': 'Muzz',
 13: 1:  'history': [
@@ -537,12 +551,14 @@
 ------------------------------------------
 14: 1:BoardData {
 14: 1:  'description': [
-14: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+14: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 14: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 14: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 14: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-14: 1:    'For all others - method should return the number itself.',
-14: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+14: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+14: 1:    'Please write optimized code without any duplication.',
+14: 1:    'For divider 11 - the word must be 'Duzz'.',
+14: 1:    'For divider 13 - the word must be 'Cazz'.'
 14: 1:  ],
 14: 1:  'expectedAnswer': '8',
 14: 1:  'history': [
@@ -611,12 +627,14 @@
 ------------------------------------------
 15: 1:BoardData {
 15: 1:  'description': [
-15: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+15: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 15: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 15: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 15: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-15: 1:    'For all others - method should return the number itself.',
-15: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+15: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+15: 1:    'Please write optimized code without any duplication.',
+15: 1:    'For divider 11 - the word must be 'Duzz'.',
+15: 1:    'For divider 13 - the word must be 'Cazz'.'
 15: 1:  ],
 15: 1:  'expectedAnswer': 'Fizz',
 15: 1:  'history': [
@@ -692,12 +710,14 @@
 ------------------------------------------
 16: 1:BoardData {
 16: 1:  'description': [
-16: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+16: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 16: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 16: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 16: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-16: 1:    'For all others - method should return the number itself.',
-16: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+16: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+16: 1:    'Please write optimized code without any duplication.',
+16: 1:    'For divider 11 - the word must be 'Duzz'.',
+16: 1:    'For divider 13 - the word must be 'Cazz'.'
 16: 1:  ],
 16: 1:  'expectedAnswer': 'Buzz',
 16: 1:  'history': [
@@ -780,12 +800,14 @@
 ------------------------------------------
 17: 1:BoardData {
 17: 1:  'description': [
-17: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+17: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 17: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 17: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 17: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-17: 1:    'For all others - method should return the number itself.',
-17: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+17: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+17: 1:    'Please write optimized code without any duplication.',
+17: 1:    'For divider 11 - the word must be 'Duzz'.',
+17: 1:    'For divider 13 - the word must be 'Cazz'.'
 17: 1:  ],
 17: 1:  'expectedAnswer': 'Duzz',
 17: 1:  'history': [
@@ -875,12 +897,14 @@
 ------------------------------------------
 18: 1:BoardData {
 18: 1:  'description': [
-18: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+18: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 18: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 18: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 18: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-18: 1:    'For all others - method should return the number itself.',
-18: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+18: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+18: 1:    'Please write optimized code without any duplication.',
+18: 1:    'For divider 11 - the word must be 'Duzz'.',
+18: 1:    'For divider 13 - the word must be 'Cazz'.'
 18: 1:  ],
 18: 1:  'expectedAnswer': 'Fizz',
 18: 1:  'history': [
@@ -977,12 +1001,14 @@
 ------------------------------------------
 19: 1:BoardData {
 19: 1:  'description': [
-19: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+19: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 19: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 19: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 19: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-19: 1:    'For all others - method should return the number itself.',
-19: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+19: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+19: 1:    'Please write optimized code without any duplication.',
+19: 1:    'For divider 11 - the word must be 'Duzz'.',
+19: 1:    'For divider 13 - the word must be 'Cazz'.'
 19: 1:  ],
 19: 1:  'expectedAnswer': 'Cazz',
 19: 1:  'history': [
@@ -1086,12 +1112,14 @@
 ------------------------------------------
 20: 1:BoardData {
 20: 1:  'description': [
-20: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+20: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 20: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 20: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 20: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-20: 1:    'For all others - method should return the number itself.',
-20: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+20: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+20: 1:    'Please write optimized code without any duplication.',
+20: 1:    'For divider 11 - the word must be 'Duzz'.',
+20: 1:    'For divider 13 - the word must be 'Cazz'.'
 20: 1:  ],
 20: 1:  'expectedAnswer': 'Muzz',
 20: 1:  'history': [
@@ -1202,12 +1230,14 @@
 ------------------------------------------
 21: 1:BoardData {
 21: 1:  'description': [
-21: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+21: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 21: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 21: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 21: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-21: 1:    'For all others - method should return the number itself.',
-21: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+21: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+21: 1:    'Please write optimized code without any duplication.',
+21: 1:    'For divider 11 - the word must be 'Duzz'.',
+21: 1:    'For divider 13 - the word must be 'Cazz'.'
 21: 1:  ],
 21: 1:  'expectedAnswer': 'FizzBuzz',
 21: 1:  'history': [
@@ -1325,12 +1355,14 @@
 ------------------------------------------
 22: 1:BoardData {
 22: 1:  'description': [
-22: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+22: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 22: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 22: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 22: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-22: 1:    'For all others - method should return the number itself.',
-22: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+22: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+22: 1:    'Please write optimized code without any duplication.',
+22: 1:    'For divider 11 - the word must be 'Duzz'.',
+22: 1:    'For divider 13 - the word must be 'Cazz'.'
 22: 1:  ],
 22: 1:  'expectedAnswer': '16',
 22: 1:  'history': [
@@ -1455,12 +1487,14 @@
 ------------------------------------------
 23: 1:BoardData {
 23: 1:  'description': [
-23: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+23: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 23: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 23: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 23: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-23: 1:    'For all others - method should return the number itself.',
-23: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+23: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+23: 1:    'Please write optimized code without any duplication.',
+23: 1:    'For divider 11 - the word must be 'Duzz'.',
+23: 1:    'For divider 13 - the word must be 'Cazz'.'
 23: 1:  ],
 23: 1:  'expectedAnswer': '17',
 23: 1:  'history': [
@@ -1592,12 +1626,14 @@
 ------------------------------------------
 24: 1:BoardData {
 24: 1:  'description': [
-24: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+24: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 24: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 24: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 24: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-24: 1:    'For all others - method should return the number itself.',
-24: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+24: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+24: 1:    'Please write optimized code without any duplication.',
+24: 1:    'For divider 11 - the word must be 'Duzz'.',
+24: 1:    'For divider 13 - the word must be 'Cazz'.'
 24: 1:  ],
 24: 1:  'expectedAnswer': 'FizzMuzz',
 24: 1:  'history': [
@@ -1736,12 +1772,14 @@
 ------------------------------------------
 25: 1:BoardData {
 25: 1:  'description': [
-25: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+25: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 25: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 25: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 25: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-25: 1:    'For all others - method should return the number itself.',
-25: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+25: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+25: 1:    'Please write optimized code without any duplication.',
+25: 1:    'For divider 11 - the word must be 'Duzz'.',
+25: 1:    'For divider 13 - the word must be 'Cazz'.'
 25: 1:  ],
 25: 1:  'expectedAnswer': 'FizzDuzz',
 25: 1:  'history': [
@@ -1887,12 +1925,14 @@
 ------------------------------------------
 26: 1:BoardData {
 26: 1:  'description': [
-26: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+26: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 26: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 26: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 26: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-26: 1:    'For all others - method should return the number itself.',
-26: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+26: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+26: 1:    'Please write optimized code without any duplication.',
+26: 1:    'For divider 11 - the word must be 'Duzz'.',
+26: 1:    'For divider 13 - the word must be 'Cazz'.'
 26: 1:  ],
 26: 1:  'expectedAnswer': 'BuzzMuzz',
 26: 1:  'history': [
@@ -2045,12 +2085,14 @@
 ------------------------------------------
 27: 1:BoardData {
 27: 1:  'description': [
-27: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+27: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 27: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 27: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 27: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-27: 1:    'For all others - method should return the number itself.',
-27: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+27: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+27: 1:    'Please write optimized code without any duplication.',
+27: 1:    'For divider 11 - the word must be 'Duzz'.',
+27: 1:    'For divider 13 - the word must be 'Cazz'.'
 27: 1:  ],
 27: 1:  'expectedAnswer': 'FizzCazz',
 27: 1:  'history': [
@@ -2210,12 +2252,14 @@
 ------------------------------------------
 28: 1:BoardData {
 28: 1:  'description': [
-28: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+28: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 28: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 28: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 28: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-28: 1:    'For all others - method should return the number itself.',
-28: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+28: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+28: 1:    'Please write optimized code without any duplication.',
+28: 1:    'For divider 11 - the word must be 'Duzz'.',
+28: 1:    'For divider 13 - the word must be 'Cazz'.'
 28: 1:  ],
 28: 1:  'expectedAnswer': 'Muzz',
 28: 1:  'history': [
@@ -2382,12 +2426,14 @@
 ------------------------------------------
 29: 1:BoardData {
 29: 1:  'description': [
-29: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+29: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 29: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 29: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 29: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-29: 1:    'For all others - method should return the number itself.',
-29: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+29: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+29: 1:    'Please write optimized code without any duplication.',
+29: 1:    'For divider 11 - the word must be 'Duzz'.',
+29: 1:    'For divider 13 - the word must be 'Cazz'.'
 29: 1:  ],
 29: 1:  'expectedAnswer': 'BuzzDuzz',
 29: 1:  'history': [
@@ -2561,12 +2607,14 @@
 ------------------------------------------
 30: 1:BoardData {
 30: 1:  'description': [
-30: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+30: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 30: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 30: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 30: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-30: 1:    'For all others - method should return the number itself.',
-30: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+30: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+30: 1:    'Please write optimized code without any duplication.',
+30: 1:    'For divider 11 - the word must be 'Duzz'.',
+30: 1:    'For divider 13 - the word must be 'Cazz'.'
 30: 1:  ],
 30: 1:  'expectedAnswer': 'BuzzCazz',
 30: 1:  'history': [
@@ -2747,12 +2795,14 @@
 ------------------------------------------
 31: 1:BoardData {
 31: 1:  'description': [
-31: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+31: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 31: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 31: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 31: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-31: 1:    'For all others - method should return the number itself.',
-31: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+31: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+31: 1:    'Please write optimized code without any duplication.',
+31: 1:    'For divider 11 - the word must be 'Duzz'.',
+31: 1:    'For divider 13 - the word must be 'Cazz'.'
 31: 1:  ],
 31: 1:  'expectedAnswer': 'MuzzDuzz',
 31: 1:  'history': [
@@ -2940,12 +2990,14 @@
 ------------------------------------------
 32: 1:BoardData {
 32: 1:  'description': [
-32: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+32: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 32: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 32: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 32: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-32: 1:    'For all others - method should return the number itself.',
-32: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+32: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+32: 1:    'Please write optimized code without any duplication.',
+32: 1:    'For divider 11 - the word must be 'Duzz'.',
+32: 1:    'For divider 13 - the word must be 'Cazz'.'
 32: 1:  ],
 32: 1:  'expectedAnswer': 'MuzzCazz',
 32: 1:  'history': [
@@ -3140,12 +3192,14 @@
 ------------------------------------------
 33: 1:BoardData {
 33: 1:  'description': [
-33: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+33: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 33: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 33: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 33: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-33: 1:    'For all others - method should return the number itself.',
-33: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+33: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+33: 1:    'Please write optimized code without any duplication.',
+33: 1:    'For divider 11 - the word must be 'Duzz'.',
+33: 1:    'For divider 13 - the word must be 'Cazz'.'
 33: 1:  ],
 33: 1:  'expectedAnswer': 'FizzBuzzMuzz',
 33: 1:  'history': [
@@ -3347,12 +3401,14 @@
 ------------------------------------------
 34: 1:BoardData {
 34: 1:  'description': [
-34: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+34: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 34: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 34: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 34: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-34: 1:    'For all others - method should return the number itself.',
-34: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+34: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+34: 1:    'Please write optimized code without any duplication.',
+34: 1:    'For divider 11 - the word must be 'Duzz'.',
+34: 1:    'For divider 13 - the word must be 'Cazz'.'
 34: 1:  ],
 34: 1:  'expectedAnswer': 'FizzBuzzDuzz',
 34: 1:  'history': [
@@ -3561,12 +3617,14 @@
 ------------------------------------------
 35: 1:BoardData {
 35: 1:  'description': [
-35: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+35: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 35: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 35: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 35: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-35: 1:    'For all others - method should return the number itself.',
-35: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+35: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+35: 1:    'Please write optimized code without any duplication.',
+35: 1:    'For divider 11 - the word must be 'Duzz'.',
+35: 1:    'For divider 13 - the word must be 'Cazz'.'
 35: 1:  ],
 35: 1:  'expectedAnswer': 'FizzBuzzCazz',
 35: 1:  'history': [
@@ -3782,12 +3840,14 @@
 ------------------------------------------
 36: 1:BoardData {
 36: 1:  'description': [
-36: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+36: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 36: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 36: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 36: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-36: 1:    'For all others - method should return the number itself.',
-36: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+36: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+36: 1:    'Please write optimized code without any duplication.',
+36: 1:    'For divider 11 - the word must be 'Duzz'.',
+36: 1:    'For divider 13 - the word must be 'Cazz'.'
 36: 1:  ],
 36: 1:  'expectedAnswer': 'FizzMuzzDuzz',
 36: 1:  'history': [
@@ -4010,12 +4070,14 @@
 ------------------------------------------
 37: 1:BoardData {
 37: 1:  'description': [
-37: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+37: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 37: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 37: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 37: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-37: 1:    'For all others - method should return the number itself.',
-37: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+37: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+37: 1:    'Please write optimized code without any duplication.',
+37: 1:    'For divider 11 - the word must be 'Duzz'.',
+37: 1:    'For divider 13 - the word must be 'Cazz'.'
 37: 1:  ],
 37: 1:  'expectedAnswer': 'FizzMuzzCazz',
 37: 1:  'history': [
@@ -4245,12 +4307,14 @@
 ------------------------------------------
 38: 1:BoardData {
 38: 1:  'description': [
-38: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+38: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 38: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 38: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 38: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-38: 1:    'For all others - method should return the number itself.',
-38: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+38: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+38: 1:    'Please write optimized code without any duplication.',
+38: 1:    'For divider 11 - the word must be 'Duzz'.',
+38: 1:    'For divider 13 - the word must be 'Cazz'.'
 38: 1:  ],
 38: 1:  'expectedAnswer': 'FizzBuzzMuzzDuzz',
 38: 1:  'history': [
@@ -4487,12 +4551,14 @@
 ------------------------------------------
 39: 1:BoardData {
 39: 1:  'description': [
-39: 1:    'Write a javascript method that takes one int argument and that returns a string.',
+39: 1:    'Write a javascript method that takes one int argument and returns a string containing the number itself.',
 39: 1:    'For those numbers that are divisible by 3, the method should return 'Fizz'',
 39: 1:    'For those numbers divisible by 5 it should return 'Buzz'.',
 39: 1:    'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',
-39: 1:    'For all others - method should return the number itself.',
-39: 1:    'Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz'
+39: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
+39: 1:    'Please write optimized code without any duplication.',
+39: 1:    'For divider 11 - the word must be 'Duzz'.',
+39: 1:    'For divider 13 - the word must be 'Cazz'.'
 39: 1:  ],
 39: 1:  'expectedAnswer': 'FizzBuzzMuzzDuzzCazz',
 39: 1:  'history': [

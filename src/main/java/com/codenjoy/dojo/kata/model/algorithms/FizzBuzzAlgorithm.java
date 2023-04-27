@@ -81,8 +81,8 @@ public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
     @Override
     public List<String> description() {
         return Arrays.asList(
-                "Write a javascript method that takes one int argument and " +
-                "that returns a string.",
+                "Write a javascript method that takes one int argument " +
+                "and returns a string containing the number itself.",
 
                 "For those numbers that are divisible by 3, " +
                 "the method should return 'Fizz'",
@@ -91,9 +91,14 @@ public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
 
                 "For those numbers divisible by both 3 and 5 - 'FizzBuzz'.",
 
-                "For all others - method should return the number itself.",
+                "Proceed in the same way if there is a number " +
+                "with a divisor of 7. The word 'Muzz' is used for it. .",
 
-                "Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz");
+                "Please write optimized code without any duplication.",
+
+                "For divider 11 - the word must be 'Duzz'.",
+
+                "For divider 13 - the word must be 'Cazz'.");
     }
 
     @Override
