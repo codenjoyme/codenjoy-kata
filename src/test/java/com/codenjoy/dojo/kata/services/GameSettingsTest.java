@@ -68,7 +68,7 @@ public class GameSettingsTest {
                         "  '[Level] Map[16]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Write a method that divides two numbers in a column to within 100 digits. If there is a period in the result, it should be written as follows:\\\\n212/133 = 1.(593984962406015037)\\\\n87/78 = 1.1(153846)\\'\\n  ],\\n  \\'name\\':\\'LongDivisionAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n    let a = Number(input.split(\\\\\\\\',\\\\\\\\')[0]);\\\\n    let b = Number(input.split(\\\\\\\\',\\\\\\\\')[1]);\\\\n\\\\n    if (b === 0) {\\\\n        return \\\\\\\\'Div by zero error!\\\\\\\\';\\\\n    }\\\\n    if (a === 0) {\\\\n        return \\\\\\\\'0\\\\\\\\';\\\\n    }\\\\n    const isMinus = (a < 0 && b > 0 || a > 0 && b < 0);\\\\n    a = Math.abs(a);\\\\n    b = Math.abs(b);\\\\n\\\\n    const length = 100;\\\\n    const DOT = -1;\\\\n    const TEN = 10;\\\\n    const NOT_FOUND = -1;\\\\n\\\\n    const result = [];\\\\n\\\\n    const aa = new Array(length * 2).fill(0);\\\\n    let ia = 0;\\\\n    let ceilpos = 0;\\\\n\\\\n    let isCalcCeil = a >= b;\\\\n    if (!isCalcCeil) {\\\\n        result.push(\\\\\\\\'0\\\\\\\\', \\\\\\\\'.\\\\\\\\');\\\\n        aa[ia++] = 0;\\\\n        aa[ia++] = DOT;\\\\n        ceilpos = ia - 1;\\\\n    }\\\\n\\\\n    while (a != 0 && (result.length - ceilpos) <= length) {\\\\n        if (a < b) {\\\\n            if (isCalcCeil) {\\\\n                result.push(\\\\\\\\'.\\\\\\\\');\\\\n                aa[ia++] = DOT;\\\\n                ceilpos = ia - 1;\\\\n                isCalcCeil = false;\\\\n            }\\\\n            a *= TEN;\\\\n        }\\\\n        while (a < b) {\\\\n            result.push(\\\\\\\\'0\\\\\\\\');\\\\n            aa[ia++] = 0;\\\\n            a *= TEN;\\\\n        }\\\\n\\\\n        let found = NOT_FOUND;\\\\n        for (let ja = 0; ja < ia; ja++) {\\\\n            if (aa[ja] === a) {\\\\n                found = ja;\\\\n                break;\\\\n            }\\\\n        }\\\\n        if (found !== NOT_FOUND) {\\\\n            result.splice(found, 0, \\\\\\\\'(\\\\\\\\');\\\\n            result.push(\\\\\\\\')\\\\\\\\');\\\\n            break;\\\\n        }\\\\n\\\\n        const c = Math.floor(a / b);\\\\n        if (isCalcCeil) {\\\\n            let c1 = c;\\\\n            while (c1 / TEN > 10000000) {\\\\n                aa[ia++] = c1 % TEN;\\\\n                c1 = Math.floor(c1 / TEN);\\\\n            }\\\\n            aa[ia++] = c1;\\\\n        } else {\\\\n            aa[ia++] = a;\\\\n        }\\\\n        const d = a % b;\\\\n        result.push(c);\\\\n        a = d;\\\\n\\\\n    }\\\\n\\\\n    return ((isMinus) ? \\\\\\\\'-\\\\\\\\' : \\\\\\\\'\\\\\\\\') + result.join(\\\\\\\\'\\\\\\\\');\\\\n}\\'\\n}',\n" +
                         "  '[Level] Map[17]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'No more Levels. You win!\\'\\n  ],\\n  \\'name\\':\\'NullLevel\\',\\n  \\'winCode\\':\\'function program(question) {\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\'\\n}',\n" +
                         "  '[Level] Map[1]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Write a method that takes a single string argument and return the string \\\\\\\\'world\\\\\\\\' if \\\\\\\\'hello\\\\\\\\' came in.\\',\\n    \\'Please write js method.\\',\\n    \\'Now please improve the algorithm so that it returns\\\\\\\\'hello\\\\\\\\' if \\\\\\\\'world\\\\\\\\' came in. Previous logic should work also\\',\\n    \\'One more improvement: in other cases the algorithm should return the same string that came in.\\'\\n  ],\\n  \\'name\\':\\'HelloWorldAlgorithm\\',\\n  \\'winCode\\':\\'function program(question) {\\\\n    if (question == \\\\\\\\'hello\\\\\\\\'){\\\\n        return \\\\\\\\'world\\\\\\\\';\\\\n    }\\\\n    if (question == \\\\\\\\'world\\\\\\\\'){\\\\n        return \\\\\\\\'hello\\\\\\\\';\\\\n    }\\\\n    return question;\\\\n}\\'\\n}',\n" +
-                        "  '[Level] Map[2]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return \\\\\\\\'Fizz\\\\\\\\', for those numbers divisible by 5 it should return \\\\\\\\'Buzz\\\\\\\\', for those numbers divisible by both 3 and 5 - \\\\\\\\'FizzBuzz\\\\\\\\', and for all others - the number itself.\\'\\n  ],\\n  \\'name\\':\\'FizzBuzzAlgorithm\\',\\n  \\'winCode\\':\\'function program(question) {\\\\n    let number = parseInt(question);\\\\n    return (number % 3 === 0 && number % 5 === 0) ? \\\\\\\\'FizzBuzz\\\\\\\\' \\\\n        : (number % 3 === 0) ? \\\\\\\\'Fizz\\\\\\\\' \\\\n        : (number % 5 === 0) ? \\\\\\\\'Buzz\\\\\\\\' \\\\n        : number;\\\\n}\\'\\n}',\n" +
+                        "  '[Level] Map[2]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Write a javascript method that takes one int argument and that returns a string.\\',\\n    \\'For those numbers that are divisible by 3, the method should return \\\\\\\\'Fizz\\\\\\\\'\\',\\n    \\'For those numbers divisible by 5 it should return \\\\\\\\'Buzz\\\\\\\\'.\\',\\n    \\'For those numbers divisible by both 3 and 5 - \\\\\\\\'FizzBuzz\\\\\\\\'.\\',\\n    \\'For all others - method should return the number itself.\\',\\n    \\'Do the same for numbers divisible by:\\\\n7 - Muzz\\\\n11 - Duzz\\\\n13 - Cazz\\'\\n  ],\\n  \\'name\\':\\'FizzBuzzAlgorithm\\',\\n  \\'winCode\\':\\'function program(number) {\\\\n  let result = \\\\\\'\\\\\\';\\\\n  if (number % 3 === 0) {\\\\n    result += \\\\\\'Fizz\\\\\\';\\\\n  }\\\\n  if (number % 5 === 0) {\\\\n    result += \\\\\\'Buzz\\\\\\';\\\\n  }\\\\n  if (number % 7 === 0) {\\\\n    result += \\\\\\'Muzz\\\\\\';\\\\n  }\\\\n  if (number % 11 === 0) {\\\\n    result += \\\\\\'Duzz\\\\\\';\\\\n  }\\\\n  if (number % 13 === 0) {\\\\n    result += \\\\\\'Cazz\\\\\\';\\\\n  }\\\\n  return result || number.toString();\\\\n}\\'\\n}',\n" +
                         "  '[Level] Map[3]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'The sum of the squares of the first ten positive integers \\\\n1^2 + 2^2 + ... + 10^2 = 385. \\\\nAnd the square of the sum is \\\\n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \\\\nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \\\\nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.\\'\\n  ],\\n  \\'name\\':\\'SumSquareDifferenceAlgorithm\\',\\n  \\'winCode\\':\\'function program(question) {\\\\n    let number = parseInt(question);\\\\n    let sumOfSquares = (number * (number + 1) * (2 * number + 1)) / 6;\\\\n    let squareOfSum = Math.pow((number * (number + 1)) / 2, 2);\\\\n    return squareOfSum - sumOfSquares;\\\\n}\\'\\n}',\n" +
                         "  '[Level] Map[4]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Given the sequence: 1, 0, 3, 2, 5, 4, 7, 6, 9, 8, 11, 10, 13, 12, 15, 14...\\\\nThe sequence starts with element number 0: f(0)=1.\\\\nYour task is to write a function that returns the element at index n: f(n)=?\\'\\n  ],\\n  \\'name\\':\\'SimpleMathAlgorithm\\',\\n  \\'winCode\\':\\'function get(input) {\\\\n    let number = parseInt(input);\\\\n    return (number % 2 == 0)\\\\n        ? number + 1\\\\n        : number - 1;\\\\n}\\'\\n}',\n" +
                         "  '[Level] Map[5]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'The order matters...\\\\n Everything is quite simple. \\\\nIn a string of three characters, the last character becomes the first one,\\\\n and the first two characters shift one position to the right. \\\\nFor example: abc=>cab...\\'\\n  ],\\n  \\'name\\':\\'CharOrderAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n    return input.substring(2)\\\\n        + input.substring(0, 2);\\\\n}\\'\\n}',\n" +
@@ -110,7 +110,12 @@ public class GameSettingsTest {
                         "  {\n" +
                         "    'complexity':5,\n" +
                         "    'description':[\n" +
-                        "      'Write a method that takes one int argument and that returns a String. For those numbers that are divisible by 3, the method should return 'Fizz', for those numbers divisible by 5 it should return 'Buzz', for those numbers divisible by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.'\n" +
+                        "      'Write a javascript method that takes one int argument and that returns a string.',\n" +
+                        "      'For those numbers that are divisible by 3, the method should return 'Fizz'',\n" +
+                        "      'For those numbers divisible by 5 it should return 'Buzz'.',\n" +
+                        "      'For those numbers divisible by both 3 and 5 - 'FizzBuzz'.',\n" +
+                        "      'For all others - method should return the number itself.',\n" +
+                        "      'Do the same for numbers divisible by:\\n7 - Muzz\\n11 - Duzz\\n13 - Cazz'\n" +
                         "    ],\n" +
                         "    'name':'FizzBuzzAlgorithm',\n" +
                         "    'qa':[\n" +
@@ -120,27 +125,35 @@ public class GameSettingsTest {
                         "      '4=4',\n" +
                         "      '5=Buzz',\n" +
                         "      '3=Fizz',\n" +
-                        "      '7=7',\n" +
+                        "      '7=Muzz',\n" +
                         "      '8=8',\n" +
                         "      '3=Fizz',\n" +
                         "      '5=Buzz',\n" +
-                        "      '11=11',\n" +
+                        "      '11=Duzz',\n" +
                         "      '3=Fizz',\n" +
-                        "      '13=13',\n" +
-                        "      '14=14',\n" +
+                        "      '13=Cazz',\n" +
+                        "      '7=Muzz',\n" +
                         "      '15=FizzBuzz',\n" +
                         "      '16=16',\n" +
                         "      '17=17',\n" +
-                        "      '3=Fizz',\n" +
-                        "      '19=19',\n" +
-                        "      '5=Buzz',\n" +
-                        "      '3=Fizz',\n" +
-                        "      '22=22',\n" +
-                        "      '23=23',\n" +
-                        "      '3=Fizz',\n" +
-                        "      '5=Buzz'\n" +
+                        "      '21=FizzMuzz',\n" +
+                        "      '33=FizzDuzz',\n" +
+                        "      '35=BuzzMuzz',\n" +
+                        "      '39=FizzCazz',\n" +
+                        "      '7=Muzz',\n" +
+                        "      '55=BuzzDuzz',\n" +
+                        "      '65=BuzzCazz',\n" +
+                        "      '77=MuzzDuzz',\n" +
+                        "      '91=MuzzCazz',\n" +
+                        "      '105=FizzBuzzMuzz',\n" +
+                        "      '165=FizzBuzzDuzz',\n" +
+                        "      '195=FizzBuzzCazz',\n" +
+                        "      '231=FizzMuzzDuzz',\n" +
+                        "      '273=FizzMuzzCazz',\n" +
+                        "      '1155=FizzBuzzMuzzDuzz',\n" +
+                        "      '15015=FizzBuzzMuzzDuzzCazz'\n" +
                         "    ],\n" +
-                        "    'size':25\n" +
+                        "    'size':33\n" +
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':10,\n" +

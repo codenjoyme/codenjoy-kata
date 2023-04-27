@@ -39,6 +39,15 @@ public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
         if (number % 5 == 0) {
             result += "Buzz";
         }
+        if (number % 7 == 0) {
+            result += "Muzz";
+        }
+        if (number % 11 == 0) {
+            result += "Duzz";
+        }
+        if (number % 13 == 0) {
+            result += "Cazz";
+        }
         if (result.length() == 0) {
             result = String.valueOf(number);
         }
@@ -47,12 +56,24 @@ public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String winCode() {
-        return "function program(question) {\n" +
-                "    let number = parseInt(question);\n" +
-                "    return (number % 3 === 0 && number % 5 === 0) ? 'FizzBuzz' \n" +
-                "        : (number % 3 === 0) ? 'Fizz' \n" +
-                "        : (number % 5 === 0) ? 'Buzz' \n" +
-                "        : number;\n" +
+        return "function program(number) {\n" +
+                "  let result = \"\";\n" +
+                "  if (number % 3 === 0) {\n" +
+                "    result += \"Fizz\";\n" +
+                "  }\n" +
+                "  if (number % 5 === 0) {\n" +
+                "    result += \"Buzz\";\n" +
+                "  }\n" +
+                "  if (number % 7 === 0) {\n" +
+                "    result += \"Muzz\";\n" +
+                "  }\n" +
+                "  if (number % 11 === 0) {\n" +
+                "    result += \"Duzz\";\n" +
+                "  }\n" +
+                "  if (number % 13 === 0) {\n" +
+                "    result += \"Cazz\";\n" +
+                "  }\n" +
+                "  return result || number.toString();\n" +
                 "}";
     }
 
@@ -60,11 +81,57 @@ public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
     @Override
     public List<String> description() {
         return Arrays.asList(
-                "Write a method that takes one int argument and " +
-                "that returns a String. For those numbers that are divisible by 3, " +
-                "the method should return 'Fizz', for those numbers divisible by 5 " +
-                "it should return 'Buzz', for those numbers divisible " +
-                "by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.");
+                "Write a javascript method that takes one int argument and " +
+                "that returns a string.",
+
+                "For those numbers that are divisible by 3, " +
+                "the method should return 'Fizz'",
+
+                "For those numbers divisible by 5 it should return 'Buzz'.",
+
+                "For those numbers divisible by both 3 and 5 - 'FizzBuzz'.",
+
+                "For all others - method should return the number itself.",
+
+                "Do the same for numbers divisible by:\n7 - Muzz\n11 - Duzz\n13 - Cazz");
+    }
+
+    @Override
+    public List<String> getQuestions() {
+        return Arrays.asList(
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "17",
+                String.valueOf(3*7),
+                String.valueOf(3*11),
+                String.valueOf(5*7),
+                String.valueOf(3*13),
+                String.valueOf(7*7),
+                String.valueOf(5*11),
+                String.valueOf(5*13),
+                String.valueOf(7*11),
+                String.valueOf(7*13),
+                String.valueOf(3*5*7),
+                String.valueOf(3*5*11),
+                String.valueOf(3*5*13),
+                String.valueOf(3*7*11),
+                String.valueOf(3*7*13),
+                String.valueOf(3*5*7*11),
+                String.valueOf(3*5*7*11*13));
     }
 
     @Override
@@ -74,8 +141,11 @@ public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String author() {
-        return "Алгоритм взят из тренинга, где он был использован в " +
-                "качестве вербальной разминки. Судя по всему автор " +
-                "Janet Rees (http://www.goodreads.com/book/show/1176717.Fizz_Buzz)";
+        return "The algorithm is taken from the training, where it was used " +
+                "as a verbal warm-up. Judging by all the information " +
+                "from the Internet the author is Janet Rees " +
+                "(http://www.goodreads.com/book/show/1176717.Fizz_Buzz). " +
+                " The task was supplemented with new conditions for " +
+                "other prime numbers.";
     }
 }
