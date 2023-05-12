@@ -60,6 +60,7 @@ public class LevelsLoaderTest {
                         "PowerDigitSumAlgorithm,\n" +
                         "MakeBricksAlgorithm,\n" +
                         "ArabicToRomanAlgorithm,\n" +
+                        "RomanToArabicAlgorithm,\n" +
                         "FactorialAlgorithm,\n" +
                         "ReverseAddPalindromeAlgorithm,\n" +
                         "Sequence2Algorithm,\n" +
