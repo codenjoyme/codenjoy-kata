@@ -26,6 +26,7 @@ import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
 import com.codenjoy.dojo.services.questionanswer.levels.QuestionAnswerLevelImpl;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Before;
+import org.junit.ComparisonFailure;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -58,9 +59,21 @@ public abstract class AlgorithmTest {
 
     @Test
     public void answersTest() {
-        assertAlgorithm(algorithm, answers());
+        try {
+            assertAlgorithm(algorithm, answers());
+        } catch (ComparisonFailure exception) {
+            throwWith(exception, "answers");
+        }
 
-        cornerCasesAnswersTest();
+        try {
+            cornerCasesAnswersTest();
+        } catch (ComparisonFailure exception) {
+            throwWith(exception, "cornerCases");
+        }
+    }
+
+    private void throwWith(ComparisonFailure exception, String methodName) {
+        throw StackTraceUtils.clarify(exception, methodName, getClass());
     }
 
     private void cornerCasesAnswersTest() {
