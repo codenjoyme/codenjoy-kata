@@ -59,6 +59,7 @@ public class LevelsLoaderTest {
                         "PrimeFactoryAlgorithm,\n" +
                         "PowerDigitSumAlgorithm,\n" +
                         "MakeBricksAlgorithm,\n" +
+                        "ArabicToRomanAlgorithm,\n" +
                         "FactorialAlgorithm,\n" +
                         "ReverseAddPalindromeAlgorithm,\n" +
                         "Sequence2Algorithm,\n" +
