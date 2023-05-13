@@ -67,6 +67,17 @@ public class NumeralSystemAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
+    public String winCode() {
+        return "function get(...input) {\n" +
+                "    const number = input[0];\n" +
+                "    const source = parseInt(input[1]);\n" +
+                "    const target = parseInt(input[2]);\n" +
+                "    \n" +
+                "    return parseInt(number, source).toString(target);\n" +
+                "}";
+    }
+
+    @Override
     public int complexity() {
         return 28;
     }
