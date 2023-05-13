@@ -57,6 +57,7 @@ public class LevelsLoaderTest {
                         "Sequence1Algorithm,\n" +
                         "FibonacciNumbersAlgorithm,\n" +
                         "PrimeFactoryAlgorithm,\n" +
+                        "NumeralSystemAlgorithm,\n" +
                         "PowerDigitSumAlgorithm,\n" +
                         "MakeBricksAlgorithm,\n" +
                         "ArabicToRomanAlgorithm,\n" +
