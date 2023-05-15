@@ -88,6 +88,8 @@ var copyToClipboardButtonHandler = function(parent, getText) {
                     $(this).parent().children().first().html()
                         .replace(/<br>/g, '\n    ')
                         .replace(/&nbsp;/g, ' ')
+                        .replace(/&gt;/g, ">")
+                        .replace(/&lt;/g, "<")
                         .replace(/\n      /g, '\n    ');
         var text = getText(data);
         copyToClipboard(text);

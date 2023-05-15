@@ -57,7 +57,7 @@ var Board = function (boardString) {
             var separator = '<br>&nbsp;'
             return separator +
                 getQuestionsFormatted(board)
-                    .map(item => `${item.valid ? '✅' : '❌'}${item.text}`)
+                    .map(item => `${item.test}`)
                     .join(separator);
         }
     };

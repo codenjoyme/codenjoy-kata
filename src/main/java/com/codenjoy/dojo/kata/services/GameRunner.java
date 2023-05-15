@@ -39,21 +39,34 @@ import com.codenjoy.dojo.services.multiplayer.LevelProgress;
 import com.codenjoy.dojo.services.multiplayer.MultiplayerType;
 import com.codenjoy.dojo.services.printer.BoardReader;
 import com.codenjoy.dojo.services.printer.CharElement;
+import com.codenjoy.dojo.services.printer.Printer;
 import com.codenjoy.dojo.services.printer.PrinterFactory;
 import com.codenjoy.dojo.services.questionanswer.QuestionAnswer;
 import com.codenjoy.dojo.services.settings.Parameter;
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.json.JSONObject;
 
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
 
 import static com.codenjoy.dojo.kata.services.GameSettings.Keys.*;
+import static com.codenjoy.dojo.services.questionanswer.Examiner.UNANSWERED;
 import static com.codenjoy.dojo.services.settings.SimpleParameter.v;
 import static java.util.stream.Collectors.toList;
 
 public class GameRunner extends AbstractGameType<GameSettings> {
 
     public static final String GAME_NAME = "kata";
+
+    public static final String KEY_HISTORY = "history";
+    public static final String KEY_INFO = "info";
+    public static final String KEY_LEVEL = "level";
+    public static final String KEY_DESCRIPTION = "description";
+    public static final String KEY_EXPECTED_ANSWER = "expectedAnswer";
+    public static final String KEY_QUESTIONS = "questions";
+    public static final String KEY_NEXT_QUESTION = "nextQuestion";
 
     @Override
     public GameSettings getSettings() {
@@ -110,35 +123,81 @@ public class GameRunner extends AbstractGameType<GameSettings> {
     @Override
     public PrinterFactory getPrinterFactory() {
         return PrinterFactory.get((BoardReader boardReader, Player player, Object... parameters) -> {
+            boolean screenOrClient = Printer.isScreenOrClient(parameters);
             JSONObject result = new JSONObject();
             GameSettings settings = player.settings();
 
-            if (settings.bool(SHOW_DESCRIPTION)) {
-                result.put("description",
-                        player.levels().getDescription().stream()
-                                .map(StringEscapeUtils::escapeJava)
-                                .collect(toList()));
-            }
+            result.put(KEY_LEVEL, player.levels().getLevelIndex());
 
-            if (settings.bool(SHOW_EXPECTED_ANSWER)) {
-                result.put("expectedAnswer", player.levels().getExpectedAnswer());
-            }
+            String next = player.levels().getNextQuestion();
 
-            result.put("level", player.levels().getLevelIndex());
-
-            result.put("questions", player.levels().getQuestions());
-
-            result.put("nextQuestion", player.levels().getNextQuestion());
-
-            List<QuestionAnswer> history = player.examiner().getLastHistory();
-            if (!settings.bool(SHOW_VALID_IN_HISTORY)) {
-                if (history != null) {
-                    history.forEach(it -> it.setExpectedAnswer(null));
+            List<String> info = getInfo(settings, player, next);
+            if (screenOrClient) {
+                result.put(KEY_HISTORY, info);
+            } else {
+                if (settings.bool(SHOW_DESCRIPTION)) {
+                    result.put(KEY_DESCRIPTION,
+                            player.levels().getDescription().stream()
+                                    .map(StringEscapeUtils::escapeJava)
+                                    .collect(toList()));
                 }
-            }
-            result.put("history", history);
 
+                if (settings.bool(SHOW_EXPECTED_ANSWER)) {
+                    result.put(KEY_EXPECTED_ANSWER, player.levels().getExpectedAnswer());
+                }
+
+                result.put(KEY_QUESTIONS, player.levels().getQuestions());
+
+                result.put(KEY_NEXT_QUESTION, next);
+
+                List<QuestionAnswer> history = player.examiner().getLastHistory();
+                if (!settings.bool(SHOW_VALID_IN_HISTORY)) {
+                    if (history != null) {
+                        history.forEach(it -> it.setExpectedAnswer(null));
+                    }
+                }
+                result.put(KEY_HISTORY, history);
+                result.put(KEY_INFO, info); // TODO не очень хорошо тут дублировать инфу, но без єтого не будет работать kata UI
+
+            }
             return result;
         });
+    }
+
+    private List<String> getInfo(GameSettings settings, Player player, String next) {
+        QuestionAnswer last = new QuestionAnswer(next, null);
+        last.setExpectedAnswer(player.levels().getExpectedAnswer());
+
+        List<QuestionAnswer> lastHistory = player.examiner().getLastHistory();
+        if (lastHistory == null) {
+            lastHistory = new LinkedList<>();
+        }
+        Deque<QuestionAnswer> history = new LinkedList<>(lastHistory);
+        if (next != null && (history.isEmpty() || !StringUtils.equals(next, history.getLast().getQuestion()))) {
+            history.add(last);
+        }
+        List<String> result = history.stream()
+                .map(qa -> format(settings, qa, next))
+                .collect(toList());
+        return result;
+    }
+
+    private String format(GameSettings settings, QuestionAnswer qa, String nextQuestion) {
+        boolean last = StringUtils.equals(qa.getQuestion(), nextQuestion);
+        String answer = qa.getAnswer();
+        if (answer == null) {
+            answer = UNANSWERED;
+        }
+        if (qa.isValid()) {
+            return String.format("✅f(%s) = %s", qa.getQuestion(), answer);
+        }
+        boolean showExpected =
+                (last && settings.bool(SHOW_EXPECTED_ANSWER))
+                || (!last && settings.bool(SHOW_VALID_IN_HISTORY));
+        if (showExpected){
+            return String.format("❌f(%s) = %s != %s", qa.getQuestion(), answer, qa.getExpected());
+        } else {
+            return String.format("❌f(%s) != %s", qa.getQuestion(), answer);
+        }
     }
 }

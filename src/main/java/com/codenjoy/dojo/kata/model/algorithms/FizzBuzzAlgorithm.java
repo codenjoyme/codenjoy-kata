@@ -32,27 +32,29 @@ public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String get(int number) {
-        String result = "";
-        if (number % 3 == 0) {
-            result += "Fizz";
+        int[] divisors = {3, 5, 7, 11, 13};
+        String[] strings = {"Fizz", "Buzz", "Muzz", "Duzz", "Cazz"};
+        String str = "";
+        for (int i = 0; i < divisors.length; i++) {
+            if (number % divisors[i] == 0) {
+                str += strings[i];
+            }
         }
-        if (number % 5 == 0) {
-            result += "Buzz";
-        }
-        if (result.length() == 0) {
-            result = String.valueOf(number);
-        }
-        return result;
+        return str.isEmpty() ? Integer.toString(number) : str;
     }
 
     @Override
     public String winCode() {
-        return "function program(question) {\n" +
-                "    let number = parseInt(question);\n" +
-                "    return (number % 3 === 0 && number % 5 === 0) ? 'FizzBuzz' \n" +
-                "        : (number % 3 === 0) ? 'Fizz' \n" +
-                "        : (number % 5 === 0) ? 'Buzz' \n" +
-                "        : number;\n" +
+        return "function program(number) {\n" +
+                "    const divisors = [3, 5, 7, 11, 13];\n" +
+                "    const strings = ['Fizz', 'Buzz', 'Muzz', 'Duzz', 'Cazz'];\n" +
+                "    let str = '';\n" +
+                "    for (let i = 0; i < divisors.length; i++) {\n" +
+                "        if (number % divisors[i] === 0) {\n" +
+                "            str += strings[i];\n" +
+                "        }\n" +
+                "    }\n" +
+                "    return str || number.toString();\n" +
                 "}";
     }
 
@@ -60,11 +62,70 @@ public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
     @Override
     public List<String> description() {
         return Arrays.asList(
-                "Write a method that takes one int argument and " +
-                "that returns a String. For those numbers that are divisible by 3, " +
-                "the method should return 'Fizz', for those numbers divisible by 5 " +
-                "it should return 'Buzz', for those numbers divisible " +
-                "by both 3 and 5 - 'FizzBuzz', and for all others - the number itself.");
+                "Write a javascript method that takes one int argument " +
+                "and returns a string containing the number itself.",
+
+                "For those numbers that are divisible by 3, " +
+                "the method should return 'Fizz'",
+
+                "For those numbers divisible by 5 it should return 'Buzz'.",
+
+                "For those numbers divisible by both 3 and 5 - 'FizzBuzz'.",
+
+                "Proceed in the same way if there is a number " +
+                "with a divisor of 7. The word 'Muzz' is used for it. .",
+
+                "Please write optimized code without any duplication.",
+
+                "For divider 11 - the word must be 'Duzz'.",
+
+                "For divider 13 - the word must be 'Cazz'.");
+    }
+
+    @Override
+    public List<String> getQuestions() {
+        return Arrays.asList(
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "17",
+                String.valueOf(3*7),
+                String.valueOf(3*11),
+                String.valueOf(5*7),
+                String.valueOf(3*13),
+                String.valueOf(7*7),
+                String.valueOf(5*11),
+                String.valueOf(5*13),
+                String.valueOf(7*11),
+                String.valueOf(7*13),
+                String.valueOf(3*5*7),
+                String.valueOf(3*5*11),
+                String.valueOf(3*5*13),
+                String.valueOf(3*7*11),
+                String.valueOf(3*7*13),
+                String.valueOf(5*7*11),
+                String.valueOf(5*7*13),
+                String.valueOf(5*11*13),
+                String.valueOf(7*11*13),
+                String.valueOf(3*5*7*11),
+                String.valueOf(3*5*7*13),
+                String.valueOf(3*5*11*13),
+                String.valueOf(3*7*11*13),
+                String.valueOf(5*7*11*13),
+                String.valueOf(3*5*7*11*13));
     }
 
     @Override
@@ -74,8 +135,11 @@ public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String author() {
-        return "Алгоритм взят из тренинга, где он был использован в " +
-                "качестве вербальной разминки. Судя по всему автор " +
-                "Janet Rees (http://www.goodreads.com/book/show/1176717.Fizz_Buzz)";
+        return "The algorithm is taken from the training, where it was used " +
+                "as a verbal warm-up. Judging by all the information " +
+                "from the Internet the author is Janet Rees " +
+                "(http://www.goodreads.com/book/show/1176717.Fizz_Buzz). " +
+                " The task was supplemented with new conditions for " +
+                "other prime numbers. Updated by Oleksandr Baglai (apofig@gmail.com).";
     }
 }

@@ -29,7 +29,7 @@ var boardAllPageLoad = function(showProgress) {
     // ----------------------- init progressbar -------------------
     $("#progress-bar-container").toggle(showProgress);
     if (showProgress) {
-        var onChangeLevel = function(level, multiple, lastPassed, levelIncreased, win) {
+        var onChangeLevel = function(oldLevel, level, multiple, lastPassed, levelIncreased, win) {
             // do nothing
         }
         var levelProgress = initLevelProgress(setup, onChangeLevel);

@@ -19,6 +19,60 @@
  * <http://www.gnu.org/licenses/gpl-3.0.html>.
  * #L%
  */
+
+function cutFunction(data) {
+    var pos = data.indexOf('```');
+    if (pos != -1) {
+        data = data.substring(pos + 3);
+        data = data.substring(data.indexOf('\n') + 1, data.indexOf('\n```'));
+        return data;
+    }
+
+    pos = data.indexOf('function ');
+    if (pos != 0) {
+        pos = data.indexOf('\nfunction ');
+        if (pos == -1) {
+            pos = data.indexOf('\n    function ');
+            if (pos == -1) {
+                pos = data.indexOf('\n  function ');
+                if (pos == -1) {
+                    return null;
+                } else {
+                    pos = pos + 1;
+                }
+            } else {
+                pos = pos + 1;
+            }
+        } else {
+            pos = pos + 1;
+        }
+    } else {
+       // do nothing
+    }
+
+    var pos2 = data.indexOf('\n}\n\n');
+    if (pos2 == -1) {
+        pos2 = data.lastIndexOf('\n}\n');
+        if (pos2 == -1) {
+            pos2 = data.lastIndexOf('\n}');
+            if (pos2 == -1) {
+                pos2 = data.lastIndexOf('}');
+            } else {
+                pos2 = pos2 + 1;
+            }
+        } else {
+            pos2 = pos2 + 1;
+        }
+    } else {
+        pos2 = pos2 + 1;
+    }
+    if (pos2 == -1) {
+        pos2 = data.length - 2;
+    }
+    data = data.substring(pos, pos2 + 1);
+    return data;
+}
+
 function initRunnerJs(setup, libs, getLevelInfo, storage) {
     
     if (setup.debug) {
@@ -60,8 +114,11 @@ function initRunnerJs(setup, libs, getLevelInfo, storage) {
     });
 
     addParentListener('update-editor', function(data) {
-        if (data.code) {
-            editor.setValue(data.code, 1);
+        if (!!data.code) {
+            var code = cutFunction(data.code); // TODO remove this hotfix
+            if (code != null) {
+                editor.setValue(code, 1);
+            }
         }
     });
 
@@ -128,11 +185,15 @@ function initRunnerJs(setup, libs, getLevelInfo, storage) {
 
     return {
         loadSettings : loadSettings,
+        saveSettings : saveSettings,
         getValue : function() {
             return editor.getValue();
         },
         setStubValue : function() {
             editor.setValue(stubValue);
+        },
+        setDefaultValue : function() {
+            editor.setValue(getDefaultEditorValue());
         },
         compileProgram : function(robot) {
             var code = editor.getValue();

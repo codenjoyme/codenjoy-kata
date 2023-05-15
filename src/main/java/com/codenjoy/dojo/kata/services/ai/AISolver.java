@@ -26,10 +26,7 @@ package com.codenjoy.dojo.kata.services.ai;
 import com.codenjoy.dojo.client.AbstractTextSolver;
 import com.codenjoy.dojo.client.Strings;
 import com.codenjoy.dojo.services.Dice;
-import com.codenjoy.dojo.services.questionanswer.levels.Algorithm;
-import com.codenjoy.dojo.services.questionanswer.levels.Level;
-import com.codenjoy.dojo.services.questionanswer.levels.LevelsLoader;
-import com.codenjoy.dojo.services.questionanswer.levels.NullAlgorithm;
+import com.codenjoy.dojo.services.questionanswer.levels.*;
 
 import java.util.List;
 
@@ -52,9 +49,6 @@ public class AISolver extends AbstractTextSolver {
 
         Strings answers = new Strings();
         for (String question : questions) {
-//            if (question.equals("2")) {
-//                answers.add("qwe");
-//            } else
             answers.add(algorithm.get(question));
         }
         return answers;
@@ -64,6 +58,10 @@ public class AISolver extends AbstractTextSolver {
         if (level >= levels.size()) {
             return new NullAlgorithm();
         }
-        return (Algorithm) levels.get(level);
+        Level result = levels.get(level);
+        if (result instanceof NullLevel) {
+            return new NullAlgorithm();
+        }
+        return (Algorithm) result;
     }
 }

@@ -75,78 +75,27 @@ setup.setupSprites = function() {
 
 // ========================== draw board ==========================
 
-var description = null;
-var setDescription = function(text) {
-    description = text;
-}
-
-var getQuestionFormatted = function(item) {
-    var answer =
-        (!!item.answer)
-            ? ' = ' + item.answer
-            : (!!item.expected)
-                ? ' = ' + item.expected
-                : '';
-
-    var expected =
-        (item.valid)
-            ? ''
-            : (!!item.expected)
-                ? ' != ' + item.expected
-                : '';
-
-    return `f(${item.question})${answer}${expected}`;
-}
-
 var getQuestionsFormatted = function(board) {
-    var questions = board.history;
-    if (questions.length == 0) {
-        questions = [{
-            last: true,
-            valid: false,
-            question: board.nextQuestion,
-            answer: null,
-            expected: board.expectedAnswer
-        }];
-    }
-    return questions.map(item => {
-        if (item.question == board.nextQuestion) {
-            var valid = board.expectedAnswer == item.answer;
-            item = {
-                last: true,
-                valid: valid,
-                question: board.nextQuestion,
-                answer: item.answer,
-                expected: (!valid) ? board.expectedAnswer : null
-            };
-        }
+    var data = (!!board.info) ? board.info : board.history;
+    return data.map(item => {
         return {
-            text : getQuestionFormatted(item),
-            valid : item.valid
+            test : item,
+            description : item.substring(1),
+            valid : item.indexOf('✅') != -1
         };
     });
 }
 
 setup.drawBoard = function(drawer) {
     var getQuestionCoordinate = function(x, y) {
-        return {x:(setup.onlyBoard ? x : 7), y:y + 1};
-    }
-
-    function unescapeUnicode(unicode) {
-        var r = /\\u([\d\w]{4})/gi;
-        var temp = unicode.replace(r, function (match, grp) {
-            return String.fromCharCode(parseInt(grp, 16));
-        });
-        return decodeURIComponent(temp).split("\\\"").join("\"");
+        return {
+            x : (setup.onlyBoard ? x : 7),
+            y : y + 1
+        };
     }
 
     drawer.clear();
     var centerX = (drawer.canvas.width() / drawer.canvas.plotSize())/2;
-
-    var board = drawer.playerData.board;
-    if (typeof setDescription != 'undefined' && !!board.description) {
-        setDescription(board.description.map(string => unescapeUnicode(string)));
-    }
 
     if (setup.unauthorized) {
         drawer.drawText('Please login...',
@@ -154,21 +103,18 @@ setup.drawBoard = function(drawer) {
         return;
     }
 
-    var isWaitNext = (board.questions.length == 0);
+    var board = drawer.playerData.board;
+    var isWaitNext = (board.history.length == 0); // TODO это условие никогда не сработает
     if (isWaitNext) {
         drawer.drawText('Algorithm done! Wait next...',
             getQuestionCoordinate(centerX, 0), '#03cece');
-        return;
     }
 
     var index = -1;
-    var isNewLevel = (board.questions.length < board.history.length);
-    if (!isNewLevel) {
-        getQuestionsFormatted(board)
-            .forEach(item => {
-                drawer.drawText(item.text,
-                    getQuestionCoordinate(centerX, ++index),
-                    (item.valid) ? '#4fee4f' : '#ff6e6e');
-            });
-    }
+    getQuestionsFormatted(board)
+        .forEach(item => {
+            drawer.drawText(item.description,
+                getQuestionCoordinate(centerX, ++index),
+                (item.valid) ? '#4fee4f' : '#ff6e6e');
+        });
 }

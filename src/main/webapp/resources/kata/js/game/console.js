@@ -19,8 +19,8 @@
  * <http://www.gnu.org/licenses/gpl-3.0.html>.
  * #L%
  */
-function initLogger() {
-    // ----------------------- init logger -------------------
+function initLogger(storage) {
+
     var container = $('#ide-console');
     var wrapper = $('.console-wrapper');
     container.empty();
@@ -59,9 +59,42 @@ function initLogger() {
         container.empty();
     }
 
+    var content = function() {
+        return container.find(".text-line span:first-child").map(function() {
+            return $(this).html();
+        }).get();
+    }
+
+    var printCongrats = function() {
+        print(`Congrats ${setup.readableName}! You have passed the puzzle!!! Please press RESET and go to next level.`);
+    }
+
+    var printHello = function() {
+        print(`Hello ${setup.readableName}. Waiting for your program...`);
+    }
+
+    var saveSettings = function() {
+        storage.save('loggerData', content());
+    }
+
+    var loadSettings = function() {
+        var data = storage.load('loggerData');
+        clean();
+        if (!!data) {
+            data.forEach(line => print(line));
+        } else {
+            printHello();
+        }
+    }
+
     return {
         print : print,
         error : error,
-        clean : clean
+        clean : clean,
+        content : content,
+        printCongrats : printCongrats,
+        printHello : printHello,
+        saveSettings : saveSettings,
+        loadSettings : loadSettings
     };
 };

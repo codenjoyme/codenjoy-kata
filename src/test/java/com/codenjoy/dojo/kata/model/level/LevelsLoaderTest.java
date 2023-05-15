@@ -48,17 +48,30 @@ public class LevelsLoaderTest {
             assertFalse(Modifier.isInterface(aClass.getModifiers()));
         }
 
-        assertEquals("HelloWorldAlgorithm, FizzBuzzAlgorithm, " +
-                        "SumSquareDifferenceAlgorithm, SimpleMathAlgorithm, " +
-                        "CharOrderAlgorithm, NumberOrderAlgorithm, " +
-                        "Sequence1Algorithm, FibonacciNumbersAlgorithm, " +
-                        "PrimeFactoryAlgorithm, PowerDigitSumAlgorithm, " +
-                        "MakeBricksAlgorithm, FactorialAlgorithm, " +
-                        "ReverseAddPalindromeAlgorithm, Sequence2Algorithm, " +
-                        "XthPrimeAlgorithm, LongDivisionAlgorithm, NullLevel",
+        assertEquals("HelloWorldAlgorithm,\n" +
+                        "FizzBuzzAlgorithm,\n" +
+                        "SumSquareDifferenceAlgorithm,\n" +
+                        "SimpleMathAlgorithm,\n" +
+                        "CharOrderAlgorithm,\n" +
+                        "NumberOrderAlgorithm,\n" +
+                        "Sequence1Algorithm,\n" +
+                        "FibonacciNumbersAlgorithm,\n" +
+                        "PrimeFactoryAlgorithm,\n" +
+                        "NumeralSystemAlgorithm,\n" +
+                        "PowerDigitSumAlgorithm,\n" +
+                        "MakeBricksAlgorithm,\n" +
+                        "ArabicToRomanAlgorithm,\n" +
+                        "RomanToArabicAlgorithm,\n" +
+                        "FactorialAlgorithm,\n" +
+                        "ReverseAddPalindromeAlgorithm,\n" +
+                        "Sequence2Algorithm,\n" +
+                        "XthPrimeAlgorithm,\n" +
+                        "FizzBuzzMultiplierAlgorithm,\n" +
+                        "LongDivisionAlgorithm,\n" +
+                        "NullLevel",
                 levels.stream()
                         .sorted(Comparator.comparingInt(Level::complexity))
                         .map(it -> it.getClass().getSimpleName())
-                        .collect(Collectors.joining(", ")));
+                        .collect(Collectors.joining(",\n")));
     }
 }

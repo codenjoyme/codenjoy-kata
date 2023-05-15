@@ -56,15 +56,28 @@ var boardPageLoad = function() {
     // ----------------------- init tooltip -------------------
     $('[data-toggle="tooltip"]').tooltip();
 
-    // ----------------------- init logger -------------------
-    var logger = initLogger();
-    logger.printCongrats = function() {
-        logger.print('Congrats ' + setup.readableName + '! You have passed the puzzle!!! Please press RESET and go to next level.');
-    }
+    // ----------------------- init storage -------------------
+    var storage = {
+        level : -1,
+        forLevel : function(level) {
+            this.level = level;
+        },
+        getKey : function(property) {
+            return `player['${setup.playerId}'].level[${this.level}].${property}`;
+        },
+        load : function(property) {
+            return JSON.parse(localStorage.getItem(this.getKey(property)));
+        },
+        save : function(property, data) {
+            if (this.level == -1) {
+                return;
+            }
+            localStorage.setItem(this.getKey(property), JSON.stringify(data));
+        }
+    };
 
-    logger.printHello = function() {
-        logger.print('Hello ' + setup.readableName + '. Waiting for your program...');
-    }
+    // ----------------------- init logger -------------------
+    var logger = initLogger(storage);
 
     // ----------------------- init slider -------------------
     var setupSlider = function() {
@@ -149,53 +162,41 @@ var boardPageLoad = function() {
         }
     });
 
-    // ----------------------- init buttons -------------------
-    var onCommitClick = function() {
-        buttons.disableAll();
-        resetRobot();
-        controller.commit();
-    }
-    var onResetClick = function() {
-        buttons.disableAll();
-        controller.reset();
-    }
+    // ----------------------- help window -------------------
+    var initHelpWindow = function() {
+        var helpOpened = 1;
+        var containerId = '#ide-help-window';
+        var container = $(containerId);
+        var moreHelp = $("#more-help");
+        var modal = $("#modal-help");
 
-    var helpOpened;
-    var resetHelpOpened = function() {
-        helpOpened = 1;
-    }
-    resetHelpOpened();
-
-    var onHelpClick = function() {
-        var levelNumber = levelProgress.getCurrentLevel();
-        var level = levelInfo.getLevel(levelNumber);
-        if (!!level) {
-            help = level.help;
-        } else if (!!description) {
-            help = description;
-        } else {
-            help = ["No help for this level"];
-        }
-
-        if (help.toString().includes("Wait for next level")) {
-            help = ["Wait for next level. Please click RESET button."];
-        }
+        copyToClipboardButtonHandler(containerId, function(data) {
+            return 'Info:\n' + data;
+        });
 
         var unescape = function(string) {
             return string.replace(/\n/g, "<br>")
-                        .replace(/\\n/g, "<br>");
+                .replace(/\\n/g, "<br>");
         }
 
-        help = help.map(string => unescape(string));
+        var loadHelpData = function() {
+            var levelNumber = levelProgress.getCurrentLevel();
+            var level = levelInfo.getLevel(levelNumber);
 
-        var containerId = '#ide-help-window';
-        var container = $(containerId);
-        container.empty();
+            var result = ["No help for this level"];
+            if (!!level) {
+                result = level.help;
+            }
 
-        var moreHelp = $("#more-help");
-        moreHelp.off();
-        moreHelp.show();
-        moreHelp.click(function(){
+            if (result.toString().includes("Wait for next level")) {
+                result = ["Wait for next level. Please click RESET button."];
+            }
+
+            result = result.map(string => unescape(string));
+            return result;
+        }
+
+        var moreHelpClick = function(help) {
             var next = container.find('.text-line').length;
 
             container.append(copyToClipboardMessageContainer(help[next]));
@@ -208,31 +209,55 @@ var boardPageLoad = function() {
             if (helpOpened < next) {
                 helpOpened++;
             }
-        });
-        for (var i = 0; i < helpOpened; i++) {
-            moreHelp.click();
         }
 
-        copyToClipboardButtonHandler(containerId, function(data) {
-            return 'Info:\n' + data;
-        });
+        var show = function() {
+            var help = loadHelpData();
+            container.empty();
+            moreHelp.off();
+            moreHelp.show();
+            moreHelp.click(function() {
+                moreHelpClick(help);
+            });
+            for (var i = 0; i < helpOpened; i++) {
+                moreHelp.click();
+            }
+            modal.removeClass("close");
+        }
 
-        $("#modal-help").removeClass("close");
-    };
+        var saveSettings = function() {
+            storage.save('helpOpened', helpOpened);
+        }
+
+        var loadSettings = function() {
+            helpOpened = storage.load('helpOpened') || 1;
+        }
+
+        return {
+            show : show,
+            saveSettings : saveSettings,
+            loadSettings : loadSettings
+        };
+    }
+
+    var helpWindow = initHelpWindow();
+
+    // ----------------------- init buttons -------------------
+    var onCommitClick = function() {
+        buttons.disableAll();
+        resetRobot();
+        controller.commit();
+    }
+    var onResetClick = function() {
+        buttons.disableAll();
+        controller.reset();
+    }
+    var onHelpClick = function() {
+        helpWindow.show();
+    }
+
     var buttons = initButtons(onCommitClick, onResetClick, onHelpClick);
 
-    // ----------------------- init storage -------------------
-    var storage = {
-        getKey : function(property) {
-            return property + '[' + setup.playerId + ']';
-        },
-        load : function(property) {
-            return JSON.parse(localStorage.getItem(this.getKey(property)));
-        },
-        save : function(property, data) {
-            localStorage.setItem(this.getKey(property), JSON.stringify(data));
-        }
-    };
     // ----------------------- init level info -----------------------------
     var levelInfo = initLevelInfo(setup.contextPath);
     levelInfo.load(
@@ -264,19 +289,35 @@ var boardPageLoad = function() {
         }
         var socket = initSocket(setup, buttons, logger, onSocketMessage, onSocketClose);
 
+        // ----------------------- level state -------------------
+        var saveLevelState = function(level) {
+            storage.forLevel(level);
+            helpWindow.saveSettings();
+            logger.saveSettings();
+            runner.saveSettings();
+        }
+
+        var loadLevelState = function(level) {
+            storage.forLevel(level);
+            helpWindow.loadSettings();
+            logger.loadSettings();
+            runner.loadSettings();
+        }
         // ----------------------- init progressbar -------------------
-        var onChangeLevel = function(level, multiple, lastPassed, isLevelIncreased, isWin) {
-            resetHelpOpened();
+        var onChangeLevel = function(oldLevel, level, multiple, lastPassed, isLevelIncreased, isWin) {
+            if (oldLevel != -1 && oldLevel != level) {
+                saveLevelState(oldLevel);
+            }
             if (isWin) {
                 win.show();
-                logger.clean();
-                logger.printHello();
+            }
+            if (oldLevel != level) {
+                loadLevelState(level);
             }
             if (isLevelIncreased) {
                 runner.levelUpdate(level, multiple, lastPassed);
             }
             initAutocomplete(level, levelInfo);
-
             sendParentMessage('change-level', level);
         }
         levelProgress = initLevelProgress(setup, onChangeLevel);
