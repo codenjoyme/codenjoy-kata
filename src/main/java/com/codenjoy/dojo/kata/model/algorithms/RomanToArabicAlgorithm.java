@@ -37,34 +37,28 @@ public class RomanToArabicAlgorithm extends AlgorithmLevelImpl {
      */
     @Override
     public String get(String input) {
-        Map<Character, Integer> numbers = Map.ofEntries(
-                Map.entry('M', 1000),
-                Map.entry('D', 500),
-                Map.entry('C', 100),
-                Map.entry('L', 50),
-                Map.entry('X', 10),
-                Map.entry('V', 5),
-                Map.entry('I', 1)
+        Map<Character, Integer> numbers = Map.of(
+                'M', 1000,
+                'D', 500,
+                'C', 100,
+                'L', 50,
+                'X', 10,
+                'V', 5,
+                'I', 1
         );
 
         int result = 0;
-        int previousValue = 0;
+        int previous = 0;
 
         for (int i = input.length() - 1; i >= 0; i--) {
-            char current = input.charAt(i);
-            int value = numbers.get(current);
-
-            if (value < previousValue) {
-                result -= value;
-            } else {
-                result += value;
-            }
-
-            previousValue = value;
+            int value = numbers.get(input.charAt(i));
+            result += value * (value < previous ? -1 : 1);
+            previous = value;
         }
 
         return Integer.toString(result);
     }
+
 
     @Override
     public String winCode() {
