@@ -95,8 +95,6 @@ public class HighestAndLowestAlgorithm extends AlgorithmLevelImpl {
                 "483 -83 -229 -373 -812 335 -802",
                 "-968 -692 -566 -31 333 831 81 -476 828 -232",
                 "4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"
-
-
         );
     }
 
