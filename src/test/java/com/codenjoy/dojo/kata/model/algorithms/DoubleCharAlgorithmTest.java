@@ -53,25 +53,25 @@ public class DoubleCharAlgorithmTest extends AlgorithmTest {
                 "Y!S47Y @=>YY!!SS4477YY  @@\n" +
                 ".-&dFI8=>..--&&ddFFII88\n" +
                 "!Zq+=>!!ZZqq++\n" +
-                "g%;U*!a'/[pZ4V3/&=>gg%%;;UU**!!aa''//[[ppZZ44VV33//&&\n" +
+                "g%;U*!a/[pZ4V3/&=>gg%%;;UU**!!aa//[[ppZZ44VV33//&&\n" +
                 "7f5nF=:b8eo&+7=>77ff55nnFF==::bb88eeoo&&++77\n" +
                 "*2SNm#Lo&Y=>**22SSNNmm##LLoo&&YY\n" +
                 "3ZVm=>33ZZVVmm\n" +
                 "]C06*Ec$62o!7][/9=>]]CC0066**EEcc$$6622oo!!77]][[//99\n" +
-                "^'q%]VoKhh9j5-=>^^''qq%%]]VVooKKhhhh99jj55--\n" +
+                "^q%]VoKhh9j5-=>^^qq%%]]VVooKKhhhh99jj55--\n" +
                 "$2EZGQ=>$$22EEZZGGQQ\n" +
                 "`U9@h=>``UU99@@hh\n" +
                 "k^F [=>kk^^FF  [[\n" +
                 "@Y(-SAZa<S2OS**i=>@@YY((--SSAAZZaa<<SS22OOSS****ii\n" +
                 "h*?RW_i+<=>hh**??RRWW__ii++<<\n" +
-                "FACBT+3YC9m3'+a0Q=>FFAACCBBTT++33YYCC99mm33''++aa00QQ\n" +
+                "FACBT+3YC9m3+a0Q=>FFAACCBBTT++33YYCC99mm33++aa00QQ\n" +
                 "KS):jY?+S9=>KKSS))::jjYY??++SS99\n" +
                 "JBWh=>JJBBWWhh\n" +
                 "ONm3l))H@Gf(=>OONNmm33ll))))HH@@GGff((\n" +
                 "fk6Kg 7&=>ffkk66KKgg  77&&\n" +
                 "*A&2SJUb#(Vc(OjC`W1=>**AA&&22SSJJUUbb##((VVcc((OOjjCC``WW11\n" +
                 "`S9ONu001E83+!=>``SS99OONNuu000011EE8833++!!\n" +
-                "('YQ^/2]7c$8L*,]:+=>((''YYQQ^^//22]]77cc$$88LL**,,]]::++\n" +
+                "(YQ^/2]7c$8L*,]:+=>((YYQQ^^//22]]77cc$$88LL**,,]]::++\n" +
                 "7Pla G3*C[=%`d=l$=>77PPllaa  GG33**CC[[==%%``dd==ll$$\n" +
                 "12mq,<[:FdF&^2P=>1122mmqq,,<<[[::FFddFF&&^^22PP\n" +
                 "l#NRT7nn+p&=>ll##NNRRTT77nnnn++pp&&\n" +

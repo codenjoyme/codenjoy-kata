@@ -51,35 +51,41 @@ public class LevelsLoaderTest {
         // todo fix me after complexity review
         assertEquals("  1 complexity:   0, name: HelloWorldAlgorithm,\n" +
                         "  2 complexity:   5, name: FizzBuzzAlgorithm,\n" +
-                        "  3 complexity:  10, name: SumSquareDifferenceAlgorithm,\n" +
-                        "  4 complexity:  11, name: NameIntoInitialsAlgorithm,\n" +
-                        "  5 complexity:  11, name: ConcatenatedSquaresAlgorithm,\n" +
-                        "  6 complexity:  11, name: SimpleMathAlgorithm,\n" +
-                        "  7 complexity:  12, name: DNASequenceAlgorithm,\n" +
-                        "  8 complexity:  12, name: ThinkLikeAChildAlgorithm,\n" +
-                        "  9 complexity:  12, name: MiddleCharacterAlgorithm,\n" +
-                        " 10 complexity:  12, name: IsogramWordsAlgorithm,\n" +
-                        " 11 complexity:  12, name: DuplicateRemoveAlgorithm,\n" +
-                        " 12 complexity:  12, name: CreditCardNumberAlgorithm,\n" +
-                        " 13 complexity:  12, name: MultiplesThreeOrFiveAlgorithm,\n" +
-                        " 14 complexity:  12, name: RemoveVowelsAlgorithm,\n" +
-                        " 15 complexity:  12, name: CharOrderAlgorithm,\n" +
-                        " 16 complexity:  13, name: NumberOrderAlgorithm,\n" +
-                        " 17 complexity:  15, name: Sequence1Algorithm,\n" +
-                        " 18 complexity:  20, name: FibonacciNumbersAlgorithm,\n" +
-                        " 19 complexity:  25, name: PrimeFactoryAlgorithm,\n" +
-                        " 20 complexity:  28, name: NumeralSystemAlgorithm,\n" +
-                        " 21 complexity:  30, name: PowerDigitSumAlgorithm,\n" +
-                        " 22 complexity:  35, name: MakeBricksAlgorithm,\n" +
-                        " 23 complexity:  37, name: ArabicToRomanAlgorithm,\n" +
-                        " 24 complexity:  38, name: RomanToArabicAlgorithm,\n" +
-                        " 25 complexity:  40, name: FactorialAlgorithm,\n" +
-                        " 26 complexity:  45, name: ReverseAddPalindromeAlgorithm,\n" +
-                        " 27 complexity:  50, name: Sequence2Algorithm,\n" +
-                        " 28 complexity:  55, name: XthPrimeAlgorithm,\n" +
-                        " 29 complexity:  57, name: FizzBuzzMultiplierAlgorithm,\n" +
-                        " 30 complexity:  60, name: LongDivisionAlgorithm,\n" +
-                        " 31 complexity:2147483647, name: NullLevel",
+                        "  3 complexity:   6, name: OddOrEvenAlgorithm,\n" +
+                        "  4 complexity:   7, name: DoubleCharAlgorithm,\n" +
+                        "  5 complexity:   8, name: SimpleMathAlgorithm,\n" +
+                        "  6 complexity:   9, name: NameIntoInitialsAlgorithm,\n" +
+                        "  7 complexity:  10, name: ConcatenatedSquaresAlgorithm,\n" +
+                        "  8 complexity:  11, name: SumSquareDifferenceAlgorithm,\n" +
+                        "  9 complexity:  12, name: HighestAndLowestAlgorithm,\n" +
+                        " 10 complexity:  13, name: RemoveVowelsAlgorithm,\n" +
+                        " 11 complexity:  14, name: ExesAndOhsAlgorithm,\n" +
+                        " 12 complexity:  15, name: CharOrderAlgorithm,\n" +
+                        " 13 complexity:  16, name: IsogramWordsAlgorithm,\n" +
+                        " 14 complexity:  17, name: RentCarCostCalculatorAlgorithm,\n" +
+                        " 15 complexity:  20, name: DuplicateRemoveAlgorithm,\n" +
+                        " 16 complexity:  21, name: ThinkLikeAChildAlgorithm,\n" +
+                        " 17 complexity:  22, name: MultiplesThreeOrFiveAlgorithm,\n" +
+                        " 18 complexity:  23, name: CreditCardNumberAlgorithm,\n" +
+                        " 19 complexity:  24, name: DNASequenceAlgorithm,\n" +
+                        " 20 complexity:  25, name: MiddleCharacterAlgorithm,\n" +
+                        " 21 complexity:  26, name: NumberOrderAlgorithm,\n" +
+                        " 22 complexity:  27, name: Sequence1Algorithm,\n" +
+                        " 23 complexity:  28, name: NumeralSystemAlgorithm,\n" +
+                        " 24 complexity:  30, name: FibonacciNumbersAlgorithm,\n" +
+                        " 25 complexity:  35, name: PrimeFactoryAlgorithm,\n" +
+                        " 26 complexity:  36, name: PowerDigitSumAlgorithm,\n" +
+                        " 27 complexity:  37, name: MakeBricksAlgorithm,\n" +
+                        " 28 complexity:  40, name: ArabicToRomanAlgorithm,\n" +
+                        " 29 complexity:  41, name: RomanToArabicAlgorithm,\n" +
+                        " 30 complexity:  42, name: FactorialAlgorithm,\n" +
+                        " 31 complexity:  45, name: ReverseAddPalindromeAlgorithm,\n" +
+                        " 32 complexity:  50, name: Sequence2Algorithm,\n" +
+                        " 33 complexity:  51, name: MaxSquareAlgorithm,\n" +
+                        " 34 complexity:  55, name: XthPrimeAlgorithm,\n" +
+                        " 35 complexity:  57, name: FizzBuzzMultiplierAlgorithm,\n" +
+                        " 36 complexity:  60, name: LongDivisionAlgorithm,\n" +
+                        " 37 complexity:2147483647, name: NullLevel",
                 levels.stream()
                         .sorted(Comparator.comparingInt(Level::complexity))
                         .map(it -> String.format("%3d complexity:%4s, name: %s",

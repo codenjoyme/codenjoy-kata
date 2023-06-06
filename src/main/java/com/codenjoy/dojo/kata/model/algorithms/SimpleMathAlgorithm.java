@@ -64,7 +64,7 @@ public class SimpleMathAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        return 11;
+        return 8;
     }
 
     @Override

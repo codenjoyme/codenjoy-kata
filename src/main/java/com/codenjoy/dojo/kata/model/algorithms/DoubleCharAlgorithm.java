@@ -74,25 +74,25 @@ public class DoubleCharAlgorithm extends AlgorithmLevelImpl {
                 "Y!S47Y @",
                 ".-&dFI8",
                 "!Zq+",
-                "g%;U*!a'/[pZ4V3/&",
+                "g%;U*!a/[pZ4V3/&",
                 "7f5nF=:b8eo&+7",
                 "*2SNm#Lo&Y",
                 "3ZVm",
                 "]C06*Ec$62o!7][/9",
-                "^'q%]VoKhh9j5-",
+                "^q%]VoKhh9j5-",
                 "$2EZGQ",
                 "`U9@h",
                 "k^F [",
                 "@Y(-SAZa<S2OS**i",
                 "h*?RW_i+<",
-                "FACBT+3YC9m3'+a0Q",
+                "FACBT+3YC9m3+a0Q",
                 "KS):jY?+S9",
                 "JBWh",
                 "ONm3l))H@Gf(",
                 "fk6Kg 7&",
                 "*A&2SJUb#(Vc(OjC`W1",
                 "`S9ONu001E83+!",
-                "('YQ^/2]7c$8L*,]:+",
+                "(YQ^/2]7c$8L*,]:+",
                 "7Pla G3*C[=%`d=l$",
                 "12mq,<[:FdF&^2P",
                 "l#NRT7nn+p&",
@@ -103,8 +103,7 @@ public class DoubleCharAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        // todo review
-        return 10;
+        return 7;
     }
 
     @Override

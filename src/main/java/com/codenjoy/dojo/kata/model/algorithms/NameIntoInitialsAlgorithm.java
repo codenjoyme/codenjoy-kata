@@ -91,8 +91,7 @@ public class NameIntoInitialsAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        // todo review
-        return 11;
+        return 9;
     }
 
     @Override

@@ -71,7 +71,7 @@ public class Sequence1Algorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        return 15;
+        return 27;
     }
 
     @Override

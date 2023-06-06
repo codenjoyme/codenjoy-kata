@@ -36,8 +36,7 @@ public class RemoveVowelsAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String winCode() {
-        return
-                "function get(input) {\n" +
+        return "function get(input) {\n" +
                 "    return input.replace(/(?i)[aeiou]/g, \"\");\n" +
                 "}";
     }
@@ -57,7 +56,6 @@ public class RemoveVowelsAlgorithm extends AlgorithmLevelImpl {
         return List.of(
                 "Hello World!!",
                 "The quick brown fox jumps over the lazy dog.",
-                "I'm sorry, Dave. I'm afraid I can't do that.",
                 "To be or not to be, that is the question.",
                 "The world is a book, and those who do not travel read only a page.",
                 "The five boxing wizards jump quickly.",
@@ -74,8 +72,7 @@ public class RemoveVowelsAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        //todo review complexity
-        return 12;
+        return 13;
     }
 
     @Override

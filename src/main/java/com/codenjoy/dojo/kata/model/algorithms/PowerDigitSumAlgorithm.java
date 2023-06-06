@@ -68,7 +68,7 @@ public class PowerDigitSumAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        return 30;
+        return 36;
     }
 
     @Override

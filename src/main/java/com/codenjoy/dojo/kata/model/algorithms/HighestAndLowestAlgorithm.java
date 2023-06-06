@@ -100,7 +100,6 @@ public class HighestAndLowestAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        // todo review
         return 12;
     }
 

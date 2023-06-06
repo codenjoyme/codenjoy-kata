@@ -140,8 +140,7 @@ public class ThinkLikeAChildAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        //todo review complexity
-        return 12;
+        return 21;
     }
 
     @Override

@@ -111,8 +111,7 @@ public class ExesAndOhsAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        // todo
-        return 12;
+        return 14;
     }
 
     @Override

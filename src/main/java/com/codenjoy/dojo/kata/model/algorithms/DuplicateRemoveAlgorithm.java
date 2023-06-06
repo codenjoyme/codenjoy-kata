@@ -118,8 +118,7 @@ public class DuplicateRemoveAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        // todo review
-        return 12;
+        return 20;
     }
 
     @Override

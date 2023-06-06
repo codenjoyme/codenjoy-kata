@@ -35,7 +35,6 @@ public class RemoveVowelsAlgorithmTest extends AlgorithmTest {
     public String answers() {
         return "Hello World!!=>Hll Wrld!!\n" +
                 "The quick brown fox jumps over the lazy dog.=>Th qck brwn fx jmps vr th lzy dg.\n" +
-                "I'm sorry, Dave. I'm afraid I can't do that.=>'m srry, Dv. 'm frd  cn't d tht.\n" +
                 "To be or not to be, that is the question.=>T b r nt t b, tht s th qstn.\n" +
                 "The world is a book, and those who do not travel read only a page.=>Th wrld s  bk, nd ths wh d nt trvl rd nly  pg.\n" +
                 "The five boxing wizards jump quickly.=>Th fv bxng wzrds jmp qckly.\n" +

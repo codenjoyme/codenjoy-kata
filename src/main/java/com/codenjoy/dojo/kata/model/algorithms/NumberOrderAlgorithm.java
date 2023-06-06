@@ -82,7 +82,7 @@ public class NumberOrderAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        return 13;
+        return 26;
     }
 
     @Override

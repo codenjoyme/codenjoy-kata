@@ -70,7 +70,7 @@ public class SumSquareDifferenceAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        return 10;
+        return 11;
     }
 
     @Override

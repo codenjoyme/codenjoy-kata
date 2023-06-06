@@ -135,7 +135,7 @@ public class RomanToArabicAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        return 38;
+        return 41;
     }
 
     @Override

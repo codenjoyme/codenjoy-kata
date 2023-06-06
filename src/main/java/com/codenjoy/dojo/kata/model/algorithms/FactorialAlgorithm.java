@@ -83,7 +83,7 @@ public class FactorialAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        return 40;
+        return 42;
     }
 
     @Override

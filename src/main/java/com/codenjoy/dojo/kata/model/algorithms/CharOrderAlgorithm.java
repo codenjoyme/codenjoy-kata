@@ -80,7 +80,7 @@ public class CharOrderAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        return 12;
+        return 15;
     }
 
     @Override

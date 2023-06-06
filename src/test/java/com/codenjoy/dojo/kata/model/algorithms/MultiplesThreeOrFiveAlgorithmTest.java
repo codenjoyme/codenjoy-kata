@@ -49,6 +49,6 @@ public class MultiplesThreeOrFiveAlgorithmTest extends AlgorithmTest {
                 "66666=>1036996298\n" +
                 "99999=>2333216669\n" +
                 "1234567=>355636612814\n" +
-                "987654321=>227607579854696948";
+                "7654321=>13670680581720";
     }
 }

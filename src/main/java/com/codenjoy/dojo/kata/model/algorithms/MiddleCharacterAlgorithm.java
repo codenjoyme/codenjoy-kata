@@ -89,8 +89,7 @@ public class MiddleCharacterAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        // todo review
-        return 12;
+        return 25;
     }
 
     @Override

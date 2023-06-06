@@ -93,7 +93,6 @@ public class OddOrEvenAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        // todo review
         return 6;
     }
 

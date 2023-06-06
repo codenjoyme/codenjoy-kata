@@ -78,14 +78,13 @@ public class MultiplesThreeOrFiveAlgorithm extends AlgorithmLevelImpl {
                 "66666",
                 "99999",
                 "1234567",
-                "987654321"
+                "7654321"
         );
     }
 
     @Override
     public int complexity() {
-        //todo review
-        return 12;
+        return 22;
     }
 
     @Override

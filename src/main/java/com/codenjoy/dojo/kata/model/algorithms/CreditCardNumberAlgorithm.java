@@ -109,8 +109,7 @@ public class CreditCardNumberAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public int complexity() {
-        //todo review
-        return 12;
+        return 23;
     }
 
     @Override
