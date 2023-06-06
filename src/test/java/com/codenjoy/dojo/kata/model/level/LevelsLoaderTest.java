@@ -48,31 +48,46 @@ public class LevelsLoaderTest {
             assertFalse(Modifier.isInterface(aClass.getModifiers()));
         }
 
-        assertEquals("HelloWorldAlgorithm,\n" +
-                        "FizzBuzzAlgorithm,\n" +
-                        "SumSquareDifferenceAlgorithm,\n" +
-                        "SimpleMathAlgorithm,\n" +
-                        "CharOrderAlgorithm,\n" +
-                        "NumberOrderAlgorithm,\n" +
-                        "Sequence1Algorithm,\n" +
-                        "FibonacciNumbersAlgorithm,\n" +
-                        "PrimeFactoryAlgorithm,\n" +
-                        "NumeralSystemAlgorithm,\n" +
-                        "PowerDigitSumAlgorithm,\n" +
-                        "MakeBricksAlgorithm,\n" +
-                        "ArabicToRomanAlgorithm,\n" +
-                        "RomanToArabicAlgorithm,\n" +
-                        "FactorialAlgorithm,\n" +
-                        "ReverseAddPalindromeAlgorithm,\n" +
-                        "Sequence2Algorithm,\n" +
-                        "MaxSquareAlgorithm,\n" +
-                        "XthPrimeAlgorithm,\n" +
-                        "FizzBuzzMultiplierAlgorithm,\n" +
-                        "LongDivisionAlgorithm,\n" +
-                        "NullLevel",
+        // todo fix me after complexity review
+        assertEquals("  1 complexity:   0, name: HelloWorldAlgorithm,\n" +
+                        "  2 complexity:   5, name: FizzBuzzAlgorithm,\n" +
+                        "  3 complexity:  10, name: SumSquareDifferenceAlgorithm,\n" +
+                        "  4 complexity:  11, name: NameIntoInitialsAlgorithm,\n" +
+                        "  5 complexity:  11, name: ConcatenatedSquaresAlgorithm,\n" +
+                        "  6 complexity:  11, name: SimpleMathAlgorithm,\n" +
+                        "  7 complexity:  12, name: DNASequenceAlgorithm,\n" +
+                        "  8 complexity:  12, name: ThinkLikeAChildAlgorithm,\n" +
+                        "  9 complexity:  12, name: MiddleCharacterAlgorithm,\n" +
+                        " 10 complexity:  12, name: IsogramWordsAlgorithm,\n" +
+                        " 11 complexity:  12, name: DuplicateRemoveAlgorithm,\n" +
+                        " 12 complexity:  12, name: CreditCardNumberAlgorithm,\n" +
+                        " 13 complexity:  12, name: MultiplesThreeOrFiveAlgorithm,\n" +
+                        " 14 complexity:  12, name: RemoveVowelsAlgorithm,\n" +
+                        " 15 complexity:  12, name: CharOrderAlgorithm,\n" +
+                        " 16 complexity:  13, name: NumberOrderAlgorithm,\n" +
+                        " 17 complexity:  15, name: Sequence1Algorithm,\n" +
+                        " 18 complexity:  20, name: FibonacciNumbersAlgorithm,\n" +
+                        " 19 complexity:  25, name: PrimeFactoryAlgorithm,\n" +
+                        " 20 complexity:  28, name: NumeralSystemAlgorithm,\n" +
+                        " 21 complexity:  30, name: PowerDigitSumAlgorithm,\n" +
+                        " 22 complexity:  35, name: MakeBricksAlgorithm,\n" +
+                        " 23 complexity:  37, name: ArabicToRomanAlgorithm,\n" +
+                        " 24 complexity:  38, name: RomanToArabicAlgorithm,\n" +
+                        " 25 complexity:  40, name: FactorialAlgorithm,\n" +
+                        " 26 complexity:  45, name: ReverseAddPalindromeAlgorithm,\n" +
+                        " 27 complexity:  50, name: Sequence2Algorithm,\n" +
+                        " 28 complexity:  55, name: XthPrimeAlgorithm,\n" +
+                        " 29 complexity:  57, name: FizzBuzzMultiplierAlgorithm,\n" +
+                        " 30 complexity:  60, name: LongDivisionAlgorithm,\n" +
+                        " 31 complexity:2147483647, name: NullLevel",
                 levels.stream()
                         .sorted(Comparator.comparingInt(Level::complexity))
-                        .map(it -> it.getClass().getSimpleName())
+                        .map(it -> String.format("%3d complexity:%4s, name: %s",
+                                        levels.indexOf(it) + 1,
+                                        it.complexity(),
+                                        it.name()
+                                )
+                        )
                         .collect(Collectors.joining(",\n")));
     }
 }
