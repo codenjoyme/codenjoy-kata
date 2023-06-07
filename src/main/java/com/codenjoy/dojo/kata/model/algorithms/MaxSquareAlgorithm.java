@@ -87,10 +87,16 @@ public class MaxSquareAlgorithm extends AlgorithmLevelImpl {
     @Override
     public List<String> description() {
         return List.of("You are given an array of vertical lines height," +
-                " so that Y-axis is the line height and X-axis is line index from an array." +
-                " Write a Javascript function that finds two lines that together forms the largest square" +
-                " and returns the maximum square number.",
-                "Try to solve this task with O(n) complexity.");
+                        " so that Y-axis is the line height and X-axis is line index from an array." +
+                        " Write a Javascript function that finds two lines" +
+                        " that together forms the rectangle with largest area." +
+                        " Return the maximum area number and line coordinates in format {area}:{x1},{x2}." +
+                        " For example:\n" +
+                        " 1, 6, 3, 2, 8 => 18:1,4\n" +
+                        " 5, 2, 8, 1, 4 => 16:0,4\n" +
+                        " 7, 10, 2, 3, 1 => 9:0,3",
+                "Solve this task with O(n) complexity.",
+                "Return line coordinates of last found rectangle.");
     }
 
     @Override
