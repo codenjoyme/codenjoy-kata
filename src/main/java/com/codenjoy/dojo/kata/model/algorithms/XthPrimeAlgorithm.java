@@ -113,8 +113,4 @@ public class XthPrimeAlgorithm extends AlgorithmLevelImpl {
         return "ProjectEuler (http://euler.jakumo.org/problems/view/7.html)";
     }
 
-    @Override
-    public int complexity() {
-        return 55;
-    }
 }

@@ -129,11 +129,6 @@ public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public int complexity() {
-        return 5;
-    }
-
-    @Override
     public String author() {
         return "The algorithm is taken from the training, where it was used " +
                 "as a verbal warm-up. Judging by all the information " +

@@ -23,12 +23,12 @@ package com.codenjoy.dojo.kata.model.level;
  */
 
 
+import com.codenjoy.dojo.kata.services.Levels;
 import com.codenjoy.dojo.services.questionanswer.levels.Level;
 import com.codenjoy.dojo.services.questionanswer.levels.LevelsLoader;
 import javassist.Modifier;
 import org.junit.Test;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -38,7 +38,7 @@ public class LevelsLoaderTest {
 
     @Test
     public void test() {
-        List<Level> levels = LevelsLoader.getAlgorithmsOrderedByComplexity();
+        List<Level> levels = LevelsLoader.getAlgorithms(Levels.complexityToAlgorithm);
         assertTrue(!levels.isEmpty());
 
         for (Level level : levels) {
@@ -87,7 +87,6 @@ public class LevelsLoaderTest {
                         " 36 complexity:  60, name: LongDivisionAlgorithm,\n" +
                         " 37 complexity:2147483647, name: NullLevel",
                 levels.stream()
-                        .sorted(Comparator.comparingInt(Level::complexity))
                         .map(it -> String.format("%3d complexity:%4s, name: %s",
                                         levels.indexOf(it) + 1,
                                         it.complexity(),

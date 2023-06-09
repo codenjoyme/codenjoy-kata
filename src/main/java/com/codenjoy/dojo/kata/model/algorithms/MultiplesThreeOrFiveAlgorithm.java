@@ -83,11 +83,6 @@ public class MultiplesThreeOrFiveAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public int complexity() {
-        return 22;
-    }
-
-    @Override
     public String author() {
         return "Pavlo Reshetylo (Pavlo_Reshetylo@epam.com)";
     }

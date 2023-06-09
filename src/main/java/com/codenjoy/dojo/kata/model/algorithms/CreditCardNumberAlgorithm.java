@@ -108,11 +108,6 @@ public class CreditCardNumberAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public int complexity() {
-        return 23;
-    }
-
-    @Override
     public String author() {
         return "Pavlo Reshetylo (Pavlo_Reshetylo@epam.com)";
     }

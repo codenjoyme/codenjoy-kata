@@ -120,8 +120,4 @@ public class MaxSquareAlgorithm extends AlgorithmLevelImpl {
                 "https://leetcode.com/problems/container-with-most-water/description/";
     }
 
-    @Override
-    public int complexity() {
-        return 51;
-    }
 }

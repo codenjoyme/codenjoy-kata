@@ -147,11 +147,6 @@ public class ArabicToRomanAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public int complexity() {
-        return 40;
-    }
-
-    @Override
     public String author() {
         return "Author: Oleksandr Baglai (apofig@gmail.com)";
     }

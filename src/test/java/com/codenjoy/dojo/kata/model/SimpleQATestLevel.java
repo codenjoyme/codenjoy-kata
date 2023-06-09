@@ -40,6 +40,10 @@ public class SimpleQATestLevel extends QuestionAnswerLevelImpl {
     }
 
     @Override
+    public void setComplexity(int value) {
+    }
+
+    @Override
     public List<String> description() {
         return Arrays.asList("description");
     }

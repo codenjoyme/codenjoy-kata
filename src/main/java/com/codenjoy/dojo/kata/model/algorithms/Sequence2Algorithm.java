@@ -66,11 +66,6 @@ public class Sequence2Algorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public int complexity() {
-        return 50;
-    }
-
-    @Override
     public String author() {
         return "Alexey.Shcheglov (Alexey_Shcheglov@epam.com)\n" +
                 "http://nazva.net/735";

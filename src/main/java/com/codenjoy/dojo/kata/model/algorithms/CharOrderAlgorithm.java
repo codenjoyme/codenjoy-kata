@@ -79,11 +79,6 @@ public class CharOrderAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public int complexity() {
-        return 15;
-    }
-
-    @Override
     public String author() {
         return "Pavlo Reshetylo (Pavlo_Reshetylo@epam.com)";
     }

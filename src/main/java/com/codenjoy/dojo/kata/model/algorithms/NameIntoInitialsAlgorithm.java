@@ -90,11 +90,6 @@ public class NameIntoInitialsAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public int complexity() {
-        return 9;
-    }
-
-    @Override
     public String author() {
         return "Pavlo Reshetylo (Pavlo_Reshetylo@epam.com)";
     }

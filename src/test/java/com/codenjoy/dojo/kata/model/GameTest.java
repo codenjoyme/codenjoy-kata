@@ -83,6 +83,10 @@ public class GameTest {
             }
 
             @Override
+            public void setComplexity(int value) {
+            }
+
+            @Override
             public List<String> description() {
                 return Arrays.asList("description");
             }

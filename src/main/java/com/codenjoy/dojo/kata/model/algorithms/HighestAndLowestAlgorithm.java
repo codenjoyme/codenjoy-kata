@@ -99,11 +99,6 @@ public class HighestAndLowestAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public int complexity() {
-        return 12;
-    }
-
-    @Override
     public String author() {
         return "Pavlo Reshetylo (Pavlo_Reshetylo@epam.com)";
     }

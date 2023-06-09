@@ -25,6 +25,7 @@ package com.codenjoy.dojo.kata.services.ai;
 
 import com.codenjoy.dojo.client.AbstractTextSolver;
 import com.codenjoy.dojo.client.Strings;
+import com.codenjoy.dojo.kata.services.Levels;
 import com.codenjoy.dojo.services.Dice;
 import com.codenjoy.dojo.services.questionanswer.levels.*;
 
@@ -34,7 +35,7 @@ import static com.codenjoy.dojo.client.Command.START_NEXT_LEVEL;
 
 public class AISolver extends AbstractTextSolver {
 
-    private List<Level> levels = LevelsLoader.getAlgorithms();
+    private List<Level> levels = LevelsLoader.getAlgorithms(Levels.complexityToAlgorithm);
 
     public AISolver(Dice dice) {
         // do nothing

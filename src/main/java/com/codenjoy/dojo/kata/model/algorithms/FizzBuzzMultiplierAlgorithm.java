@@ -170,11 +170,6 @@ public class FizzBuzzMultiplierAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public int complexity() {
-        return 57;
-    }
-
-    @Override
     public String author() {
         return "The algorithm came as a extension of the famous " +
                 "FizzBuzz problem during the ChatGPT challenge on Dojorena. " +

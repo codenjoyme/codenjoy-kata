@@ -85,11 +85,6 @@ public class HelloWorldAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public int complexity() {
-        return 0;
-    }
-
-    @Override
     public String author() {
         return "Александр Баглай (apofig@gmail.com)";
     }

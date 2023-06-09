@@ -23,13 +23,16 @@ package com.codenjoy.dojo.kata.services;
  */
 
 import com.codenjoy.dojo.client.Utils;
+import com.codenjoy.dojo.kata.model.algorithms.*;
 import com.codenjoy.dojo.services.multiplayer.LevelProgress;
 import com.codenjoy.dojo.services.questionanswer.levels.Level;
 import com.codenjoy.dojo.services.questionanswer.levels.LevelsLoader;
 import com.codenjoy.dojo.utils.JsonUtils;
 import org.json.JSONObject;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
@@ -42,8 +45,47 @@ public final class Levels {
         throw new IllegalAccessError("Utility class");
     }
 
+    public static Map<Integer, Class<? extends Level>> complexityToAlgorithm = new HashMap<>() {{
+        put(0, HelloWorldAlgorithm.class);
+        put(5, FizzBuzzAlgorithm.class);
+        put(6, OddOrEvenAlgorithm.class);
+        put(7, DoubleCharAlgorithm.class);
+        put(8, SimpleMathAlgorithm.class);
+        put(9, NameIntoInitialsAlgorithm.class);
+        put(10, ConcatenatedSquaresAlgorithm.class);
+        put(11, SumSquareDifferenceAlgorithm.class);
+        put(12, HighestAndLowestAlgorithm.class);
+        put(13, RemoveVowelsAlgorithm.class);
+        put(14, ExesAndOhsAlgorithm.class);
+        put(15, CharOrderAlgorithm.class);
+        put(16, IsogramWordsAlgorithm.class);
+        put(17, RentCarCostCalculatorAlgorithm.class);
+        put(20, DuplicateRemoveAlgorithm.class);
+        put(21, ThinkLikeAChildAlgorithm.class);
+        put(22, MultiplesThreeOrFiveAlgorithm.class);
+        put(23, CreditCardNumberAlgorithm.class);
+        put(24, DNASequenceAlgorithm.class);
+        put(25, MiddleCharacterAlgorithm.class);
+        put(26, NumberOrderAlgorithm.class);
+        put(27, Sequence1Algorithm.class);
+        put(28, NumeralSystemAlgorithm.class);
+        put(30, FibonacciNumbersAlgorithm.class);
+        put(35, PrimeFactoryAlgorithm.class);
+        put(36, PowerDigitSumAlgorithm.class);
+        put(37, MakeBricksAlgorithm.class);
+        put(40, ArabicToRomanAlgorithm.class);
+        put(41, RomanToArabicAlgorithm.class);
+        put(42, FactorialAlgorithm.class);
+        put(45, ReverseAddPalindromeAlgorithm.class);
+        put(50, Sequence2Algorithm.class);
+        put(51, MaxSquareAlgorithm.class);
+        put(55, XthPrimeAlgorithm.class);
+        put(57, FizzBuzzMultiplierAlgorithm.class);
+        put(60, LongDivisionAlgorithm.class);
+    }};
+
     private static List<Level> all() {
-        return LevelsLoader.getAlgorithms();
+        return LevelsLoader.getAlgorithms(complexityToAlgorithm);
     }
 
     public static void setup(GameSettings settings) {

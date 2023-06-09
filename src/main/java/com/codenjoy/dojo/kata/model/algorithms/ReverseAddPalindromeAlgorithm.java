@@ -118,11 +118,6 @@ public class ReverseAddPalindromeAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public int complexity() {
-        return 45;
-    }
-
-    @Override
     public String author() {
         return "Alexey.Shcheglov (Alexey_Shcheglov@epam.com)";
     }

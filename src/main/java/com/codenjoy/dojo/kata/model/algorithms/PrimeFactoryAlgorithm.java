@@ -85,11 +85,6 @@ public class PrimeFactoryAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public int complexity() {
-        return 35;
-    }
-
-    @Override
     public String author() {
         return "Алгоритм взят из доклада Johannes Brodwall о TDD" +
                 "(http://szelenin.blogspot.com/2011_12_01_archive.html)";

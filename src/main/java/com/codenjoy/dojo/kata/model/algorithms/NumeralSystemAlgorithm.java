@@ -78,11 +78,6 @@ public class NumeralSystemAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public int complexity() {
-        return 28;
-    }
-
-    @Override
     public List<String> description() {
         return Arrays.asList(
                 "Please implement algorithm that converts " +

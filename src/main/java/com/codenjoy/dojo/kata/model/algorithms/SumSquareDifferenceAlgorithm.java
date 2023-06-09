@@ -69,11 +69,6 @@ public class SumSquareDifferenceAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public int complexity() {
-        return 11;
-    }
-
-    @Override
     public String author() {
         return "ProjectEuler (http://projecteuler.net/problem=6)";
     }

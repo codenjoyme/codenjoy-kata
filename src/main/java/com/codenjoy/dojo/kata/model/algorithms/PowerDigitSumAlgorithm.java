@@ -67,11 +67,6 @@ public class PowerDigitSumAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public int complexity() {
-        return 36;
-    }
-
-    @Override
     public String author() {
         return "ProjectEuler (http://projecteuler.net/problem=16)";
     }

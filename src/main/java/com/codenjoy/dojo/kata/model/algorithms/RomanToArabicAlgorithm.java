@@ -134,11 +134,6 @@ public class RomanToArabicAlgorithm extends AlgorithmLevelImpl {
     }
 
     @Override
-    public int complexity() {
-        return 41;
-    }
-
-    @Override
     public List<String> description() {
         return Arrays.asList(
                 "Write a function that converts a Roman number to Arabic");
