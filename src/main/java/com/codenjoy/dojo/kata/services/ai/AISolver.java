@@ -35,7 +35,7 @@ import static com.codenjoy.dojo.client.Command.START_NEXT_LEVEL;
 
 public class AISolver extends AbstractTextSolver {
 
-    private List<Level> levels = LevelsLoader.getAlgorithms(Levels.complexityToAlgorithm);
+    private List<Level> levels = LevelsLoader.getAlgorithms(Levels.COMPLEXITIES);
 
     public AISolver(Dice dice) {
         // do nothing

@@ -45,7 +45,7 @@ public final class Levels {
         throw new IllegalAccessError("Utility class");
     }
 
-    public static Map<Integer, Class<? extends Level>> complexityToAlgorithm = new HashMap<>() {{
+    public static final Map<Integer, Class<? extends Level>> COMPLEXITIES = new HashMap<>() {{
         put(0, HelloWorldAlgorithm.class);
         put(5, FizzBuzzAlgorithm.class);
         put(6, OddOrEvenAlgorithm.class);
@@ -85,7 +85,7 @@ public final class Levels {
     }};
 
     private static List<Level> all() {
-        return LevelsLoader.getAlgorithms(complexityToAlgorithm);
+        return LevelsLoader.getAlgorithms(COMPLEXITIES);
     }
 
     public static void setup(GameSettings settings) {

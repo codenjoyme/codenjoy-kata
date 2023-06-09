@@ -38,7 +38,7 @@ public class LevelsLoaderTest {
 
     @Test
     public void test() {
-        List<Level> levels = LevelsLoader.getAlgorithms(Levels.complexityToAlgorithm);
+        List<Level> levels = LevelsLoader.getAlgorithms(Levels.COMPLEXITIES);
         assertTrue(!levels.isEmpty());
 
         for (Level level : levels) {
@@ -48,7 +48,6 @@ public class LevelsLoaderTest {
             assertFalse(Modifier.isInterface(aClass.getModifiers()));
         }
 
-        // todo fix me after complexity review
         assertEquals("  1 complexity:   0, name: HelloWorldAlgorithm,\n" +
                         "  2 complexity:   5, name: FizzBuzzAlgorithm,\n" +
                         "  3 complexity:   6, name: OddOrEvenAlgorithm,\n" +
