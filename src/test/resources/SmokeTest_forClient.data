@@ -10502,7 +10502,12 @@
 75: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 76: 1:BoardData {
-76: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+76: 1:  'description': [
+76: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+76: 1:    'Write a javascript method.',
+76: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+76: 1:    'Use regular expressions to solve this problem.'
+76: 1:  ],
 76: 1:  'expectedAnswer': 'SSttrriinngg',
 76: 1:  'history': [],
 76: 1:  'info': ['❌f(String) = ??? != SSttrriinngg'],
@@ -10515,7 +10520,12 @@
 76: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 77: 1:BoardData {
-77: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+77: 1:  'description': [
+77: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+77: 1:    'Write a javascript method.',
+77: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+77: 1:    'Use regular expressions to solve this problem.'
+77: 1:  ],
 77: 1:  'expectedAnswer': 'HHeelllloo  WWoorrlldd',
 77: 1:  'history': [{
 77: 1:    'answer': 'SSttrriinngg',
@@ -10538,7 +10548,12 @@
 77: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 78: 1:BoardData {
-78: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+78: 1:  'description': [
+78: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+78: 1:    'Write a javascript method.',
+78: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+78: 1:    'Use regular expressions to solve this problem.'
+78: 1:  ],
 78: 1:  'expectedAnswer': '11223344!!__  ',
 78: 1:  'history': [
 78: 1:    {
@@ -10570,7 +10585,12 @@
 78: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 79: 1:BoardData {
-79: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+79: 1:  'description': [
+79: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+79: 1:    'Write a javascript method.',
+79: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+79: 1:    'Use regular expressions to solve this problem.'
+79: 1:  ],
 79: 1:  'expectedAnswer': '________  __  __  ____  ______  __  ________  ',
 79: 1:  'history': [
 79: 1:    {
@@ -10609,7 +10629,12 @@
 79: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 80: 1:BoardData {
-80: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+80: 1:  'description': [
+80: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+80: 1:    'Write a javascript method.',
+80: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+80: 1:    'Use regular expressions to solve this problem.'
+80: 1:  ],
 80: 1:  'expectedAnswer': '((--__--))',
 80: 1:  'history': [
 80: 1:    {
@@ -10655,7 +10680,12 @@
 80: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 81: 1:BoardData {
-81: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+81: 1:  'description': [
+81: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+81: 1:    'Write a javascript method.',
+81: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+81: 1:    'Use regular expressions to solve this problem.'
+81: 1:  ],
 81: 1:  'expectedAnswer': '112233445566',
 81: 1:  'history': [
 81: 1:    {
@@ -10708,7 +10738,12 @@
 81: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 82: 1:BoardData {
-82: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+82: 1:  'description': [
+82: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+82: 1:    'Write a javascript method.',
+82: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+82: 1:    'Use regular expressions to solve this problem.'
+82: 1:  ],
 82: 1:  'expectedAnswer': 'SSccrruubb  LLoorrddss',
 82: 1:  'history': [
 82: 1:    {
@@ -10768,7 +10803,12 @@
 82: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 83: 1:BoardData {
-83: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+83: 1:  'description': [
+83: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+83: 1:    'Write a javascript method.',
+83: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+83: 1:    'Use regular expressions to solve this problem.'
+83: 1:  ],
 83: 1:  'expectedAnswer': 'bbrruuhh',
 83: 1:  'history': [
 83: 1:    {
@@ -10835,7 +10875,12 @@
 83: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 84: 1:BoardData {
-84: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+84: 1:  'description': [
+84: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+84: 1:    'Write a javascript method.',
+84: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+84: 1:    'Use regular expressions to solve this problem.'
+84: 1:  ],
 84: 1:  'expectedAnswer': 'iilllluummiinnaattii',
 84: 1:  'history': [
 84: 1:    {
@@ -10909,7 +10954,12 @@
 84: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 85: 1:BoardData {
-85: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+85: 1:  'description': [
+85: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+85: 1:    'Write a javascript method.',
+85: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+85: 1:    'Use regular expressions to solve this problem.'
+85: 1:  ],
 85: 1:  'expectedAnswer': 'AAddiiddaass',
 85: 1:  'history': [
 85: 1:    {
@@ -10990,7 +11040,12 @@
 85: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 86: 1:BoardData {
-86: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+86: 1:  'description': [
+86: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+86: 1:    'Write a javascript method.',
+86: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+86: 1:    'Use regular expressions to solve this problem.'
+86: 1:  ],
 86: 1:  'expectedAnswer': '!!##%%GG##DDGGYY^^RRCC',
 86: 1:  'history': [
 86: 1:    {
@@ -11078,7 +11133,12 @@
 86: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 87: 1:BoardData {
-87: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+87: 1:  'description': [
+87: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+87: 1:    'Write a javascript method.',
+87: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+87: 1:    'Use regular expressions to solve this problem.'
+87: 1:  ],
 87: 1:  'expectedAnswer': 'DDoonnaalldd  DDuucckk',
 87: 1:  'history': [
 87: 1:    {
@@ -11173,7 +11233,12 @@
 87: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 88: 1:BoardData {
-88: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+88: 1:  'description': [
+88: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+88: 1:    'Write a javascript method.',
+88: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+88: 1:    'Use regular expressions to solve this problem.'
+88: 1:  ],
 88: 1:  'expectedAnswer': 'KKaannyyee  22002200',
 88: 1:  'history': [
 88: 1:    {
@@ -11275,7 +11340,12 @@
 88: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 89: 1:BoardData {
-89: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+89: 1:  'description': [
+89: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+89: 1:    'Write a javascript method.',
+89: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+89: 1:    'Use regular expressions to solve this problem.'
+89: 1:  ],
 89: 1:  'expectedAnswer': 'BBeerrnniiee  SSaannddeerrss  iiss  BBaaee',
 89: 1:  'history': [
 89: 1:    {
@@ -11384,7 +11454,12 @@
 89: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 90: 1:BoardData {
-90: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+90: 1:  'description': [
+90: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+90: 1:    'Write a javascript method.',
+90: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+90: 1:    'Use regular expressions to solve this problem.'
+90: 1:  ],
 90: 1:  'expectedAnswer': 'PPeeaannuutt  BBuutttteerr',
 90: 1:  'history': [
 90: 1:    {
@@ -11500,7 +11575,12 @@
 90: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 91: 1:BoardData {
-91: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+91: 1:  'description': [
+91: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+91: 1:    'Write a javascript method.',
+91: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+91: 1:    'Use regular expressions to solve this problem.'
+91: 1:  ],
 91: 1:  'expectedAnswer': '11333377',
 91: 1:  'history': [
 91: 1:    {
@@ -11623,7 +11703,12 @@
 91: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 92: 1:BoardData {
-92: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+92: 1:  'description': [
+92: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+92: 1:    'Write a javascript method.',
+92: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+92: 1:    'Use regular expressions to solve this problem.'
+92: 1:  ],
 92: 1:  'expectedAnswer': 'hh**oo@@DD77aann&&  aa',
 92: 1:  'history': [
 92: 1:    {
@@ -11753,7 +11838,12 @@
 92: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 93: 1:BoardData {
-93: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+93: 1:  'description': [
+93: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+93: 1:    'Write a javascript method.',
+93: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+93: 1:    'Use regular expressions to solve this problem.'
+93: 1:  ],
 93: 1:  'expectedAnswer': 'YY!!SS4477YY  @@',
 93: 1:  'history': [
 93: 1:    {
@@ -11890,7 +11980,12 @@
 93: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 94: 1:BoardData {
-94: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+94: 1:  'description': [
+94: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+94: 1:    'Write a javascript method.',
+94: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+94: 1:    'Use regular expressions to solve this problem.'
+94: 1:  ],
 94: 1:  'expectedAnswer': '..--&&ddFFII88',
 94: 1:  'history': [
 94: 1:    {
@@ -12034,7 +12129,12 @@
 94: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 95: 1:BoardData {
-95: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+95: 1:  'description': [
+95: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+95: 1:    'Write a javascript method.',
+95: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+95: 1:    'Use regular expressions to solve this problem.'
+95: 1:  ],
 95: 1:  'expectedAnswer': '!!ZZqq++',
 95: 1:  'history': [
 95: 1:    {
@@ -12185,7 +12285,12 @@
 95: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 96: 1:BoardData {
-96: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+96: 1:  'description': [
+96: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+96: 1:    'Write a javascript method.',
+96: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+96: 1:    'Use regular expressions to solve this problem.'
+96: 1:  ],
 96: 1:  'expectedAnswer': 'gg%%;;UU**!!aa//[[ppZZ44VV33//&&',
 96: 1:  'history': [
 96: 1:    {
@@ -12343,7 +12448,12 @@
 96: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 97: 1:BoardData {
-97: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+97: 1:  'description': [
+97: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+97: 1:    'Write a javascript method.',
+97: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+97: 1:    'Use regular expressions to solve this problem.'
+97: 1:  ],
 97: 1:  'expectedAnswer': '77ff55nnFF==::bb88eeoo&&++77',
 97: 1:  'history': [
 97: 1:    {
@@ -12508,7 +12618,12 @@
 97: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 98: 1:BoardData {
-98: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+98: 1:  'description': [
+98: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+98: 1:    'Write a javascript method.',
+98: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+98: 1:    'Use regular expressions to solve this problem.'
+98: 1:  ],
 98: 1:  'expectedAnswer': '**22SSNNmm##LLoo&&YY',
 98: 1:  'history': [
 98: 1:    {
@@ -12680,7 +12795,12 @@
 98: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 99: 1:BoardData {
-99: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+99: 1:  'description': [
+99: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+99: 1:    'Write a javascript method.',
+99: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+99: 1:    'Use regular expressions to solve this problem.'
+99: 1:  ],
 99: 1:  'expectedAnswer': '33ZZVVmm',
 99: 1:  'history': [
 99: 1:    {
@@ -12859,7 +12979,12 @@
 99: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 100: 1:BoardData {
-100: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+100: 1:  'description': [
+100: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+100: 1:    'Write a javascript method.',
+100: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+100: 1:    'Use regular expressions to solve this problem.'
+100: 1:  ],
 100: 1:  'expectedAnswer': ']]CC0066**EEcc$$6622oo!!77]][[//99',
 100: 1:  'history': [
 100: 1:    {
@@ -13045,7 +13170,12 @@
 100: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 101: 1:BoardData {
-101: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+101: 1:  'description': [
+101: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+101: 1:    'Write a javascript method.',
+101: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+101: 1:    'Use regular expressions to solve this problem.'
+101: 1:  ],
 101: 1:  'expectedAnswer': '^^qq%%]]VVooKKhhhh99jj55--',
 101: 1:  'history': [
 101: 1:    {
@@ -13238,7 +13368,12 @@
 101: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 102: 1:BoardData {
-102: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+102: 1:  'description': [
+102: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+102: 1:    'Write a javascript method.',
+102: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+102: 1:    'Use regular expressions to solve this problem.'
+102: 1:  ],
 102: 1:  'expectedAnswer': '$$22EEZZGGQQ',
 102: 1:  'history': [
 102: 1:    {
@@ -13438,7 +13573,12 @@
 102: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 103: 1:BoardData {
-103: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+103: 1:  'description': [
+103: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+103: 1:    'Write a javascript method.',
+103: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+103: 1:    'Use regular expressions to solve this problem.'
+103: 1:  ],
 103: 1:  'expectedAnswer': '``UU99@@hh',
 103: 1:  'history': [
 103: 1:    {
@@ -13645,7 +13785,12 @@
 103: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 104: 1:BoardData {
-104: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+104: 1:  'description': [
+104: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+104: 1:    'Write a javascript method.',
+104: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+104: 1:    'Use regular expressions to solve this problem.'
+104: 1:  ],
 104: 1:  'expectedAnswer': 'kk^^FF  [[',
 104: 1:  'history': [
 104: 1:    {
@@ -13859,7 +14004,12 @@
 104: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 105: 1:BoardData {
-105: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+105: 1:  'description': [
+105: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+105: 1:    'Write a javascript method.',
+105: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+105: 1:    'Use regular expressions to solve this problem.'
+105: 1:  ],
 105: 1:  'expectedAnswer': '@@YY((--SSAAZZaa<<SS22OOSS****ii',
 105: 1:  'history': [
 105: 1:    {
@@ -14080,7 +14230,12 @@
 105: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 106: 1:BoardData {
-106: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+106: 1:  'description': [
+106: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+106: 1:    'Write a javascript method.',
+106: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+106: 1:    'Use regular expressions to solve this problem.'
+106: 1:  ],
 106: 1:  'expectedAnswer': 'hh**??RRWW__ii++<<',
 106: 1:  'history': [
 106: 1:    {
@@ -14308,7 +14463,12 @@
 106: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 107: 1:BoardData {
-107: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+107: 1:  'description': [
+107: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+107: 1:    'Write a javascript method.',
+107: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+107: 1:    'Use regular expressions to solve this problem.'
+107: 1:  ],
 107: 1:  'expectedAnswer': 'FFAACCBBTT++33YYCC99mm33++aa00QQ',
 107: 1:  'history': [
 107: 1:    {
@@ -14543,7 +14703,12 @@
 107: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 108: 1:BoardData {
-108: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+108: 1:  'description': [
+108: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+108: 1:    'Write a javascript method.',
+108: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+108: 1:    'Use regular expressions to solve this problem.'
+108: 1:  ],
 108: 1:  'expectedAnswer': 'KKSS))::jjYY??++SS99',
 108: 1:  'history': [
 108: 1:    {
@@ -14785,7 +14950,12 @@
 108: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 109: 1:BoardData {
-109: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+109: 1:  'description': [
+109: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+109: 1:    'Write a javascript method.',
+109: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+109: 1:    'Use regular expressions to solve this problem.'
+109: 1:  ],
 109: 1:  'expectedAnswer': 'JJBBWWhh',
 109: 1:  'history': [
 109: 1:    {
@@ -15034,7 +15204,12 @@
 109: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 110: 1:BoardData {
-110: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+110: 1:  'description': [
+110: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+110: 1:    'Write a javascript method.',
+110: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+110: 1:    'Use regular expressions to solve this problem.'
+110: 1:  ],
 110: 1:  'expectedAnswer': 'OONNmm33ll))))HH@@GGff((',
 110: 1:  'history': [
 110: 1:    {
@@ -15290,7 +15465,12 @@
 110: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 111: 1:BoardData {
-111: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+111: 1:  'description': [
+111: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+111: 1:    'Write a javascript method.',
+111: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+111: 1:    'Use regular expressions to solve this problem.'
+111: 1:  ],
 111: 1:  'expectedAnswer': 'ffkk66KKgg  77&&',
 111: 1:  'history': [
 111: 1:    {
@@ -15553,7 +15733,12 @@
 111: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 112: 1:BoardData {
-112: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+112: 1:  'description': [
+112: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+112: 1:    'Write a javascript method.',
+112: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+112: 1:    'Use regular expressions to solve this problem.'
+112: 1:  ],
 112: 1:  'expectedAnswer': '**AA&&22SSJJUUbb##((VVcc((OOjjCC``WW11',
 112: 1:  'history': [
 112: 1:    {
@@ -15823,7 +16008,12 @@
 112: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 113: 1:BoardData {
-113: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+113: 1:  'description': [
+113: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+113: 1:    'Write a javascript method.',
+113: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+113: 1:    'Use regular expressions to solve this problem.'
+113: 1:  ],
 113: 1:  'expectedAnswer': '``SS99OONNuu000011EE8833++!!',
 113: 1:  'history': [
 113: 1:    {
@@ -16100,7 +16290,12 @@
 113: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 114: 1:BoardData {
-114: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+114: 1:  'description': [
+114: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+114: 1:    'Write a javascript method.',
+114: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+114: 1:    'Use regular expressions to solve this problem.'
+114: 1:  ],
 114: 1:  'expectedAnswer': '((YYQQ^^//22]]77cc$$88LL**,,]]::++',
 114: 1:  'history': [
 114: 1:    {
@@ -16384,7 +16579,12 @@
 114: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 115: 1:BoardData {
-115: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+115: 1:  'description': [
+115: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+115: 1:    'Write a javascript method.',
+115: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+115: 1:    'Use regular expressions to solve this problem.'
+115: 1:  ],
 115: 1:  'expectedAnswer': '77PPllaa  GG33**CC[[==%%``dd==ll$$',
 115: 1:  'history': [
 115: 1:    {
@@ -16675,7 +16875,12 @@
 115: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 116: 1:BoardData {
-116: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+116: 1:  'description': [
+116: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+116: 1:    'Write a javascript method.',
+116: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+116: 1:    'Use regular expressions to solve this problem.'
+116: 1:  ],
 116: 1:  'expectedAnswer': '1122mmqq,,<<[[::FFddFF&&^^22PP',
 116: 1:  'history': [
 116: 1:    {
@@ -16973,7 +17178,12 @@
 116: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 117: 1:BoardData {
-117: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+117: 1:  'description': [
+117: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+117: 1:    'Write a javascript method.',
+117: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+117: 1:    'Use regular expressions to solve this problem.'
+117: 1:  ],
 117: 1:  'expectedAnswer': 'll##NNRRTT77nnnn++pp&&',
 117: 1:  'history': [
 117: 1:    {
@@ -17278,7 +17488,12 @@
 117: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 118: 1:BoardData {
-118: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+118: 1:  'description': [
+118: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+118: 1:    'Write a javascript method.',
+118: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+118: 1:    'Use regular expressions to solve this problem.'
+118: 1:  ],
 118: 1:  'expectedAnswer': '99..dd((QQ;;DD((LL..**',
 118: 1:  'history': [
 118: 1:    {
@@ -17590,7 +17805,12 @@
 118: 1:Fire Event: PassTest{complexity=7, testCount=44}
 ------------------------------------------
 119: 1:BoardData {
-119: 1:  'description': ['Double char?\nGiven a string, you have to return a string in which each character (case-sensitive) is repeated once.\nExamples (Input=>Output):\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  '],
+119: 1:  'description': [
+119: 1:    'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.',
+119: 1:    'Write a javascript method.',
+119: 1:    'Example:\nString=>SSttrriinngg\nHello World=>HHeelllloo  WWoorrlldd\n1234!_ =>11223344!!__  ',
+119: 1:    'Use regular expressions to solve this problem.'
+119: 1:  ],
 119: 1:  'expectedAnswer': 'nnqq00CCMMEEgg``))??nnJJ$$MM$$GGGG;;,,;;>>',
 119: 1:  'history': [
 119: 1:    {
