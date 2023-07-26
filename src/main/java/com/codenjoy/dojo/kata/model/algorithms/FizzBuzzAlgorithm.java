@@ -45,16 +45,23 @@ public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public String winCode() {
-        return "function program(number) {\n" +
-                "    const divisors = [3, 5, 7, 11, 13];\n" +
-                "    const strings = ['Fizz', 'Buzz', 'Muzz', 'Duzz', 'Cazz'];\n" +
-                "    let str = '';\n" +
-                "    for (let i = 0; i < divisors.length; i++) {\n" +
-                "        if (number % divisors[i] === 0) {\n" +
-                "            str += strings[i];\n" +
-                "        }\n" +
+        return "function getWord(number) {\n" +
+                "  const map = new Map([\n" +
+                "    [3, 'Fizz'],\n" +
+                "    [5, 'Buzz'],\n" +
+                "    [7, 'Muzz'],\n" +
+                "    [11, 'Duzz'],\n" +
+                "    [13, 'Cazz']\n" +
+                "  ]);\n" +
+                "\n" +
+                "  let result = '';\n" +
+                "  map.forEach((word, divisor) => {\n" +
+                "    if (number % divisor === 0) {\n" +
+                "      result += word;\n" +
                 "    }\n" +
-                "    return str || number.toString();\n" +
+                "  });\n" +
+                "\n" +
+                "  return result || number.toString();\n" +
                 "}";
     }
 
@@ -79,7 +86,9 @@ public class FizzBuzzAlgorithm extends AlgorithmLevelImpl {
 
                 "For divider 11 - the word must be 'Duzz'.",
 
-                "For divider 13 - the word must be 'Cazz'.");
+                "For divider 13 - the word must be 'Cazz'.",
+
+                "Please use a map with constants and dividers to avoid multiple ifs.");
     }
 
     @Override

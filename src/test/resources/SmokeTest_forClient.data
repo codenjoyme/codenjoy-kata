@@ -229,7 +229,8 @@
 7: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 7: 1:    'Please write optimized code without any duplication.',
 7: 1:    'For divider 11 - the word must be 'Duzz'.',
-7: 1:    'For divider 13 - the word must be 'Cazz'.'
+7: 1:    'For divider 13 - the word must be 'Cazz'.',
+7: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 7: 1:  ],
 7: 1:  'expectedAnswer': '1',
 7: 1:  'history': [],
@@ -251,7 +252,8 @@
 8: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 8: 1:    'Please write optimized code without any duplication.',
 8: 1:    'For divider 11 - the word must be 'Duzz'.',
-8: 1:    'For divider 13 - the word must be 'Cazz'.'
+8: 1:    'For divider 13 - the word must be 'Cazz'.',
+8: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 8: 1:  ],
 8: 1:  'expectedAnswer': '2',
 8: 1:  'history': [{
@@ -283,7 +285,8 @@
 9: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 9: 1:    'Please write optimized code without any duplication.',
 9: 1:    'For divider 11 - the word must be 'Duzz'.',
-9: 1:    'For divider 13 - the word must be 'Cazz'.'
+9: 1:    'For divider 13 - the word must be 'Cazz'.',
+9: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 9: 1:  ],
 9: 1:  'expectedAnswer': 'Fizz',
 9: 1:  'history': [
@@ -324,7 +327,8 @@
 10: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 10: 1:    'Please write optimized code without any duplication.',
 10: 1:    'For divider 11 - the word must be 'Duzz'.',
-10: 1:    'For divider 13 - the word must be 'Cazz'.'
+10: 1:    'For divider 13 - the word must be 'Cazz'.',
+10: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 10: 1:  ],
 10: 1:  'expectedAnswer': '4',
 10: 1:  'history': [
@@ -372,7 +376,8 @@
 11: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 11: 1:    'Please write optimized code without any duplication.',
 11: 1:    'For divider 11 - the word must be 'Duzz'.',
-11: 1:    'For divider 13 - the word must be 'Cazz'.'
+11: 1:    'For divider 13 - the word must be 'Cazz'.',
+11: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 11: 1:  ],
 11: 1:  'expectedAnswer': 'Buzz',
 11: 1:  'history': [
@@ -427,7 +432,8 @@
 12: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 12: 1:    'Please write optimized code without any duplication.',
 12: 1:    'For divider 11 - the word must be 'Duzz'.',
-12: 1:    'For divider 13 - the word must be 'Cazz'.'
+12: 1:    'For divider 13 - the word must be 'Cazz'.',
+12: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 12: 1:  ],
 12: 1:  'expectedAnswer': 'Fizz',
 12: 1:  'history': [
@@ -489,7 +495,8 @@
 13: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 13: 1:    'Please write optimized code without any duplication.',
 13: 1:    'For divider 11 - the word must be 'Duzz'.',
-13: 1:    'For divider 13 - the word must be 'Cazz'.'
+13: 1:    'For divider 13 - the word must be 'Cazz'.',
+13: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 13: 1:  ],
 13: 1:  'expectedAnswer': 'Muzz',
 13: 1:  'history': [
@@ -558,7 +565,8 @@
 14: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 14: 1:    'Please write optimized code without any duplication.',
 14: 1:    'For divider 11 - the word must be 'Duzz'.',
-14: 1:    'For divider 13 - the word must be 'Cazz'.'
+14: 1:    'For divider 13 - the word must be 'Cazz'.',
+14: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 14: 1:  ],
 14: 1:  'expectedAnswer': '8',
 14: 1:  'history': [
@@ -634,7 +642,8 @@
 15: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 15: 1:    'Please write optimized code without any duplication.',
 15: 1:    'For divider 11 - the word must be 'Duzz'.',
-15: 1:    'For divider 13 - the word must be 'Cazz'.'
+15: 1:    'For divider 13 - the word must be 'Cazz'.',
+15: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 15: 1:  ],
 15: 1:  'expectedAnswer': 'Fizz',
 15: 1:  'history': [
@@ -717,7 +726,8 @@
 16: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 16: 1:    'Please write optimized code without any duplication.',
 16: 1:    'For divider 11 - the word must be 'Duzz'.',
-16: 1:    'For divider 13 - the word must be 'Cazz'.'
+16: 1:    'For divider 13 - the word must be 'Cazz'.',
+16: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 16: 1:  ],
 16: 1:  'expectedAnswer': 'Buzz',
 16: 1:  'history': [
@@ -807,7 +817,8 @@
 17: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 17: 1:    'Please write optimized code without any duplication.',
 17: 1:    'For divider 11 - the word must be 'Duzz'.',
-17: 1:    'For divider 13 - the word must be 'Cazz'.'
+17: 1:    'For divider 13 - the word must be 'Cazz'.',
+17: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 17: 1:  ],
 17: 1:  'expectedAnswer': 'Duzz',
 17: 1:  'history': [
@@ -904,7 +915,8 @@
 18: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 18: 1:    'Please write optimized code without any duplication.',
 18: 1:    'For divider 11 - the word must be 'Duzz'.',
-18: 1:    'For divider 13 - the word must be 'Cazz'.'
+18: 1:    'For divider 13 - the word must be 'Cazz'.',
+18: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 18: 1:  ],
 18: 1:  'expectedAnswer': 'Fizz',
 18: 1:  'history': [
@@ -1008,7 +1020,8 @@
 19: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 19: 1:    'Please write optimized code without any duplication.',
 19: 1:    'For divider 11 - the word must be 'Duzz'.',
-19: 1:    'For divider 13 - the word must be 'Cazz'.'
+19: 1:    'For divider 13 - the word must be 'Cazz'.',
+19: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 19: 1:  ],
 19: 1:  'expectedAnswer': 'Cazz',
 19: 1:  'history': [
@@ -1119,7 +1132,8 @@
 20: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 20: 1:    'Please write optimized code without any duplication.',
 20: 1:    'For divider 11 - the word must be 'Duzz'.',
-20: 1:    'For divider 13 - the word must be 'Cazz'.'
+20: 1:    'For divider 13 - the word must be 'Cazz'.',
+20: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 20: 1:  ],
 20: 1:  'expectedAnswer': 'Muzz',
 20: 1:  'history': [
@@ -1237,7 +1251,8 @@
 21: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 21: 1:    'Please write optimized code without any duplication.',
 21: 1:    'For divider 11 - the word must be 'Duzz'.',
-21: 1:    'For divider 13 - the word must be 'Cazz'.'
+21: 1:    'For divider 13 - the word must be 'Cazz'.',
+21: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 21: 1:  ],
 21: 1:  'expectedAnswer': 'FizzBuzz',
 21: 1:  'history': [
@@ -1362,7 +1377,8 @@
 22: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 22: 1:    'Please write optimized code without any duplication.',
 22: 1:    'For divider 11 - the word must be 'Duzz'.',
-22: 1:    'For divider 13 - the word must be 'Cazz'.'
+22: 1:    'For divider 13 - the word must be 'Cazz'.',
+22: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 22: 1:  ],
 22: 1:  'expectedAnswer': '16',
 22: 1:  'history': [
@@ -1494,7 +1510,8 @@
 23: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 23: 1:    'Please write optimized code without any duplication.',
 23: 1:    'For divider 11 - the word must be 'Duzz'.',
-23: 1:    'For divider 13 - the word must be 'Cazz'.'
+23: 1:    'For divider 13 - the word must be 'Cazz'.',
+23: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 23: 1:  ],
 23: 1:  'expectedAnswer': '17',
 23: 1:  'history': [
@@ -1633,7 +1650,8 @@
 24: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 24: 1:    'Please write optimized code without any duplication.',
 24: 1:    'For divider 11 - the word must be 'Duzz'.',
-24: 1:    'For divider 13 - the word must be 'Cazz'.'
+24: 1:    'For divider 13 - the word must be 'Cazz'.',
+24: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 24: 1:  ],
 24: 1:  'expectedAnswer': 'FizzMuzz',
 24: 1:  'history': [
@@ -1779,7 +1797,8 @@
 25: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 25: 1:    'Please write optimized code without any duplication.',
 25: 1:    'For divider 11 - the word must be 'Duzz'.',
-25: 1:    'For divider 13 - the word must be 'Cazz'.'
+25: 1:    'For divider 13 - the word must be 'Cazz'.',
+25: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 25: 1:  ],
 25: 1:  'expectedAnswer': 'FizzDuzz',
 25: 1:  'history': [
@@ -1932,7 +1951,8 @@
 26: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 26: 1:    'Please write optimized code without any duplication.',
 26: 1:    'For divider 11 - the word must be 'Duzz'.',
-26: 1:    'For divider 13 - the word must be 'Cazz'.'
+26: 1:    'For divider 13 - the word must be 'Cazz'.',
+26: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 26: 1:  ],
 26: 1:  'expectedAnswer': 'BuzzMuzz',
 26: 1:  'history': [
@@ -2092,7 +2112,8 @@
 27: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 27: 1:    'Please write optimized code without any duplication.',
 27: 1:    'For divider 11 - the word must be 'Duzz'.',
-27: 1:    'For divider 13 - the word must be 'Cazz'.'
+27: 1:    'For divider 13 - the word must be 'Cazz'.',
+27: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 27: 1:  ],
 27: 1:  'expectedAnswer': 'FizzCazz',
 27: 1:  'history': [
@@ -2259,7 +2280,8 @@
 28: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 28: 1:    'Please write optimized code without any duplication.',
 28: 1:    'For divider 11 - the word must be 'Duzz'.',
-28: 1:    'For divider 13 - the word must be 'Cazz'.'
+28: 1:    'For divider 13 - the word must be 'Cazz'.',
+28: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 28: 1:  ],
 28: 1:  'expectedAnswer': 'Muzz',
 28: 1:  'history': [
@@ -2433,7 +2455,8 @@
 29: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 29: 1:    'Please write optimized code without any duplication.',
 29: 1:    'For divider 11 - the word must be 'Duzz'.',
-29: 1:    'For divider 13 - the word must be 'Cazz'.'
+29: 1:    'For divider 13 - the word must be 'Cazz'.',
+29: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 29: 1:  ],
 29: 1:  'expectedAnswer': 'BuzzDuzz',
 29: 1:  'history': [
@@ -2614,7 +2637,8 @@
 30: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 30: 1:    'Please write optimized code without any duplication.',
 30: 1:    'For divider 11 - the word must be 'Duzz'.',
-30: 1:    'For divider 13 - the word must be 'Cazz'.'
+30: 1:    'For divider 13 - the word must be 'Cazz'.',
+30: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 30: 1:  ],
 30: 1:  'expectedAnswer': 'BuzzCazz',
 30: 1:  'history': [
@@ -2802,7 +2826,8 @@
 31: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 31: 1:    'Please write optimized code without any duplication.',
 31: 1:    'For divider 11 - the word must be 'Duzz'.',
-31: 1:    'For divider 13 - the word must be 'Cazz'.'
+31: 1:    'For divider 13 - the word must be 'Cazz'.',
+31: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 31: 1:  ],
 31: 1:  'expectedAnswer': 'MuzzDuzz',
 31: 1:  'history': [
@@ -2997,7 +3022,8 @@
 32: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 32: 1:    'Please write optimized code without any duplication.',
 32: 1:    'For divider 11 - the word must be 'Duzz'.',
-32: 1:    'For divider 13 - the word must be 'Cazz'.'
+32: 1:    'For divider 13 - the word must be 'Cazz'.',
+32: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 32: 1:  ],
 32: 1:  'expectedAnswer': 'MuzzCazz',
 32: 1:  'history': [
@@ -3199,7 +3225,8 @@
 33: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 33: 1:    'Please write optimized code without any duplication.',
 33: 1:    'For divider 11 - the word must be 'Duzz'.',
-33: 1:    'For divider 13 - the word must be 'Cazz'.'
+33: 1:    'For divider 13 - the word must be 'Cazz'.',
+33: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 33: 1:  ],
 33: 1:  'expectedAnswer': 'FizzBuzzMuzz',
 33: 1:  'history': [
@@ -3408,7 +3435,8 @@
 34: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 34: 1:    'Please write optimized code without any duplication.',
 34: 1:    'For divider 11 - the word must be 'Duzz'.',
-34: 1:    'For divider 13 - the word must be 'Cazz'.'
+34: 1:    'For divider 13 - the word must be 'Cazz'.',
+34: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 34: 1:  ],
 34: 1:  'expectedAnswer': 'FizzBuzzDuzz',
 34: 1:  'history': [
@@ -3624,7 +3652,8 @@
 35: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 35: 1:    'Please write optimized code without any duplication.',
 35: 1:    'For divider 11 - the word must be 'Duzz'.',
-35: 1:    'For divider 13 - the word must be 'Cazz'.'
+35: 1:    'For divider 13 - the word must be 'Cazz'.',
+35: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 35: 1:  ],
 35: 1:  'expectedAnswer': 'FizzBuzzCazz',
 35: 1:  'history': [
@@ -3847,7 +3876,8 @@
 36: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 36: 1:    'Please write optimized code without any duplication.',
 36: 1:    'For divider 11 - the word must be 'Duzz'.',
-36: 1:    'For divider 13 - the word must be 'Cazz'.'
+36: 1:    'For divider 13 - the word must be 'Cazz'.',
+36: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 36: 1:  ],
 36: 1:  'expectedAnswer': 'FizzMuzzDuzz',
 36: 1:  'history': [
@@ -4077,7 +4107,8 @@
 37: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 37: 1:    'Please write optimized code without any duplication.',
 37: 1:    'For divider 11 - the word must be 'Duzz'.',
-37: 1:    'For divider 13 - the word must be 'Cazz'.'
+37: 1:    'For divider 13 - the word must be 'Cazz'.',
+37: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 37: 1:  ],
 37: 1:  'expectedAnswer': 'FizzMuzzCazz',
 37: 1:  'history': [
@@ -4314,7 +4345,8 @@
 38: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 38: 1:    'Please write optimized code without any duplication.',
 38: 1:    'For divider 11 - the word must be 'Duzz'.',
-38: 1:    'For divider 13 - the word must be 'Cazz'.'
+38: 1:    'For divider 13 - the word must be 'Cazz'.',
+38: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 38: 1:  ],
 38: 1:  'expectedAnswer': 'BuzzMuzzDuzz',
 38: 1:  'history': [
@@ -4558,7 +4590,8 @@
 39: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 39: 1:    'Please write optimized code without any duplication.',
 39: 1:    'For divider 11 - the word must be 'Duzz'.',
-39: 1:    'For divider 13 - the word must be 'Cazz'.'
+39: 1:    'For divider 13 - the word must be 'Cazz'.',
+39: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 39: 1:  ],
 39: 1:  'expectedAnswer': 'BuzzMuzzCazz',
 39: 1:  'history': [
@@ -4809,7 +4842,8 @@
 40: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 40: 1:    'Please write optimized code without any duplication.',
 40: 1:    'For divider 11 - the word must be 'Duzz'.',
-40: 1:    'For divider 13 - the word must be 'Cazz'.'
+40: 1:    'For divider 13 - the word must be 'Cazz'.',
+40: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 40: 1:  ],
 40: 1:  'expectedAnswer': 'BuzzDuzzCazz',
 40: 1:  'history': [
@@ -5067,7 +5101,8 @@
 41: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 41: 1:    'Please write optimized code without any duplication.',
 41: 1:    'For divider 11 - the word must be 'Duzz'.',
-41: 1:    'For divider 13 - the word must be 'Cazz'.'
+41: 1:    'For divider 13 - the word must be 'Cazz'.',
+41: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 41: 1:  ],
 41: 1:  'expectedAnswer': 'MuzzDuzzCazz',
 41: 1:  'history': [
@@ -5332,7 +5367,8 @@
 42: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 42: 1:    'Please write optimized code without any duplication.',
 42: 1:    'For divider 11 - the word must be 'Duzz'.',
-42: 1:    'For divider 13 - the word must be 'Cazz'.'
+42: 1:    'For divider 13 - the word must be 'Cazz'.',
+42: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 42: 1:  ],
 42: 1:  'expectedAnswer': 'FizzBuzzMuzzDuzz',
 42: 1:  'history': [
@@ -5604,7 +5640,8 @@
 43: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 43: 1:    'Please write optimized code without any duplication.',
 43: 1:    'For divider 11 - the word must be 'Duzz'.',
-43: 1:    'For divider 13 - the word must be 'Cazz'.'
+43: 1:    'For divider 13 - the word must be 'Cazz'.',
+43: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 43: 1:  ],
 43: 1:  'expectedAnswer': 'FizzBuzzMuzzCazz',
 43: 1:  'history': [
@@ -5883,7 +5920,8 @@
 44: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 44: 1:    'Please write optimized code without any duplication.',
 44: 1:    'For divider 11 - the word must be 'Duzz'.',
-44: 1:    'For divider 13 - the word must be 'Cazz'.'
+44: 1:    'For divider 13 - the word must be 'Cazz'.',
+44: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 44: 1:  ],
 44: 1:  'expectedAnswer': 'FizzBuzzDuzzCazz',
 44: 1:  'history': [
@@ -6169,7 +6207,8 @@
 45: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 45: 1:    'Please write optimized code without any duplication.',
 45: 1:    'For divider 11 - the word must be 'Duzz'.',
-45: 1:    'For divider 13 - the word must be 'Cazz'.'
+45: 1:    'For divider 13 - the word must be 'Cazz'.',
+45: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 45: 1:  ],
 45: 1:  'expectedAnswer': 'FizzMuzzDuzzCazz',
 45: 1:  'history': [
@@ -6462,7 +6501,8 @@
 46: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 46: 1:    'Please write optimized code without any duplication.',
 46: 1:    'For divider 11 - the word must be 'Duzz'.',
-46: 1:    'For divider 13 - the word must be 'Cazz'.'
+46: 1:    'For divider 13 - the word must be 'Cazz'.',
+46: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 46: 1:  ],
 46: 1:  'expectedAnswer': 'BuzzMuzzDuzzCazz',
 46: 1:  'history': [
@@ -6762,7 +6802,8 @@
 47: 1:    'Proceed in the same way if there is a number with a divisor of 7. The word 'Muzz' is used for it. .',
 47: 1:    'Please write optimized code without any duplication.',
 47: 1:    'For divider 11 - the word must be 'Duzz'.',
-47: 1:    'For divider 13 - the word must be 'Cazz'.'
+47: 1:    'For divider 13 - the word must be 'Cazz'.',
+47: 1:    'Please use a map with constants and dividers to avoid multiple ifs.'
 47: 1:  ],
 47: 1:  'expectedAnswer': 'FizzBuzzMuzzDuzzCazz',
 47: 1:  'history': [
