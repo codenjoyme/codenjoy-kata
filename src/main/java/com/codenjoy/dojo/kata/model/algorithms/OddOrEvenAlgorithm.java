@@ -51,15 +51,22 @@ public class OddOrEvenAlgorithm extends AlgorithmLevelImpl {
     public List<String> description() {
         return Arrays.asList(
                 "Given a list of integers, determine whether the sum of its elements is Odd or Even.",
+
                 "Write a javascript method.",
+
                 "You are given a string of space separated numbers.",
+
                 "All numbers are valid Int32, no need to validate them.",
+
                 "Give your answer as a string matching 'odd' or 'even'.",
+
                 "Example:\n" +
                 "0=>even\n" +
                 "0 1 4=>odd\n" +
                 "0 -1 -5=>even",
+
                 "Don't use comments for clarification.",
+
                 "Make the code as readable and concise as possible."
         );
     }

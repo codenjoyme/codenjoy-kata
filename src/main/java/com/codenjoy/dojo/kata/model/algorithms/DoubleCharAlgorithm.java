@@ -45,11 +45,14 @@ public class DoubleCharAlgorithm extends AlgorithmLevelImpl {
     public List<String> description() {
         return Arrays.asList(
                 "Given a string, you have to return a string in which each character (case-sensitive) is repeated once.",
+
                 "Write a javascript method.",
+
                 "Example:\n" +
                 "String=>SSttrriinngg\n" +
                 "Hello World=>HHeelllloo  WWoorrlldd\n" +
                 "1234!_ =>11223344!!__  ",
+
                 "Use regular expressions to solve this problem."
         );
     }
