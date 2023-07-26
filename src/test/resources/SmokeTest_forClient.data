@@ -7362,7 +7362,16 @@
 48: 1:PLAYER_WIN -> REMOVE_FROM_GAME
 ------------------------------------------
 49: 1:BoardData {
-49: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+49: 1:  'description': [
+49: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+49: 1:    'Write a javascript method.',
+49: 1:    'You are given a string of space separated numbers.',
+49: 1:    'All numbers are valid Int32, no need to validate them.',
+49: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+49: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+49: 1:    'Don't use comments for clarification.',
+49: 1:    'Make the code as readable and concise as possible.'
+49: 1:  ],
 49: 1:  'expectedAnswer': 'even',
 49: 1:  'history': [],
 49: 1:  'info': ['❌f(0) = ??? != even'],
@@ -7375,7 +7384,16 @@
 49: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 50: 1:BoardData {
-50: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+50: 1:  'description': [
+50: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+50: 1:    'Write a javascript method.',
+50: 1:    'You are given a string of space separated numbers.',
+50: 1:    'All numbers are valid Int32, no need to validate them.',
+50: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+50: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+50: 1:    'Don't use comments for clarification.',
+50: 1:    'Make the code as readable and concise as possible.'
+50: 1:  ],
 50: 1:  'expectedAnswer': 'odd',
 50: 1:  'history': [{
 50: 1:    'answer': 'even',
@@ -7398,7 +7416,16 @@
 50: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 51: 1:BoardData {
-51: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+51: 1:  'description': [
+51: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+51: 1:    'Write a javascript method.',
+51: 1:    'You are given a string of space separated numbers.',
+51: 1:    'All numbers are valid Int32, no need to validate them.',
+51: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+51: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+51: 1:    'Don't use comments for clarification.',
+51: 1:    'Make the code as readable and concise as possible.'
+51: 1:  ],
 51: 1:  'expectedAnswer': 'even',
 51: 1:  'history': [
 51: 1:    {
@@ -7430,7 +7457,16 @@
 51: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 52: 1:BoardData {
-52: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+52: 1:  'description': [
+52: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+52: 1:    'Write a javascript method.',
+52: 1:    'You are given a string of space separated numbers.',
+52: 1:    'All numbers are valid Int32, no need to validate them.',
+52: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+52: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+52: 1:    'Don't use comments for clarification.',
+52: 1:    'Make the code as readable and concise as possible.'
+52: 1:  ],
 52: 1:  'expectedAnswer': 'odd',
 52: 1:  'history': [
 52: 1:    {
@@ -7469,7 +7505,16 @@
 52: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 53: 1:BoardData {
-53: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+53: 1:  'description': [
+53: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+53: 1:    'Write a javascript method.',
+53: 1:    'You are given a string of space separated numbers.',
+53: 1:    'All numbers are valid Int32, no need to validate them.',
+53: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+53: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+53: 1:    'Don't use comments for clarification.',
+53: 1:    'Make the code as readable and concise as possible.'
+53: 1:  ],
 53: 1:  'expectedAnswer': 'odd',
 53: 1:  'history': [
 53: 1:    {
@@ -7515,7 +7560,16 @@
 53: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 54: 1:BoardData {
-54: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+54: 1:  'description': [
+54: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+54: 1:    'Write a javascript method.',
+54: 1:    'You are given a string of space separated numbers.',
+54: 1:    'All numbers are valid Int32, no need to validate them.',
+54: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+54: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+54: 1:    'Don't use comments for clarification.',
+54: 1:    'Make the code as readable and concise as possible.'
+54: 1:  ],
 54: 1:  'expectedAnswer': 'even',
 54: 1:  'history': [
 54: 1:    {
@@ -7568,7 +7622,16 @@
 54: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 55: 1:BoardData {
-55: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+55: 1:  'description': [
+55: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+55: 1:    'Write a javascript method.',
+55: 1:    'You are given a string of space separated numbers.',
+55: 1:    'All numbers are valid Int32, no need to validate them.',
+55: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+55: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+55: 1:    'Don't use comments for clarification.',
+55: 1:    'Make the code as readable and concise as possible.'
+55: 1:  ],
 55: 1:  'expectedAnswer': 'odd',
 55: 1:  'history': [
 55: 1:    {
@@ -7628,7 +7691,16 @@
 55: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 56: 1:BoardData {
-56: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+56: 1:  'description': [
+56: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+56: 1:    'Write a javascript method.',
+56: 1:    'You are given a string of space separated numbers.',
+56: 1:    'All numbers are valid Int32, no need to validate them.',
+56: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+56: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+56: 1:    'Don't use comments for clarification.',
+56: 1:    'Make the code as readable and concise as possible.'
+56: 1:  ],
 56: 1:  'expectedAnswer': 'even',
 56: 1:  'history': [
 56: 1:    {
@@ -7695,7 +7767,16 @@
 56: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 57: 1:BoardData {
-57: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+57: 1:  'description': [
+57: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+57: 1:    'Write a javascript method.',
+57: 1:    'You are given a string of space separated numbers.',
+57: 1:    'All numbers are valid Int32, no need to validate them.',
+57: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+57: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+57: 1:    'Don't use comments for clarification.',
+57: 1:    'Make the code as readable and concise as possible.'
+57: 1:  ],
 57: 1:  'expectedAnswer': 'odd',
 57: 1:  'history': [
 57: 1:    {
@@ -7769,7 +7850,16 @@
 57: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 58: 1:BoardData {
-58: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+58: 1:  'description': [
+58: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+58: 1:    'Write a javascript method.',
+58: 1:    'You are given a string of space separated numbers.',
+58: 1:    'All numbers are valid Int32, no need to validate them.',
+58: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+58: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+58: 1:    'Don't use comments for clarification.',
+58: 1:    'Make the code as readable and concise as possible.'
+58: 1:  ],
 58: 1:  'expectedAnswer': 'odd',
 58: 1:  'history': [
 58: 1:    {
@@ -7850,7 +7940,16 @@
 58: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 59: 1:BoardData {
-59: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+59: 1:  'description': [
+59: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+59: 1:    'Write a javascript method.',
+59: 1:    'You are given a string of space separated numbers.',
+59: 1:    'All numbers are valid Int32, no need to validate them.',
+59: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+59: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+59: 1:    'Don't use comments for clarification.',
+59: 1:    'Make the code as readable and concise as possible.'
+59: 1:  ],
 59: 1:  'expectedAnswer': 'even',
 59: 1:  'history': [
 59: 1:    {
@@ -7938,7 +8037,16 @@
 59: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 60: 1:BoardData {
-60: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+60: 1:  'description': [
+60: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+60: 1:    'Write a javascript method.',
+60: 1:    'You are given a string of space separated numbers.',
+60: 1:    'All numbers are valid Int32, no need to validate them.',
+60: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+60: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+60: 1:    'Don't use comments for clarification.',
+60: 1:    'Make the code as readable and concise as possible.'
+60: 1:  ],
 60: 1:  'expectedAnswer': 'even',
 60: 1:  'history': [
 60: 1:    {
@@ -8033,7 +8141,16 @@
 60: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 61: 1:BoardData {
-61: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+61: 1:  'description': [
+61: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+61: 1:    'Write a javascript method.',
+61: 1:    'You are given a string of space separated numbers.',
+61: 1:    'All numbers are valid Int32, no need to validate them.',
+61: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+61: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+61: 1:    'Don't use comments for clarification.',
+61: 1:    'Make the code as readable and concise as possible.'
+61: 1:  ],
 61: 1:  'expectedAnswer': 'even',
 61: 1:  'history': [
 61: 1:    {
@@ -8135,7 +8252,16 @@
 61: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 62: 1:BoardData {
-62: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+62: 1:  'description': [
+62: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+62: 1:    'Write a javascript method.',
+62: 1:    'You are given a string of space separated numbers.',
+62: 1:    'All numbers are valid Int32, no need to validate them.',
+62: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+62: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+62: 1:    'Don't use comments for clarification.',
+62: 1:    'Make the code as readable and concise as possible.'
+62: 1:  ],
 62: 1:  'expectedAnswer': 'even',
 62: 1:  'history': [
 62: 1:    {
@@ -8244,7 +8370,16 @@
 62: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 63: 1:BoardData {
-63: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+63: 1:  'description': [
+63: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+63: 1:    'Write a javascript method.',
+63: 1:    'You are given a string of space separated numbers.',
+63: 1:    'All numbers are valid Int32, no need to validate them.',
+63: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+63: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+63: 1:    'Don't use comments for clarification.',
+63: 1:    'Make the code as readable and concise as possible.'
+63: 1:  ],
 63: 1:  'expectedAnswer': 'odd',
 63: 1:  'history': [
 63: 1:    {
@@ -8360,7 +8495,16 @@
 63: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 64: 1:BoardData {
-64: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+64: 1:  'description': [
+64: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+64: 1:    'Write a javascript method.',
+64: 1:    'You are given a string of space separated numbers.',
+64: 1:    'All numbers are valid Int32, no need to validate them.',
+64: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+64: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+64: 1:    'Don't use comments for clarification.',
+64: 1:    'Make the code as readable and concise as possible.'
+64: 1:  ],
 64: 1:  'expectedAnswer': 'odd',
 64: 1:  'history': [
 64: 1:    {
@@ -8483,7 +8627,16 @@
 64: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 65: 1:BoardData {
-65: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+65: 1:  'description': [
+65: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+65: 1:    'Write a javascript method.',
+65: 1:    'You are given a string of space separated numbers.',
+65: 1:    'All numbers are valid Int32, no need to validate them.',
+65: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+65: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+65: 1:    'Don't use comments for clarification.',
+65: 1:    'Make the code as readable and concise as possible.'
+65: 1:  ],
 65: 1:  'expectedAnswer': 'even',
 65: 1:  'history': [
 65: 1:    {
@@ -8613,7 +8766,16 @@
 65: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 66: 1:BoardData {
-66: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+66: 1:  'description': [
+66: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+66: 1:    'Write a javascript method.',
+66: 1:    'You are given a string of space separated numbers.',
+66: 1:    'All numbers are valid Int32, no need to validate them.',
+66: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+66: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+66: 1:    'Don't use comments for clarification.',
+66: 1:    'Make the code as readable and concise as possible.'
+66: 1:  ],
 66: 1:  'expectedAnswer': 'even',
 66: 1:  'history': [
 66: 1:    {
@@ -8750,7 +8912,16 @@
 66: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 67: 1:BoardData {
-67: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+67: 1:  'description': [
+67: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+67: 1:    'Write a javascript method.',
+67: 1:    'You are given a string of space separated numbers.',
+67: 1:    'All numbers are valid Int32, no need to validate them.',
+67: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+67: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+67: 1:    'Don't use comments for clarification.',
+67: 1:    'Make the code as readable and concise as possible.'
+67: 1:  ],
 67: 1:  'expectedAnswer': 'odd',
 67: 1:  'history': [
 67: 1:    {
@@ -8894,7 +9065,16 @@
 67: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 68: 1:BoardData {
-68: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+68: 1:  'description': [
+68: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+68: 1:    'Write a javascript method.',
+68: 1:    'You are given a string of space separated numbers.',
+68: 1:    'All numbers are valid Int32, no need to validate them.',
+68: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+68: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+68: 1:    'Don't use comments for clarification.',
+68: 1:    'Make the code as readable and concise as possible.'
+68: 1:  ],
 68: 1:  'expectedAnswer': 'even',
 68: 1:  'history': [
 68: 1:    {
@@ -9045,7 +9225,16 @@
 68: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 69: 1:BoardData {
-69: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+69: 1:  'description': [
+69: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+69: 1:    'Write a javascript method.',
+69: 1:    'You are given a string of space separated numbers.',
+69: 1:    'All numbers are valid Int32, no need to validate them.',
+69: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+69: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+69: 1:    'Don't use comments for clarification.',
+69: 1:    'Make the code as readable and concise as possible.'
+69: 1:  ],
 69: 1:  'expectedAnswer': 'even',
 69: 1:  'history': [
 69: 1:    {
@@ -9203,7 +9392,16 @@
 69: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 70: 1:BoardData {
-70: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+70: 1:  'description': [
+70: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+70: 1:    'Write a javascript method.',
+70: 1:    'You are given a string of space separated numbers.',
+70: 1:    'All numbers are valid Int32, no need to validate them.',
+70: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+70: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+70: 1:    'Don't use comments for clarification.',
+70: 1:    'Make the code as readable and concise as possible.'
+70: 1:  ],
 70: 1:  'expectedAnswer': 'even',
 70: 1:  'history': [
 70: 1:    {
@@ -9368,7 +9566,16 @@
 70: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 71: 1:BoardData {
-71: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+71: 1:  'description': [
+71: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+71: 1:    'Write a javascript method.',
+71: 1:    'You are given a string of space separated numbers.',
+71: 1:    'All numbers are valid Int32, no need to validate them.',
+71: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+71: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+71: 1:    'Don't use comments for clarification.',
+71: 1:    'Make the code as readable and concise as possible.'
+71: 1:  ],
 71: 1:  'expectedAnswer': 'even',
 71: 1:  'history': [
 71: 1:    {
@@ -9540,7 +9747,16 @@
 71: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 72: 1:BoardData {
-72: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+72: 1:  'description': [
+72: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+72: 1:    'Write a javascript method.',
+72: 1:    'You are given a string of space separated numbers.',
+72: 1:    'All numbers are valid Int32, no need to validate them.',
+72: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+72: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+72: 1:    'Don't use comments for clarification.',
+72: 1:    'Make the code as readable and concise as possible.'
+72: 1:  ],
 72: 1:  'expectedAnswer': 'odd',
 72: 1:  'history': [
 72: 1:    {
@@ -9719,7 +9935,16 @@
 72: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 73: 1:BoardData {
-73: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+73: 1:  'description': [
+73: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+73: 1:    'Write a javascript method.',
+73: 1:    'You are given a string of space separated numbers.',
+73: 1:    'All numbers are valid Int32, no need to validate them.',
+73: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+73: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+73: 1:    'Don't use comments for clarification.',
+73: 1:    'Make the code as readable and concise as possible.'
+73: 1:  ],
 73: 1:  'expectedAnswer': 'even',
 73: 1:  'history': [
 73: 1:    {
@@ -9905,7 +10130,16 @@
 73: 1:Fire Event: PassTest{complexity=6, testCount=26}
 ------------------------------------------
 74: 1:BoardData {
-74: 1:  'description': ['Odd or Even?\nIn this little assignment you are given a string of space separated numbers\nAll numbers are valid Int32, no need to validate them.\nGiven a list of integers, determine whether the sum of its elements is odd or even.\nGive your answer as a string matching 'odd' or 'even'.\nExample: 0=>even\n0 1 4=>odd\n0 -1 -5=>even'],
+74: 1:  'description': [
+74: 1:    'Given a list of integers, determine whether the sum of its elements is Odd or Even.',
+74: 1:    'Write a javascript method.',
+74: 1:    'You are given a string of space separated numbers.',
+74: 1:    'All numbers are valid Int32, no need to validate them.',
+74: 1:    'Give your answer as a string matching 'odd' or 'even'.',
+74: 1:    'Example:\n0=>even\n0 1 4=>odd\n0 -1 -5=>even',
+74: 1:    'Don't use comments for clarification.',
+74: 1:    'Make the code as readable and concise as possible.'
+74: 1:  ],
 74: 1:  'expectedAnswer': 'even',
 74: 1:  'history': [
 74: 1:    {

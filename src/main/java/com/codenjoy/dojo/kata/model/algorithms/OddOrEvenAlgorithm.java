@@ -49,14 +49,18 @@ public class OddOrEvenAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public List<String> description() {
-        return Arrays.asList("Odd or Even?\n" +
-                "In this little assignment you are given a string of space separated numbers\n" +
-                "All numbers are valid Int32, no need to validate them.\n" +
-                "Given a list of integers, determine whether the sum of its elements is odd or even.\n" +
-                "Give your answer as a string matching 'odd' or 'even'.\n" +
-                "Example: 0=>even\n" +
+        return Arrays.asList(
+                "Given a list of integers, determine whether the sum of its elements is Odd or Even.",
+                "Write a javascript method.",
+                "You are given a string of space separated numbers.",
+                "All numbers are valid Int32, no need to validate them.",
+                "Give your answer as a string matching 'odd' or 'even'.",
+                "Example:\n" +
+                "0=>even\n" +
                 "0 1 4=>odd\n" +
-                "0 -1 -5=>even"
+                "0 -1 -5=>even",
+                "Don't use comments for clarification.",
+                "Make the code as readable and concise as possible."
         );
     }
 
