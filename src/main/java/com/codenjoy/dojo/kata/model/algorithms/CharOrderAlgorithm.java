@@ -45,11 +45,14 @@ public class CharOrderAlgorithm extends AlgorithmLevelImpl {
     @Override
     public List<String> description() {
         return Arrays.asList(
-                "The order matters...\n " +
-                "Everything is quite simple. \n" +
                 "In a string of three characters, the last character becomes the first one,\n " +
-                "and the first two characters shift one position to the right. \n" +
-                "For example: abc=>cab...");
+                "and the first two characters shift one position to the right. Write a JavaScript function.\n",
+
+                "For example: abc=>cab...",
+                
+                "Remove everything from the script except for the function.",
+                
+                "Rewrite the function in a shorter way.");
     }
 
     @Override

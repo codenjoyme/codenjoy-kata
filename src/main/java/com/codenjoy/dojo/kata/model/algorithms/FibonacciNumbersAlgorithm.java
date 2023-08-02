@@ -68,7 +68,17 @@ public class FibonacciNumbersAlgorithm extends AlgorithmLevelImpl {
                 "f(7) = 5 + 8 = 13\n" +
                 "f(8) = 8 + 13 = 21\n" +
                 "f(9) = 13 + 21 = 34\n" +
-                "etc...");
+                "etc...",
+                
+                "Rewrite in JavaScript.",
+                
+                "Use parseInt",
+                
+                "Use separate variable to store the result of parseInt.",
+                
+                "Rewrite the function in a shorter way.",
+                
+                "Remove everything from the script except for the function.");
     }
 
     @Override

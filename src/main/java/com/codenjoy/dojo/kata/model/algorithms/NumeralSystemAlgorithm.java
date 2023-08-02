@@ -80,9 +80,15 @@ public class NumeralSystemAlgorithm extends AlgorithmLevelImpl {
     @Override
     public List<String> description() {
         return Arrays.asList(
-                "Please implement algorithm that converts " +
+                "Write a JavaScript function that converts " +
                 "number from one numeral system to another. Method should accept " +
-                "number, source numeral system and target numeral system.");
+                "number, source numeral system and target numeral system.",
+                
+                "Use the spread operator to parse arguments.",
+                
+                "Don't convert the number to decimal (base 10) first. Just convert to target numeral system.",
+                
+                "Remove everything from the script except for the function.");
     }
 
     @Override
