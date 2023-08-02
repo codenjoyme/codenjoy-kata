@@ -53,26 +53,26 @@ public class LevelsLoaderTest {
                         "  3 complexity:   6, name: OddOrEvenAlgorithm,\n" +
                         "  4 complexity:   7, name: DoubleCharAlgorithm,\n" +
                         "  5 complexity:   8, name: SimpleMathAlgorithm,\n" +
-                        "  6 complexity:   9, name: NameIntoInitialsAlgorithm,\n" +
-                        "  7 complexity:  10, name: ConcatenatedSquaresAlgorithm,\n" +
-                        "  8 complexity:  11, name: SumSquareDifferenceAlgorithm,\n" +
-                        "  9 complexity:  12, name: HighestAndLowestAlgorithm,\n" +
-                        " 10 complexity:  13, name: RemoveVowelsAlgorithm,\n" +
-                        " 11 complexity:  14, name: ExesAndOhsAlgorithm,\n" +
-                        " 12 complexity:  15, name: CharOrderAlgorithm,\n" +
-                        " 13 complexity:  16, name: IsogramWordsAlgorithm,\n" +
-                        " 14 complexity:  17, name: RentCarCostCalculatorAlgorithm,\n" +
-                        " 15 complexity:  20, name: DuplicateRemoveAlgorithm,\n" +
-                        " 16 complexity:  21, name: ThinkLikeAChildAlgorithm,\n" +
-                        " 17 complexity:  22, name: MultiplesThreeOrFiveAlgorithm,\n" +
-                        " 18 complexity:  23, name: CreditCardNumberAlgorithm,\n" +
-                        " 19 complexity:  24, name: DNASequenceAlgorithm,\n" +
-                        " 20 complexity:  25, name: MiddleCharacterAlgorithm,\n" +
-                        " 21 complexity:  26, name: NumberOrderAlgorithm,\n" +
-                        " 22 complexity:  27, name: Sequence1Algorithm,\n" +
-                        " 23 complexity:  28, name: NumeralSystemAlgorithm,\n" +
-                        " 24 complexity:  30, name: FibonacciNumbersAlgorithm,\n" +
-                        " 25 complexity:  35, name: PrimeFactoryAlgorithm,\n" +
+                        "  6 complexity:   9, name: SumSquareDifferenceAlgorithm,\n" +
+                        "  7 complexity:  10, name: CharOrderAlgorithm,\n" +
+                        "  8 complexity:  11, name: NumeralSystemAlgorithm,\n" +
+                        "  9 complexity:  12, name: FibonacciNumbersAlgorithm,\n" +
+                        " 10 complexity:  13, name: PrimeFactoryAlgorithm,\n" +
+                        " 11 complexity:  14, name: NameIntoInitialsAlgorithm,\n" +
+                        " 12 complexity:  15, name: ConcatenatedSquaresAlgorithm,\n" +
+                        " 13 complexity:  16, name: HighestAndLowestAlgorithm,\n" +
+                        " 14 complexity:  17, name: RemoveVowelsAlgorithm,\n" +
+                        " 15 complexity:  18, name: ExesAndOhsAlgorithm,\n" +
+                        " 16 complexity:  19, name: IsogramWordsAlgorithm,\n" +
+                        " 17 complexity:  20, name: RentCarCostCalculatorAlgorithm,\n" +
+                        " 18 complexity:  21, name: DuplicateRemoveAlgorithm,\n" +
+                        " 19 complexity:  22, name: ThinkLikeAChildAlgorithm,\n" +
+                        " 20 complexity:  23, name: MultiplesThreeOrFiveAlgorithm,\n" +
+                        " 21 complexity:  24, name: CreditCardNumberAlgorithm,\n" +
+                        " 22 complexity:  25, name: DNASequenceAlgorithm,\n" +
+                        " 23 complexity:  26, name: MiddleCharacterAlgorithm,\n" +
+                        " 24 complexity:  27, name: NumberOrderAlgorithm,\n" +
+                        " 25 complexity:  28, name: Sequence1Algorithm,\n" +
                         " 26 complexity:  36, name: PowerDigitSumAlgorithm,\n" +
                         " 27 complexity:  37, name: MakeBricksAlgorithm,\n" +
                         " 28 complexity:  40, name: ArabicToRomanAlgorithm,\n" +

@@ -59,23 +59,23 @@ public class GameSettingsTest {
                         "  '[Game] Show algorithm description in the request':true,\n" +
                         "  '[Game] Show expected answer for all history questions':true,\n" +
                         "  '[Game] Show expected answer for last question':true,\n" +
-                        "  '[Level] Map[10]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Oh my, it seems that trolls have taken over your comment section!\\\\nHowever, fear not, for there is a simple solution to deal with these troublesome creatures.\\\\nYou may remove all vowels from their comments, rendering them powerless.\\\\nI implore you to create a function that can execute this task, for instance,\\\\ntransforming \\\\\\'This website is for losers LOL!\\\\\\' into \\\\\\'Ths wbst s fr lsrs LL!\\\\\\'. \\\\nPlease take note that for this exercise, the letter \\\\\\\\'y\\\\\\\\' is not considered a vowel.\\'\\n  ],\\n  \\'name\\':\\'RemoveVowelsAlgorithm\\',\\n  \\'winCode\\':\\'function get(input) {\\\\n    return input.replace(/(?i)[aeiou]/g, \\\\\\'\\\\\\');\\\\n}\\'\\n}',\n" +
-                        "  '[Level] Map[11]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Check to see if a string has the same amount of \\\\\\\\'x\\\\\\\\'s and \\\\\\\\'o\\\\\\\\'s.\\\\nThe method must return a boolean and be case insensitive. The string can contain any char.\\\\nExamples input/output:\\\\nooxx=>true\\\\nxooxx=>false\\\\nooxXm=>true\\\\nzpzpzpp=>true // when no \\\\\\\\'x\\\\\\\\' and \\\\\\\\'o\\\\\\\\' is present should return true\\\\nzzoo=>false\\'\\n  ],\\n  \\'name\\':\\'ExesAndOhsAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n    const lowerCaseInput = input.toLowerCase();\\\\n    return (\\\\n        String(lowerCaseInput.replaceAll(\\\\\\'[^o]\\\\\\', \\\\\\'\\\\\\').length) ===\\\\n        String(lowerCaseInput.replaceAll(\\\\\\'[^x]\\\\\\', \\\\\\'\\\\\\').length)\\\\n    );\\\\n}\\'\\n}',\n" +
-                        "  '[Level] Map[12]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'The order matters...\\\\n Everything is quite simple. \\\\nIn a string of three characters, the last character becomes the first one,\\\\n and the first two characters shift one position to the right. \\\\nFor example: abc=>cab...\\'\\n  ],\\n  \\'name\\':\\'CharOrderAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n    return input.substring(2)\\\\n        + input.substring(0, 2);\\\\n}\\'\\n}',\n" +
-                        "  '[Level] Map[13]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'An isogram is a word that has no repeating letters, consecutive or non-consecutive.\\\\nImplement a function that determines whether a string that contains only letters is an isogram.\\\\nAssume the empty string is an isogram. Ignore letter case.\\\\nConjugated=>true\\\\ncappa=>false\\\\nmoOn=>false\\'\\n  ],\\n  \\'name\\':\\'IsogramWordsAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n   return (new Set(input.toLowerCase())).size === input.length;}\\'\\n}',\n" +
-                        "  '[Level] Map[14]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Rent car cost calculator\\\\n Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. \\\\nAlternatively, if you rent the car for 3 or more days, you get $20 off your total.\\\\nWrite a code that gives out the total amount for different days(d).Example: 1=>40, 2=>80, 3=>100, 4=>140, 6=>220, 7=>230, 15=>550\\'\\n  ],\\n  \\'name\\':\\'RentCarCostCalculatorAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n  return (input * 40) - (input >= 7 ? 50 : (input >= 3 ? 20 : 0));\\\\n}\\'\\n}',\n" +
-                        "  '[Level] Map[15]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Remove all adjacent duplicate characters from a string, as soon as you encounter them walking left to right, and ensuring that at the end NO two adjacent characters remain.\\\\nExample: abc=>abc\\\\nabbc=>ac\\\\nabbbc=>ac\\\\nabbcccbad=>abad\\'\\n  ],\\n  \\'name\\':\\'DuplicateRemoveAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\nconst stack = [];\\\\nlet deleted = \\\\\\'\\\\\\';\\\\n\\\\nfor (let i = 0; i < input.length; i++) {\\\\n    const c = input.charAt(i);\\\\n\\\\n    if (stack.length === 0 && !c===deleted) {\\\\n        stack.push(c);\\\\n        deleted = \\\\\\'\\\\\\';\\\\n    } else if (deleted === c) {\\\\n        //skip\\\\n    } else if (stack[stack.length - 1] === c) {\\\\n        deleted = stack.pop();\\\\n    } else {\\\\n        stack.push(c);\\\\n        deleted = \\\\\\'\\\\\\';\\\\n    }\\\\n}\\\\nreturn stack.join(\\\\\\'\\\\\\');\\\\n}\\'\\n}',\n" +
-                        "  '[Level] Map[16]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Think like a child...\\\\n Implement an algorithm that can solve the following tasks:For example: \\\\n8809 = 6\\\\n7111 = 0\\\\n2172 = 0\\\\n6666 = 4\\\\n1111 = 0\\\\n3213 = 0\\\\n7662 = 2\\\\n9312 = 1\\\\n0000 = 4\\\\n2222 = 0\\\\n3333 = 0\\\\n5555 = 0\\\\n8193 = 3\\\\n8096 = 5\\\\n7777 = 0\\\\n9999 = 4\\'\\n  ],\\n  \\'name\\':\\'ThinkLikeAChildAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\nreturn input.chars().map(this::getCircleCount).sum() + \\\\\\'\\\\\\';\\\\n    }\\\\n\\\\n    private int getCircleCount(int c) {\\\\n        switch (c) {\\\\n            case \\\\\\\\'0\\\\\\\\':\\\\n            case \\\\\\\\'6\\\\\\\\':\\\\n            case \\\\\\\\'9\\\\\\\\':\\\\n                return 1;\\\\n            case \\\\\\\\'8\\\\\\\\':\\\\n                return 2;\\\\n\\\\n            default:\\\\n                return 0;\\\\n        }\\\\n    }\\\\n}\\'\\n}',\n" +
-                        "  '[Level] Map[17]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.\\\\nThe sum of these multiples is 23.\\\\nFinish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.\\\\nAdditionally, if the number is negative, return 0 (for languages that do have them).\\\\nNote: If the number is a multiple of both 3 and 5, only count it once.\\'\\n  ],\\n  \\'name\\':\\'MultiplesThreeOrFiveAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\nreturn String(\\\\n    [...Array(parseInt(input)).keys()]\\\\n      .filter(n => n % 3 === 0 || n % 5 === 0)\\\\n      .reduce((acc, n) => acc + n, 0)\\\\n  );\\\\n}\\'\\n}',\n" +
-                        "  '[Level] Map[18]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Credit Card Number...\\\\n I will give you the first 15 digits of the credit card number. \\\\nYou need to generate the last, 16th digit.\\\\nPlease provide only the last digit as the answer.\\\\nCorrect credit card number example: 4561261212345467Answer example: 456126121234546=>7\\'\\n  ],\\n  \\'name\\':\\'CreditCardNumberAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n  let sum = 0;\\\\n  for (let i = 0; i < input.length; i++) {\\\\n    const number = parseInt(input.charAt(i));\\\\n    sum += i % 2 == 0 ? calcLuhnNumber(number) : number;\\\\n  }\\\\n  return (sum % 10 == 0 ? 0 : 10 - (sum % 10)).toString();\\\\n}\\\\n\\\\nfunction calcLuhnNumber(number) {\\\\n  const result = number * 2;\\\\n  return result > 9 ? result - 9 : result;\\\\n}\\'\\n}',\n" +
-                        "  '[Level] Map[19]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'The structure of the DNA double helix (type B-DNA).\\\\nIf you want to know more: http://en.wikipedia.org/wiki/DNA\\\\n\\\\nIn DNA strings, symbols \\\\\\\\'A\\\\\\\\' and \\\\\\\\'T\\\\\\\\' are complements of each other, as \\\\\\\\'C\\\\\\\\' and \\\\\\\\'G\\\\\\\\'. \\\\nYour function receives one side of the DNA (string). \\\\nYou need to return the other complementary side. \\\\nDNA strand is never empty or there is no DNA at all (again, except for Haskell).\\\\nExample: TTTT=>AAAA, TAACG=>ATTGC etc.\\'\\n  ],\\n  \\'name\\':\\'DNASequenceAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n    return Array.from(input.toUpperCase()).map(c => {\\\\n        switch (c) {\\\\n            case \\\\\\\\'T\\\\\\\\':\\\\n                return \\\\\\\\'A\\\\\\\\';\\\\n            case \\\\\\\\'A\\\\\\\\':\\\\n                return \\\\\\\\'T\\\\\\\\';\\\\n            case \\\\\\\\'C\\\\\\\\':\\\\n                return \\\\\\\\'G\\\\\\\\';\\\\n            case \\\\\\\\'G\\\\\\\\':\\\\n                return \\\\\\\\'C\\\\\\\\';\\\\n            default:\\\\n                return c;\\\\n        }\\\\n    }).join(\\\\\\\\'\\\\\\\\');\\\\n}\\'\\n}',\n" +
+                        "  '[Level] Map[10]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Write a javascript function to find prime factors of a positive integer\\',\\n    \\'Store the result into an array.\\',\\n    \\'Use parseInt to parse input string arguments.\\',\\n    \\'Use let for variables and put variable declarations at the top of the script.\\',\\n    \\'Use separate variable to store the result of parseInt.\\',\\n    \\'Corner case: primeFactors(1) should return [1].\\',\\n    \\'Remove everything from the script except for the function logic.\\'\\n  ],\\n  \\'name\\':\\'PrimeFactoryAlgorithm\\',\\n  \\'winCode\\':\\'function program(number) {\\\\n    if (number == 1) {\\\\n        return \\\\\\\\'[1]\\\\\\\\';\\\\n    }\\\\n    const result = [];\\\\n    for (let i = 2; i <= Math.sqrt(number); i++) {\\\\n        while (number % i === 0) {\\\\n             result.push(i);\\\\n             number /= i;\\\\n        }\\\\n    }\\\\n    if (number > 1) {\\\\n        result.push(number);\\\\n    }\\\\n    return \\\\\\\\'[\\\\\\\\' + result.join(\\\\\\\\',\\\\\\\\') + \\\\\\\\']\\\\\\\\';\\\\n}\\'\\n}',\n" +
+                        "  '[Level] Map[11]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Write a function to convert a name into initials. \\\\nThis kata strictly takes two words with one space in between them.\\\\nThe output should be two capital letters with a dot separating them.\\\\nExample:\\\\nTom Harris=>T.H\\\\ngarlick looney=>G.L\\'\\n  ],\\n  \\'name\\':\\'NameIntoInitialsAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\nreturn input.split(\\\\\\' \\\\\\').map(w => w.substring(0, 1)).join(\\\\\\'.\\\\\\').toUpperCase();\\\\n}\\'\\n}',\n" +
+                        "  '[Level] Map[12]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Hello there\\\\nYou are asked to square every digit of a number and concatenate them.\\\\nFor example, if we run 123 through the function, 149 will come out\\\\n because 1^2 is 1 and 2^2 is 4, 3^3=9. (1-4-9)\\\\nExample #2: An input of 465 will/should return 163625\\\\nbecause 4^2 is 16, 6^2 is 36, and 5^2 is 25. (16-36-25)\\\\n\\'\\n  ],\\n  \\'name\\':\\'ConcatenatedSquaresAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\nreturn Array.from(input)\\\\n    .map(Number)\\\\n    .map(d => d * d)\\\\n    .join(\\\\\\\\'\\\\\\\\');}\\'\\n}',\n" +
+                        "  '[Level] Map[13]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.\\\\nAll numbers are valid Int32, no need to validate them.\\\\nThere will always be at least one number in the input string.\\\\nOutput string must be two numbers separated by a single space, and highest number is first.Example: 1 2 3 4 5=>5 1\\\\n1 2 -3 4 5=>5 -3\\\\n1 9 3 4 -5=>9 -5\\'\\n  ],\\n  \\'name\\':\\'HighestAndLowestAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n  const result = input\\\\n    .split(\\\\\\' \\\\\\')\\\\n    .map(Number)\\\\n    .reduce(\\\\n      (stats, num) => {\\\\n        stats.max = Math.max(stats.max, num);\\\\n        stats.min = Math.min(stats.min, num);\\\\n        return stats;\\\\n      },\\\\n      { max: -Infinity, min: Infinity }\\\\n    );\\\\n\\\\n  return `${result.max} ${result.min}`;\\'\\n}',\n" +
+                        "  '[Level] Map[14]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Oh my, it seems that trolls have taken over your comment section!\\\\nHowever, fear not, for there is a simple solution to deal with these troublesome creatures.\\\\nYou may remove all vowels from their comments, rendering them powerless.\\\\nI implore you to create a function that can execute this task, for instance,\\\\ntransforming \\\\\\'This website is for losers LOL!\\\\\\' into \\\\\\'Ths wbst s fr lsrs LL!\\\\\\'. \\\\nPlease take note that for this exercise, the letter \\\\\\\\'y\\\\\\\\' is not considered a vowel.\\'\\n  ],\\n  \\'name\\':\\'RemoveVowelsAlgorithm\\',\\n  \\'winCode\\':\\'function get(input) {\\\\n    return input.replace(/(?i)[aeiou]/g, \\\\\\'\\\\\\');\\\\n}\\'\\n}',\n" +
+                        "  '[Level] Map[15]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Check to see if a string has the same amount of \\\\\\\\'x\\\\\\\\'s and \\\\\\\\'o\\\\\\\\'s.\\\\nThe method must return a boolean and be case insensitive. The string can contain any char.\\\\nExamples input/output:\\\\nooxx=>true\\\\nxooxx=>false\\\\nooxXm=>true\\\\nzpzpzpp=>true // when no \\\\\\\\'x\\\\\\\\' and \\\\\\\\'o\\\\\\\\' is present should return true\\\\nzzoo=>false\\'\\n  ],\\n  \\'name\\':\\'ExesAndOhsAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n    const lowerCaseInput = input.toLowerCase();\\\\n    return (\\\\n        String(lowerCaseInput.replaceAll(\\\\\\'[^o]\\\\\\', \\\\\\'\\\\\\').length) ===\\\\n        String(lowerCaseInput.replaceAll(\\\\\\'[^x]\\\\\\', \\\\\\'\\\\\\').length)\\\\n    );\\\\n}\\'\\n}',\n" +
+                        "  '[Level] Map[16]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'An isogram is a word that has no repeating letters, consecutive or non-consecutive.\\\\nImplement a function that determines whether a string that contains only letters is an isogram.\\\\nAssume the empty string is an isogram. Ignore letter case.\\\\nConjugated=>true\\\\ncappa=>false\\\\nmoOn=>false\\'\\n  ],\\n  \\'name\\':\\'IsogramWordsAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n   return (new Set(input.toLowerCase())).size === input.length;}\\'\\n}',\n" +
+                        "  '[Level] Map[17]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Rent car cost calculator\\\\n Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. \\\\nAlternatively, if you rent the car for 3 or more days, you get $20 off your total.\\\\nWrite a code that gives out the total amount for different days(d).Example: 1=>40, 2=>80, 3=>100, 4=>140, 6=>220, 7=>230, 15=>550\\'\\n  ],\\n  \\'name\\':\\'RentCarCostCalculatorAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n  return (input * 40) - (input >= 7 ? 50 : (input >= 3 ? 20 : 0));\\\\n}\\'\\n}',\n" +
+                        "  '[Level] Map[18]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Remove all adjacent duplicate characters from a string, as soon as you encounter them walking left to right, and ensuring that at the end NO two adjacent characters remain.\\\\nExample: abc=>abc\\\\nabbc=>ac\\\\nabbbc=>ac\\\\nabbcccbad=>abad\\'\\n  ],\\n  \\'name\\':\\'DuplicateRemoveAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\nconst stack = [];\\\\nlet deleted = \\\\\\'\\\\\\';\\\\n\\\\nfor (let i = 0; i < input.length; i++) {\\\\n    const c = input.charAt(i);\\\\n\\\\n    if (stack.length === 0 && !c===deleted) {\\\\n        stack.push(c);\\\\n        deleted = \\\\\\'\\\\\\';\\\\n    } else if (deleted === c) {\\\\n        //skip\\\\n    } else if (stack[stack.length - 1] === c) {\\\\n        deleted = stack.pop();\\\\n    } else {\\\\n        stack.push(c);\\\\n        deleted = \\\\\\'\\\\\\';\\\\n    }\\\\n}\\\\nreturn stack.join(\\\\\\'\\\\\\');\\\\n}\\'\\n}',\n" +
+                        "  '[Level] Map[19]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Think like a child...\\\\n Implement an algorithm that can solve the following tasks:For example: \\\\n8809 = 6\\\\n7111 = 0\\\\n2172 = 0\\\\n6666 = 4\\\\n1111 = 0\\\\n3213 = 0\\\\n7662 = 2\\\\n9312 = 1\\\\n0000 = 4\\\\n2222 = 0\\\\n3333 = 0\\\\n5555 = 0\\\\n8193 = 3\\\\n8096 = 5\\\\n7777 = 0\\\\n9999 = 4\\'\\n  ],\\n  \\'name\\':\\'ThinkLikeAChildAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\nreturn input.chars().map(this::getCircleCount).sum() + \\\\\\'\\\\\\';\\\\n    }\\\\n\\\\n    private int getCircleCount(int c) {\\\\n        switch (c) {\\\\n            case \\\\\\\\'0\\\\\\\\':\\\\n            case \\\\\\\\'6\\\\\\\\':\\\\n            case \\\\\\\\'9\\\\\\\\':\\\\n                return 1;\\\\n            case \\\\\\\\'8\\\\\\\\':\\\\n                return 2;\\\\n\\\\n            default:\\\\n                return 0;\\\\n        }\\\\n    }\\\\n}\\'\\n}',\n" +
                         "  '[Level] Map[1]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Write a method that takes a single string argument and return the string \\\\\\\\'world\\\\\\\\' if \\\\\\\\'hello\\\\\\\\' came in.\\',\\n    \\'Please write js method.\\',\\n    \\'Now please improve the algorithm so that it returns\\\\\\\\'hello\\\\\\\\' if \\\\\\\\'world\\\\\\\\' came in. Previous logic should work also\\',\\n    \\'One more improvement: in other cases the algorithm should return the same string that came in.\\'\\n  ],\\n  \\'name\\':\\'HelloWorldAlgorithm\\',\\n  \\'winCode\\':\\'function program(question) {\\\\n    if (question == \\\\\\\\'hello\\\\\\\\'){\\\\n        return \\\\\\\\'world\\\\\\\\';\\\\n    }\\\\n    if (question == \\\\\\\\'world\\\\\\\\'){\\\\n        return \\\\\\\\'hello\\\\\\\\';\\\\n    }\\\\n    return question;\\\\n}\\'\\n}',\n" +
-                        "  '[Level] Map[20]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'You are going to be given a word. \\\\nYour job is to return the middle character of the word. \\\\nIf the word\\\\\\\\'s length is odd, return the middle character. \\\\nIf the word\\\\\\\\'s length is even, return the middle 2 characters.\\\\n#Examples:test=>es, testing=>t, middle=>dd, A=>A\\'\\n  ],\\n  \\'name\\':\\'MiddleCharacterAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n  let length = input.length;\\\\n  let middle = Math.floor(length / 2);\\\\n\\\\n  if (length % 2 === 0) {\\\\n    return input.substring(middle - 1, middle + 1);\\\\n  } else {\\\\n    return input.substring(middle, middle + 1);\\\\n  }}\\'\\n}',\n" +
-                        "  '[Level] Map[21]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Order matters...\\\\nYou need to work with three-digit numbers. \\\\nSolve the algorithm for changing the number according to the given examples: \\\\nExamples: 111=>222, 123=>423, 679=>078, 999=>000, 012=>312, 090=>110, 444=>555, 090=>110, 916=>702\\'\\n  ],\\n  \\'name\\':\\'NumberOrderAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n    return \\\\\\\\'\\\\\\\\' + getNextNumber(input.charAt(2))\\\\n        + getNextNumber(input.charAt(0))\\\\n        + getNextNumber(input.charAt(1));\\\\n}\\\\n\\\\nfunction getNextNumber(number) {\\\\n    return (parseInt(number) + 1) % 10;\\\\n}\\'\\n}',\n" +
-                        "  '[Level] Map[22]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Continue the sequence 101, 112, 131, 415, 161, 718... \\\\ni.e f(1) = 101, f(2) = 112, ...\\\\nHint: Look at the whole picture\\'\\n  ],\\n  \\'name\\':\\'Sequence1Algorithm\\',\\n  \\'winCode\\':\\'function program(number) {\\\\n    const START_WITH = 10;\\\\n    const GROUP = 3;\\\\n    const MAX = number * GROUP;\\\\n    let i = 0;\\\\n    let buffer = \\\\\\'\\\\\\';\\\\n    while (buffer.length < MAX) {\\\\n        buffer += START_WITH + i;\\\\n        i++;\\\\n    }\\\\n    return buffer.substring(MAX - GROUP, MAX);\\\\n}\\'\\n}',\n" +
-                        "  '[Level] Map[23]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Please implement algorithm that converts number from one numeral system to another. Method should accept number, source numeral system and target numeral system.\\'\\n  ],\\n  \\'name\\':\\'NumeralSystemAlgorithm\\',\\n  \\'winCode\\':\\'function get(...input) {\\\\n    const number = input[0];\\\\n    const source = parseInt(input[1]);\\\\n    const target = parseInt(input[2]);\\\\n    \\\\n    return parseInt(number, source).toString(target);\\\\n}\\'\\n}',\n" +
-                        "  '[Level] Map[24]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Make a method that returns a Fibonacci number from the series by its number:\\\\nf(0) = 0\\\\nf(1) = 1\\\\nf(2) = 0 + 1 = 1\\\\nf(3) = 1 + 1 = 2\\\\nf(4) = 1 + 2 = 3\\\\nf(5) = 2 + 3 = 5\\\\nf(6) = 3 + 5 = 8\\\\nf(7) = 5 + 8 = 13\\\\nf(8) = 8 + 13 = 21\\\\nf(9) = 13 + 21 = 34\\\\netc...\\'\\n  ],\\n  \\'name\\':\\'FibonacciNumbersAlgorithm\\',\\n  \\'winCode\\':\\'function program(number) {\\\\n    let previous = 0, current = 1;\\\\n    for (let i = 0; i < number; i++) {\\\\n         [previous, current] = [current, previous + current];\\\\n    }\\\\n    return String(previous);\\\\n}\\'\\n}',\n" +
-                        "  '[Level] Map[25]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Divide an integer into multiples of prime numbers:\\\\n1 -> [1]\\\\n2 -> [2]\\\\n3 -> [3]\\\\n4 -> [2,2]\\\\n6 -> [2,3]\\\\n9 -> [3,3]\\\\n12 -> [2,2,3]\\\\n15 -> [3,5]\\\\netc...\\'\\n  ],\\n  \\'name\\':\\'PrimeFactoryAlgorithm\\',\\n  \\'winCode\\':\\'function program(number) {\\\\n    if (number == 1) {\\\\n        return \\\\\\\\'[1]\\\\\\\\';\\\\n    }\\\\n    const result = [];\\\\n    for (let i = 2; i <= Math.sqrt(number); i++) {\\\\n        while (number % i === 0) {\\\\n             result.push(i);\\\\n             number /= i;\\\\n        }\\\\n    }\\\\n    if (number > 1) {\\\\n        result.push(number);\\\\n    }\\\\n    return \\\\\\\\'[\\\\\\\\' + result.join(\\\\\\\\',\\\\\\\\') + \\\\\\\\']\\\\\\\\';\\\\n}\\'\\n}',\n" +
+                        "  '[Level] Map[20]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.\\\\nThe sum of these multiples is 23.\\\\nFinish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.\\\\nAdditionally, if the number is negative, return 0 (for languages that do have them).\\\\nNote: If the number is a multiple of both 3 and 5, only count it once.\\'\\n  ],\\n  \\'name\\':\\'MultiplesThreeOrFiveAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\nreturn String(\\\\n    [...Array(parseInt(input)).keys()]\\\\n      .filter(n => n % 3 === 0 || n % 5 === 0)\\\\n      .reduce((acc, n) => acc + n, 0)\\\\n  );\\\\n}\\'\\n}',\n" +
+                        "  '[Level] Map[21]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Credit Card Number...\\\\n I will give you the first 15 digits of the credit card number. \\\\nYou need to generate the last, 16th digit.\\\\nPlease provide only the last digit as the answer.\\\\nCorrect credit card number example: 4561261212345467Answer example: 456126121234546=>7\\'\\n  ],\\n  \\'name\\':\\'CreditCardNumberAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n  let sum = 0;\\\\n  for (let i = 0; i < input.length; i++) {\\\\n    const number = parseInt(input.charAt(i));\\\\n    sum += i % 2 == 0 ? calcLuhnNumber(number) : number;\\\\n  }\\\\n  return (sum % 10 == 0 ? 0 : 10 - (sum % 10)).toString();\\\\n}\\\\n\\\\nfunction calcLuhnNumber(number) {\\\\n  const result = number * 2;\\\\n  return result > 9 ? result - 9 : result;\\\\n}\\'\\n}',\n" +
+                        "  '[Level] Map[22]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'The structure of the DNA double helix (type B-DNA).\\\\nIf you want to know more: http://en.wikipedia.org/wiki/DNA\\\\n\\\\nIn DNA strings, symbols \\\\\\\\'A\\\\\\\\' and \\\\\\\\'T\\\\\\\\' are complements of each other, as \\\\\\\\'C\\\\\\\\' and \\\\\\\\'G\\\\\\\\'. \\\\nYour function receives one side of the DNA (string). \\\\nYou need to return the other complementary side. \\\\nDNA strand is never empty or there is no DNA at all (again, except for Haskell).\\\\nExample: TTTT=>AAAA, TAACG=>ATTGC etc.\\'\\n  ],\\n  \\'name\\':\\'DNASequenceAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n    return Array.from(input.toUpperCase()).map(c => {\\\\n        switch (c) {\\\\n            case \\\\\\\\'T\\\\\\\\':\\\\n                return \\\\\\\\'A\\\\\\\\';\\\\n            case \\\\\\\\'A\\\\\\\\':\\\\n                return \\\\\\\\'T\\\\\\\\';\\\\n            case \\\\\\\\'C\\\\\\\\':\\\\n                return \\\\\\\\'G\\\\\\\\';\\\\n            case \\\\\\\\'G\\\\\\\\':\\\\n                return \\\\\\\\'C\\\\\\\\';\\\\n            default:\\\\n                return c;\\\\n        }\\\\n    }).join(\\\\\\\\'\\\\\\\\');\\\\n}\\'\\n}',\n" +
+                        "  '[Level] Map[23]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'You are going to be given a word. \\\\nYour job is to return the middle character of the word. \\\\nIf the word\\\\\\\\'s length is odd, return the middle character. \\\\nIf the word\\\\\\\\'s length is even, return the middle 2 characters.\\\\n#Examples:test=>es, testing=>t, middle=>dd, A=>A\\'\\n  ],\\n  \\'name\\':\\'MiddleCharacterAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n  let length = input.length;\\\\n  let middle = Math.floor(length / 2);\\\\n\\\\n  if (length % 2 === 0) {\\\\n    return input.substring(middle - 1, middle + 1);\\\\n  } else {\\\\n    return input.substring(middle, middle + 1);\\\\n  }}\\'\\n}',\n" +
+                        "  '[Level] Map[24]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Order matters...\\\\nYou need to work with three-digit numbers. \\\\nSolve the algorithm for changing the number according to the given examples: \\\\nExamples: 111=>222, 123=>423, 679=>078, 999=>000, 012=>312, 090=>110, 444=>555, 090=>110, 916=>702\\'\\n  ],\\n  \\'name\\':\\'NumberOrderAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n    return \\\\\\\\'\\\\\\\\' + getNextNumber(input.charAt(2))\\\\n        + getNextNumber(input.charAt(0))\\\\n        + getNextNumber(input.charAt(1));\\\\n}\\\\n\\\\nfunction getNextNumber(number) {\\\\n    return (parseInt(number) + 1) % 10;\\\\n}\\'\\n}',\n" +
+                        "  '[Level] Map[25]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Continue the sequence 101, 112, 131, 415, 161, 718... \\\\ni.e f(1) = 101, f(2) = 112, ...\\\\nHint: Look at the whole picture\\'\\n  ],\\n  \\'name\\':\\'Sequence1Algorithm\\',\\n  \\'winCode\\':\\'function program(number) {\\\\n    const START_WITH = 10;\\\\n    const GROUP = 3;\\\\n    const MAX = number * GROUP;\\\\n    let i = 0;\\\\n    let buffer = \\\\\\'\\\\\\';\\\\n    while (buffer.length < MAX) {\\\\n        buffer += START_WITH + i;\\\\n        i++;\\\\n    }\\\\n    return buffer.substring(MAX - GROUP, MAX);\\\\n}\\'\\n}',\n" +
                         "  '[Level] Map[26]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'2 to the power of 15 = 32768, the sum of digits of the result 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of 2 to the power of i?\\\\nWrite a method for calculation that takes int and returns the result as a String\\'\\n  ],\\n  \\'name\\':\\'PowerDigitSumAlgorithm\\',\\n  \\'winCode\\':\\'function program(power) {\\\\n    const temp = (BigInt(1) << BigInt(power)).toString();\\\\n    let sum = 0;\\\\n    for (let i = 0; i < temp.length; i++) {\\\\n        sum += parseInt(temp[i]);\\\\n    }\\\\n    return sum.toString();\\\\n}\\'\\n}',\n" +
                         "  '[Level] Map[27]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'You have bricks of size 5 (bigCount) and 1 (smallCount). Write a method that can determine if a given set of bricks can be used to build a wall of a given length. a given set of bricks to build a wall of a given length (length). For example: \\\\nmethod(3, 1, 8) → true\\\\nmethod(3, 1, 9) → false\\\\nmethod(3, 2, 10) → true\\'\\n  ],\\n  \\'name\\':\\'MakeBricksAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n    const [small, big, goal] = input.split(\\\\\\\\', \\\\\\\\').map(number => parseInt(number));\\\\n    const result = (small >= (goal % 5) && small >= goal - big * 5);\\\\n    return String(result);\\\\n}\\'\\n}',\n" +
                         "  '[Level] Map[28]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Roman number algorithm. Convert arabic number to roman number.\\'\\n  ],\\n  \\'name\\':\\'ArabicToRomanAlgorithm\\',\\n  \\'winCode\\':\\'function get(input) {\\\\n  const numerals = [\\\\n    [1000, \\\\\\\\'M\\\\\\\\'],\\\\n    [900, \\\\\\\\'CM\\\\\\\\'],\\\\n    [500, \\\\\\\\'D\\\\\\\\'],\\\\n    [400, \\\\\\\\'CD\\\\\\\\'],\\\\n    [100, \\\\\\\\'C\\\\\\\\'],\\\\n    [90, \\\\\\\\'XC\\\\\\\\'],\\\\n    [50, \\\\\\\\'L\\\\\\\\'],\\\\n    [40, \\\\\\\\'XL\\\\\\\\'],\\\\n    [10, \\\\\\\\'X\\\\\\\\'],\\\\n    [9, \\\\\\\\'IX\\\\\\\\'],\\\\n    [5, \\\\\\\\'V\\\\\\\\'],\\\\n    [4, \\\\\\\\'IV\\\\\\\\'],\\\\n    [1, \\\\\\\\'I\\\\\\\\'],\\\\n  ];\\\\n\\\\n  if (input < 1 || input > 3999) {\\\\n    return \\\\\\\\'Input must be between 1 and 3999\\\\\\\\';\\\\n  }\\\\n\\\\n  let result = \\\\\\\\'\\\\\\\\';\\\\n  numerals.forEach(([value, numeral]) => {\\\\n    while (input >= value) {\\\\n      result += numeral;\\\\n      input -= value;\\\\n    }\\\\n  });\\\\n\\\\n  return result;\\\\n}\\'\\n}',\n" +
@@ -91,11 +91,11 @@ public class GameSettingsTest {
                         "  '[Level] Map[37]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'No more Levels. You win!\\'\\n  ],\\n  \\'name\\':\\'NullLevel\\',\\n  \\'winCode\\':\\'function program(question) {\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\'\\n}',\n" +
                         "  '[Level] Map[3]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Given a list of integers, determine whether the sum of its elements is Odd or Even.\\',\\n    \\'Write a javascript method.\\',\\n    \\'You are given a string of space separated numbers.\\',\\n    \\'All numbers are valid Int32, no need to validate them.\\',\\n    \\'Give your answer as a string matching \\\\\\\\'odd\\\\\\\\' or \\\\\\\\'even\\\\\\\\'.\\',\\n    \\'Example:\\\\n0=>even\\\\n0 1 4=>odd\\\\n0 -1 -5=>even\\',\\n    \\'Don\\\\\\\\'t use comments for clarification.\\',\\n    \\'Make the code as readable and concise as possible.\\'\\n  ],\\n  \\'name\\':\\'OddOrEvenAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n  const result = input.split(\\\\\\' \\\\\\')\\\\n    .map(Number)\\\\n    .reduce((sum, num) => sum + num, 0);\\\\n  return result % 2 === 0 ? \\\\\\'even\\\\\\' : \\\\\\'odd\\\\\\';\\\\n}\\'\\n}',\n" +
                         "  '[Level] Map[4]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Given a string, you have to return a string in which each character (case-sensitive) is repeated once.\\',\\n    \\'Write a javascript method.\\',\\n    \\'Example:\\\\nString=>SSttrriinngg\\\\nHello World=>HHeelllloo  WWoorrlldd\\\\n1234!_ =>11223344!!__  \\',\\n    \\'Use regular expressions to solve this problem.\\'\\n  ],\\n  \\'name\\':\\'DoubleCharAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n  return input.replace(/./g, \\\\\\\\'$&$&\\\\\\\\');\\\\n}\\'\\n}',\n" +
-                        "  '[Level] Map[5]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Given the sequence: 1, 0, 3, 2, 5, 4, 7, 6, 9, 8, 11, 10, 13, 12, 15, 14...\\\\nThe sequence starts with element number 0: f(0)=1.\\\\nYour task is to write a function that returns the element at index n: f(n)=?\\'\\n  ],\\n  \\'name\\':\\'SimpleMathAlgorithm\\',\\n  \\'winCode\\':\\'function get(input) {\\\\n    let number = parseInt(input);\\\\n    return (number % 2 == 0)\\\\n        ? number + 1\\\\n        : number - 1;\\\\n}\\'\\n}',\n" +
-                        "  '[Level] Map[6]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Write a function to convert a name into initials. \\\\nThis kata strictly takes two words with one space in between them.\\\\nThe output should be two capital letters with a dot separating them.\\\\nExample:\\\\nTom Harris=>T.H\\\\ngarlick looney=>G.L\\'\\n  ],\\n  \\'name\\':\\'NameIntoInitialsAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\nreturn input.split(\\\\\\' \\\\\\').map(w => w.substring(0, 1)).join(\\\\\\'.\\\\\\').toUpperCase();\\\\n}\\'\\n}',\n" +
-                        "  '[Level] Map[7]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Hello there\\\\nYou are asked to square every digit of a number and concatenate them.\\\\nFor example, if we run 123 through the function, 149 will come out\\\\n because 1^2 is 1 and 2^2 is 4, 3^3=9. (1-4-9)\\\\nExample #2: An input of 465 will/should return 163625\\\\nbecause 4^2 is 16, 6^2 is 36, and 5^2 is 25. (16-36-25)\\\\n\\'\\n  ],\\n  \\'name\\':\\'ConcatenatedSquaresAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\nreturn Array.from(input)\\\\n    .map(Number)\\\\n    .map(d => d * d)\\\\n    .join(\\\\\\\\'\\\\\\\\');}\\'\\n}',\n" +
-                        "  '[Level] Map[8]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'The sum of the squares of the first ten positive integers \\\\n1^2 + 2^2 + ... + 10^2 = 385. \\\\nAnd the square of the sum is \\\\n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \\\\nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \\\\nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.\\'\\n  ],\\n  \\'name\\':\\'SumSquareDifferenceAlgorithm\\',\\n  \\'winCode\\':\\'function program(question) {\\\\n    let number = parseInt(question);\\\\n    let sumOfSquares = (number * (number + 1) * (2 * number + 1)) / 6;\\\\n    let squareOfSum = Math.pow((number * (number + 1)) / 2, 2);\\\\n    return squareOfSum - sumOfSquares;\\\\n}\\'\\n}',\n" +
-                        "  '[Level] Map[9]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.\\\\nAll numbers are valid Int32, no need to validate them.\\\\nThere will always be at least one number in the input string.\\\\nOutput string must be two numbers separated by a single space, and highest number is first.Example: 1 2 3 4 5=>5 1\\\\n1 2 -3 4 5=>5 -3\\\\n1 9 3 4 -5=>9 -5\\'\\n  ],\\n  \\'name\\':\\'HighestAndLowestAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n  const result = input\\\\n    .split(\\\\\\' \\\\\\')\\\\n    .map(Number)\\\\n    .reduce(\\\\n      (stats, num) => {\\\\n        stats.max = Math.max(stats.max, num);\\\\n        stats.min = Math.min(stats.min, num);\\\\n        return stats;\\\\n      },\\\\n      { max: -Infinity, min: Infinity }\\\\n    );\\\\n\\\\n  return `${result.max} ${result.min}`;\\'\\n}',\n" +
+                        "  '[Level] Map[5]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Given the sequence: 1, 0, 3, 2, 5, 4, 7, 6, 9, 8, 11, 10, 13, 12, 15, 14...\\\\nThe sequence starts with element number 0: f(0)=1.\\',\\n    \\'Your task is to write a javascript function that returns the element at index n: f(n)=?\\',\\n    \\'Use parseInt to parse input string arguments.\\',\\n    \\'Use separate variable to store the result of parseInt.\\',\\n    \\'Use let instead of var.\\',\\n    \\'Remove everything from the script except for the function logic.\\'\\n  ],\\n  \\'name\\':\\'SimpleMathAlgorithm\\',\\n  \\'winCode\\':\\'function get(input) {\\\\n    let number = parseInt(input);\\\\n    return (number % 2 == 0)\\\\n        ? number + 1\\\\n        : number - 1;\\\\n}\\'\\n}',\n" +
+                        "  '[Level] Map[6]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'The sum of the squares of the first ten positive integers \\\\n1^2 + 2^2 + ... + 10^2 = 385. \\\\nAnd the square of the sum is \\\\n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \\\\nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640.\\',\\n    \\'Create a function that calculates the difference between the sum squares and the square of the sum for the natural number i.\\',\\n    \\'Write a javascript function.\\',\\n    \\'The function should not use a loop.\\'\\n  ],\\n  \\'name\\':\\'SumSquareDifferenceAlgorithm\\',\\n  \\'winCode\\':\\'function program(question) {\\\\n    let number = parseInt(question);\\\\n    let sumOfSquares = (number * (number + 1) * (2 * number + 1)) / 6;\\\\n    let squareOfSum = Math.pow((number * (number + 1)) / 2, 2);\\\\n    return squareOfSum - sumOfSquares;\\\\n}\\'\\n}',\n" +
+                        "  '[Level] Map[7]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'In a string of three characters, the last character becomes the first one,\\\\n and the first two characters shift one position to the right.\\',\\n    \\'Write a javascript function.\\',\\n    \\'For example: abc=>cab...\\',\\n    \\'Remove everything from the script except for the function logic.\\',\\n    \\'Rewrite the function in a shorter way.\\'\\n  ],\\n  \\'name\\':\\'CharOrderAlgorithm\\',\\n  \\'winCode\\':\\'function program(input) {\\\\n    return input.substring(2)\\\\n        + input.substring(0, 2);\\\\n}\\'\\n}',\n" +
+                        "  '[Level] Map[8]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Write a javascript function that converts number from one numeral system to another.\\',\\n    \\'Method should accept number, source numeral system and target numeral system.\\',\\n    \\'Use the spread operator to parse arguments.\\',\\n    \\'Don\\\\\\\\'t convert the number to decimal (base 10) first. Just convert to target numeral system.\\',\\n    \\'Remove everything from the script except for the function logic.\\'\\n  ],\\n  \\'name\\':\\'NumeralSystemAlgorithm\\',\\n  \\'winCode\\':\\'function get(...input) {\\\\n    const number = input[0];\\\\n    const source = parseInt(input[1]);\\\\n    const target = parseInt(input[2]);\\\\n    \\\\n    return parseInt(number, source).toString(target);\\\\n}\\'\\n}',\n" +
+                        "  '[Level] Map[9]':'{\\n  \\'defaultCode\\':\\'function program(question) {\\\\n    // TODO implement your logic here\\\\n    return \\\\\\\\'answer\\\\\\\\';\\\\n}\\',\\n  \\'help\\':[\\n    \\'Make a function that returns a Fibonacci number from the series by its number:\\\\nf(0) = 0\\\\nf(1) = 1\\\\nf(2) = 0 + 1 = 1\\\\nf(3) = 1 + 1 = 2\\\\nf(4) = 1 + 2 = 3\\\\nf(5) = 2 + 3 = 5\\\\nf(6) = 3 + 5 = 8\\\\nf(7) = 5 + 8 = 13\\\\nf(8) = 8 + 13 = 21\\\\nf(9) = 13 + 21 = 34\\\\netc...\\',\\n    \\'Please use javascript language.\\',\\n    \\'Use parseInt to parse input string arguments.\\',\\n    \\'Use separate variable to store the result of parseInt.\\',\\n    \\'Rewrite the function in a shorter way.\\',\\n    \\'Remove everything from the script except for the function logic.\\'\\n  ],\\n  \\'name\\':\\'FibonacciNumbersAlgorithm\\',\\n  \\'winCode\\':\\'function program(number) {\\\\n    let previous = 0, current = 1;\\\\n    for (let i = 0; i < number; i++) {\\\\n         [previous, current] = [current, previous + current];\\\\n    }\\\\n    return String(previous);\\\\n}\\'\\n}',\n" +
                         "  '[Score] A constant':100,\n" +
                         "  '[Score] B constant':3,\n" +
                         "  '[Score] C constant':30,\n" +
@@ -289,7 +289,12 @@ public class GameSettingsTest {
                         "  {\n" +
                         "    'complexity':8,\n" +
                         "    'description':[\n" +
-                        "      'Given the sequence: 1, 0, 3, 2, 5, 4, 7, 6, 9, 8, 11, 10, 13, 12, 15, 14...\\nThe sequence starts with element number 0: f(0)=1.\\nYour task is to write a function that returns the element at index n: f(n)=?'\n" +
+                        "      'Given the sequence: 1, 0, 3, 2, 5, 4, 7, 6, 9, 8, 11, 10, 13, 12, 15, 14...\\nThe sequence starts with element number 0: f(0)=1.',\n" +
+                        "      'Your task is to write a javascript function that returns the element at index n: f(n)=?',\n" +
+                        "      'Use parseInt to parse input string arguments.',\n" +
+                        "      'Use separate variable to store the result of parseInt.',\n" +
+                        "      'Use let instead of var.',\n" +
+                        "      'Remove everything from the script except for the function logic.'\n" +
                         "    ],\n" +
                         "    'name':'SimpleMathAlgorithm',\n" +
                         "    'qa':[\n" +
@@ -324,6 +329,195 @@ public class GameSettingsTest {
                         "  },\n" +
                         "  {\n" +
                         "    'complexity':9,\n" +
+                        "    'description':[\n" +
+                        "      'The sum of the squares of the first ten positive integers \\n1^2 + 2^2 + ... + 10^2 = 385. \\nAnd the square of the sum is \\n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \\nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640.',\n" +
+                        "      'Create a function that calculates the difference between the sum squares and the square of the sum for the natural number i.',\n" +
+                        "      'Write a javascript function.',\n" +
+                        "      'The function should not use a loop.'\n" +
+                        "    ],\n" +
+                        "    'name':'SumSquareDifferenceAlgorithm',\n" +
+                        "    'qa':[\n" +
+                        "      '1=0',\n" +
+                        "      '2=4',\n" +
+                        "      '3=22',\n" +
+                        "      '4=70',\n" +
+                        "      '5=170',\n" +
+                        "      '6=350',\n" +
+                        "      '7=644',\n" +
+                        "      '8=1092',\n" +
+                        "      '9=1740',\n" +
+                        "      '10=2640',\n" +
+                        "      '11=3850',\n" +
+                        "      '12=5434',\n" +
+                        "      '13=7462',\n" +
+                        "      '14=10010',\n" +
+                        "      '15=13160',\n" +
+                        "      '16=17000',\n" +
+                        "      '17=21624',\n" +
+                        "      '18=27132',\n" +
+                        "      '19=33630',\n" +
+                        "      '20=41230',\n" +
+                        "      '21=50050',\n" +
+                        "      '22=60214',\n" +
+                        "      '23=71852',\n" +
+                        "      '24=85100',\n" +
+                        "      '25=100100'\n" +
+                        "    ],\n" +
+                        "    'size':25\n" +
+                        "  },\n" +
+                        "  {\n" +
+                        "    'complexity':10,\n" +
+                        "    'description':[\n" +
+                        "      'In a string of three characters, the last character becomes the first one,\\n and the first two characters shift one position to the right.',\n" +
+                        "      'Write a javascript function.',\n" +
+                        "      'For example: abc=>cab...',\n" +
+                        "      'Remove everything from the script except for the function logic.',\n" +
+                        "      'Rewrite the function in a shorter way.'\n" +
+                        "    ],\n" +
+                        "    'name':'CharOrderAlgorithm',\n" +
+                        "    'qa':[\n" +
+                        "      'abc=cab',\n" +
+                        "      'cad=dca',\n" +
+                        "      'asd=das',\n" +
+                        "      'xyz=zxy',\n" +
+                        "      'aaa=aaa',\n" +
+                        "      '123=312',\n" +
+                        "      'dEf=fdE',\n" +
+                        "      'zxc=czx',\n" +
+                        "      'qwe=eqw',\n" +
+                        "      'rty=yrt',\n" +
+                        "      'mnb=bmn',\n" +
+                        "      'vbn=nvb',\n" +
+                        "      'fgh=hfg',\n" +
+                        "      'ijk=kij',\n" +
+                        "      'lmn=nlm',\n" +
+                        "      'pqr=rpq',\n" +
+                        "      'stu=ust',\n" +
+                        "      'wxy=ywx',\n" +
+                        "      '222=222',\n" +
+                        "      '789=978',\n" +
+                        "      '090=009'\n" +
+                        "    ],\n" +
+                        "    'size':21\n" +
+                        "  },\n" +
+                        "  {\n" +
+                        "    'complexity':11,\n" +
+                        "    'description':[\n" +
+                        "      'Write a javascript function that converts number from one numeral system to another.',\n" +
+                        "      'Method should accept number, source numeral system and target numeral system.',\n" +
+                        "      'Use the spread operator to parse arguments.',\n" +
+                        "      'Don't convert the number to decimal (base 10) first. Just convert to target numeral system.',\n" +
+                        "      'Remove everything from the script except for the function logic.'\n" +
+                        "    ],\n" +
+                        "    'name':'NumeralSystemAlgorithm',\n" +
+                        "    'qa':[\n" +
+                        "      '10, 10, 10=10',\n" +
+                        "      '10, 10, 2=1010',\n" +
+                        "      '10, 2, 10=2',\n" +
+                        "      '1000, 10, 16=3e8',\n" +
+                        "      '1000, 16, 10=4096',\n" +
+                        "      '1000, 16, 2=1000000000000',\n" +
+                        "      '1ACD, 16, 2=1101011001101',\n" +
+                        "      'ABCD, 16, 2=1010101111001101',\n" +
+                        "      '34BE, 16, 10=13502',\n" +
+                        "      '1000, 2, 16=8',\n" +
+                        "      '1010, 2, 16=a',\n" +
+                        "      '1010101, 2, 4=1111',\n" +
+                        "      '1010101, 2, 6=221',\n" +
+                        "      '1010101, 2, 8=125',\n" +
+                        "      '1010101, 2, 10=85',\n" +
+                        "      '1010101, 2, 12=71',\n" +
+                        "      '1010101, 2, 14=61',\n" +
+                        "      '1010101, 2, 16=55',\n" +
+                        "      '0, 2, 16=0',\n" +
+                        "      '360, 10, 60=360',\n" +
+                        "      '360, 10, 12=260'\n" +
+                        "    ],\n" +
+                        "    'size':21\n" +
+                        "  },\n" +
+                        "  {\n" +
+                        "    'complexity':12,\n" +
+                        "    'description':[\n" +
+                        "      'Make a function that returns a Fibonacci number from the series by its number:\\nf(0) = 0\\nf(1) = 1\\nf(2) = 0 + 1 = 1\\nf(3) = 1 + 1 = 2\\nf(4) = 1 + 2 = 3\\nf(5) = 2 + 3 = 5\\nf(6) = 3 + 5 = 8\\nf(7) = 5 + 8 = 13\\nf(8) = 8 + 13 = 21\\nf(9) = 13 + 21 = 34\\netc...',\n" +
+                        "      'Please use javascript language.',\n" +
+                        "      'Use parseInt to parse input string arguments.',\n" +
+                        "      'Use separate variable to store the result of parseInt.',\n" +
+                        "      'Rewrite the function in a shorter way.',\n" +
+                        "      'Remove everything from the script except for the function logic.'\n" +
+                        "    ],\n" +
+                        "    'name':'FibonacciNumbersAlgorithm',\n" +
+                        "    'qa':[\n" +
+                        "      '1=1',\n" +
+                        "      '1=1',\n" +
+                        "      '3=2',\n" +
+                        "      '4=3',\n" +
+                        "      '5=5',\n" +
+                        "      '6=8',\n" +
+                        "      '7=13',\n" +
+                        "      '8=21',\n" +
+                        "      '9=34',\n" +
+                        "      '10=55',\n" +
+                        "      '11=89',\n" +
+                        "      '12=144',\n" +
+                        "      '13=233',\n" +
+                        "      '14=377',\n" +
+                        "      '15=610',\n" +
+                        "      '16=987',\n" +
+                        "      '17=1597',\n" +
+                        "      '18=2584',\n" +
+                        "      '19=4181',\n" +
+                        "      '20=6765',\n" +
+                        "      '21=10946',\n" +
+                        "      '22=17711',\n" +
+                        "      '23=28657',\n" +
+                        "      '24=46368',\n" +
+                        "      '25=75025'\n" +
+                        "    ],\n" +
+                        "    'size':25\n" +
+                        "  },\n" +
+                        "  {\n" +
+                        "    'complexity':13,\n" +
+                        "    'description':[\n" +
+                        "      'Write a javascript function to find prime factors of a positive integer',\n" +
+                        "      'Store the result into an array.',\n" +
+                        "      'Use parseInt to parse input string arguments.',\n" +
+                        "      'Use let for variables and put variable declarations at the top of the script.',\n" +
+                        "      'Use separate variable to store the result of parseInt.',\n" +
+                        "      'Corner case: primeFactors(1) should return [1].',\n" +
+                        "      'Remove everything from the script except for the function logic.'\n" +
+                        "    ],\n" +
+                        "    'name':'PrimeFactoryAlgorithm',\n" +
+                        "    'qa':[\n" +
+                        "      '1=[1]',\n" +
+                        "      '2=[2]',\n" +
+                        "      '3=[3]',\n" +
+                        "      '4=[2,2]',\n" +
+                        "      '5=[5]',\n" +
+                        "      '6=[2,3]',\n" +
+                        "      '7=[7]',\n" +
+                        "      '8=[2,2,2]',\n" +
+                        "      '9=[3,3]',\n" +
+                        "      '10=[2,5]',\n" +
+                        "      '11=[11]',\n" +
+                        "      '12=[2,2,3]',\n" +
+                        "      '13=[13]',\n" +
+                        "      '14=[2,7]',\n" +
+                        "      '15=[3,5]',\n" +
+                        "      '16=[2,2,2,2]',\n" +
+                        "      '17=[17]',\n" +
+                        "      '18=[2,3,3]',\n" +
+                        "      '19=[19]',\n" +
+                        "      '20=[2,2,5]',\n" +
+                        "      '21=[3,7]',\n" +
+                        "      '22=[2,11]',\n" +
+                        "      '23=[23]',\n" +
+                        "      '24=[2,2,2,3]',\n" +
+                        "      '25=[5,5]'\n" +
+                        "    ],\n" +
+                        "    'size':25\n" +
+                        "  },\n" +
+                        "  {\n" +
+                        "    'complexity':14,\n" +
                         "    'description':[\n" +
                         "      'Write a function to convert a name into initials. \\nThis kata strictly takes two words with one space in between them.\\nThe output should be two capital letters with a dot separating them.\\nExample:\\nTom Harris=>T.H\\ngarlick looney=>G.L'\n" +
                         "    ],\n" +
@@ -365,7 +559,7 @@ public class GameSettingsTest {
                         "    'size':32\n" +
                         "  },\n" +
                         "  {\n" +
-                        "    'complexity':10,\n" +
+                        "    'complexity':15,\n" +
                         "    'description':[\n" +
                         "      'Hello there\\nYou are asked to square every digit of a number and concatenate them.\\nFor example, if we run 123 through the function, 149 will come out\\n because 1^2 is 1 and 2^2 is 4, 3^3=9. (1-4-9)\\nExample #2: An input of 465 will/should return 163625\\nbecause 4^2 is 16, 6^2 is 36, and 5^2 is 25. (16-36-25)\\n'\n" +
                         "    ],\n" +
@@ -403,42 +597,7 @@ public class GameSettingsTest {
                         "    'size':28\n" +
                         "  },\n" +
                         "  {\n" +
-                        "    'complexity':11,\n" +
-                        "    'description':[\n" +
-                        "      'The sum of the squares of the first ten positive integers \\n1^2 + 2^2 + ... + 10^2 = 385. \\nAnd the square of the sum is \\n(1 + 2 + ... + 10)^2 = 55^2 = 3025. \\nTherefore, the difference between the sum of the squares and the square of the sum of the first ten natural numbers is equal to 3025 - 385 = 2640. \\nCreate a method that calculates the difference between the sum squares and the square of the sum for the natural number i.'\n" +
-                        "    ],\n" +
-                        "    'name':'SumSquareDifferenceAlgorithm',\n" +
-                        "    'qa':[\n" +
-                        "      '1=0',\n" +
-                        "      '2=4',\n" +
-                        "      '3=22',\n" +
-                        "      '4=70',\n" +
-                        "      '5=170',\n" +
-                        "      '6=350',\n" +
-                        "      '7=644',\n" +
-                        "      '8=1092',\n" +
-                        "      '9=1740',\n" +
-                        "      '10=2640',\n" +
-                        "      '11=3850',\n" +
-                        "      '12=5434',\n" +
-                        "      '13=7462',\n" +
-                        "      '14=10010',\n" +
-                        "      '15=13160',\n" +
-                        "      '16=17000',\n" +
-                        "      '17=21624',\n" +
-                        "      '18=27132',\n" +
-                        "      '19=33630',\n" +
-                        "      '20=41230',\n" +
-                        "      '21=50050',\n" +
-                        "      '22=60214',\n" +
-                        "      '23=71852',\n" +
-                        "      '24=85100',\n" +
-                        "      '25=100100'\n" +
-                        "    ],\n" +
-                        "    'size':25\n" +
-                        "  },\n" +
-                        "  {\n" +
-                        "    'complexity':12,\n" +
+                        "    'complexity':16,\n" +
                         "    'description':[\n" +
                         "      'In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.\\nAll numbers are valid Int32, no need to validate them.\\nThere will always be at least one number in the input string.\\nOutput string must be two numbers separated by a single space, and highest number is first.Example: 1 2 3 4 5=>5 1\\n1 2 -3 4 5=>5 -3\\n1 9 3 4 -5=>9 -5'\n" +
                         "    ],\n" +
@@ -471,7 +630,7 @@ public class GameSettingsTest {
                         "    'size':23\n" +
                         "  },\n" +
                         "  {\n" +
-                        "    'complexity':13,\n" +
+                        "    'complexity':17,\n" +
                         "    'description':[\n" +
                         "      'Oh my, it seems that trolls have taken over your comment section!\\nHowever, fear not, for there is a simple solution to deal with these troublesome creatures.\\nYou may remove all vowels from their comments, rendering them powerless.\\nI implore you to create a function that can execute this task, for instance,\\ntransforming \\'This website is for losers LOL!\\' into \\'Ths wbst s fr lsrs LL!\\'. \\nPlease take note that for this exercise, the letter 'y' is not considered a vowel.'\n" +
                         "    ],\n" +
@@ -494,7 +653,7 @@ public class GameSettingsTest {
                         "    'size':13\n" +
                         "  },\n" +
                         "  {\n" +
-                        "    'complexity':14,\n" +
+                        "    'complexity':18,\n" +
                         "    'description':[\n" +
                         "      'Check to see if a string has the same amount of 'x's and 'o's.\\nThe method must return a boolean and be case insensitive. The string can contain any char.\\nExamples input/output:\\nooxx=>true\\nxooxx=>false\\nooxXm=>true\\nzpzpzpp=>true // when no 'x' and 'o' is present should return true\\nzzoo=>false'\n" +
                         "    ],\n" +
@@ -545,38 +704,7 @@ public class GameSettingsTest {
                         "    'size':41\n" +
                         "  },\n" +
                         "  {\n" +
-                        "    'complexity':15,\n" +
-                        "    'description':[\n" +
-                        "      'The order matters...\\n Everything is quite simple. \\nIn a string of three characters, the last character becomes the first one,\\n and the first two characters shift one position to the right. \\nFor example: abc=>cab...'\n" +
-                        "    ],\n" +
-                        "    'name':'CharOrderAlgorithm',\n" +
-                        "    'qa':[\n" +
-                        "      'abc=cab',\n" +
-                        "      'cad=dca',\n" +
-                        "      'asd=das',\n" +
-                        "      'xyz=zxy',\n" +
-                        "      'aaa=aaa',\n" +
-                        "      '123=312',\n" +
-                        "      'dEf=fdE',\n" +
-                        "      'zxc=czx',\n" +
-                        "      'qwe=eqw',\n" +
-                        "      'rty=yrt',\n" +
-                        "      'mnb=bmn',\n" +
-                        "      'vbn=nvb',\n" +
-                        "      'fgh=hfg',\n" +
-                        "      'ijk=kij',\n" +
-                        "      'lmn=nlm',\n" +
-                        "      'pqr=rpq',\n" +
-                        "      'stu=ust',\n" +
-                        "      'wxy=ywx',\n" +
-                        "      '222=222',\n" +
-                        "      '789=978',\n" +
-                        "      '090=009'\n" +
-                        "    ],\n" +
-                        "    'size':21\n" +
-                        "  },\n" +
-                        "  {\n" +
-                        "    'complexity':16,\n" +
+                        "    'complexity':19,\n" +
                         "    'description':[\n" +
                         "      'An isogram is a word that has no repeating letters, consecutive or non-consecutive.\\nImplement a function that determines whether a string that contains only letters is an isogram.\\nAssume the empty string is an isogram. Ignore letter case.\\nConjugated=>true\\ncappa=>false\\nmoOn=>false'\n" +
                         "    ],\n" +
@@ -620,7 +748,7 @@ public class GameSettingsTest {
                         "    'size':34\n" +
                         "  },\n" +
                         "  {\n" +
-                        "    'complexity':17,\n" +
+                        "    'complexity':20,\n" +
                         "    'description':[\n" +
                         "      'Rent car cost calculator\\n Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. \\nAlternatively, if you rent the car for 3 or more days, you get $20 off your total.\\nWrite a code that gives out the total amount for different days(d).Example: 1=>40, 2=>80, 3=>100, 4=>140, 6=>220, 7=>230, 15=>550'\n" +
                         "    ],\n" +
@@ -649,7 +777,7 @@ public class GameSettingsTest {
                         "    'size':19\n" +
                         "  },\n" +
                         "  {\n" +
-                        "    'complexity':20,\n" +
+                        "    'complexity':21,\n" +
                         "    'description':[\n" +
                         "      'Remove all adjacent duplicate characters from a string, as soon as you encounter them walking left to right, and ensuring that at the end NO two adjacent characters remain.\\nExample: abc=>abc\\nabbc=>ac\\nabbbc=>ac\\nabbcccbad=>abad'\n" +
                         "    ],\n" +
@@ -683,7 +811,7 @@ public class GameSettingsTest {
                         "    'size':24\n" +
                         "  },\n" +
                         "  {\n" +
-                        "    'complexity':21,\n" +
+                        "    'complexity':22,\n" +
                         "    'description':[\n" +
                         "      'Think like a child...\\n Implement an algorithm that can solve the following tasks:For example: \\n8809 = 6\\n7111 = 0\\n2172 = 0\\n6666 = 4\\n1111 = 0\\n3213 = 0\\n7662 = 2\\n9312 = 1\\n0000 = 4\\n2222 = 0\\n3333 = 0\\n5555 = 0\\n8193 = 3\\n8096 = 5\\n7777 = 0\\n9999 = 4'\n" +
                         "    ],\n" +
@@ -729,7 +857,7 @@ public class GameSettingsTest {
                         "    'size':36\n" +
                         "  },\n" +
                         "  {\n" +
-                        "    'complexity':22,\n" +
+                        "    'complexity':23,\n" +
                         "    'description':[\n" +
                         "      'If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.\\nThe sum of these multiples is 23.\\nFinish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.\\nAdditionally, if the number is negative, return 0 (for languages that do have them).\\nNote: If the number is a multiple of both 3 and 5, only count it once.'\n" +
                         "    ],\n" +
@@ -756,7 +884,7 @@ public class GameSettingsTest {
                         "    'size':17\n" +
                         "  },\n" +
                         "  {\n" +
-                        "    'complexity':23,\n" +
+                        "    'complexity':24,\n" +
                         "    'description':[\n" +
                         "      'Credit Card Number...\\n I will give you the first 15 digits of the credit card number. \\nYou need to generate the last, 16th digit.\\nPlease provide only the last digit as the answer.\\nCorrect credit card number example: 4561261212345467Answer example: 456126121234546=>7'\n" +
                         "    ],\n" +
@@ -793,7 +921,7 @@ public class GameSettingsTest {
                         "    'size':27\n" +
                         "  },\n" +
                         "  {\n" +
-                        "    'complexity':24,\n" +
+                        "    'complexity':25,\n" +
                         "    'description':[\n" +
                         "      'The structure of the DNA double helix (type B-DNA).\\nIf you want to know more: http://en.wikipedia.org/wiki/DNA\\n\\nIn DNA strings, symbols 'A' and 'T' are complements of each other, as 'C' and 'G'. \\nYour function receives one side of the DNA (string). \\nYou need to return the other complementary side. \\nDNA strand is never empty or there is no DNA at all (again, except for Haskell).\\nExample: TTTT=>AAAA, TAACG=>ATTGC etc.'\n" +
                         "    ],\n" +
@@ -830,7 +958,7 @@ public class GameSettingsTest {
                         "    'size':27\n" +
                         "  },\n" +
                         "  {\n" +
-                        "    'complexity':25,\n" +
+                        "    'complexity':26,\n" +
                         "    'description':[\n" +
                         "      'You are going to be given a word. \\nYour job is to return the middle character of the word. \\nIf the word's length is odd, return the middle character. \\nIf the word's length is even, return the middle 2 characters.\\n#Examples:test=>es, testing=>t, middle=>dd, A=>A'\n" +
                         "    ],\n" +
@@ -862,7 +990,7 @@ public class GameSettingsTest {
                         "    'size':22\n" +
                         "  },\n" +
                         "  {\n" +
-                        "    'complexity':26,\n" +
+                        "    'complexity':27,\n" +
                         "    'description':[\n" +
                         "      'Order matters...\\nYou need to work with three-digit numbers. \\nSolve the algorithm for changing the number according to the given examples: \\nExamples: 111=>222, 123=>423, 679=>078, 999=>000, 012=>312, 090=>110, 444=>555, 090=>110, 916=>702'\n" +
                         "    ],\n" +
@@ -884,7 +1012,7 @@ public class GameSettingsTest {
                         "    'size':12\n" +
                         "  },\n" +
                         "  {\n" +
-                        "    'complexity':27,\n" +
+                        "    'complexity':28,\n" +
                         "    'description':[\n" +
                         "      'Continue the sequence 101, 112, 131, 415, 161, 718... \\ni.e f(1) = 101, f(2) = 112, ...\\nHint: Look at the whole picture'\n" +
                         "    ],\n" +
@@ -915,107 +1043,6 @@ public class GameSettingsTest {
                         "      '23=434',\n" +
                         "      '24=445',\n" +
                         "      '25=464'\n" +
-                        "    ],\n" +
-                        "    'size':25\n" +
-                        "  },\n" +
-                        "  {\n" +
-                        "    'complexity':28,\n" +
-                        "    'description':[\n" +
-                        "      'Please implement algorithm that converts number from one numeral system to another. Method should accept number, source numeral system and target numeral system.'\n" +
-                        "    ],\n" +
-                        "    'name':'NumeralSystemAlgorithm',\n" +
-                        "    'qa':[\n" +
-                        "      '10, 10, 10=10',\n" +
-                        "      '10, 10, 2=1010',\n" +
-                        "      '10, 2, 10=2',\n" +
-                        "      '1000, 10, 16=3e8',\n" +
-                        "      '1000, 16, 10=4096',\n" +
-                        "      '1000, 16, 2=1000000000000',\n" +
-                        "      '1ACD, 16, 2=1101011001101',\n" +
-                        "      'ABCD, 16, 2=1010101111001101',\n" +
-                        "      '34BE, 16, 10=13502',\n" +
-                        "      '1000, 2, 16=8',\n" +
-                        "      '1010, 2, 16=a',\n" +
-                        "      '1010101, 2, 4=1111',\n" +
-                        "      '1010101, 2, 6=221',\n" +
-                        "      '1010101, 2, 8=125',\n" +
-                        "      '1010101, 2, 10=85',\n" +
-                        "      '1010101, 2, 12=71',\n" +
-                        "      '1010101, 2, 14=61',\n" +
-                        "      '1010101, 2, 16=55',\n" +
-                        "      '0, 2, 16=0',\n" +
-                        "      '360, 10, 60=360',\n" +
-                        "      '360, 10, 12=260'\n" +
-                        "    ],\n" +
-                        "    'size':21\n" +
-                        "  },\n" +
-                        "  {\n" +
-                        "    'complexity':30,\n" +
-                        "    'description':[\n" +
-                        "      'Make a method that returns a Fibonacci number from the series by its number:\\nf(0) = 0\\nf(1) = 1\\nf(2) = 0 + 1 = 1\\nf(3) = 1 + 1 = 2\\nf(4) = 1 + 2 = 3\\nf(5) = 2 + 3 = 5\\nf(6) = 3 + 5 = 8\\nf(7) = 5 + 8 = 13\\nf(8) = 8 + 13 = 21\\nf(9) = 13 + 21 = 34\\netc...'\n" +
-                        "    ],\n" +
-                        "    'name':'FibonacciNumbersAlgorithm',\n" +
-                        "    'qa':[\n" +
-                        "      '1=1',\n" +
-                        "      '1=1',\n" +
-                        "      '3=2',\n" +
-                        "      '4=3',\n" +
-                        "      '5=5',\n" +
-                        "      '6=8',\n" +
-                        "      '7=13',\n" +
-                        "      '8=21',\n" +
-                        "      '9=34',\n" +
-                        "      '10=55',\n" +
-                        "      '11=89',\n" +
-                        "      '12=144',\n" +
-                        "      '13=233',\n" +
-                        "      '14=377',\n" +
-                        "      '15=610',\n" +
-                        "      '16=987',\n" +
-                        "      '17=1597',\n" +
-                        "      '18=2584',\n" +
-                        "      '19=4181',\n" +
-                        "      '20=6765',\n" +
-                        "      '21=10946',\n" +
-                        "      '22=17711',\n" +
-                        "      '23=28657',\n" +
-                        "      '24=46368',\n" +
-                        "      '25=75025'\n" +
-                        "    ],\n" +
-                        "    'size':25\n" +
-                        "  },\n" +
-                        "  {\n" +
-                        "    'complexity':35,\n" +
-                        "    'description':[\n" +
-                        "      'Divide an integer into multiples of prime numbers:\\n1 -> [1]\\n2 -> [2]\\n3 -> [3]\\n4 -> [2,2]\\n6 -> [2,3]\\n9 -> [3,3]\\n12 -> [2,2,3]\\n15 -> [3,5]\\netc...'\n" +
-                        "    ],\n" +
-                        "    'name':'PrimeFactoryAlgorithm',\n" +
-                        "    'qa':[\n" +
-                        "      '1=[1]',\n" +
-                        "      '2=[2]',\n" +
-                        "      '3=[3]',\n" +
-                        "      '4=[2,2]',\n" +
-                        "      '5=[5]',\n" +
-                        "      '6=[2,3]',\n" +
-                        "      '7=[7]',\n" +
-                        "      '8=[2,2,2]',\n" +
-                        "      '9=[3,3]',\n" +
-                        "      '10=[2,5]',\n" +
-                        "      '11=[11]',\n" +
-                        "      '12=[2,2,3]',\n" +
-                        "      '13=[13]',\n" +
-                        "      '14=[2,7]',\n" +
-                        "      '15=[3,5]',\n" +
-                        "      '16=[2,2,2,2]',\n" +
-                        "      '17=[17]',\n" +
-                        "      '18=[2,3,3]',\n" +
-                        "      '19=[19]',\n" +
-                        "      '20=[2,2,5]',\n" +
-                        "      '21=[3,7]',\n" +
-                        "      '22=[2,11]',\n" +
-                        "      '23=[23]',\n" +
-                        "      '24=[2,2,2,3]',\n" +
-                        "      '25=[5,5]'\n" +
                         "    ],\n" +
                         "    'size':25\n" +
                         "  },\n" +

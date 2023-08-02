@@ -63,13 +63,14 @@ public class SumSquareDifferenceAlgorithm extends AlgorithmLevelImpl {
                 "(1 + 2 + ... + 10)^2 = 55^2 = 3025. \n" +
                 "Therefore, the difference between the sum of the squares and " +
                 "the square of the sum of the first ten natural " +
-                "numbers is equal to 3025 - 385 = 2640. \n" +
-                "Create a method that calculates the difference between the sum " +
+                "numbers is equal to 3025 - 385 = 2640.",
+
+                "Create a function that calculates the difference between the sum " +
                 "squares and the square of the sum for the natural number i.",
                 
-                "Rewrite this function using JavaScript.",
+                "Write a javascript function.",
                 
-                "Rewrite the function without using a loop.");
+                "The function should not use a loop.");
     }
 
     @Override

@@ -49,16 +49,17 @@ public class SimpleMathAlgorithm extends AlgorithmLevelImpl {
     public List<String> description() {
         return Arrays.asList(
                 "Given the sequence: 1, 0, 3, 2, 5, 4, 7, 6, 9, 8, 11, 10, 13, 12, 15, 14...\n" +
-                "The sequence starts with element number 0: f(0)=1.\n" +
-                "Your task is to write a JavaScript function that returns the element at index n: f(n)=?",
+                "The sequence starts with element number 0: f(0)=1.",
+
+                "Your task is to write a javascript function that returns the element at index n: f(n)=?",
                 
-                "Use parseInt.",
+                "Use parseInt to parse input string arguments.",
                 
                 "Use separate variable to store the result of parseInt.",
                 
                 "Use let instead of var.",
                 
-                "Remove everything from the script except for the function.");
+                "Remove everything from the script except for the function logic.");
     }
 
     @Override

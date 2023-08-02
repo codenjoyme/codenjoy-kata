@@ -46,11 +46,13 @@ public class CharOrderAlgorithm extends AlgorithmLevelImpl {
     public List<String> description() {
         return Arrays.asList(
                 "In a string of three characters, the last character becomes the first one,\n " +
-                "and the first two characters shift one position to the right. Write a JavaScript function.\n",
+                "and the first two characters shift one position to the right.",
+
+                "Write a javascript function.",
 
                 "For example: abc=>cab...",
                 
-                "Remove everything from the script except for the function.",
+                "Remove everything from the script except for the function logic.",
                 
                 "Rewrite the function in a shorter way.");
     }

@@ -57,7 +57,7 @@ public class FibonacciNumbersAlgorithm extends AlgorithmLevelImpl {
     @Override
     public List<String> description() {
         return Arrays.asList(
-                "Make a method that returns a Fibonacci number from the series by its number:\n" +
+                "Make a function that returns a Fibonacci number from the series by its number:\n" +
                 "f(0) = 0\n" +
                 "f(1) = 1\n" +
                 "f(2) = 0 + 1 = 1\n" +
@@ -70,15 +70,15 @@ public class FibonacciNumbersAlgorithm extends AlgorithmLevelImpl {
                 "f(9) = 13 + 21 = 34\n" +
                 "etc...",
                 
-                "Rewrite in JavaScript.",
+                "Please use javascript language.",
                 
-                "Use parseInt",
+                "Use parseInt to parse input string arguments.",
                 
                 "Use separate variable to store the result of parseInt.",
                 
                 "Rewrite the function in a shorter way.",
                 
-                "Remove everything from the script except for the function.");
+                "Remove everything from the script except for the function logic.");
     }
 
     @Override

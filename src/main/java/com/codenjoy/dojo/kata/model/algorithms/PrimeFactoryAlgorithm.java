@@ -72,17 +72,19 @@ public class PrimeFactoryAlgorithm extends AlgorithmLevelImpl {
     @Override
     public List<String> description() {
         return Arrays.asList(
-                "Write a JavaScript function to find prime factors of a positive integer. Store the result into an array.",
+                "Write a javascript function to find prime factors of a positive integer",
 
-                "Use parseInt",
+                "Store the result into an array.",
+
+                "Use parseInt to parse input string arguments.",
 
                 "Use let for variables and put variable declarations at the top of the script.",
 
                 "Use separate variable to store the result of parseInt.",
 
-                "primeFactors(1) should return [1]",
+                "Corner case: primeFactors(1) should return [1].",
 
-                "Remove everything from the script except for the function.");
+                "Remove everything from the script except for the function logic.");
     }
 
     @Override
