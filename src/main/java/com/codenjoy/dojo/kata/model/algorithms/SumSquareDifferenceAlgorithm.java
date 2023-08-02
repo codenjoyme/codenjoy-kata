@@ -65,7 +65,11 @@ public class SumSquareDifferenceAlgorithm extends AlgorithmLevelImpl {
                 "the square of the sum of the first ten natural " +
                 "numbers is equal to 3025 - 385 = 2640. \n" +
                 "Create a method that calculates the difference between the sum " +
-                "squares and the square of the sum for the natural number i.");
+                "squares and the square of the sum for the natural number i.",
+                
+                "Rewrite this function using JavaScript.",
+                
+                "Rewrite the function without using a loop.");
     }
 
     @Override
