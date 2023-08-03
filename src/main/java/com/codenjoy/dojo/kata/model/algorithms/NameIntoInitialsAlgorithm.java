@@ -49,7 +49,17 @@ public class NameIntoInitialsAlgorithm extends AlgorithmLevelImpl {
                 "The output should be two capital letters with a dot separating them.\n" +
                 "Example:\n" +
                 "Tom Harris=>T.H\n" +
-                "garlick looney=>G.L");
+                "garlick looney=>G.L",
+                
+                "Rewrite this function in JavaScript.",
+
+                "Use a map method th solve this task.",
+
+                "Rewrite this function in a shorter way.",
+
+                "Remove everything from the script except for the function.",
+
+                "Use function keyword.");
     }
 
     @Override
