@@ -69,7 +69,9 @@ public class HighestAndLowestAlgorithm extends AlgorithmLevelImpl {
                         "1 2 -3 4 5=>5 -3\n" +
                         "1 9 3 4 -5=>9 -5",
                         
-                        "Remove everything from the script except for the function.");
+                        "Remove everything from the script except for the function.",
+                        
+                        "Remove comments.");
     }
 
     @Override
