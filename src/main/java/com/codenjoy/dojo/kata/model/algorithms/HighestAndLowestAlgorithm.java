@@ -61,13 +61,15 @@ public class HighestAndLowestAlgorithm extends AlgorithmLevelImpl {
     @Override
     public List<String> description() {
         return Arrays.asList(
-                "In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.\n" +
+                "Given a string of space separated numbers. Write a JavaScript function that returns the highest and lowest number.\n" +
                         "All numbers are valid Int32, no need to validate them.\n" +
                         "There will always be at least one number in the input string.\n" +
                         "Output string must be two numbers separated by a single space, and highest number is first." +
                         "Example: 1 2 3 4 5=>5 1\n" +
                         "1 2 -3 4 5=>5 -3\n" +
-                        "1 9 3 4 -5=>9 -5");
+                        "1 9 3 4 -5=>9 -5",
+                        
+                        "Remove everything from the script except for the function.");
     }
 
     @Override
