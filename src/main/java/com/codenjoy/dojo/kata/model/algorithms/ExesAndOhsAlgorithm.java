@@ -60,7 +60,19 @@ public class ExesAndOhsAlgorithm extends AlgorithmLevelImpl {
                         "xooxx=>false\n" +
                         "ooxXm=>true\n" +
                         "zpzpzpp=>true // when no 'x' and 'o' is present should return true\n" +
-                        "zzoo=>false");
+                        "zzoo=>false",
+                        
+                        "Rewrite this function in JavaScript.",
+                        
+                        "Use a regexp for this task.",
+                        
+                        "Rewrite this function using let keyword.",
+                        
+                        "Store input string in the separate variable.",
+                        
+                        "Remove comments.",
+                        
+                        "Remove everything from the script except for the function.");
     }
 
     @Override
