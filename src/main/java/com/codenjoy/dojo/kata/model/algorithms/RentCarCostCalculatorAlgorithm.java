@@ -49,7 +49,13 @@ public class RentCarCostCalculatorAlgorithm extends AlgorithmLevelImpl {
                         "Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. \n" +
                         "Alternatively, if you rent the car for 3 or more days, you get $20 off your total.\n" +
                         "Write a code that gives out the total amount for different days(d)." +
-                        "Example: 1=>40, 2=>80, 3=>100, 4=>140, 6=>220, 7=>230, 15=>550");
+                        "Example: 1=>40, 2=>80, 3=>100, 4=>140, 6=>220, 7=>230, 15=>550",
+                        
+                        "Rewrite this function in JavaScript.",
+                        
+                        "Rewrite this function using ternary operator.",
+                        
+                        "Remove everything from the script except for the function.");
     }
 
     @Override
