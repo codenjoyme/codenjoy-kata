@@ -31,7 +31,7 @@ Select the game from the Game Collection.
 
 Click the "Join the Game" button.
 
-![Join the Game](./images/01.png)
+![Join the Game](./images/01_Join_the_Game.png)
 
 To return to the Game Collection, press the "Leave the Game" button.
 
@@ -41,15 +41,15 @@ There are two tabs in the middle of the screen: Game Board and Code Editor.
 
 The Game Board tab displays the playing field with the current state of the game.
 
-![Game Board](./images/04.png)
+![Game Board](./images/04_Your_Task.png)
 
 The Code Editor tab showcases a code editor containing an initial JavaScript function, a console presenting the results of the function execution, and three control buttons: Reset, Help, and Commit.
 
-![Code Editor](./images/02.png)
+![Code Editor](./images/02_Game_Board.png)
 
 Your task is presented in a modal window.
 
-![Your task](./images/03.png)
+![Your task](./images/03_Code_Editor.png)
 
 Copy the task using the copy button.
 
@@ -63,7 +63,7 @@ Click the Commit button to progress to the next level.
 
 If the function doesn't pass the tests, refine your prompt and ask AI Chat again.
 
-![Write prompts](./images/05.png)
+![Write prompts](./images/05_Write_Prompts.png)
 
 ### 3. AI Chat
 
@@ -77,7 +77,7 @@ For creating a complex context, write several prompts and add them one by one to
 
 Edit your prompts using the editing tool that appears when you hover over the message.
 
-![Edit message](./images/06.png)
+![Edit message](./images/06_Edit_Message.png)
 
 ### 4. Leaderboard
 
@@ -85,7 +85,7 @@ Players earn points for solving challenges.
 
 The leaderboard is displayed on the right side of the screen.
 
-![Leaderboard](./images/07.png)
+![Leaderboard](./images/07_Leaderboard.png)
 
 ### 5. Room Chat and Field Chat
 
@@ -93,4 +93,4 @@ Room Chat and Field Chat are displayed on the left side of the screen.
 
 Use them to collaborate with other players.
 
-![Room Chat and Field Chat](./images/08.png)
+![Room Chat and Field Chat](./images/08_Room_and_Field_Chat.png)
