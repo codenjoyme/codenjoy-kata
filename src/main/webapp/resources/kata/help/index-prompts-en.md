@@ -97,6 +97,18 @@ Use them to collaborate with other players.
 
 ![Room Chat and Field Chat](./images/11_Room_and_Field_Chat.png)
 
+## What is context?
+
+Context means the surrounding details or information that helps understand a situation or conversation better.
+
+In language, it's the words or phrases around a particular word that give it meaning.
+
+In natural language processing, context includes the words, phrases, or information that precedes or follows a specific word or passage, providing additional details that aid in interpretation. The context helps to disambiguate language and allows the model to generate more accurate and relevant responses.
+
+For example, in a conversation, each statement or question builds upon the context of the previous ones. Understanding context involves considering the broader meaning and implications of the words used, as well as any relevant background information.
+
+Enhancing context in communication with AI models often involves providing clear and detailed information, referring to previous statements, and structuring prompts to guide the model's understanding. Effective management of context allows for more coherent and contextually appropriate responses from language models.
+
 ## How to enhance context for better answers?
 
 - **Provide Clear Instructions:** Clearly specify what kind of information or response you are looking for. The more specific your instructions, the better the model can tailor its response.
