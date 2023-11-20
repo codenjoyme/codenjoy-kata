@@ -131,14 +131,6 @@ ul {
   overflow: hidden;
 }
 
-.main-block.console-open {
-  padding-right:  255px;
-}
-
-.editor-fullscreen .main-block.console-open {
-  padding-right: 400px;
-}
-
 .main-block.console-close {
   padding-right: 20px;
 }
@@ -431,8 +423,9 @@ a.modalCloseImg {
 .console {
   transition: right 1s;
   padding: 0;
-  width: 255px;
-  position: absolute;
+  width: 100%;
+  position: initial;
+  margin: 0;
   top: 0;
   height: 550px;
   box-sizing: border-box;
@@ -441,10 +434,6 @@ a.modalCloseImg {
   border: 1px solid rgb(48, 54, 68);
   font: 12px/20px "Monaco", "Menlo", "Ubuntu Mono", "Consolas", "source-code-pro", monospace;
   z-index: 7;
-}
-
-.editor-fullscreen .console {
-  width: 400px;
 }
 
 .console-wrapper {
@@ -1055,14 +1044,6 @@ canvas {
   .main {
     text-align: center;
     padding-left: 15px;
-  }
-
-  .console {
-    width: 400px;
-  }
-
-  .main-block.console-open {
-    padding-right: 400px;
   }
 
   .main-block {
