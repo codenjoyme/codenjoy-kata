@@ -43,12 +43,11 @@ public class RemoveVowelsAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public List<String> description() {
-        return Arrays.asList("Oh my, it seems that trolls have taken over your comment section!\n" +
-                "However, fear not, for there is a simple solution to deal with these troublesome creatures.\n" +
-                "You may remove all vowels from their comments, rendering them powerless.\n" +
-                "I implore you to create a function that can execute this task, for instance,\n" +
-                "transforming \"This website is for losers LOL!\" into \"Ths wbst s fr lsrs LL!\". \n" +
-                "Please take note that for this exercise, the letter 'y' is not considered a vowel.");
+        return Arrays.asList("Write a JavaScript function to remove all vowels from given strings.\n" +
+                "For example, the input string \"This website is for losers LOL!\" should transform into \"Ths wbst s fr lsrs LL!\". \n" +
+                "Please take note that for this task, the letter 'y' is not considered a vowel.",
+                
+                "Remove everything from the script except for the function.");
     }
 
     @Override

@@ -51,12 +51,13 @@ public class ConcatenatedSquaresAlgorithm extends AlgorithmLevelImpl {
 
     @Override
     public List<String> description() {
-        return Arrays.asList("Hello there\n" +
-                "You are asked to square every digit of a number and concatenate them.\n" +
+        return Arrays.asList("Write a JavaScript function to square every digit of a number and concatenate them.\n" +
                 "For example, if we run 123 through the function, 149 will come out\n " +
                 "because 1^2 is 1 and 2^2 is 4, 3^3=9. (1-4-9)\n" +
                 "Example #2: An input of 465 will/should return 163625\n" +
-                "because 4^2 is 16, 6^2 is 36, and 5^2 is 25. (16-36-25)\n"
+                "because 4^2 is 16, 6^2 is 36, and 5^2 is 25. (16-36-25)\n",
+
+                "Use a map method to solve this task."
         );
     }
 
