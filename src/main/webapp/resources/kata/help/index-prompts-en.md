@@ -96,3 +96,16 @@ Room Chat and Field Chat are displayed on the left side of the screen.
 Use them to collaborate with other players.
 
 ![Room Chat and Field Chat](./images/11_Room_and_Field_Chat.png)
+
+## How to enhance context for better answers?
+
+- **Provide Clear Instructions:** Clearly specify what kind of information or response you are looking for. The more specific your instructions, the better the model can tailor its response.
+- **Add Background Information:** Include relevant background details or context that the model might need to understand the question or prompt better. This can help eliminate ambiguity.
+- **Use Previous Responses:** If you are engaging in a conversation or series of prompts, refer back to previous responses. This helps maintain continuity and provides the model with a better understanding of the ongoing context.
+- **Incremental Information:** Build up the context gradually by providing information in increments. Instead of giving all the details at once, feed the model information step by step.
+- **Provide Examples:** Offer examples related to your query. Examples can help clarify your intent and guide the model in generating more accurate and relevant responses.
+- **Ask Follow-up Questions:** If the initial response is not entirely what you're looking for, consider asking follow-up questions. This gives you the opportunity to refine the context and guide the model toward the desired information.
+- **Be Explicit with Pronouns:** If your prompt includes pronouns like "it," "this," or "that," be explicit about what these refer to. This avoids potential confusion and ensures the model understands the context correctly.
+- **Avoid Ambiguous Phrasing:** Ensure your prompts are clear and avoid ambiguous phrasing. Ambiguity can lead to varied interpretations, potentially resulting in responses that are not aligned with your expectations.
+
+Good luck in prompting!
